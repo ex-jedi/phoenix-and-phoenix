@@ -71,8 +71,16 @@ img {
 // ** Body **
 // *=========================================
 
+.main-content {
+  width: 100%;
+}
+
 .typed-strings {
   @include main-font-stack;
+}
+
+#typed {
+  // height: auto;
 }
 
 // *=========================================
