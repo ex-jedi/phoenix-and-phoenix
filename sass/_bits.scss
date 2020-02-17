@@ -32,12 +32,8 @@ $grid-gap: 0 1rem;
 
 //* Font Stacks
 @mixin main-font-stack {
-  font-family: "baskerville-poster-pt", serif;
-  font-weight: 400;
-}
-
-@mixin utility-font-stack {
-  font-family: "calluna-sans", sans-serif;
+  font-family: "ff-dagny-web-pro", sans-serif;
+  letter-spacing: 0.1rem;
   font-weight: 400;
 }
 
