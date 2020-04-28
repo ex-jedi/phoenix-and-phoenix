@@ -13,8 +13,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   width: 100%;
+  min-height: 100vh;
   background: linear-gradient(270deg, #c9d8ff, #d5c7ff);
   background-size: 400% 400%;
 }
