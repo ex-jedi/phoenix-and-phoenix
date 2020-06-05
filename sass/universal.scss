@@ -22,6 +22,18 @@ html {
   height: 100%;
 }
 
+@keyframes background-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 body {
   @include flex(column);
   justify-content: center;
@@ -30,18 +42,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(270deg, #c9d8ff, #d5c7ff);
   background-size: 400% 400%;
-
-  @keyframes AnimationName {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+  animation: background-gradient 10s ease infinite forwards;
 }
 
 // * Box sizing rules

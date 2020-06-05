@@ -9,17 +9,7 @@ html {
   height: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(270deg, #c9d8ff, #d5c7ff);
-  background-size: 400% 400%;
-}
-@keyframes AnimationName {
+@keyframes background-gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -29,6 +19,17 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(270deg, #c9d8ff, #d5c7ff);
+  background-size: 400% 400%;
+  animation: background-gradient 10s ease infinite forwards;
 }
 
 *,
