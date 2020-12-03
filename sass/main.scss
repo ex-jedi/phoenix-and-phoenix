@@ -1,11 +1,10 @@
 // *=======================================================================================
 // ** Styles for all pages  **
-// ** Reset based on https://hankchizljaw.com/wrote/a-modern-css-reset/  **
 // *=======================================================================================
 
 //********** Imports **********
 
-@import 'bits'; //Contains variables, media queries mixins etc.
+@use 'bits' as *; //Contains variables, media queries mixins etc.
 
 // *=========================================
 // ** Wrappers **
