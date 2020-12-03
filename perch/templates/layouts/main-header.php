@@ -15,8 +15,8 @@
 										    'add-trailing-slash' => false,
 										    'include-domain'     => true,
 										), true);
-	$mainsitename      = "SITE NAME";
-	$pagetitlename = " - SITE NAME";
+	$mainsitename      = "phoenix & phoenix";
+	$pagetitlename = " - phoenix & phoenix";
 	$sharing_image = '/images/default_fb_image.jpg';
 
 	PerchSystem::set_var('domain',$domain);
