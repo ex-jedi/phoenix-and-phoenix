@@ -44,7 +44,9 @@
 				<!-- Skip to main content link  -->
 				<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 				<div class="main-logo-wrapper">
+					<a class="main-logo-wrapper" href="/">
 					<?php perch_layout("main-logo"); ?>
+				</a>
 				</div>
 					<?php perch_pages_navigation(array(
 							'hide-extensions' => true,

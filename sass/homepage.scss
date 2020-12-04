@@ -10,6 +10,35 @@
 //** Header **
 //*=========================================
 
+.homepage-header-content-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.homepage-header-text-wrapper {
+  color: $font-colour-blue;
+  font-size: $font-size-large;
+  flex: 0 1 auto;
+
+  p {
+    margin: 0;
+
+    &:first-of-type {
+      margin-bottom: $paragraph-spacing-large;
+    }
+  }
+}
+
+.homepage-header-image {
+  flex: 0 1 auto;
+}
+
+.homepage-header-text-wrapper,
+.homepage-header-image {
+  width: 47%;
+}
+
 //*=========================================
 //** Main Nav **
 //*=========================================

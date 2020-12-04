@@ -1,0 +1,11 @@
+<div class="homepage-header-content-wrapper">
+  <div class="homepage-header-text-wrapper">
+    <perch:content id="headerTextWrapper" editor="redactor" type="textarea" label="Header Text Wrapper"  required  html>
+  </div>
+  <img class="homepage-header-image" src="<perch:content id="homepageHeaderImage" type="image" width="500" label="Homepage Header Image" quality="75">" alt="<perch:content id="alt" type="text" label="Image description">"
+  sizes="30vw"
+  srcset="<perch:content type="image" id="homepageHeaderImage" width="1000" > 1000w,
+  <perch:content type="image" id="homepageHeaderImage" width="800" quality="75"> 800w,
+  <perch:content type="image" id="homepageHeaderImage" width="600" quality="75"> 600w,
+  <perch:content type="image" id="homepageHeaderImage" width="400" quality="75"> 400w" >
+</div>

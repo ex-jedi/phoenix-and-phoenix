@@ -1,0 +1,27 @@
+.homepage-header-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.homepage-header-text-wrapper {
+  color: #535cb0;
+  font-size: 5rem;
+  flex: 0 1 auto;
+}
+.homepage-header-text-wrapper p {
+  margin: 0;
+}
+.homepage-header-text-wrapper p:first-of-type {
+  margin-bottom: 5rem;
+}
+
+.homepage-header-image {
+  flex: 0 1 auto;
+}
+
+.homepage-header-text-wrapper,
+.homepage-header-image {
+  width: 47%;
+}

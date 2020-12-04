@@ -57,11 +57,14 @@ $heading-spacing-large: 20rem;
 //* Sections
 
 // Spacing
+$section-spacing-super-large: 40rem;
+$section-spacing-extra-large: 35rem;
 $section-spacing-large: 20rem;
 $section-spacing-medium: 15rem;
 $section-spacing-small: 10rem;
 
 //Spacing
+$paragraph-spacing-large: 5rem;
 $paragraph-spacing-medium: 2.5rem;
 $paragraph-spacing-small: 1rem;
 
@@ -132,9 +135,11 @@ $input-spacing: 1rem;
 
 //Main brand Colours
 $green: #5bb072;
+$blue: #535cb0;
 
 //Main Font Colours
 $font-colour-green: $green;
+$font-colour-blue: $blue;
 
 //*=========================================
 //** Effects and Animation  **
