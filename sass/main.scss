@@ -20,6 +20,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  @include main-font-stack;
+}
+
 // * Box sizing rules
 *,
 *:before,
@@ -51,9 +55,18 @@ img {
 
 //********** Links **********
 
+a {
+  text-decoration: none;
+}
+
 //*=========================================
 //** Header **
 //*=========================================
+
+.main-header {
+  position: relative;
+}
+
 .main-logo-wrapper {
   width: 100%;
   max-width: 350px;
@@ -63,6 +76,43 @@ img {
 // *=========================================
 // ** Main Nav  **
 // *=========================================
+
+.main-nav {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: $font-size-medium;
+  height: fit-content;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(-180deg);
+  top: $paragraph-spacing-medium;
+  left: $paragraph-spacing-medium;
+  position: absolute;
+}
+
+.main-nav-link {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 5rem 0 0;
+  height: fit-content;
+  white-space: nowrap;
+  color: $font-colour-green;
+
+  &:first-of-type {
+    margin: 0;
+  }
+}
+
+#main-nav-current {
+  display: none;
+}
+
+.main-nav-trigger-wrapper {
+  display: none;
+}
+
+//********** Responsive Nav Styles **********
 
 // *=========================================
 // ** Body **
@@ -110,10 +160,10 @@ select {
 //*Skip to content link
 .show-on-focus {
   position: absolute;
-  color: $dark-font-colour;
-  background-color: $light-background-colour;
+  color: #000;
+  background-color: #fff;
   padding: 10px;
-  font-size: $font-size;
+  font-size: $font-size-medium;
   top: 0;
   left: 0;
   width: 1px;

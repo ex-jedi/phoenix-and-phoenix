@@ -39,10 +39,17 @@ $grid-gap: 0 1rem;
 
 //********** Sizing & spacing **********
 
+//* Font sizing
+
+$font-size-extra-large: 10rem;
+$font-size-large: 5rem;
+$font-size-medium: 2.5rem;
+$font-size-small: 1rem;
+
 //* Headings
 
 //Sizing
-$heading-size-large: 10rem;
+$heading-size-large: $font-size-extra-large;
 
 //Spacing
 $heading-spacing-large: 20rem;
@@ -53,13 +60,6 @@ $heading-spacing-large: 20rem;
 $section-spacing-large: 20rem;
 $section-spacing-medium: 15rem;
 $section-spacing-small: 10rem;
-
-//* Paragraphs
-
-//Font sizing
-$font-size-large: 2.5rem;
-$font-size: 1.25rem;
-$font-size-small: 1rem;
 
 //Spacing
 $paragraph-spacing-medium: 2.5rem;
@@ -131,27 +131,10 @@ $input-spacing: 1rem;
 //*=========================================
 
 //Main brand Colours
-$light-beige: rgb(233, 227, 226);
-$dark-beige: rgb(195, 179, 177);
-$dark-grey: rgb(47, 47, 47);
-$white: rgb(255, 255, 255);
+$green: #5bb072;
 
 //Main Font Colours
-$dark-font-colour: #252525;
-$light-font-colour: $white;
-$link-colour: #3c3cf6;
-$link-visited: #8608fb;
-
-//Background Colours
-$main-background-colour: $light-beige;
-$accent-background-colour: $dark-beige;
-$dark-background-colour: $dark-grey;
-$light-background-colour: $white;
-$light-background-gradient: linear-gradient(
-  180deg,
-  rgba(233, 228, 227, 1) 0%,
-  rgba(195, 179, 177, 1) 100%
-);
+$font-colour-green: $green;
 
 //*=========================================
 //** Effects and Animation  **

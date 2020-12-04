@@ -1,10 +1,11 @@
 <perch:before>
-    <ul>
+<nav class="main-nav" data-state="closed">
 </perch:before>
-		<li<perch:if exists="current_page"> class="selected"</perch:if><perch:if exists="ancestor_page"> class="ancestor"</perch:if>>
-            <a href="<perch:pages id="pagePath" />"><perch:pages id="pageNavText" /></a>   
-            <perch:pages id="subitems" encode="false" />
-        </li>
-<perch:after>
-    </ul>
+    <a class="main-nav-link<perch:if exists="ancestor_page"> ancestor</perch:if>" <perch:if exists="current_page"> id="main-nav-current"</perch:if> href="<perch:pages id="pagePath"  />"><perch:pages id="pageNavText" /></a>
+  <perch:pages id="subitems" encode="false" />
+  <perch:after>
+  </nav>
+  <div class="main-nav-trigger-wrapper">
+    <button id="main-nav-trigger" class="main-nav-trigger">MENU</button>
+  </div>
 </perch:after>
