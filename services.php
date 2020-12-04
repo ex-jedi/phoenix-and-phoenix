@@ -1,6 +1,6 @@
 <?php include('perch/runtime.php'); ?>
-<?php perch_layout('homepage-header'); ?>
-<main class="main-content homepage-main-content" id="main-content">
+<?php perch_layout('main-header'); ?>
+<main class="main-content about-us-main-content" id="main-content">
 <h1>Ahoy</h1>
 </main>
 <?php perch_layout('main-footer'); ?>
