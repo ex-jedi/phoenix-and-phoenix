@@ -16,7 +16,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
-  font-size: 20px;
+  font-size: 10px;
   overflow-x: hidden;
 }
 
@@ -50,6 +50,15 @@ img {
 }
 
 //********** Links **********
+
+//*=========================================
+//** Header **
+//*=========================================
+.main-logo-wrapper {
+  width: 100%;
+  max-width: 320px;
+  margin: $paragraph-spacing-small auto $section-spacing-large;
+}
 
 // *=========================================
 // ** Main Nav  **
