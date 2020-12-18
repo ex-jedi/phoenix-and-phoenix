@@ -32,3 +32,13 @@
   background-color: #535cb0;
   color: #fdfcfa;
 }
+
+.bio-image-wrapper {
+  width: 100%;
+}
+
+.homepage-bio-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

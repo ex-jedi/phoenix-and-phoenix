@@ -53,3 +53,13 @@
   background-color: $background-colour-blue;
   color: $font-colour-light;
 }
+
+.bio-image-wrapper {
+  width: 100%;
+}
+
+.homepage-bio-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
