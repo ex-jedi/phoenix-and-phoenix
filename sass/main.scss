@@ -78,6 +78,14 @@ a {
   margin: $paragraph-spacing-small auto $section-spacing-large;
 }
 
+.hidden-main-logo {
+  visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+}
+
 // *=========================================
 // ** Main Nav  **
 // *=========================================

@@ -44,7 +44,8 @@
 				<!-- Skip to main content link  -->
 				<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 				<div class="main-logo-wrapper">
-					<a class="main-logo-wrapper" href="<?php echo $domain ?>">
+					<a class="main-logo-wrapper" itemprop="url" href="<?php echo $domain ?>">
+					<img class="hidden-main-logo" aria-hidden="true" itemprop="logo" src="/images/main-logo.png" alt="phoenix and phoenix main logo">
 					<?php perch_layout("main-logo"); ?>
 				</a>
 				</div>
