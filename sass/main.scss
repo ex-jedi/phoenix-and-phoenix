@@ -26,6 +26,7 @@ body {
   min-width: 320px;
   max-width: 1920px;
   margin: 0 auto;
+  background-color: $background-colour-light;
 }
 
 // * Box sizing rules
@@ -70,6 +71,8 @@ a {
 .main-header {
   position: relative;
   padding: 0 $section-spacing-extra-large;
+  margin-bottom: $section-spacing-large;
+  background-color: $background-colour-light;
 }
 
 .main-logo-wrapper {
@@ -130,6 +133,12 @@ a {
 // *=========================================
 // ** Body **
 // *=========================================
+
+.section-heading {
+  font-size: 10rem;
+  width: fit-content;
+  margin: 0 auto $section-spacing-large;
+}
 
 // *=========================================
 // ** Forms  **
