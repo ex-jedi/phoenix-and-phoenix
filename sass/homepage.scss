@@ -48,6 +48,8 @@
 //*=========================================
 
 .homepage-section-one {
-  background-color: $background-colour-blue;
+  margin: 0;
   padding: $section-spacing-large $section-spacing-super-large;
+  background-color: $background-colour-blue;
+  color: $font-colour-light;
 }

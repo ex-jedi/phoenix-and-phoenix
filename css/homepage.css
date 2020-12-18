@@ -27,6 +27,8 @@
 }
 
 .homepage-section-one {
-  background-color: #535cb0;
+  margin: 0;
   padding: 20rem 40rem;
+  background-color: #535cb0;
+  color: #fdfcfa;
 }
