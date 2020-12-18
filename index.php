@@ -4,7 +4,7 @@
 <?php perch_content("Section One"); ?>
 </main>
 <?php perch_layout('main-footer'); ?>
-<?php perch_layout('main-footer-end-js'); ?>
+<?php perch_layout('homepage-footer-end'); ?>
 <!-- TODO: Remove debug -->
 <!-- <?php PerchUtil::output_debug(); ?> -->
 
