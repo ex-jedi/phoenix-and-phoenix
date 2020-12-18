@@ -2,16 +2,17 @@
 body {
   /* GROUP VARIABLES -- DECORATION -- COLOURS -- THEME
     =================================================== */
-  --colour-main: #ff8000;
-  --colour-main-hover: #424242;
-  --admin-colour-one: #bebebe;
+  --colour-main: hsl(46, 37%, 51%);
+  --colour-main-hover: hsl(0, 0%, 26%);
+  --admin-colour-one: hsl(0, 0%, 75%);
   --admin-colour-two: rgb(253, 253, 253);
-  --admin-color-dark: hsl(216, 12%, 8%);
+  --admin-color-dark: hsl(234, 37%, 51%);
+  --font-color-light: hsl(15, 15%, 95%);
 
   /* GROUP VARIABLES -- DECORATION -- TEXT
     =================================================== */
-  --font-family-main: "Roboto", Arial, sans-serif;
-  --font-family-headline: "Montserrat", Arial, sans-serif;
+  --font-family-main: 'Roboto', Arial, sans-serif;
+  --font-family-headline: 'Montserrat', Arial, sans-serif;
   /* GROUP VARIABLES -- DECORATION -- TEXT -- WEIGHTS
     =================================================== */
   --font-family-main-weight-normal: 400;
@@ -21,7 +22,7 @@ body {
 /* Add any brand specific CSS here */
 
 html {
-  font-size: 24px;
+  font-size: 25px;
 }
 
 body {
@@ -49,6 +50,16 @@ header a,
   background-color: var(--admin-color-dark);
 }
 
+.sidebar .back {
+  border: 1px solid var(--admin-colour-two);
+  font-size: 17px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar .back:hover {
+  border: 1px solid var(--admin-colour-two) !important;
+}
+
 .subnav li a {
   border-left: 4px solid var(--admin-color-dark);
 }
@@ -56,13 +67,19 @@ header a,
 .sidebar a,
 .sidebar h2,
 .sidebar h3 {
-  color: #fff !important;
+  color: var(--font-color-light) !important;
   opacity: 1;
 }
 
-/* Max font size so text fits  */
-.sidebar-back {
-  font-size: 22px;
+/* Makes text in text fields a bit larger */
+div.form-entry,
+input.input-simple {
+  font-size: 0.9rem !important;
+}
+
+/* Text is black on black background when redactor source is open. This fixess it */
+textarea.redactor-source-open {
+  color: #fff !important;
 }
 
 /* Adds space above block item title bar */
@@ -85,4 +102,18 @@ header a,
 div.markItUpHeader {
   display: none;
   visibility: hidden;
+}
+
+/* Hiding tags from Post meta admin  */
+input#postTags,
+input#postTags,
+label[for='postTags'] ~ span.inline-help,
+label[for='postTags'] {
+  display: none;
+}
+
+/* Hiding allow Comments checkbox and title from Post meta admin  */
+label[for='postAllowComments'],
+label[for='postAllowComments'] ~ .form-entry {
+  display: none;
 }
