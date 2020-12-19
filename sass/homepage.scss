@@ -67,6 +67,26 @@
 
 .homepage-bio-div {
   @include flex(row);
-
+  justify-content: space-between;
   width: 100%;
+  font-size: $font-size-large;
+  margin-bottom: $section-spacing-large;
+  position: relative;
+}
+
+.bio-image-wrapper,
+.bio-text-wrapper {
+  flex: 0 1 auto;
+  width: 50%;
+}
+
+.bio-image-wrapper {
+  margin-right: $section-spacing-small;
+  margin-top: $section-spacing-large;
+}
+
+.bio-text-wrapper {
+  p {
+    margin: 0;
+  }
 }
