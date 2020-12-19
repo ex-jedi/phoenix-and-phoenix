@@ -1,9 +1,9 @@
 <section class="homepage-section-one">
   <h2 class="section-heading homepage-section-heading">
-    <perch:content id="sectionOneHeading" type="text" label="Section One Heading" required>
+    <perch:content id="sectionOneHeading" type="text" label="Section One Heading" divider-before="Section One Intro" required>
   </h2>
   <div class="homepage-section-one-main-image-wrapper">
-    <img class="homepage-section-one-main-image" itemprop="image" src="<perch:content id="homepageSectionOneMainImage" type="image" label="Homepage Bio Main Image" help="Image must be at least 1500px x 1500px to crop to a square" width="1500" height="1500" quality="70" crop>" alt="<perch:content id="altOne" type="text" label="Image description">"
+    <img class="homepage-section-one-main-image" itemprop="image" src="<perch:content id="homepageSectionOneMainImage" type="image" label="Section One Main Image" help="Image must be at least 1500px x 1500px to crop to a square" width="1500" height="1500" quality="70" crop>" alt="<perch:content id="altOne" type="text" label="Image description">"
     sizes="80vw"
     srcset="<perch:content type="image" id="homepageSectionOneMainImage" width="1500" height="1500" crop> 1500w,
     <perch:content type="image" id="homepageSectionOneMainImage" width="1200" height="1200" quality="70" crop> 1200w,
@@ -11,12 +11,10 @@
     <perch:content type="image" id="homepageSectionOneMainImage" width="800" height="800" quality="70" crop> 800w,
     <perch:content type="image" id="homepageSectionOneMainImage" width="600" height="600" quality="70" crop> 600w">
   </div>
+
   <div class="homepage-bio-div homepage-bio-one">
-    <div class="bio-text-wrapper">
-      <perch:content id="bioOneText" type="textarea" editor="redactor" label="Homepage Bio One"  required  html>
-    </div>
     <div class="bio-image-wrapper">
-      <img class="homepage-bio-image" itemprop="image" src="<perch:content id="homepageBioImageOne" type="image" label="Homepage Bio Image" help="Image must be at least 1500px x 1500px to crop to a square" width="1500" height="1500" quality="70" crop>" alt="<perch:content id="altTwo" type="text" label="Image description">"
+      <img class="homepage-bio-image" itemprop="image" src="<perch:content id="homepageBioImageOne" type="image" label="Bio One Image" help="Image must be at least 1500px x 1500px to crop to a square" divider-before="Bio One" width="1500" height="1500" quality="70" crop>" alt="<perch:content id="altTwo" type="text" label="Image description">"
       sizes="80vh"
     srcset="<perch:content type="image" id="homepageBioImageOne" width="1500" height="1500" crop> 1500w,
     <perch:content type="image" id="homepageBioImageOne" width="1200" height="1200" quality="70" crop> 1200w,
@@ -24,19 +22,23 @@
     <perch:content type="image" id="homepageBioImageOne" width="800" height="800" quality="70" crop> 800w,
     <perch:content type="image" id="homepageBioImageOne" width="600" height="600" quality="70" crop> 600w">
     </div>
-  </div>
-  <div class="homepage-bio-div homepage-bio-two">
     <div class="bio-text-wrapper">
-      <perch:content id="bioTwoText" type="textarea" editor="redactor" label="Homepage Bio Two"  required  html>
+      <perch:content id="bioOneText" type="textarea" editor="redactor" label="Bio One Text" required html>
     </div>
+  </div>
+
+  <div class="homepage-bio-div homepage-bio-two">
     <div class="bio-image-wrapper">
-      <img class="homepage-bio-image" itemprop="image" src="<perch:content id="homepageBioImageTwo" type="image" label="Homepage Bio Image" help="Image must be at least 1500px x 1500px to crop to a square" width="1500" height="1500" quality="70" crop>" altTwo="<perch:content id="altThree" type="text" label="Image description">"
+      <img class="homepage-bio-image" itemprop="image" src="<perch:content id="homepageBioImageTwo" type="image" label="Bio Two Image" help="Image must be at least 1500px x 1500px to crop to a square" divider-before="Bio Two" width="1500" height="1500" quality="70" crop>" altTwo="<perch:content id="altThree" type="text" label="Image description">"
       sizes="80vh"
     srcset="<perch:content type="image" id="homepageBioImageTwo" width="1500" height="1500" crop> 1500w,
     <perch:content type="image" id="homepageBioImageTwo" width="1200" height="1200" quality="70" crop> 1200w,
     <perch:content type="image" id="homepageBioImageTwo" width="1000" height="1000" quality="70" crop> 1000w,
     <perch:content type="image" id="homepageBioImageTwo" width="800" height="800" quality="70" crop> 800w,
     <perch:content type="image" id="homepageBioImageTwo" width="600" height="600" quality="70" crop> 600w">
+    </div>
+    <div class="bio-text-wrapper">
+      <perch:content id="bioTwoText" type="textarea" editor="redactor" label="Bio Two Text" required html>
     </div>
   </div>
 </section>

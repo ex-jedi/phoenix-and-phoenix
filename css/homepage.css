@@ -33,12 +33,19 @@
   color: #fdfcfa;
 }
 
-.bio-image-wrapper {
-  width: 100%;
-}
-
 .homepage-bio-image {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.homepage-section-one-main-image-wrapper {
+  width: 100%;
+  margin-bottom: 20rem;
+}
+
+.homepage-bio-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
