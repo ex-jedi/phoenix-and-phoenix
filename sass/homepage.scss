@@ -40,18 +40,21 @@
 }
 
 //*=========================================
-//** Main Nav **
+//** Main **
 //*=========================================
+
+.homepage-section {
+  margin: 0;
+  padding: $section-spacing-large $section-spacing-super-large;
+  color: $font-colour-light;
+}
 
 //*=========================================
 //** Section One **
 //*=========================================
 
 .homepage-section-one {
-  margin: 0;
-  padding: $section-spacing-large $section-spacing-super-large;
   background-color: $background-colour-blue;
-  color: $font-colour-light;
 }
 
 .homepage-bio-image {
@@ -89,4 +92,12 @@
   p {
     margin: 0;
   }
+}
+
+//*=========================================
+//** Section Two **
+//*=========================================
+
+.homepage-section-two {
+  background-color: $background-colour-gold;
 }

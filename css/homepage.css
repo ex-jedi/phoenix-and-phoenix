@@ -26,11 +26,14 @@
   width: 47%;
 }
 
-.homepage-section-one {
+.homepage-section {
   margin: 0;
   padding: 20rem 40rem;
-  background-color: #535cb0;
   color: #fdfcfa;
+}
+
+.homepage-section-one {
+  background-color: #535cb0;
 }
 
 .homepage-bio-image {
@@ -67,4 +70,8 @@
 
 .bio-text-wrapper p {
   margin: 0;
+}
+
+.homepage-section-two {
+  background-color: #b09b53;
 }

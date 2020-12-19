@@ -27,6 +27,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   background-color: $background-colour-light;
+  position: relative;
 }
 
 // * Box sizing rules
@@ -34,6 +35,11 @@ body {
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+section,
+main {
+  overflow: hidden;
 }
 
 // *=========================================
@@ -70,8 +76,7 @@ a {
 
 .main-header {
   position: relative;
-  padding: 0 $section-spacing-extra-large;
-  margin-bottom: $section-spacing-large;
+  padding: 0 $section-spacing-extra-large $section-spacing-large;
   background-color: $background-colour-light;
 }
 
@@ -182,8 +187,8 @@ select {
 //*Skip to content link
 .show-on-focus {
   position: absolute;
-  color: #000;
-  background-color: #fff;
+  color: $font-colour-blue;
+  background-color: $background-colour-light;
   padding: 10px;
   font-size: $font-size-medium;
   top: 0;

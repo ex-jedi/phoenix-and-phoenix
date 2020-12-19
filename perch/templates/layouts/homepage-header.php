@@ -31,8 +31,6 @@
 		'template' => 'default.html'
 	));
 	?>
-<!-- Google Analytics -->
-<?php perch_content('Analytics'); ?>
 
 <!-- Cookie Warning -->
 <?php perch_content("Cookie Warning"); ?>
