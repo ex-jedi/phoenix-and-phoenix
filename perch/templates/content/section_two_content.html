@@ -2,4 +2,29 @@
   <h1 class="section-heading section-two-heading">
     <perch:content id="sectionTwoHeading" type="text" label="Section Two Heading" required>
   </h1>
+  <p class="section-two-paragraph">
+    <perch:content id="secTwoParaOne" type="text" label="Paragraph One">
+  </p>
+  <div class="section-two-flex-wrapper section-two-flex-wrapper-one">
+    <p class="section-two-paragraph section-two-flex-paragraph">
+      <perch:content id="secTwoFlexParaOne" type="text" label="Paragraph Two">
+    </p>
+    <img class="section-two-flex-image" itemprop="image" src="<perch:content id="secTwoFlexImgOne" type="image" width="1000" label="Section Two Image One" quality="70">" alt="<perch:content id="altOne" type="text" label="Image description">"
+    sizes="40vw"
+    srcset="<perch:content type="image" id="secTwoFlexImgOne" width="1000" > 1000w,
+    <perch:content type="image" id="secTwoFlexImgOne" width="900" quality="70"> 900w,
+    <perch:content type="image" id="secTwoFlexImgOne" width="800" quality="70"> 800w,
+    <perch:content type="image" id="secTwoFlexImgOne" width="600" quality="70"> 600w,
+    <perch:content type="image" id="secTwoFlexImgOne" width="400" quality="70"> 400w">
+  </div>
+  <div class="section-two-flex-wrapper section-two-flex-wrapper-two">
+    <p class="section-two-paragraph section-two-flex-paragraph">
+      <perch:content id="secTwoFlexParaTwo" type="text" label="Paragraph Three">
+    </p>
+    <div class="homepage-call-to-action-link-wrapper">
+      <a class="homepage-call-to-action-link" href="/about-us">
+        <perch:content id="ctaLinkText" type="text" label="Call To Action One Text">
+      </a>
+    </div>
+  </div>
 </section>

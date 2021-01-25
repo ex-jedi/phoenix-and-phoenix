@@ -101,3 +101,44 @@
 .homepage-section-two {
   background-color: $background-colour-gold;
 }
+
+.section-two-paragraph {
+  color: $font-colour-light;
+  font-size: $font-size-large;
+  margin: 0 auto $section-spacing-large;
+}
+
+.section-two-flex-wrapper {
+  @include flex(row);
+  align-items: center;
+  margin: 0 auto $section-spacing-large;
+}
+
+.section-two-flex-paragraph {
+  margin: 0;
+}
+
+.section-two-flex-image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  margin-left: $section-spacing-small;
+}
+
+.homepage-call-to-action-link-wrapper {
+  flex: 1 0 auto;
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  background-color: $background-colour-light;
+  width: 275px;
+  height: 275px;
+  padding: $paragraph-spacing-medium;
+  border-radius: 50%;
+}
+
+.homepage-call-to-action-link {
+  color: $font-colour-blue;
+  font-size: $font-size-medium;
+  text-align: center;
+}
