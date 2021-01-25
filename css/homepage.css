@@ -87,6 +87,11 @@
   flex-direction: row;
   align-items: center;
   margin: 0 auto 20rem;
+  position: relative;
+}
+
+.section-two-flex-wrapper-three {
+  margin: 0 auto calc(20rem + 150px);
 }
 
 .section-two-flex-paragraph {
@@ -117,4 +122,14 @@
   color: #535cb0;
   font-size: 2.5rem;
   text-align: center;
+}
+
+.homepage-call-to-action-link-two {
+  color: #b07677;
+}
+
+.positioned-call-to-action-wrapper {
+  position: absolute;
+  right: 375px;
+  top: 375px;
 }

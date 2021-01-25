@@ -112,6 +112,11 @@
   @include flex(row);
   align-items: center;
   margin: 0 auto $section-spacing-large;
+  position: relative;
+}
+
+.section-two-flex-wrapper-three {
+  margin: 0 auto calc(#{$section-spacing-large} + 150px);
 }
 
 .section-two-flex-paragraph {
@@ -141,4 +146,14 @@
   color: $font-colour-blue;
   font-size: $font-size-medium;
   text-align: center;
+}
+
+.homepage-call-to-action-link-two {
+  color: $font-colour-brown;
+}
+
+.positioned-call-to-action-wrapper {
+  position: absolute;
+  right: 375px;
+  top: 375px;
 }
