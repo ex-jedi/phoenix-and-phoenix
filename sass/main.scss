@@ -177,6 +177,21 @@ select {
 // ** Footer  **
 // *=========================================
 
+.main-footer {
+  color: $font-colour-light;
+  font-size: $font-size-medium;
+  background-color: $background-colour-blue;
+  padding: $section-spacing-large $section-spacing-super-large;
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
 //*=========================================
 //** Utility & Accessibility  **
 //*=========================================
