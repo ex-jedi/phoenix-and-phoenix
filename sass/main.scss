@@ -18,6 +18,13 @@ html {
   -webkit-tap-highlight-color: transparent;
   font-size: 10px;
   overflow-x: hidden;
+
+  @include styled-scrollbar(
+    $font-size-small,
+    $background-colour-blue,
+    $background-colour-light,
+    $background-colour-light
+  );
 }
 
 body {

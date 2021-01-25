@@ -32,11 +32,10 @@
 	));
 	?>
 
-<!-- Cookie Warning -->
-<?php perch_content("Cookie Warning"); ?>
-
 </head>
 	<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
+<!-- Cookie Warning -->
+<?php perch_content("Cookie Warning"); ?>
 				<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
 			<header class="main-header">
 				<!-- Skip to main content link  -->
