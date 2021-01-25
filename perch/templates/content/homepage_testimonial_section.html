@@ -2,4 +2,24 @@
   <h1 class="section-heading homepage-testimonials-heading">
     <perch:content id="testimonialsHeading" type="text" label="Testimonials Heading" required>
   </h1>
+  <perch:repeater id="homepageTestimonials" label="Testimonials">
+    <div class="homepage-testimonial-wrapper">
+      <p class="testimonial-paragraph">
+        <perch:content id="testimonialText" type="textarea" label="Testimonial text">
+      </p>
+      <div class="testimonial-flex-wrapper">
+        <p class="testimonial-name">
+          <perch:content id="testimonialName" type="text" label="Testimonial Name" >
+        </p>
+        <img class="testimonial-image" itemprop="image" src="<perch:content id="testimonialImg" type="image" width="1000" label="Testimonial Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image description">"
+        sizes="40vw"
+        srcset="<perch:content type="image" id="testimonialImg" width="1000" > 1000w,
+        <perch:content type="image" id="testimonialImg" width="800" quality="70"> 800w,
+        <perch:content type="image" id="testimonialImg" width="600" quality="70"> 600w,
+        <perch:content type="image" id="testimonialImg" width="400" quality="70"> 400w,
+        <perch:content type="image" id="testimonialImg" width="200" quality="70"> 200w" >
+      </div>
+    </div>
+  </perch:repeater>
+
 </section>
