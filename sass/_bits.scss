@@ -153,17 +153,6 @@ $font-colour-blue: $blue;
 //** Effects and Animation  **
 //*=========================================
 
-//********** Animation Stagger **********
-
-@mixin stagger-anim-delay($elem, $initial-delay, $stagger-delay) {
-  @for $i from 1 through $elem {
-    &:nth-of-type(#{$i}) {
-      animation-delay: $initial-delay + $stagger-delay * $i;
-    }
-    $i: $i - 1;
-  }
-}
-
 //********** Transition Timings**********
 
 $transition-one: 0.3s ease-in-out 0s;
