@@ -74,7 +74,8 @@ img {
 //********** Links **********
 
 a {
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
 }
 
 //*=========================================
@@ -122,6 +123,7 @@ a {
 .main-nav-link {
   display: inline-block;
   text-transform: uppercase;
+  text-decoration: none;
   margin: 5rem 0 0;
   height: fit-content;
   white-space: nowrap;

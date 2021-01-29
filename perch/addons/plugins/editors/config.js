@@ -2,7 +2,7 @@ Perch.UserConfig.redactor = (function() {
   const get = function(profile, config, field) {
     config.plugins = [];
     config.buttons = ['link', 'bold', 'italic', 'format', 'ol', 'ul', 'html'];
-    config.formatting = ['p', 'h3', 'h4'];
+    config.formatting = ['p', 'h2', 'h3', 'h4'];
 
     return config;
   };

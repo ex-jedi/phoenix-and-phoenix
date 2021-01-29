@@ -146,6 +146,7 @@
   color: $font-colour-blue;
   font-size: $font-size-medium;
   text-align: center;
+  text-decoration: none;
 }
 
 .homepage-call-to-action-link-two {
@@ -207,4 +208,16 @@
   height: 275px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+//*=========================================
+//** Contact Section **
+//*=========================================
+
+.homepage-contact-section {
+  background-color: $background-colour-brown;
+}
+
+.homepage-contact-heading {
+  margin: 0 auto;
 }
