@@ -175,6 +175,19 @@ select {
   opacity: 0;
 }
 
+//*=========================================
+//** Contact Section **
+//*=========================================
+
+.contact-section {
+  margin: 0;
+  padding: $section-spacing-large $section-spacing-super-large;
+}
+
+.contact-heading {
+  margin: 0 auto;
+}
+
 // *=========================================
 // ** Footer  **
 // *=========================================

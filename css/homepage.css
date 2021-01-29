@@ -177,10 +177,11 @@
   border-radius: 50%;
 }
 
-.homepage-contact-section {
+.contact-section {
   background-color: #b07677;
+  color: #fdfcfa;
 }
 
-.homepage-contact-heading {
+.contact-heading {
   margin: 0 auto;
 }
