@@ -10,6 +10,10 @@ function tabClickHandler(e) {
   tabButtons.forEach((buttons) => buttons.setAttribute('aria-selected', false));
   // Mark the clicked tab button as selected
   clickedTab.setAttribute('aria-selected', true);
+  // Find associated tab panel and show it
+  const { id } = clickedTab;
+  const panelToShow = tabPanel.find((panel) => panel.getAttribute('aria-labelledby') === id);
+  panelToShow.hidden = false;
 }
 
 tabButtons.forEach((button) => button.addEventListener('click', tabClickHandler));
