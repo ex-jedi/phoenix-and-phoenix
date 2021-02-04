@@ -25,9 +25,10 @@
   border: none;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-#branding {
+.tab-button#branding {
   background-color: $background-colour-blue;
   color: $font-colour-light;
 
@@ -37,12 +38,25 @@
   }
 }
 
-#websites {
-  background-color: $font-colour-gold;
+.tab-button#websites {
+  color: $font-colour-light;
+  background-color: $background-colour-gold;
+
+  &[aria-selected='true'] {
+    background-color: $background-colour-light;
+    color: $font-colour-gold;
+  }
 }
 
-#illustration {
+.tab-button#illustration {
   background-color: $background-colour-brown;
+  color: $font-colour-light;
+  transition: all 0.3 ease;
+
+  &[aria-selected='true'] {
+    background-color: $background-colour-light;
+    color: $font-colour-brown;
+  }
 }
 
 #websites,

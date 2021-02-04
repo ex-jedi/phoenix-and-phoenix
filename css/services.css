@@ -14,23 +14,35 @@
   border: none;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-#branding {
+.tab-button#branding {
   background-color: #535cb0;
   color: #fdfcfa;
 }
-#branding[aria-selected=true] {
+.tab-button#branding[aria-selected=true] {
   background-color: #fdfcfa;
   color: #535cb0;
 }
 
-#websites {
+.tab-button#websites {
+  color: #fdfcfa;
   background-color: #b09b53;
 }
+.tab-button#websites[aria-selected=true] {
+  background-color: #fdfcfa;
+  color: #b09b53;
+}
 
-#illustration {
+.tab-button#illustration {
   background-color: #b07677;
+  color: #fdfcfa;
+  transition: all 0.3 ease;
+}
+.tab-button#illustration[aria-selected=true] {
+  background-color: #fdfcfa;
+  color: #b07677;
 }
 
 #websites,

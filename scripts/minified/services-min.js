@@ -1,2 +1,2 @@
-(()=>{const e=document.querySelector(".tabs-wrapper"),r=e.querySelectorAll('[role="tabButton"]'),t=Array.from(e.querySelectorAll('[role="tabpanel"]'));function o(e){t.forEach((e=>e.hidden=!0)),r.forEach((e=>e.setAttribute("aria-selected",!1)))}r.forEach((e=>e.addEventListener("click",o)))})();
+(()=>{const e=document.querySelector(".tabs-wrapper"),t=e.querySelectorAll('[role="tabButton"]'),r=Array.from(e.querySelectorAll('[role="tabpanel"]'));function a(e){const a=e.currentTarget;r.forEach((e=>e.hidden=!0)),t.forEach((e=>e.setAttribute("aria-selected",!1))),a.setAttribute("aria-selected",!0)}t.forEach((e=>e.addEventListener("click",a)))})();
 //# sourceMappingURL=services-min.js.map
