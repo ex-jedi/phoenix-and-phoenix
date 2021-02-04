@@ -28,7 +28,13 @@
 }
 
 #branding {
-  color: $font-colour-blue;
+  background-color: $background-colour-blue;
+  color: $font-colour-light;
+
+  &[aria-selected='true'] {
+    background-color: $background-colour-light;
+    color: $font-colour-blue;
+  }
 }
 
 #websites {

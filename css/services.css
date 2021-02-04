@@ -17,6 +17,11 @@
 }
 
 #branding {
+  background-color: #535cb0;
+  color: #fdfcfa;
+}
+#branding[aria-selected=true] {
+  background-color: #fdfcfa;
   color: #535cb0;
 }
 

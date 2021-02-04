@@ -1,2 +1,2 @@
-console.log("Hi There!");
+(()=>{const e=document.querySelector(".tabs-wrapper"),r=e.querySelectorAll('[role="tabButton"]'),t=Array.from(e.querySelectorAll('[role="tabpanel"]'));function o(e){t.forEach((e=>e.hidden=!0)),r.forEach((e=>e.setAttribute("aria-selected",!1)))}r.forEach((e=>e.addEventListener("click",o)))})();
 //# sourceMappingURL=services-min.js.map
