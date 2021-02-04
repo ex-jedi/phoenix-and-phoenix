@@ -1,0 +1,56 @@
+.tab-buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 5rem;
+  padding: 0 25rem;
+}
+
+.tab-button {
+  flex: 1 0 auto;
+  width: 300px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#branding {
+  color: #535cb0;
+}
+
+#websites {
+  background-color: #b09b53;
+}
+
+#illustration {
+  background-color: #b07677;
+}
+
+#websites,
+#illustration {
+  color: #fdfcfa;
+}
+
+.tab-panel {
+  width: 100%;
+  height: 400px;
+  color: #fdfcfa;
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 10rem;
+  margin-top: 10rem;
+}
+
+.branding-tab-panel {
+  background-color: #535cb0;
+}
+
+.websites-tab-panel {
+  background-color: #b07677;
+}
+
+.illustration-tab-panel {
+  background-color: #b09b53;
+}

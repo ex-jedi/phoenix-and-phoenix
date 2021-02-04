@@ -37,7 +37,7 @@
 <!-- Cookie Warning -->
 <?php perch_content("Cookie Warning"); ?>
 				<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
-			<header class="header homepage-header">
+			<header class="header main-header">
 				<!-- Skip to main content link  -->
 				<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 				<div class="main-logo-wrapper">

@@ -9,3 +9,59 @@
 //*=========================================
 //** Contact Section **
 //*=========================================
+
+.tab-buttons-wrapper {
+  @include flex(row);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: $font-size-large;
+  padding: 0 $section-spacing-larger;
+}
+
+.tab-button {
+  flex: 1 0 auto;
+  width: 300px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#branding {
+  color: $font-colour-blue;
+}
+
+#websites {
+  background-color: $font-colour-gold;
+}
+
+#illustration {
+  background-color: $background-colour-brown;
+}
+
+#websites,
+#illustration {
+  color: $font-colour-light;
+}
+
+.tab-panel {
+  width: 100%;
+  height: 400px;
+  color: $font-colour-light;
+  font-size: $font-size-large;
+  text-align: center;
+  padding-top: $section-spacing-small;
+  margin-top: $section-spacing-small;
+}
+
+.branding-tab-panel {
+  background-color: $background-colour-blue;
+}
+
+.websites-tab-panel {
+  background-color: $background-colour-brown;
+}
+
+.illustration-tab-panel {
+  background-color: $background-colour-gold;
+}

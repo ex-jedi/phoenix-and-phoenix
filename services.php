@@ -5,7 +5,7 @@
 <?php perch_content("Contact Section"); ?>
 </main>
 <?php perch_layout('main-footer'); ?>
-<?php perch_layout('main-footer-end'); ?>
+<?php perch_layout('services-footer-end'); ?>
 <!-- TODO: Remove debug -->
 <!-- <?php PerchUtil::output_debug(); ?> -->
 
