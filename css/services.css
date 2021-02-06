@@ -2,6 +2,16 @@
   padding: 20rem 25rem;
 }
 
+.branding-text-wrapper {
+  font-size: 5rem;
+}
+.branding-text-wrapper p:first-of-type {
+  margin-top: 0;
+}
+.branding-text-wrapper p:last-of-type {
+  margin-bottom: 0;
+}
+
 .tab-buttons-wrapper {
   display: flex;
   flex-direction: row;
@@ -56,10 +66,6 @@
 
 .tab-panel {
   width: 100%;
-  min-height: 400px;
-  color: #fdfcfa;
-  font-size: 5rem;
-  text-align: center;
 }
 
 .branding-tab-panel {
@@ -88,13 +94,11 @@
   width: 50%;
 }
 
-.branding-intro-text-wrapper p:first-of-type {
-  margin-top: 0;
-}
-.branding-intro-text-wrapper p:last-of-type {
-  margin-bottom: 0;
-}
-
 .branding-intro-image {
   margin-left: 10rem;
+}
+
+.branding-process-section {
+  background-color: #535cb0;
+  color: #fdfcfa;
 }

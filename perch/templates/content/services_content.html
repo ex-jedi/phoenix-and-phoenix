@@ -1,4 +1,5 @@
     <div class="tabs-wrapper">
+      <!-- Tab Buttons -->
       <div class="tab-buttons-wrapper" role="tablist" aria-label="Services">
         <button class="tab-button" role="tabButton" aria-selected="true" id="branding">
           Branding
@@ -10,10 +11,13 @@
           Illustration
         </button>
       </div>
+      <!-- Tab Panels -->
       <div class="tab-panel branding-tab-panel" role="tabpanel" aria-labelledby="branding">
+        <!-- Branding Tab -->
         <perch:group label="Branding Tab Content">
+          <!-- Branding Intro -->
           <section class="services-section branding-intro-section">
-            <div class="branding-intro-text-wrapper">
+            <div class="branding-text-wrapper branding-intro-text-wrapper">
               <perch:content id="brandingIntroText" type="textarea" editor="redactor" label="Branding Intro Text" divider-before="Branding Intro" required html>
             </div>
             <img class="branding-intro-image" itemprop="image" src="<perch:content id="brandingIntroImg" type="image" width="1000" label="Branding Intro Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image description">"
@@ -23,6 +27,15 @@
             <perch:content type="image" id="brandingIntroImg" width="600" quality="70"> 600w,
             <perch:content type="image" id="brandingIntroImg" width="500" quality="70"> 500w" >
 
+          </section>
+          <!-- Branding Process -->
+          <section class="services-section branding-process-section">
+            <h2 class="services-subheading">
+              <perch:content id="processSubtitle" type="text" label="Process Subheading" divider-before="Process" required>
+            </h2>
+            <div class="branding-text-wrapper branding-process-text-wrapper">
+              <perch:content id="processText" type="textarea" editor="redactor" label="Process Text" required html>
+            </div>
           </section>
         </perch:group>
       </div>

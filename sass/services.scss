@@ -13,6 +13,18 @@
   padding: $section-spacing-large $section-spacing-larger;
 }
 
+.branding-text-wrapper {
+  font-size: $font-size-large;
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 //*=========================================
 //** Tabs **
 //*=========================================
@@ -73,10 +85,6 @@
 
 .tab-panel {
   width: 100%;
-  min-height: 400px;
-  color: $font-colour-light;
-  font-size: $font-size-large;
-  text-align: center;
 }
 
 .branding-tab-panel {
@@ -108,16 +116,15 @@
   width: 50%;
 }
 
-.branding-intro-text-wrapper {
-  p:first-of-type {
-    margin-top: 0;
-  }
-
-  p:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
 .branding-intro-image {
   margin-left: $section-spacing-small;
+}
+
+//*=========================================
+//** Process **
+//*=========================================
+
+.branding-process-section {
+  background-color: $background-colour-blue;
+  color: $font-colour-light;
 }
