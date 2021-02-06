@@ -1,3 +1,7 @@
+.services-section {
+  padding: 20rem 25rem;
+}
+
 .tab-buttons-wrapper {
   display: flex;
   flex-direction: row;
@@ -52,12 +56,10 @@
 
 .tab-panel {
   width: 100%;
-  height: 400px;
+  min-height: 400px;
   color: #fdfcfa;
   font-size: 5rem;
   text-align: center;
-  padding-top: 10rem;
-  margin-top: 10rem;
 }
 
 .branding-tab-panel {
@@ -70,4 +72,29 @@
 
 .illustration-tab-panel {
   background-color: #b09b53;
+}
+
+.branding-intro-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fdfcfa;
+  color: #535cb0;
+}
+
+.branding-intro-text-wrapper,
+.branding-intro-image {
+  flex: 0 1 auto;
+  width: 50%;
+}
+
+.branding-intro-text-wrapper p:first-of-type {
+  margin-top: 0;
+}
+.branding-intro-text-wrapper p:last-of-type {
+  margin-bottom: 0;
+}
+
+.branding-intro-image {
+  margin-left: 10rem;
 }
