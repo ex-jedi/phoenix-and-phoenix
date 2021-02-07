@@ -15,6 +15,7 @@
 
 .branding-text-wrapper {
   font-size: $font-size-large;
+  text-align: center;
 
   p:first-of-type {
     margin-top: 0;
@@ -121,10 +122,25 @@
 }
 
 //*=========================================
-//** Process **
+//** Branding Process **
 //*=========================================
 
 .branding-process-section {
   background-color: $background-colour-blue;
   color: $font-colour-light;
+}
+
+//*=========================================
+//**  **
+//*=========================================
+
+.essential-branding-package-section {
+  background-color: $background-colour-gold;
+  color: $font-colour-light;
+}
+
+.branding-package-price-paragraph {
+  margin: $section-spacing-large auto 0;
+  font-size: $font-size-large;
+  text-align: center;
 }

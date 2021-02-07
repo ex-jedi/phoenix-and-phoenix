@@ -131,25 +131,18 @@
 }
 
 .homepage-call-to-action-link-wrapper {
-  flex: 1 0 auto;
-  @include flex(column);
-  justify-content: center;
-  align-items: center;
   background-color: $background-colour-light;
-  width: 275px;
-  height: 275px;
-  padding: $paragraph-spacing-medium;
-  border-radius: 50%;
 }
 
-.homepage-call-to-action-link {
+.homepage-call-to-action-link-one {
   color: $font-colour-blue;
-  font-size: $font-size-medium;
-  text-align: center;
-  text-decoration: none;
 }
 
 .homepage-call-to-action-link-two {
+  color: $font-colour-brown;
+}
+
+.homepage-call-to-action-link-three {
   color: $font-colour-brown;
 }
 

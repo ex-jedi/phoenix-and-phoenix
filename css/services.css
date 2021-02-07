@@ -4,6 +4,7 @@
 
 .branding-text-wrapper {
   font-size: 5rem;
+  text-align: center;
 }
 .branding-text-wrapper p:first-of-type {
   margin-top: 0;
@@ -101,4 +102,15 @@
 .branding-process-section {
   background-color: #535cb0;
   color: #fdfcfa;
+}
+
+.essential-branding-package-section {
+  background-color: #b09b53;
+  color: #fdfcfa;
+}
+
+.branding-package-price-paragraph {
+  margin: 20rem auto 0;
+  font-size: 5rem;
+  text-align: center;
 }

@@ -50,10 +50,8 @@ main {
 }
 
 // *=========================================
-// ** Content container and block **
+// ** Headings **
 // *=========================================
-
-//********** Headings**********
 
 h1 {
   font-size: $font-size-extra-large;
@@ -67,9 +65,11 @@ h2 {
   margin: 0 auto $section-spacing-large;
 }
 
-//********** Containers **********
-
-//********** Paragraphs **********
+.section-heading {
+  font-size: $font-size-extra-large;
+  width: fit-content;
+  margin: 0 auto $section-spacing-large;
+}
 
 // *=========================================
 // ** Inline **
@@ -81,6 +81,11 @@ h2 {
 img {
   max-width: 100%;
   display: block;
+}
+
+//********** Paragraphs **********
+p {
+  margin: 0 auto $paragraph-spacing-large;
 }
 
 //********** Links **********
@@ -168,10 +173,20 @@ a {
 // ** Body **
 // *=========================================
 
-.section-heading {
-  font-size: $font-size-extra-large;
-  width: fit-content;
-  margin: 0 auto $section-spacing-large;
+.call-to-action-link-wrapper {
+  flex: 1 0 auto;
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  width: 275px;
+  height: 275px;
+  border-radius: 50%;
+}
+
+.call-to-action-link {
+  font-size: $font-size-medium;
+  text-align: center;
+  text-decoration: none;
 }
 
 // *=========================================

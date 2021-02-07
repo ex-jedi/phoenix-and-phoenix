@@ -20,7 +20,7 @@
             <div class="branding-text-wrapper branding-intro-text-wrapper">
               <perch:content id="brandingIntroText" type="textarea" editor="redactor" label="Branding Intro Text" divider-before="Branding Intro" required html>
             </div>
-            <img class="branding-intro-image" itemprop="image" src="<perch:content id="brandingIntroImg" type="image" width="1000" label="Branding Intro Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image description">"
+            <img class="branding-intro-image" itemprop="image" src="<perch:content id="brandingIntroImg" type="image" width="1000" label="Branding Intro Image" quality="70">" alt="<perch:content id="brandingImgAlt" type="text" label="Branding Image Description">"
             sizes="40vw"
             srcset="<perch:content type="image" id="brandingIntroImg" width="1000" > 1000w,
             <perch:content type="image" id="brandingIntroImg" width="800" quality="70"> 800w,
@@ -31,17 +31,47 @@
           <!-- Branding Process -->
           <section class="services-section branding-process-section">
             <h2 class="services-subheading">
-              <perch:content id="processSubtitle" type="text" label="Process Subheading" divider-before="Process" required>
+              <perch:content id="brandingProcessSubtitle" type="text" label="Branding Process Subheading" divider-before="Process" required>
             </h2>
             <div class="branding-text-wrapper branding-process-text-wrapper">
-              <perch:content id="processText" type="textarea" editor="redactor" label="Process Text" required html>
+              <perch:content id="processText" type="textarea" editor="redactor" label="Branding Process Text" required html>
             </div>
+          </section>
+          <section class="services-section essential-branding-package-section">
+            <h2 class="services-subheading">
+              <perch:content id="brandingPackageSubheading" type="text" label="Essential Branding Package Subheading" required>
+            </h2>
+            <div class="branding-text-wrapper essential-branding-process-text-wrapper">
+              <perch:content id="essentialBrandingProcessTextWrapper" type="textarea" editor="redactor" label="Branding Essential Package Text" required html>
+              </div>
+              <p class="branding-package-price-paragraph essential-branding-package-price-paragraph">
+                <perch:content id="essentialBrandingProce" type="text" label="Essential Branding Package Price" required >
+              </p>
+              <div class="essential-branding-package-image-wrapper">
+                <img class="essential-branding-image" itemprop="image" src="<perch:content id="essentialBrandingImage" type="image" width="1000" label="Essential Branding Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image description">"
+                sizes="100vw"
+                srcset="<perch:content type="image" id="essentialBrandingImage" width="1000" > 1000w,
+                <perch:content type="image" id="essentialBrandingImage" width="900" quality="70"> 900w,
+                <perch:content type="image" id="essentialBrandingImage" width="800" quality="70"> 800w,
+                <perch:content type="image" id="essentialBrandingImage" width="700" quality="70"> 700w,
+                <perch:content type="image" id="essentialBrandingImage" width="600" quality="70"> 600w" >
+
+                <div class="call-to-action-link-wrapper services-call-to-action-link-wrapper">
+                  <!-- TODO: Insert proper link -->
+                  <a class="call-to-action-link services-call-to-action-link-one" href="#">
+                    <perch:content id="servicesCtaLinkOne" type="text" label="Essential Branding Call To Action">
+                  </a>
+                </div>
+              </div>
+
           </section>
         </perch:group>
       </div>
+      <!-- Websites Tab -->
       <div class="tab-panel websites-tab-panel" role="tabpanel" aria-labelledby="websites" hidden>
         <h2>Websites</h2>
       </div>
+      <!-- Illustrations Tab  -->
       <div class="tab-panel illustration-tab-panel" role="tabpanel" aria-labelledby="illustration" hidden>
         <h2>Illustrations</h2>
       </div>
