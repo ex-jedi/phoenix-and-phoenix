@@ -110,7 +110,31 @@
 }
 
 .branding-package-price-paragraph {
-  margin: 20rem auto 0;
+  margin: 20rem auto;
   font-size: 5rem;
   text-align: center;
+}
+
+.branding-package-cta-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto 20rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.services-call-to-action-link-wrapper-one {
+  background-color: #fdfcfa;
+  flex: 0 1 auto;
+}
+
+.services-call-to-action-link-one {
+  color: #535cb0;
+}
+
+.essential-branding-image {
+  flex: 0 1 auto;
+  width: 500px;
 }

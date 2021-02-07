@@ -131,7 +131,7 @@
 }
 
 //*=========================================
-//**  **
+//** Essential Branding Package  **
 //*=========================================
 
 .essential-branding-package-section {
@@ -140,7 +140,30 @@
 }
 
 .branding-package-price-paragraph {
-  margin: $section-spacing-large auto 0;
+  margin: $section-spacing-large auto;
   font-size: $font-size-large;
   text-align: center;
+}
+
+.branding-package-cta-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  margin: 0 auto $section-spacing-large;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.services-call-to-action-link-wrapper-one {
+  background-color: $background-colour-light;
+  flex: 0 1 auto;
+}
+
+.services-call-to-action-link-one {
+  color: $font-colour-blue;
+}
+
+.essential-branding-image {
+  flex: 0 1 auto;
+  width: 500px;
 }
