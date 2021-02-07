@@ -139,6 +139,15 @@
   width: 500px;
 }
 
+.want-more-paragraph-wrapper {
+  margin: 0 auto 20rem;
+}
+
+.svg-down-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .svg-down-arrow svg .a {
   stroke: #fdfcfa;
 }

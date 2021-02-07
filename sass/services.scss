@@ -168,7 +168,13 @@
   width: 500px;
 }
 
+.want-more-paragraph-wrapper {
+  margin: 0 auto $section-spacing-large;
+}
+
 .svg-down-arrow {
+  @include flex(row);
+  justify-content: center;
   svg .a {
     stroke: $font-colour-light;
   }
