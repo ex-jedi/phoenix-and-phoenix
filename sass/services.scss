@@ -167,3 +167,9 @@
   flex: 0 1 auto;
   width: 500px;
 }
+
+.svg-down-arrow {
+  svg .a {
+    stroke: $font-colour-light;
+  }
+}
