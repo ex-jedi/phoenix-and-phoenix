@@ -13,6 +13,21 @@
   margin-bottom: 0;
 }
 
+.branding-image {
+  flex: 0 1 auto;
+  width: 500px;
+}
+
+.want-more-paragraph-wrapper {
+  margin: 0 auto 20rem;
+}
+
+.svg-down-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .tab-buttons-wrapper {
   display: flex;
   flex-direction: row;
@@ -125,29 +140,35 @@
   max-width: 1000px;
 }
 
-.services-call-to-action-link-wrapper-one {
+.essential-branding-call-to-action-link-wrapper {
   background-color: #fdfcfa;
-  flex: 0 1 auto;
 }
 
-.services-call-to-action-link-one {
+.essential-branding-call-to-action-link {
   color: #535cb0;
 }
 
-.essential-branding-image {
-  flex: 0 1 auto;
-  width: 500px;
-}
-
-.want-more-paragraph-wrapper {
-  margin: 0 auto 20rem;
-}
-
-.svg-down-arrow {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.svg-down-arrow svg .a {
+.essential-svg-down-arrow svg .a {
   stroke: #fdfcfa;
+}
+
+.extended-branding-package-section {
+  background-color: #fdfcfa;
+}
+
+.extended-services-subheading {
+  color: #b07677;
+}
+
+.extended-branding-process-text-wrapper {
+  color: #b09b53;
+}
+
+.extended-branding-call-to-action-link-wrapper {
+  background-color: #b09b53;
+  color: #fdfcfa;
+}
+
+.extended-svg-down-arrow svg .a {
+  stroke: #535cb0;
 }

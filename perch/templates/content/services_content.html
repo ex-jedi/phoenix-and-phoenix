@@ -46,10 +46,10 @@
               <perch:content id="essentialBrandingProcessTextWrapper" type="textarea" editor="redactor" label="Branding Essential Package Text" required html>
               </div>
               <p class="branding-package-price-paragraph essential-branding-package-price-paragraph">
-                <perch:content id="essentialBrandingProce" type="text" label="Essential Branding Package Price" required >
+                <perch:content id="essentialBrandingPrice" type="text" label="Essential Branding Package Price" required >
               </p>
               <div class="branding-package-cta-wrapper">
-                <img class="essential-branding-image" itemprop="image" src="<perch:content id="essentialBrandingImage" type="image" width="1000" label="Essential Branding Image" quality="70">" alt="<perch:content id="essentialImgAlt" type="text" label="Essential Branding Image Description">"
+                <img class="branding-image essential-branding-image" itemprop="image" src="<perch:content id="essentialBrandingImage" type="image" width="1000" label="Essential Branding Image" quality="70">" alt="<perch:content id="essentialImgAlt" type="text" label="Essential Branding Image Description">"
                 sizes="100vw"
                 srcset="<perch:content type="image" id="essentialBrandingImage" width="1000" > 1000w,
                 <perch:content type="image" id="essentialBrandingImage" width="900" quality="70"> 900w,
@@ -57,10 +57,10 @@
                 <perch:content type="image" id="essentialBrandingImage" width="700" quality="70"> 700w,
                 <perch:content type="image" id="essentialBrandingImage" width="600" quality="70"> 600w" >
 
-                <div class="call-to-action-link-wrapper services-call-to-action-link-wrapper-one">
-                  <!-- TODO: Insert proper link -->
-                  <a class="call-to-action-link services-call-to-action-link-one" href="#">
-                    <perch:content id="servicesCtaLinkOne" type="text" label="Essential Branding Call To Action">
+                <div class="call-to-action-link-wrapper essential-branding-call-to-action-link-wrapper">
+                  <!-- TODO: Insert proper links -->
+                  <a class="call-to-action-link essential-branding-call-to-action-link" href="<perch:content id="essentialBrandingCTALink" type="text" label="Essential Branding Call To Action Link" required>">
+                    <perch:content id="essentialBrandingCtaLinkText" type="text" label="Essential Branding Call To Action Text">
                   </a>
                 </div>
               </div>
@@ -70,7 +70,44 @@
                 </p>
               </div>
 
-              <div class="svg-down-arrow svg-down-arrow-one">
+              <div class="svg-down-arrow essential-svg-down-arrow">
+                <perch:template path="svg/svg_arrow.html">
+              </div>
+          </section>
+          <!-- Extended Branding Package -->
+          <section class="services-section extended-branding-package-section">
+            <h2 class="services-subheading extended-services-subheading">
+              <perch:content id="brandingExtendedPackageSubheading" type="text" label="Extended Branding Package Subheading" divider-before="Extended Branding Package" required>
+            </h2>
+            <div class="branding-text-wrapper extended-branding-process-text-wrapper">
+              <perch:content id="extendedlBrandingProcessTextWrapper" type="textarea" editor="redactor" label="Branding Extended Package Text" required html>
+              </div>
+              <p class="branding-package-price-paragraph Extended-branding-package-price-paragraph">
+                <perch:content id="extendedBrandingPrice" type="text" label="Extended Branding Package Price" required >
+              </p>
+              <div class="branding-package-cta-wrapper">
+                <img class="branding-image extended-branding-image" itemprop="image" src="<perch:content id="extendedBrandingImage" type="image" width="1000" label="Extended Branding Image" quality="70">" alt="<perch:content id="extendedImgAlt" type="text" label="Extended Branding Image Description">"
+                sizes="100vw"
+                srcset="<perch:content type="image" id="extendedBrandingImage" width="1000" > 1000w,
+                <perch:content type="image" id="extendedBrandingImage" width="900" quality="70"> 900w,
+                <perch:content type="image" id="extendedBrandingImage" width="800" quality="70"> 800w,
+                <perch:content type="image" id="extendedBrandingImage" width="700" quality="70"> 700w,
+                <perch:content type="image" id="extendedBrandingImage" width="600" quality="70"> 600w" >
+
+                <div class="call-to-action-link-wrapper extended-branding-call-to-action-link-wrapper">
+                  <!-- TODO: Insert proper link -->
+                  <a class="call-to-action-link extended-branding-call-to-action-link" href="#">
+                    <perch:content id="extendedBrandingCtaLink" type="text" label="Extended Branding Call To Action Text">
+                  </a>
+                </div>
+              </div>
+              <div class="branding-text-wrapper want-more-paragraph-wrapper">
+                <p class="want-more-paragraph">
+                  <perch:content id="wantMoreParaTwo" type="text" label="Want More Paragraph">
+                </p>
+              </div>
+
+              <div class="svg-down-arrow extended-svg-down-arrow">
                 <perch:template path="svg/svg_arrow.html">
               </div>
           </section>

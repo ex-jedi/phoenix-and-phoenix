@@ -26,6 +26,20 @@
   }
 }
 
+.branding-image {
+  flex: 0 1 auto;
+  width: 500px;
+}
+
+.want-more-paragraph-wrapper {
+  margin: 0 auto $section-spacing-large;
+}
+
+.svg-down-arrow {
+  @include flex(row);
+  justify-content: center;
+}
+
 //*=========================================
 //** Tabs **
 //*=========================================
@@ -154,28 +168,43 @@
   max-width: 1000px;
 }
 
-.services-call-to-action-link-wrapper-one {
+.essential-branding-call-to-action-link-wrapper {
   background-color: $background-colour-light;
-  flex: 0 1 auto;
 }
 
-.services-call-to-action-link-one {
+.essential-branding-call-to-action-link {
   color: $font-colour-blue;
 }
 
-.essential-branding-image {
-  flex: 0 1 auto;
-  width: 500px;
-}
-
-.want-more-paragraph-wrapper {
-  margin: 0 auto $section-spacing-large;
-}
-
-.svg-down-arrow {
-  @include flex(row);
-  justify-content: center;
+.essential-svg-down-arrow {
   svg .a {
     stroke: $font-colour-light;
+  }
+}
+
+//*=========================================
+//** Extended Branding Package **
+//*=========================================
+
+.extended-branding-package-section {
+  background-color: $background-colour-light;
+}
+
+.extended-services-subheading {
+  color: $font-colour-brown;
+}
+
+.extended-branding-process-text-wrapper {
+  color: $font-colour-gold;
+}
+
+.extended-branding-call-to-action-link-wrapper {
+  background-color: $background-colour-gold;
+  color: $font-colour-light;
+}
+
+.extended-svg-down-arrow {
+  svg .a {
+    stroke: $font-colour-blue;
   }
 }
