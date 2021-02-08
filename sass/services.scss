@@ -208,3 +208,32 @@
     stroke: $font-colour-blue;
   }
 }
+
+.extended-branding-package-price-paragraph {
+  color: $font-colour-brown;
+}
+
+.extended-branding-want-more-paragraph {
+  color: $font-colour-blue;
+}
+
+//*=========================================
+//** Custom Branding **
+//*=========================================
+
+.custom-branding-section {
+  @include flex(row);
+  align-items: center;
+
+  background-color: $background-colour-brown;
+  color: $font-colour-light;
+}
+
+.custom-branding-text-wrapper {
+  margin-right: $section-spacing-medium;
+}
+
+.custom-branding-call-to-action-link-wrapper {
+  background-color: $background-colour-light;
+  color: $font-colour-gold;
+}

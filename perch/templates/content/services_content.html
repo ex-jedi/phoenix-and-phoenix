@@ -65,8 +65,8 @@
                 </div>
               </div>
               <div class="branding-text-wrapper want-more-paragraph-wrapper">
-                <p class="want-more-paragraph">
-                  <perch:content id="wantMoreParaOne" type="text" label="Want More Paragraph">
+                <p class="want-more-paragraph essential-branding-want-more-paragraph">
+                  <perch:content id="essentialwantMorePara" type="text" label="Essential Want More Paragraph">
                 </p>
               </div>
 
@@ -82,7 +82,7 @@
             <div class="branding-text-wrapper extended-branding-process-text-wrapper">
               <perch:content id="extendedlBrandingProcessTextWrapper" type="textarea" editor="redactor" label="Branding Extended Package Text" required html>
               </div>
-              <p class="branding-package-price-paragraph Extended-branding-package-price-paragraph">
+              <p class="branding-package-price-paragraph extended-branding-package-price-paragraph">
                 <perch:content id="extendedBrandingPrice" type="text" label="Extended Branding Package Price" required >
               </p>
               <div class="branding-package-cta-wrapper">
@@ -96,20 +96,32 @@
 
                 <div class="call-to-action-link-wrapper extended-branding-call-to-action-link-wrapper">
                   <!-- TODO: Insert proper link -->
-                  <a class="call-to-action-link extended-branding-call-to-action-link" href="#">
+                  <a class="call-to-action-link extended-branding-call-to-action-link" href="<perch:content id="extendedCTALink" type="text" label="Extended Branding Call To Action Link" required></a>">
                     <perch:content id="extendedBrandingCtaLink" type="text" label="Extended Branding Call To Action Text">
                   </a>
                 </div>
               </div>
               <div class="branding-text-wrapper want-more-paragraph-wrapper">
-                <p class="want-more-paragraph">
-                  <perch:content id="wantMoreParaTwo" type="text" label="Want More Paragraph">
+                <p class="want-more-paragraph extended-branding-want-more-paragraph">
+                  <perch:content id="extendedWantMorePara" type="text" label="Extended Want More Paragraph">
                 </p>
               </div>
 
               <div class="svg-down-arrow extended-svg-down-arrow">
                 <perch:template path="svg/svg_arrow.html">
               </div>
+          </section>
+          <!-- Custom Branding -->
+          <section class="section services-section custom-branding-section">
+            <div class="branding-text-wrapper custom-branding-text-wrapper">
+              <perch:content id="customBrandingText" type="textarea" editor="redactor" label="Custom Branding Text" divider-before="Custom Branding Package" required html>
+            </div>
+            <div class="call-to-action-link-wrapper custom-branding-call-to-action-link-wrapper">
+              <!-- TODO: Insert proper link -->
+              <a class="call-to-action-link custom-branding-call-to-action-link" href="<perch:content id="customCTALink" type="text" label="Custom Branding Call To Action Link" required>">
+                <perch:content id="customBrandingCtaLinkText" type="text" label="Custom Branding Call To Action Text">
+              </a>
+            </div>
           </section>
         </perch:group>
       </div>

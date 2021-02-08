@@ -172,3 +172,28 @@
 .extended-svg-down-arrow svg .a {
   stroke: #535cb0;
 }
+
+.extended-branding-package-price-paragraph {
+  color: #b07677;
+}
+
+.extended-branding-want-more-paragraph {
+  color: #535cb0;
+}
+
+.custom-branding-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #b07677;
+  color: #fdfcfa;
+}
+
+.custom-branding-text-wrapper {
+  margin-right: 15rem;
+}
+
+.custom-branding-call-to-action-link-wrapper {
+  background-color: #fdfcfa;
+  color: #b09b53;
+}
