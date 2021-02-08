@@ -262,6 +262,17 @@
   }
 }
 
+@keyframes rotateSvg {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+[data-name='Text'] {
+  transform-origin: center;
+  animation: rotateSvg 10s linear infinite forwards;
+}
+
 //*=========================================
 //** Contact Section **
 //*=========================================
