@@ -1,3 +1,29 @@
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(2rem);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(2rem);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .services-section {
   padding: 20rem 25rem;
 }
@@ -26,6 +52,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  animation: arrow-bounce 2s linear infinite forwards;
 }
 
 .tab-buttons-wrapper {

@@ -38,6 +38,7 @@
 .svg-down-arrow {
   @include flex(row);
   justify-content: center;
+  animation: arrow-bounce 2s linear infinite forwards;
 }
 
 //*=========================================
