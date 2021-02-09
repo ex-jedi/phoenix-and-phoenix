@@ -50,6 +50,7 @@
   justify-content: space-between;
   font-size: $font-size-large;
   padding: 0 $section-spacing-larger;
+  background-color: $background-colour-light;
 }
 
 .tab-button {
@@ -279,4 +280,5 @@
 
 .contact-section {
   color: $font-colour-gold;
+  background-color: $background-colour-light;
 }
