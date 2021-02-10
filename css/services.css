@@ -28,14 +28,14 @@
   padding: 20rem 25rem;
 }
 
-.branding-text-wrapper {
+.services-text-wrapper {
   font-size: 5rem;
   text-align: center;
 }
-.branding-text-wrapper p:first-of-type {
+.services-text-wrapper p:first-of-type {
   margin-top: 0;
 }
-.branding-text-wrapper p:last-of-type {
+.services-text-wrapper p:last-of-type {
   margin-bottom: 0;
 }
 
@@ -217,7 +217,7 @@
   color: #fdfcfa;
 }
 
-.custom-branding-text-wrapper {
+.custom-services-text-wrapper {
   margin-right: 15rem;
 }
 

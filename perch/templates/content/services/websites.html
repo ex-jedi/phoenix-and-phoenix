@@ -1,1 +1,15 @@
-<h2>Websites Sub-Template</h2>
+<perch:group label="Websites Tab Content">
+  <section class="services-section branding-intro-section">
+    <div class="services-text-wrapper branding-intro-text-wrapper">
+      <perch:content id="websitesIntroText" type="textarea" editor="redactor" label="websites Intro Text" divider-before="websites Intro" required html>
+    </div>
+    <img class="branding-intro-image" itemprop="image" src="<perch:content id="websitesIntroImg" type="image" width="1000" label="websites Intro Image" quality="70">" alt="<perch:content id="websitesImgAlt" type="text" label="websites Image Description">"
+    sizes="40vw"
+    srcset="<perch:content type="image" id="websitesIntroImg" width="1000" > 1000w,
+    <perch:content type="image" id="websitesIntroImg" width="800" quality="70"> 800w,
+    <perch:content type="image" id="websitesIntroImg" width="600" quality="70"> 600w,
+    <perch:content type="image" id="websitesIntroImg" width="500" quality="70"> 500w">
+  </section>
+</perch:group>
+
+<!-- Branding Intro -->

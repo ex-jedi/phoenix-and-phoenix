@@ -47,6 +47,7 @@
   margin: 0;
   padding: $section-spacing-large $section-spacing-super-large;
   color: $font-colour-light;
+  position: relative;
 }
 
 //*=========================================
@@ -155,6 +156,10 @@
 //*=========================================
 //** Testimonials **
 //*=========================================
+
+.homepage-testimonials-section {
+  background-color: $background-colour-light;
+}
 
 .homepage-testimonials-heading {
   color: $font-colour-blue;

@@ -13,6 +13,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
@@ -31,6 +32,7 @@ html {
 body {
   @include main-font-stack;
   position: relative;
+  width: 100%;
   min-width: 320px;
   max-width: 1920px;
   margin: 0 auto;
@@ -44,6 +46,7 @@ body {
 .site-wrapper {
   // Removes small gap below footer
   line-height: normal;
+  width: 100%;
 }
 
 // * Box sizing rules
@@ -56,6 +59,7 @@ body {
 section,
 main {
   overflow: hidden;
+  z-index: 1;
 }
 
 // *=========================================
@@ -112,6 +116,7 @@ a {
   position: relative;
   padding: 0 $section-spacing-extra-large $section-spacing-large;
   background-color: $background-colour-light;
+  overflow: hidden;
 }
 
 .main-logo-wrapper {
@@ -246,6 +251,7 @@ select {
   bottom: 0;
   left: 0;
   z-index: -1;
+  overflow: hidden;
 
   p {
     text-align: center;

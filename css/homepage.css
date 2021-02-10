@@ -56,6 +56,7 @@
   margin: 0;
   padding: 20rem 40rem;
   color: #fdfcfa;
+  position: relative;
 }
 
 .homepage-section-one {
@@ -151,6 +152,10 @@
   position: absolute;
   right: 375px;
   top: 375px;
+}
+
+.homepage-testimonials-section {
+  background-color: #fdfcfa;
 }
 
 .homepage-testimonials-heading {
