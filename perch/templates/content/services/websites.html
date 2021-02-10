@@ -1,7 +1,7 @@
 <perch:group label="Websites Tab Content">
   <section class="services-section branding-intro-section">
     <div class="services-text-wrapper branding-intro-text-wrapper">
-      <perch:content id="websitesIntroText" type="textarea" editor="redactor" label="websites Intro Text" divider-before="websites Intro" required html>
+      <perch:content id="websitesIntroText" type="textarea" editor="redactor" label="websites Intro Text" divider-before="Websites Intro" required html>
     </div>
     <img class="branding-intro-image" itemprop="image" src="<perch:content id="websitesIntroImg" type="image" width="1000" label="websites Intro Image" quality="70">" alt="<perch:content id="websitesImgAlt" type="text" label="websites Image Description">"
     sizes="40vw"
@@ -10,13 +10,22 @@
     <perch:content type="image" id="websitesIntroImg" width="600" quality="70"> 600w,
     <perch:content type="image" id="websitesIntroImg" width="500" quality="70"> 500w">
   </section>
-  <!-- Design Section -->
-  <section class="services-section design-section">
+  <!-- Web Design Section -->
+  <section class="services-section web-design-section">
     <h2 class="services-subtitle">
-      <perch:content id="designServicesSubtitle" type="text" label="Web Design Subtitle" required>
+      <perch:content id="webDesignServicesSubtitle" type="text" label="Web Design Subtitle" divider-before="Web Design Section" required>
     </h2>
     <div class="services-text-wrapper">
-      <perch:content id="designServicesTextWrapper" type="textarea" editor="redactor" label="Web Design Services Text" required html>
+      <perch:content id="webDesignServicesTextWrapper" type="textarea" editor="redactor" label="Web Design Services Text" required html>
+    </div>
+  </section>
+  <!-- Web Development Section -->
+  <section class="services-section web-development-section">
+    <h2 class="services-subtitle">
+      <perch:content id="webDevelopmentServicesSubtitle" type="text" label="Web Development Subtitle" divider-before="Web Development Section" required>
+    </h2>
+    <div class="services-text-wrapper">
+      <perch:content id="webDevelopmentServicesTextWrapper" type="textarea" editor="redactor" label="Web Development Services Text" required html>
     </div>
   </section>
 </perch:group>

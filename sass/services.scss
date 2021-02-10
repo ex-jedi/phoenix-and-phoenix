@@ -285,9 +285,23 @@
 }
 
 //*==============================================================================
-//** Design **
+//** Websites Tab**
 //*==============================================================================
-.design-section {
+
+//*=========================================
+//** Design **
+//*=========================================
+
+.web-design-section {
   background-color: $background-colour-blue;
+  color: $font-colour-light;
+}
+
+//*=========================================
+//** Development **
+//*=========================================
+
+.web-development-section {
+  background-color: $background-colour-gold;
   color: $font-colour-light;
 }

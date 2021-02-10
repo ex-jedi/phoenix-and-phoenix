@@ -261,7 +261,12 @@
   background-color: #fdfcfa;
 }
 
-.design-section {
+.web-design-section {
   background-color: #535cb0;
+  color: #fdfcfa;
+}
+
+.web-development-section {
+  background-color: #b09b53;
   color: #fdfcfa;
 }
