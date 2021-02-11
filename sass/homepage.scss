@@ -1,0 +1,222 @@
+//*==============================================================================
+//** Homepage **
+//*==============================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Header **
+//*=========================================
+
+.homepage-header-content-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.homepage-header-text-wrapper {
+  color: $font-colour-blue;
+  font-size: $font-size-large;
+  flex: 0 1 auto;
+
+  p {
+    margin: 0;
+
+    &:first-of-type {
+      margin-bottom: $paragraph-spacing-large;
+    }
+  }
+}
+
+.homepage-header-image {
+  flex: 0 1 auto;
+}
+
+.homepage-header-text-wrapper,
+.homepage-header-image {
+  width: 47%;
+}
+
+//*=========================================
+//** Main **
+//*=========================================
+
+.homepage-section {
+  margin: 0;
+  padding: $section-spacing-large $section-spacing-super-large;
+  color: $font-colour-light;
+  position: relative;
+}
+
+//*=========================================
+//** Section One **
+//*=========================================
+
+.homepage-section-one {
+  background-color: $background-colour-blue;
+}
+
+.homepage-bio-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.homepage-section-one-main-image-wrapper {
+  width: 100%;
+  margin-bottom: $section-spacing-large;
+}
+
+.homepage-bio-div {
+  @include flex(row);
+  justify-content: space-between;
+  width: 100%;
+  font-size: $font-size-large;
+  margin-bottom: $section-spacing-large;
+  position: relative;
+}
+
+.bio-image-wrapper,
+.bio-text-wrapper {
+  flex: 0 1 auto;
+  width: 50%;
+}
+
+.bio-image-wrapper {
+  margin-right: $section-spacing-small;
+  margin-top: $section-spacing-large;
+}
+
+.bio-text-wrapper {
+  p {
+    margin: 0;
+  }
+}
+
+//*=========================================
+//** Section Two **
+//*=========================================
+
+.homepage-section-two {
+  background-color: $background-colour-gold;
+}
+
+.section-two-paragraph {
+  color: $font-colour-light;
+  font-size: $font-size-large;
+  margin: 0 auto $section-spacing-large;
+}
+
+.section-two-flex-wrapper {
+  @include flex(row);
+  align-items: center;
+  margin: 0 auto $section-spacing-large;
+  position: relative;
+}
+
+.section-two-flex-wrapper-three {
+  margin: 0 auto calc(#{$section-spacing-large} + 150px);
+}
+
+.section-two-flex-paragraph {
+  margin: 0;
+}
+
+.section-two-flex-image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  margin-left: $section-spacing-small;
+}
+
+.homepage-call-to-action-link-wrapper {
+  background-color: $background-colour-light;
+}
+
+.homepage-call-to-action-link-one {
+  color: $font-colour-blue;
+}
+
+.homepage-call-to-action-link-two {
+  color: $font-colour-brown;
+}
+
+.homepage-call-to-action-link-three {
+  color: $font-colour-brown;
+}
+
+.positioned-call-to-action-wrapper {
+  position: absolute;
+  right: 375px;
+  top: 375px;
+}
+
+//*=========================================
+//** Testimonials **
+//*=========================================
+
+.homepage-testimonials-section {
+  background-color: $background-colour-light;
+}
+
+.homepage-testimonials-heading {
+  color: $font-colour-blue;
+}
+
+.homepage-testimonial-wrapper {
+  font-size: $font-size-large;
+
+  &:first-of-type {
+    margin: 0 auto $section-spacing-large;
+    .testimonial-paragraph {
+      color: $font-colour-gold;
+    }
+
+    .testimonial-name {
+      color: $font-colour-brown;
+    }
+  }
+
+  &:nth-of-type(2) {
+    .testimonial-paragraph {
+      color: $font-colour-blue;
+    }
+
+    .testimonial-name {
+      color: $font-colour-gold;
+    }
+  }
+}
+
+.testimonial-flex-wrapper {
+  @include flex(row);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.testimonial-paragraph {
+  text-align: center;
+  margin: 0 auto $section-spacing-small;
+}
+
+.testimonial-image {
+  width: 275px;
+  height: 275px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+//*=========================================
+//** Contact Section **
+//*=========================================
+
+.contact-section {
+  background-color: $background-colour-brown;
+  color: $font-colour-light;
+}
+
+.contact-heading {
+  margin: 0 auto;
+}

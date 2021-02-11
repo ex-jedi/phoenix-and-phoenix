@@ -1,0 +1,343 @@
+//*==============================================================================
+//** Services **
+//*==============================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** General Styles **
+//*=========================================
+.services-section {
+  padding: $section-spacing-large $section-spacing-larger;
+}
+
+.services-text-wrapper {
+  font-size: $font-size-large;
+  text-align: center;
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.branding-image {
+  flex: 0 1 auto;
+  width: 500px;
+}
+
+.want-more-paragraph-wrapper {
+  margin: 0 auto $section-spacing-large;
+}
+
+.svg-down-arrow {
+  @include flex(row);
+  justify-content: center;
+  animation: arrow-bounce 2s linear infinite forwards;
+}
+
+//*=========================================
+//** Tabs **
+//*=========================================
+
+.tab-buttons-wrapper {
+  @include flex(row);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: $font-size-large;
+  padding: 0 $section-spacing-larger;
+  background-color: $background-colour-light;
+}
+
+.tab-button {
+  flex: 1 0 auto;
+  width: 300px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button#branding {
+  background-color: $background-colour-blue;
+  color: $font-colour-light;
+
+  &[aria-selected='true'] {
+    background-color: $background-colour-light;
+    color: $font-colour-blue;
+  }
+}
+
+.tab-button#websites {
+  color: $font-colour-light;
+  background-color: $background-colour-gold;
+
+  &[aria-selected='true'] {
+    background-color: $background-colour-light;
+    color: $font-colour-gold;
+  }
+}
+
+.tab-button#illustration {
+  background-color: $background-colour-brown;
+  color: $font-colour-light;
+  transition: all 0.3 ease;
+
+  &[aria-selected='true'] {
+    background-color: $background-colour-light;
+    color: $font-colour-brown;
+  }
+}
+
+#websites,
+#illustration {
+  color: $font-colour-light;
+}
+
+.tab-panel {
+  width: 100%;
+}
+
+.branding-tab-panel {
+  background-color: $background-colour-blue;
+}
+
+.websites-tab-panel {
+  background-color: $background-colour-brown;
+}
+
+.illustration-tab-panel {
+  background-color: $background-colour-gold;
+}
+
+//*==============================================================================
+//** Branding **
+//*==============================================================================
+
+.branding-intro-section {
+  @include flex(row);
+  align-items: center;
+  background-color: $background-colour-light;
+  color: $font-colour-blue;
+}
+
+.branding-intro-text-wrapper,
+.branding-intro-image {
+  flex: 0 1 auto;
+  width: 50%;
+}
+
+.branding-intro-image {
+  margin-left: $section-spacing-small;
+}
+
+//*=========================================
+//** Branding Process **
+//*=========================================
+
+.branding-process-section {
+  background-color: $background-colour-blue;
+  color: $font-colour-light;
+}
+
+//*=========================================
+//** Essential Branding Package  **
+//*=========================================
+
+.essential-branding-package-section {
+  background-color: $background-colour-gold;
+  color: $font-colour-light;
+}
+
+.branding-package-price-paragraph {
+  margin: $section-spacing-large auto;
+  font-size: $font-size-large;
+  text-align: center;
+}
+
+.branding-package-cta-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  margin: 0 auto $section-spacing-large;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.essential-branding-call-to-action-link-wrapper {
+  background-color: $background-colour-light;
+}
+
+.essential-branding-call-to-action-link {
+  color: $font-colour-blue;
+}
+
+.essential-svg-down-arrow {
+  svg .a {
+    stroke: $font-colour-light;
+  }
+}
+
+//*=========================================
+//** Extended Branding Package **
+//*=========================================
+
+.extended-branding-package-section {
+  background-color: $background-colour-light;
+}
+
+.extended-services-subheading {
+  color: $font-colour-brown;
+}
+
+.extended-branding-process-text-wrapper {
+  color: $font-colour-gold;
+}
+
+.extended-branding-call-to-action-link-wrapper {
+  background-color: $background-colour-gold;
+  color: $font-colour-light;
+}
+
+.extended-svg-down-arrow {
+  svg .a {
+    stroke: $font-colour-blue;
+  }
+}
+
+.extended-branding-package-price-paragraph {
+  color: $font-colour-brown;
+}
+
+.extended-branding-want-more-paragraph {
+  color: $font-colour-blue;
+}
+
+//*=========================================
+//** Custom Branding **
+//*=========================================
+
+.custom-branding-section {
+  @include flex(row);
+  align-items: center;
+
+  background-color: $background-colour-brown;
+  color: $font-colour-light;
+}
+
+.custom-services-text-wrapper {
+  margin-right: $section-spacing-medium;
+}
+
+.custom-branding-call-to-action-link-wrapper {
+  background-color: $background-colour-light;
+  color: $font-colour-gold;
+}
+
+//*=========================================
+//** Small Print **
+//*=========================================
+
+.small-print-section {
+  background-color: $background-colour-blue;
+  color: $font-colour-light;
+}
+
+.small-print-text-wrapper {
+  margin-bottom: $section-spacing-large;
+}
+
+.yes-svg-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  path,
+  line {
+    fill: #fff;
+    stroke: #fff;
+  }
+}
+
+.branding-yes-svg-wrapper {
+  path,
+  line {
+    fill: $font-colour-light;
+    stroke: $font-colour-light;
+  }
+}
+
+@keyframes rotateSvg {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+[data-name='Text'] {
+  transform-origin: center;
+  animation: rotateSvg 10s linear infinite forwards;
+}
+
+//*=========================================
+//** Contact Section **
+//*=========================================
+
+.contact-section {
+  color: $font-colour-gold;
+  background-color: $background-colour-light;
+}
+
+//*==============================================================================
+//** Websites Tab**
+//*==============================================================================
+
+//*=========================================
+//** Design **
+//*=========================================
+
+.web-design-section {
+  background-color: $background-colour-blue;
+  color: $font-colour-light;
+}
+
+//*=========================================
+//** Development **
+//*=========================================
+
+.web-development-section {
+  background-color: $background-colour-gold;
+  color: $font-colour-light;
+}
+
+//*=========================================
+//** Small Print **
+//*=========================================
+.websites-small-print-section {
+  background-color: $background-colour-light;
+  color: $font-colour-blue;
+}
+
+.websites-small-print-subtitle {
+  color: $font-colour-brown;
+}
+
+.h3-gold-subheading {
+  color: $font-colour-gold;
+}
+
+.websites-get-started-subtitle {
+  color: $font-colour-brown;
+}
+
+.websites-yes-svg-wrapper {
+  path,
+  line {
+    fill: $font-colour-gold;
+    stroke: $font-colour-gold;
+  }
+}
