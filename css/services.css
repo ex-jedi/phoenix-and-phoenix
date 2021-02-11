@@ -246,6 +246,12 @@
   stroke: #fff;
 }
 
+.branding-yes-svg-wrapper path,
+.branding-yes-svg-wrapper line {
+  fill: #fdfcfa;
+  stroke: #fdfcfa;
+}
+
 @keyframes rotateSvg {
   100% {
     transform: rotate(360deg);
@@ -282,4 +288,14 @@
 
 .h3-gold-subheading {
   color: #b09b53;
+}
+
+.websites-get-started-subtitle {
+  color: #b07677;
+}
+
+.websites-yes-svg-wrapper path,
+.websites-yes-svg-wrapper line {
+  fill: #b09b53;
+  stroke: #b09b53;
 }

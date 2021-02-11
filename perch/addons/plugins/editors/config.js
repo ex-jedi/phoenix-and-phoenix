@@ -6,7 +6,7 @@ Perch.UserConfig.redactor = (function () {
     config.fontcolors = ['#fdfcfa', '#5bb072', '#535cb0', '#b09b53', '#b07677'];
     config.formattingAdd = {
       'gold-subheading-add': {
-        title: 'Subheading',
+        title: 'Gold Subheading',
         api: 'module.block.format',
         args: {
           tag: 'h3',
@@ -14,7 +14,7 @@ Perch.UserConfig.redactor = (function () {
         },
       },
       'gold-subheading-remove': {
-        title: 'Remove Subheading',
+        title: 'Remove Gold Subheading',
         api: 'module.block.format',
         args: {
           tag: 'h3',

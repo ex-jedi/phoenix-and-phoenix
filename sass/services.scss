@@ -264,6 +264,14 @@
   }
 }
 
+.branding-yes-svg-wrapper {
+  path,
+  line {
+    fill: $font-colour-light;
+    stroke: $font-colour-light;
+  }
+}
+
 @keyframes rotateSvg {
   100% {
     transform: rotate(360deg);
@@ -320,4 +328,16 @@
 
 .h3-gold-subheading {
   color: $font-colour-gold;
+}
+
+.websites-get-started-subtitle {
+  color: $font-colour-brown;
+}
+
+.websites-yes-svg-wrapper {
+  path,
+  line {
+    fill: $font-colour-gold;
+    stroke: $font-colour-gold;
+  }
 }

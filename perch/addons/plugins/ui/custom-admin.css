@@ -122,6 +122,6 @@ label[for='postAllowComments'] ~ .form-entry {
 /* Gold Subheading */
 .h3-gold-subheading {
   color: #b09b53 !important;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: bold !important;
+  font-size: 1.1rem !important;
 }
