@@ -117,3 +117,11 @@ label[for='postAllowComments'],
 label[for='postAllowComments'] ~ .form-entry {
   display: none;
 }
+
+/* Custom redactor styles */
+/* Gold Subheading */
+.h3-gold-subheading {
+  color: #b09b53 !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+}

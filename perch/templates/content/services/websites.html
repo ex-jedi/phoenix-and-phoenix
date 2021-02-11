@@ -1,9 +1,9 @@
 <perch:group label="Websites Tab Content">
   <section class="services-section branding-intro-section">
     <div class="services-text-wrapper branding-intro-text-wrapper">
-      <perch:content id="websitesIntroText" type="textarea" editor="redactor" label="websites Intro Text" divider-before="Websites Intro" required html>
+      <perch:content id="websitesIntroText" type="textarea" editor="redactor" label="Websites Intro Text" divider-before="Websites Intro" required html>
     </div>
-    <img class="branding-intro-image" itemprop="image" src="<perch:content id="websitesIntroImg" type="image" width="1000" label="websites Intro Image" quality="70">" alt="<perch:content id="websitesImgAlt" type="text" label="websites Image Description">"
+    <img class="branding-intro-image" itemprop="image" src="<perch:content id="websitesIntroImg" type="image" width="1000" label="Websites Intro Image" quality="70">" alt="<perch:content id="websitesImgAlt" type="text" label="Websites Image Description">"
     sizes="40vw"
     srcset="<perch:content type="image" id="websitesIntroImg" width="1000" > 1000w,
     <perch:content type="image" id="websitesIntroImg" width="800" quality="70"> 800w,
@@ -33,6 +33,9 @@
     <h2 class="services-subtitle websites-small-print-subtitle">
       <perch:content id="websitesSmallPrintSubtitle" type="text" label="Websites Small Print Subtitle" divider-before="Websites Small Print" required>
     </h2>
+    <div class="services-text-wrapper websites-small-print-text-wrapper">
+      <perch:content id="wesitesSmallPrintText" type="textarea" editor="redactor" label="Websites Small Print Text" required html>
+    </div>
   </section>
 
 </perch:group>

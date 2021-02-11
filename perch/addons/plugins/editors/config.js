@@ -2,8 +2,27 @@ Perch.UserConfig.redactor = (function () {
   const get = function (profile, config, field) {
     config.plugins = ['fontcolor', 'alignment'];
     config.buttons = ['link', 'bold', 'italic', 'format', 'ol', 'ul', 'html'];
-    config.formatting = ['p', 'h2', 'h3', 'h4'];
+    config.formatting = ['p', 'h3', 'h4'];
     config.fontcolors = ['#fdfcfa', '#5bb072', '#535cb0', '#b09b53', '#b07677'];
+    config.formattingAdd = {
+      'gold-subheading-add': {
+        title: 'Subheading',
+        api: 'module.block.format',
+        args: {
+          tag: 'h3',
+          class: 'h3-gold-subheading',
+        },
+      },
+      'gold-subheading-remove': {
+        title: 'Remove Subheading',
+        api: 'module.block.format',
+        args: {
+          tag: 'h3',
+          class: 'h3-gold-subheading',
+          type: 'remove',
+        },
+      },
+    };
 
     return config;
   };
