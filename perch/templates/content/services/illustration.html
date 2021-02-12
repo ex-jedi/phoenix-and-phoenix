@@ -11,16 +11,33 @@
     <perch:content type="image" id="illustrationIntroImg" width="600" quality="70"> 600w,
     <perch:content type="image" id="illustrationIntroImg" width="500" quality="70"> 500w">
   </section>
+  <!-- Take A Look Section -->
   <section class="services-section illustration-take-a-look-section">
-    <h2 class="services-subtitle illustration-take-a-look-subheading">
-      <a href="<perch:content id="IllustrationLookLink" type="text" label="Illistration Take A Look Link" required>" class="illustration-take-a-look-link">
+    <h2 class="services-subheading illustration-take-a-look-subheading">
+      <a href="<perch:content id="IllustrationLookLink" type="text" label="Illistration Take A Look Link" divider-before="Illustration Take A Look" required>" class="illustration-take-a-look-link">
         <perch:content id="illustrationLookLinkText" type="text" label="Illustration Take a Look Link Text" required>
       </a>
     </h2>
   </section>
-  <section class="services-section illustration-services-small-print">
-    <h2 class="services-subtitle illustration-small-print-subtitle">
-      <perch:content id="illustrationSmallPrintSubheading" type="text" label="Illustration Small Print Subheading" required html>
+  <!-- Small Print  -->
+  <section class="services-section illustration-services-small-print-section">
+    <h2 class="services-subheading illustration-small-print-subheading">
+      <perch:content id="illustrationSmallPrintSubheading" type="text" label="Illustration Small Print Subheading" divider-before="Illustration Small Print Text" required html>
     </h2>
+    <div class="services-text-wrapper small-print-text-wrapper">
+      <perch:content id="illustrationSmallPrintText" type="textarea" editor="redactor" label="Illustration Small Print Text" required html>
+    </div>
+    <h2 class="services-subheading small-print-subheading">
+      <perch:content id="illustrationGetstartedSubheading" type="text" label="Illustration &#39;Get Started&#8242; Subheading" required>
+    </h2>
+    <div class="yes-svg-wrapper illustration-yes-svg-wrapper">
+      <perch:template path="svg/yes_svg.html">
+    </div>
   </section>
+  <!-- Illustration Contact Section -->
+  <section class="contact-section illustration-contact-section">
+    <h2 class="section-heading contact-heading">
+    CONTACT US <a class="contact-link" href="/about-us">HERE</a>
+    </h2>
+</section>
 </perch:group>

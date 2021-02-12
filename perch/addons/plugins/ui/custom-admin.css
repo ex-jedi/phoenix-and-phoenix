@@ -119,9 +119,14 @@ label[for='postAllowComments'] ~ .form-entry {
 }
 
 /* Custom redactor styles */
+
+/* Reducung native h3 size   */
+h3 {
+  font-size: 1.1rem !important;
+}
+
 /* Gold Subheading */
 .h3-gold-subheading {
   color: #b09b53 !important;
   font-weight: bold !important;
-  font-size: 1.1rem !important;
 }

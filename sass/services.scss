@@ -287,7 +287,7 @@
 //** Branding Contact Section **
 //*=========================================
 
-.websites-contact-section {
+.branding-services-contact-section {
   color: $font-colour-gold;
   background-color: $background-colour-light;
 }
@@ -322,7 +322,7 @@
   color: $font-colour-blue;
 }
 
-.websites-small-print-subtitle {
+.websites-small-print-subheading {
   color: $font-colour-brown;
 }
 
@@ -330,7 +330,7 @@
   color: $font-colour-gold;
 }
 
-.websites-get-started-subtitle {
+.websites-get-started-subheading {
   color: $font-colour-brown;
 }
 
@@ -354,6 +354,10 @@
 //** Illustration **
 //*==============================================================================
 
+//*=========================================
+//** Illustration Take a Look **
+//*=========================================
+
 .illustration-take-a-look-section {
   background-color: $background-colour-blue;
   color: $font-colour-light;
@@ -361,4 +365,21 @@
 
 .illustration-take-a-look-subheading {
   margin: 0 auto;
+}
+
+//*=========================================
+//** Illustration Small Print **
+//*=========================================
+
+.illustration-services-small-print-section {
+  background-color: $background-colour-gold;
+  color: $font-colour-light;
+}
+
+//*=========================================
+//** Illustration Contact **
+//*=========================================
+.illustration-contact-section {
+  background-color: $background-colour-light;
+  color: $font-colour-brown;
 }

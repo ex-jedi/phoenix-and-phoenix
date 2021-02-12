@@ -262,7 +262,7 @@
   animation: rotateSvg 10s linear infinite forwards;
 }
 
-.websites-contact-section {
+.branding-services-contact-section {
   color: #b09b53;
   background-color: #fdfcfa;
 }
@@ -282,7 +282,7 @@
   color: #535cb0;
 }
 
-.websites-small-print-subtitle {
+.websites-small-print-subheading {
   color: #b07677;
 }
 
@@ -290,7 +290,7 @@
   color: #b09b53;
 }
 
-.websites-get-started-subtitle {
+.websites-get-started-subheading {
   color: #b07677;
 }
 
@@ -312,4 +312,14 @@
 
 .illustration-take-a-look-subheading {
   margin: 0 auto;
+}
+
+.illustration-services-small-print-section {
+  background-color: #b09b53;
+  color: #fdfcfa;
+}
+
+.illustration-contact-section {
+  background-color: #fdfcfa;
+  color: #b07677;
 }
