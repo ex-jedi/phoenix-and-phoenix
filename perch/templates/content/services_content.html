@@ -5,10 +5,10 @@
         <button class="tab-button" role="tabButton" aria-selected="false" id="branding">
           Branding
         </button>
-        <button class="tab-button" role="tabButton" aria-selected="true" id="websites">
+        <button class="tab-button" role="tabButton" aria-selected="false" id="websites">
           Websites
         </button>
-        <button class="tab-button" role="tabButton" aria-selected="false" id="illustration">
+        <button class="tab-button" role="tabButton" aria-selected="true" id="illustration">
           Illustration
         </button>
       </div>
@@ -18,11 +18,11 @@
         <!--* Branding Tab Template -->
         <perch:template path="services/branding.html">
       </div>
-      <div class="tab-panel websites-tab-panel" role="tabpanel" aria-labelledby="websites">
+      <div class="tab-panel websites-tab-panel" role="tabpanel" aria-labelledby="websites" hidden>
         <!-- * Websites Tab Template -->
         <perch:template path="services/websites.html">
       </div>
-      <div class="tab-panel illustration-tab-panel" role="tabpanel" aria-labelledby="illustration" hidden>
+      <div class="tab-panel illustration-tab-panel" role="tabpanel" aria-labelledby="illustration">
         <!-- * Illustrations Tab Template -->
         <perch:template path="services/illustration.html">
       </div>

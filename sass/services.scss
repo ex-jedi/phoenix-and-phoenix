@@ -120,7 +120,7 @@
 //** Branding **
 //*==============================================================================
 
-.branding-intro-section {
+.services-intro-section {
   @include flex(row);
   align-items: center;
   background-color: $background-colour-light;
@@ -348,4 +348,17 @@
 .websites-contact-section {
   background-color: $background-colour-brown;
   color: $font-colour-light;
+}
+
+//*==============================================================================
+//** Illustration **
+//*==============================================================================
+
+.illustration-take-a-look-section {
+  background-color: $background-colour-blue;
+  color: $font-colour-light;
+}
+
+.illustration-take-a-look-subheading {
+  margin: 0 auto;
 }

@@ -124,7 +124,7 @@
   background-color: #b09b53;
 }
 
-.branding-intro-section {
+.services-intro-section {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -303,4 +303,13 @@
 .websites-contact-section {
   background-color: #b07677;
   color: #fdfcfa;
+}
+
+.illustration-take-a-look-section {
+  background-color: #535cb0;
+  color: #fdfcfa;
+}
+
+.illustration-take-a-look-subheading {
+  margin: 0 auto;
 }
