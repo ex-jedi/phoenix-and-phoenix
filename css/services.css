@@ -132,13 +132,13 @@
   color: #535cb0;
 }
 
-.branding-intro-text-wrapper,
-.branding-intro-image {
+.services-intro-text-wrapper,
+.services-intro-image {
   flex: 0 1 auto;
   width: 50%;
 }
 
-.branding-intro-image {
+.services-intro-image {
   margin-left: 10rem;
 }
 
@@ -262,7 +262,7 @@
   animation: rotateSvg 10s linear infinite forwards;
 }
 
-.contact-section {
+.websites-contact-section {
   color: #b09b53;
   background-color: #fdfcfa;
 }
@@ -298,4 +298,9 @@
 .websites-yes-svg-wrapper line {
   fill: #b09b53;
   stroke: #b09b53;
+}
+
+.websites-contact-section {
+  background-color: #b07677;
+  color: #fdfcfa;
 }

@@ -127,13 +127,13 @@
   color: $font-colour-blue;
 }
 
-.branding-intro-text-wrapper,
-.branding-intro-image {
+.services-intro-text-wrapper,
+.services-intro-image {
   flex: 0 1 auto;
   width: 50%;
 }
 
-.branding-intro-image {
+.services-intro-image {
   margin-left: $section-spacing-small;
 }
 
@@ -284,10 +284,10 @@
 }
 
 //*=========================================
-//** Contact Section **
+//** Branding Contact Section **
 //*=========================================
 
-.contact-section {
+.websites-contact-section {
   color: $font-colour-gold;
   background-color: $background-colour-light;
 }
@@ -340,4 +340,12 @@
     fill: $font-colour-gold;
     stroke: $font-colour-gold;
   }
+}
+
+//*=========================================
+//** Websites Contact Section **
+//*=========================================
+.websites-contact-section {
+  background-color: $background-colour-brown;
+  color: $font-colour-light;
 }

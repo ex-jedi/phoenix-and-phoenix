@@ -1,10 +1,10 @@
         <perch:group label="Branding Tab Content">
           <!-- Branding Intro -->
           <section class="services-section branding-intro-section">
-            <div class="services-text-wrapper branding-intro-text-wrapper">
+            <div class="services-text-wrapper services-intro-text-wrapper">
               <perch:content id="brandingIntroText" type="textarea" editor="redactor" label="Branding Intro Text" divider-before="Branding Intro" required html>
             </div>
-            <img class="branding-intro-image" itemprop="image" src="<perch:content id="brandingIntroImg" type="image" width="1000" label="Branding Intro Image" quality="70">" alt="<perch:content id="brandingImgAlt" type="text" label="Branding Image Description">"
+            <img class="services-intro-image" itemprop="image" src="<perch:content id="brandingIntroImg" type="image" width="1000" label="Branding Intro Image" quality="70">" alt="<perch:content id="brandingImgAlt" type="text" label="Branding Image Description">"
             sizes="40vw"
             srcset="<perch:content type="image" id="brandingIntroImg" width="1000" > 1000w,
             <perch:content type="image" id="brandingIntroImg" width="800" quality="70"> 800w,
@@ -120,5 +120,11 @@
             <div class="yes-svg-wrapper branding-yes-svg-wrapper">
               <perch:template path="svg/yes_svg.html">
             </div>
+          </section>
+          <!-- Branding Contact Section -->
+          <section class="contact-section branding-services-contact-section">
+            <h2 class="section-heading contact-heading">
+            CONTACT US <a class="contact-link" href="/about-us">HERE</a>
+            </h2>
           </section>
         </perch:group>

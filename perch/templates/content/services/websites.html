@@ -1,9 +1,9 @@
 <perch:group label="Websites Tab Content">
   <section class="services-section branding-intro-section">
-    <div class="services-text-wrapper branding-intro-text-wrapper">
+    <div class="services-text-wrapper services-intro-text-wrapper">
       <perch:content id="websitesIntroText" type="textarea" editor="redactor" label="Websites Intro Text" divider-before="Websites Intro" required html>
     </div>
-    <img class="branding-intro-image" itemprop="image" src="<perch:content id="websitesIntroImg" type="image" width="1000" label="Websites Intro Image" quality="70">" alt="<perch:content id="websitesImgAlt" type="text" label="Websites Image Description">"
+    <img class="services-intro-image" itemprop="image" src="<perch:content id="websitesIntroImg" type="image" width="1000" label="Websites Intro Image" quality="70">" alt="<perch:content id="websitesImgAlt" type="text" label="Websites Image Description">"
     sizes="40vw"
     srcset="<perch:content type="image" id="websitesIntroImg" width="1000" > 1000w,
     <perch:content type="image" id="websitesIntroImg" width="800" quality="70"> 800w,
@@ -42,6 +42,12 @@
     <div class="yes-svg-wrapper websites-yes-svg-wrapper">
       <perch:template path="svg/yes_svg.html">
     </div>
+  </section>
+  <!-- Websites Contact Section -->
+  <section class="contact-section websites-contact-section">
+    <h2 class="section-heading contact-heading">
+    CONTACT US <a class="contact-link" href="/about-us">HERE</a>
+    </h2>
   </section>
 </perch:group>
 
