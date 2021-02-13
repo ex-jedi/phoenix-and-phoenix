@@ -270,10 +270,13 @@ select {
 
 .footer-social-media-wrapper {
   @include flex(row);
+  justify-content: space-between;
+  margin: 0 auto $section-spacing-large;
+  width: 150px;
 }
 
 .footer-social-media-link {
-  width: 100px;
+  width: 50px;
 }
 
 //*=========================================
