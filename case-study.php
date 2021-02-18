@@ -1,4 +1,4 @@
-<?php include('../perch/runtime.php'); ?>
+<?php include('perch/runtime.php'); ?>
 <?php perch_layout('main-header'); ?>
 <main class="main-content about-us-main-content" id="main-content">
 
