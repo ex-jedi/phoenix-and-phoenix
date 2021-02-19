@@ -3,6 +3,11 @@
     ));
    ?>
 
+<?php perch_content_create('Portfolio Project Header Content', array(
+        'template' => 'portfolio/portfolio_header_content.html',
+    ));
+   ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,5 +60,5 @@
 							'levels'    => 1
 					)); ?>
 
-        <?php perch_content("Header Content"); ?>
+        <?php perch_content_custom('Portfolio Project Header Content', []); ?>
 			</header>

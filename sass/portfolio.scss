@@ -65,10 +65,6 @@ body {
   }
 }
 
-.non-featured-portfolio-link {
-  // display: none;
-}
-
 //*=========================================
 //** Illustration Portfolio Link **
 //*=========================================
@@ -101,3 +97,17 @@ body {
 //*==============================================================================
 //** Portfolio Project Page **
 //*==============================================================================
+
+.portfolio-project-header-index-link {
+  display: block;
+  width: fit-content;
+  color: $font-colour-blue;
+  font-size: $font-size-medium;
+  text-decoration: none;
+  margin: 0 auto $section-spacing-small;
+}
+
+.portfolio-project-text-wrapper {
+  font-size: $font-size-large;
+  color: $font-colour-blue;
+}
