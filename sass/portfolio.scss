@@ -6,8 +6,34 @@
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
+body {
+  counter-reset: sub-nav-counter;
+}
+
 .portfolio-section {
+  @include flex(column);
+  // align-items: center;
   background-color: $background-colour-light;
-  padding: 0 $section-spacing-large $section-spacing-medium;
+  padding: 0 $section-spacing-big $section-spacing-large;
   font-size: $font-size-extra-large;
+}
+
+.portfolio-index-sub-nav-link {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  &::before {
+    counter-increment: sub-nav-counter;
+    content: '0' counter(sub-nav-counter) '. ';
+  }
+
+  &:nth-of-type(odd) {
+    justify-content: flex-start;
+    // align-self: flex-end;
+  }
+
+  &:nth-of-type(even) {
+    outline: 2px dotted #f00;
+    margin-left: auto;
+  }
 }
