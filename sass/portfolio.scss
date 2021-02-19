@@ -6,6 +6,8 @@
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
-.thing {
-  margin: 10px;
+.portfolio-section {
+  background-color: $background-colour-light;
+  padding: 0 $section-spacing-large $section-spacing-medium;
+  font-size: $font-size-extra-large;
 }

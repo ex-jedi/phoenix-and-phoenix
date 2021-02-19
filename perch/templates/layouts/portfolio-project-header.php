@@ -1,5 +1,5 @@
    <?php perch_content_create('Portfolio Project Content', array(
-        'template' => 'portfolio_project_content.html',
+        'template' => 'portfolio/portfolio_project_content.html',
     ));
    ?>
 

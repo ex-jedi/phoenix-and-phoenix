@@ -24,6 +24,8 @@
     transform: translateY(0);
   }
 }
-.thing {
-  margin: 10px;
+.portfolio-section {
+  background-color: #fdfcfa;
+  padding: 0 20rem 15rem;
+  font-size: 10rem;
 }
