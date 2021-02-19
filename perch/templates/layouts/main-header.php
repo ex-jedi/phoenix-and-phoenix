@@ -48,6 +48,7 @@
 				</div>
 					<?php perch_pages_navigation(array(
 							'hide-extensions' => true,
+							'levels'    => 1
 					)); ?>
 
         <?php perch_content("Header Content"); ?>
