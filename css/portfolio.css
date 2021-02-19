@@ -43,14 +43,15 @@ body {
   width: fit-content;
   text-decoration: none;
 }
-.portfolio-index-sub-nav-link::before {
-  counter-increment: sub-nav-counter;
-  content: "0" counter(sub-nav-counter) ". ";
-}
 .portfolio-index-sub-nav-link:nth-of-type(odd) {
   justify-content: flex-start;
 }
 .portfolio-index-sub-nav-link:nth-of-type(even) {
   outline: 2px dotted #f00;
   margin-left: auto;
+}
+
+.featured-portfolio-link::before {
+  counter-increment: sub-nav-counter;
+  content: "0" counter(sub-nav-counter) ". ";
 }

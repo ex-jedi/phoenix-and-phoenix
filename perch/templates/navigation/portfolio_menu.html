@@ -1,9 +1,15 @@
 <perch:before>
 <nav class="portfolio-index-sub-nav">
 </perch:before>
-  <a class="portfolio-index-sub-nav-link" href="<perch:pages id="pagePath">">
-    <perch:content id="perch_item_index"><perch:pages id="pageNavText">
-  </a>
+  <perch:if id="perch_item_index" value="5" match="lt">
+    <a class="portfolio-index-sub-nav-link featured-portfolio-link" href="<perch:pages id="pagePath">">
+      <perch:pages id="pageNavText">
+    </a>
+    <perch:else>
+    <a class="portfolio-index-sub-nav-link non-featured-portfolio-link" href="<perch:pages id="pagePath">">
+      <perch:pages id="pageNavText">
+    </a>
+  </perch:if>
 <perch:after>
 </nav>
 </perch:after>
