@@ -75,6 +75,22 @@ body {
   margin-bottom: 0;
 }
 
+.portfolio-illustration-portfolio-link-section {
+  margin: 0;
+  padding: 20rem 40rem;
+  background-color: #b09b53;
+}
+
+.portfolio-illustration-portfolio-subheading {
+  margin: 0 auto;
+  font-size: 5rem;
+  color: #fdfcfa;
+}
+
+.portfolio-illustration-portfolio-link {
+  text-decoration: none;
+}
+
 .contact-section {
   background-color: #fdfcfa;
   color: #b07677;

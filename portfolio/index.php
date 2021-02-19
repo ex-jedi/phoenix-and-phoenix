@@ -12,6 +12,7 @@
         'siblings' => false));
     ?>
 </section>
+<?php perch_content("Illustration Portfolio Section"); ?>
 <?php perch_content("Contact Section"); ?>
 </main>
 <?php perch_layout('main-footer'); ?>

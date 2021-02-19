@@ -6,6 +6,10 @@
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
+//*==============================================================================
+//** General Styles **
+//*==============================================================================
+
 body {
   counter-reset: sub-nav-counter;
 }
@@ -65,7 +69,35 @@ body {
   // display: none;
 }
 
+//*=========================================
+//** Illustration Portfolio Link **
+//*=========================================
+
+.portfolio-illustration-portfolio-link-section {
+  margin: 0;
+  padding: $section-spacing-large $section-spacing-super-large;
+  background-color: $background-colour-gold;
+}
+
+.portfolio-illustration-portfolio-subheading {
+  margin: 0 auto;
+  font-size: $font-size-large;
+  color: $font-colour-light;
+}
+
+.portfolio-illustration-portfolio-link {
+  text-decoration: none;
+}
+
+//*=========================================
+//** Contact Section **
+//*=========================================
+
 .contact-section {
   background-color: $background-colour-light;
   color: $font-colour-brown;
 }
+
+//*==============================================================================
+//** Portfolio Project Page **
+//*==============================================================================
