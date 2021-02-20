@@ -32,8 +32,11 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #fdfcfa;
-  padding: 0 30rem 20rem;
   font-size: 10rem;
+}
+
+.portfolio-index-section {
+  padding: 0 30rem 20rem;
 }
 
 .portfolio-index-subheading {
@@ -96,6 +99,10 @@ body {
   color: #b07677;
 }
 
+.portfolio-padding-wrapper {
+  padding: 0 30rem 10rem;
+}
+
 .portfolio-project-header-index-link {
   display: block;
   width: -webkit-fit-content;
@@ -110,4 +117,18 @@ body {
 .portfolio-project-text-wrapper {
   font-size: 5rem;
   color: #535cb0;
+}
+.portfolio-project-text-wrapper p:last-of-type {
+  margin-bottom: 0;
+}
+
+.portfolio-dual-image-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.portfolio-project-dual-image {
+  flex: 0 1 auto;
+  width: 46%;
 }

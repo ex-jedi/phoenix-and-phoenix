@@ -1,12 +1,34 @@
 <section class="portfolio-section portfolio-project-section">
 
 <perch:blocks>
+
   <perch:block type="text" label="Text Area" icon="edit">
-    <div class="portfolio-project-text-wrapper">
+    <div class="portfolio-project-text-wrapper portfolio-padding-wrapper">
       <perch:content id="portfolioIntroTextarea" type="textarea" editor="redactor" label="Portfolio Project Introduction Text" required html>
     </div>
   </perch:block>
-  <perch:block type="image" label="Two Image Block" icon="photo">
+
+  <perch:block type="image" label="Dual Image Block" icon="photo">
+    <div class="portfolio-dual-image-wrapper portfolio-padding-wrapper">
+
+    <!-- TODO: Change sourceset sizes -->
+    <img class="portfolio-project-dual-image" itemprop="image" src="<perch:content id="portfolioDualImageOne" type="image" width="1200" label="Portfolio Project Dual Image One" quality="70">" alt="<perch:content id="altOne" type="text" label="Image Description One">"
+    sizes="(max-width:1000px) 100vw, 40vw"
+    srcset="<perch:content type="image" id="portfolioDualImageOne" width="1200" > 1200w,
+    <perch:content type="image" id="portfolioDualImageOne" width="1000" quality="70"> 1000w,
+    <perch:content type="image" id="portfolioDualImageOne" width="800" quality="70"> 800w,
+    <perch:content type="image" id="portfolioDualImageOne" width="600" quality="70"> 600w,
+    <perch:content type="image" id="portfolioDualImageOne" width="400" quality="70"> 400w" >
+
+    <img class="portfolio-project-dual-image" itemprop="image" src="<perch:content id="portfolioDualImageTwo" type="image" width="1200" label="Portfolio Project Dual Image Two" quality="70">" alt="<perch:content id="altTwo" type="text" label="Image Description Two">"
+    sizes="(max-width:1000px) 100vw, 40vw"
+    srcset="<perch:content type="image" id="portfolioDualImageTwo" width="1200" > 1200w,
+    <perch:content type="image" id="portfolioDualImageTwo" width="1000" quality="70"> 1000w,
+    <perch:content type="image" id="portfolioDualImageTwo" width="800" quality="70"> 800w,
+    <perch:content type="image" id="portfolioDualImageTwo" width="600" quality="70"> 600w,
+    <perch:content type="image" id="portfolioDualImageTwo" width="400" quality="70"> 400w" >
+
+  </div>
 
   </perch:block>
 

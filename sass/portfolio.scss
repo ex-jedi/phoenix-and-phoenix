@@ -18,8 +18,11 @@ body {
   @include flex(column);
   // align-items: center;
   background-color: $background-colour-light;
-  padding: 0 $section-spacing-big $section-spacing-large;
   font-size: $font-size-extra-large;
+}
+
+.portfolio-index-section {
+  padding: 0 $section-spacing-big $section-spacing-large;
 }
 
 .portfolio-index-subheading {
@@ -98,6 +101,10 @@ body {
 //** Portfolio Project Page **
 //*==============================================================================
 
+.portfolio-padding-wrapper {
+  padding: 0 $section-spacing-big $section-spacing-small;
+}
+
 .portfolio-project-header-index-link {
   display: block;
   width: fit-content;
@@ -110,4 +117,20 @@ body {
 .portfolio-project-text-wrapper {
   font-size: $font-size-large;
   color: $font-colour-blue;
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.portfolio-dual-image-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+}
+
+.portfolio-project-dual-image {
+  flex: 0 1 auto;
+  width: 46%;
 }
