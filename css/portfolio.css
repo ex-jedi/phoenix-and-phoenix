@@ -132,3 +132,9 @@ body {
   flex: 0 1 auto;
   width: 46%;
 }
+
+.portfolio-project-single-image {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}

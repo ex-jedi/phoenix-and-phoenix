@@ -8,9 +8,8 @@
     </div>
   </perch:block>
 
-  <perch:block type="image" label="Dual Image Block" icon="photo">
+  <perch:block type="dualImage" label="Dual Image Block" icon="photo">
     <div class="portfolio-dual-image-wrapper portfolio-padding-wrapper">
-
     <!-- TODO: Change sourceset sizes -->
     <img class="portfolio-project-dual-image" itemprop="image" src="<perch:content id="portfolioDualImageOne" type="image" width="1200" label="Portfolio Project Dual Image One" quality="70">" alt="<perch:content id="altOne" type="text" label="Image Description One">"
     sizes="(max-width:1000px) 100vw, 40vw"
@@ -27,10 +26,21 @@
     <perch:content type="image" id="portfolioDualImageTwo" width="800" quality="70"> 800w,
     <perch:content type="image" id="portfolioDualImageTwo" width="600" quality="70"> 600w,
     <perch:content type="image" id="portfolioDualImageTwo" width="400" quality="70"> 400w" >
-
   </div>
+</perch:block>
 
-  </perch:block>
+<perch:block type="singleImage" label="Single Image Block" icon="photo">
+  <div class="portfolio-single-image-wrapper portfolio-padding-wrapper">
+    <!-- TODO: Change sourceset sizes -->
+    <img class="portfolio-project-single-image" itemprop="image" src="<perch:content id="portfolioSingleImage" type="image" width="1400" label="Portfolio Project Single Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image Description">"
+    sizes="(max-width:1000px) 100vw, 40vw"
+    srcset="<perch:content type="image" id="portfolioSingleImage" width="1400" > 1400w,
+    <perch:content type="image" id="portfolioSingleImage" width="1200" quality="70"> 1200w,
+    <perch:content type="image" id="portfolioSingleImage" width="1000" quality="70"> 1000w,
+    <perch:content type="image" id="portfolioSingleImage" width="800" quality="70"> 800w,
+    <perch:content type="image" id="portfolioSingleImage" width="600" quality="70"> 600w" >
+  </div>
+</perch:block>
 
 </perch:blocks>
 
