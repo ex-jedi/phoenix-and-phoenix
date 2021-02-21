@@ -145,3 +145,26 @@ body {
   width: 100%;
   margin: 0 auto $section-spacing-small;
 }
+
+.portfolio-project-page-wrapper {
+  .contact-section {
+    background-color: $background-colour-gold;
+    color: $font-colour-light;
+  }
+}
+
+.like-what-you-see-cta {
+  color: $font-colour-brown;
+  margin: $section-spacing-small auto;
+}
+
+.portfolio-project-svg-down-arrow {
+  @include flex(row);
+  justify-content: center;
+  animation: arrow-bounce 2s linear infinite forwards;
+  margin: 0 auto $section-spacing-large;
+
+  svg .a {
+    stroke: $font-colour-brown;
+  }
+}

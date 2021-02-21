@@ -143,3 +143,24 @@ body {
   width: 100%;
   margin: 0 auto 10rem;
 }
+
+.portfolio-project-page-wrapper .contact-section {
+  background-color: #b09b53;
+  color: #fdfcfa;
+}
+
+.like-what-you-see-cta {
+  color: #b07677;
+  margin: 10rem auto;
+}
+
+.portfolio-project-svg-down-arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  animation: arrow-bounce 2s linear infinite forwards;
+  margin: 0 auto 20rem;
+}
+.portfolio-project-svg-down-arrow svg .a {
+  stroke: #b07677;
+}
