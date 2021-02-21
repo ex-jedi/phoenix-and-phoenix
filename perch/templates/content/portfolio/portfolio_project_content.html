@@ -42,10 +42,12 @@
   </div>
 </perch:block>
 
-<perch:block type="embed" icon="video" label="Video Embed">
-  <div class="portfolio-video-embed-wrapper">
-    <perch:content id="videoEmbedBlock" type="textarea" editor="markitup" html="true" help="Paste the embed code into the box." size="m">
-    </div>
+<perch:block type="embed" icon="video" label="Video Clip">
+    <video class="portfolio-project-video-wrapper" autoplay loop muted>
+        <source src="<perch:content id="portfilioProjectVideo" type="file" file-type="video" label="Portfolio Video - MP4">" type="video/mp4">
+        <!-- <source src="" type="video/ogv"> -->
+        <!-- <source src="" type="video/webm"> -->
+    </video>
 </perch:block>
 
 </perch:blocks>
