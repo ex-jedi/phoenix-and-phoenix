@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ex-jedi/phoenix-and-phoenix#readme",
   "dependencies": {
+    "gsap": "npm:@gsap/simply@^3.6.0",
     "reframe.js": "^3.0.2"
   },
   "devDependencies": {
