@@ -36,20 +36,18 @@
 	<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
 <!-- Cookie Warning -->
 <?php perch_content("Cookie Warning"); ?>
-				<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
-			<header class="header main-header">
-				<!-- Skip to main content link  -->
-				<a class="show-on-focus"  href="#main-content">Skip to main content</a>
-				<div class="main-logo-wrapper">
-					<a class="main-logo-wrapper" itemprop="url" href="<?php echo $domain ?>">
-					<img class="hidden-main-logo" aria-hidden="true" itemprop="logo" src="/images/main-logo.png" alt="phoenix and phoenix main logo">
-					<?php perch_layout("main-logo-small"); ?>
-				</a>
-				</div>
-					<?php perch_pages_navigation(array(
-							'hide-extensions' => true,
-							'levels'    => 1
-					)); ?>
-
-        <?php perch_content("Header Content"); ?>
-			</header>
+  <div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
+    <header class="header small-header">
+      <!-- Skip to main content link  -->
+      <a class="show-on-focus"  href="#main-content">Skip to main content</a>
+      <div class="small-logo-wrapper">
+        <a class="small-logo-wrapper-link" itemprop="url" href="<?php echo $domain ?>">
+          <img class="hidden-main-logo" aria-hidden="true" itemprop="logo" src="/images/main-logo.png" alt="phoenix and phoenix main logo">
+          <?php perch_layout("main-logo-small"); ?>
+        </a>
+      </div>
+        <?php perch_pages_navigation(array(
+            'hide-extensions' => true,
+            'levels'    => 1
+        )); ?>
+    </header>

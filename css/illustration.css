@@ -24,9 +24,15 @@
     transform: translateY(0);
   }
 }
-.main-header {
+.small-header {
   position: relative;
   z-index: 2;
+  overflow: visible;
+}
+
+.small-logo-wrapper {
+  width: 500px;
+  margin: 1rem auto 0;
 }
 
 .illustration-portfolio-section {
