@@ -32,6 +32,7 @@ body {
 
 .small-header {
   position: relative;
+  z-index: 3;
   overflow: visible;
   width: 100%;
 }
@@ -51,6 +52,7 @@ body {
 
 .illustration-image-wrapper {
   width: 100%;
+  background-color: #fdfcfa;
 }
 
 .illustration-portfolio-image {
