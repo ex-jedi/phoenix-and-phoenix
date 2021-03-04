@@ -1,0 +1,13 @@
+//*==============================================================================
+//** Error Page **
+//*==============================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+.error-page-heading {
+  background-color: $background-colour-light;
+  color: $font-colour-blue;
+  padding: $section-spacing-large 0;
+}
