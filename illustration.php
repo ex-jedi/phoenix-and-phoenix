@@ -1,5 +1,5 @@
 <?php include('perch/runtime.php'); ?>
-<?php perch_layout('main-header'); ?>
+<?php perch_layout('small-header'); ?>
 <main class="main-content illustration-main-content" id="main-content">
 <?php perch_content("Illustration Content"); ?>
 </main>
