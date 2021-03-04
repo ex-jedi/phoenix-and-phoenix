@@ -4,6 +4,6 @@
 <?php perch_content("Illustration Content"); ?>
 </main>
 <?php perch_layout('main-footer'); ?>
-<?php perch_layout('main-footer-end'); ?>
+<?php perch_layout('illustration-footer-end'); ?>
 <!-- TODO: Remove debug -->
 <!-- <?php PerchUtil::output_debug(); ?> -->
