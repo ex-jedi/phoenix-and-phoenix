@@ -6,10 +6,18 @@
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
+html,
+body {
+  // overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .small-header {
   position: relative;
-  z-index: 2;
+  // z-index: 3;
   overflow: visible;
+  width: 100%;
 }
 
 .small-logo-wrapper {
@@ -19,15 +27,25 @@
 
 .illustration-portfolio-section {
   position: relative;
-  background-color: $background-colour-light;
+  background-color: transparent;
   width: 100%;
+  margin: 0;
   z-index: 1;
+}
+
+.illustration-image-wrapper {
+  width: 100%;
 }
 
 .illustration-portfolio-image {
   width: auto;
-  max-height: 100vh;
+  max-height: 80vh;
   margin: 0 auto;
+}
+
+.invisible-footer {
+  height: 0;
+  overflow: hidden;
 }
 
 //*=========================================

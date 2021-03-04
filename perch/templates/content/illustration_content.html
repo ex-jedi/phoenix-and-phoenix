@@ -1,11 +1,13 @@
 <section class="illustration-portfolio-section">
   <perch:repeater id="portfolio_slider" label="Portfolio Images">
-    <img class="illustration-portfolio-image" itemprop="image" loading="lazy" src="<perch:content id="illustrationPortfolioImg" type="image" width="1500" label="Illustration Portfolio Image" quality="80">" alt="<perch:content id="alt" type="text" label="Image Description">"
-    sizes="(max-width:1500) 60vw, 100vw"
-    srcset="<perch:content type="image" id="illustrationPortfolioImg" width="1500" > 1500w,
-    <perch:content type="image" id="illustrationPortfolioImg" width="1200" quality="80"> 1200w,
-    <perch:content type="image" id="illustrationPortfolioImg" width="900" quality="80"> 900w,
-    <perch:content type="image" id="illustrationPortfolioImg" width="700" quality="80"> 700w,
-    <perch:content type="image" id="illustrationPortfolioImg" width="500" quality="80"> 500w" >
+    <div class="illustration-image-wrapper">
+      <img class="illustration-portfolio-image" itemprop="image" src="<perch:content id="illustrationPortfolioImg" type="image" width="1500" label="Illustration Portfolio Image" quality="80">" alt="<perch:content id="alt" type="text" label="Image Description">"
+      sizes="(max-width:1500) 60vw, 100vw"
+      srcset="<perch:content type="image" id="illustrationPortfolioImg" width="1500" > 1500w,
+      <perch:content type="image" id="illustrationPortfolioImg" width="1200" quality="80"> 1200w,
+      <perch:content type="image" id="illustrationPortfolioImg" width="900" quality="80"> 900w,
+      <perch:content type="image" id="illustrationPortfolioImg" width="700" quality="80"> 700w,
+      <perch:content type="image" id="illustrationPortfolioImg" width="500" quality="80"> 500w" >
+    </div>
   </perch:repeater>
 </section>
