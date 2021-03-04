@@ -6,11 +6,14 @@
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
-html,
-body {
-  // overflow: hidden;
-  margin: 0;
-  padding: 0;
+html {
+  background-color: $background-colour-light;
+}
+
+.illustration-page {
+  overflow: hidden;
+  //TODO: Set media query to show menu when page is too short
+  // height: 110vh;
 }
 
 .small-header {
@@ -31,11 +34,13 @@ body {
   width: 100%;
   margin: 0;
   z-index: 1;
+  overflow: hidden;
 }
 
 .illustration-image-wrapper {
   width: 100%;
   background-color: $background-colour-light;
+  overflow: hidden;
 }
 
 .illustration-portfolio-image {
