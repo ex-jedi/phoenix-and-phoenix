@@ -10,3 +10,5 @@ const flkty = new Flickity(carousel, {
   selectedAttraction: 0.006,
   friction: 0.15,
 });
+
+// Fade SVG scroll when user scrolls. No autoplay.

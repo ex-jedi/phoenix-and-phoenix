@@ -64,13 +64,30 @@ html {
 
   [data-name='Text'] {
     transform-origin: center;
-    animation: rotateSvg 10s linear infinite forwards;
+    animation: rotateSvg 4s linear forwards;
+  }
+
+  [data-name='Arrow'] {
+    animation: fadeSvg 4s linear forwards;
   }
 }
 
 @keyframes rotateSvg {
+  80% {
+    opacity: 1;
+  }
   100% {
     transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeSvg {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
