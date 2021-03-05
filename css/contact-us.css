@@ -58,8 +58,18 @@
 }
 
 .checkbox-wrapper {
+  display: flex;
+  flex-direction: row;
   color: #b07677;
   margin-bottom: 10rem;
+  align-items: center;
+}
+.checkbox-wrapper input {
+  order: 1;
+  margin-right: 2.5rem;
+}
+.checkbox-wrapper label {
+  order: 2;
 }
 
 .message-area-wrapper {

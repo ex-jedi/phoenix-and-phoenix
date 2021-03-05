@@ -49,8 +49,18 @@
 }
 
 .checkbox-wrapper {
+  @include flex(row);
   color: $font-colour-brown;
   margin-bottom: $section-spacing-small;
+  align-items: center;
+
+  input {
+    order: 1;
+    margin-right: $paragraph-spacing-medium;
+  }
+  label {
+    order: 2;
+  }
 }
 
 .message-area-wrapper {
