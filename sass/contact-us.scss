@@ -54,10 +54,6 @@
   margin-bottom: $section-spacing-small;
   align-items: center;
 
-  input {
-    order: 1;
-    margin-right: $paragraph-spacing-medium;
-  }
   label {
     order: 2;
   }
@@ -65,17 +61,20 @@
   //* Custom radio button styling
   input[type='checkbox'] {
     position: relative;
+    order: 1;
+    margin-right: $paragraph-spacing-large;
+
     &:before {
       content: '';
       display: block;
       position: absolute;
-      border: 3px solid $font-colour-brown;
+      border: 5px solid $font-colour-brown;
       background-color: $background-colour-light;
       border-radius: 100%;
-      height: 25px;
-      width: 25px;
-      top: -8px;
-      left: -4px;
+      height: 50px;
+      width: 50px;
+      top: -18px;
+      left: -6px;
       z-index: 5;
       transition: $transition-one;
     }
@@ -85,10 +84,10 @@
       position: absolute;
       content: '';
       border-radius: 50%;
-      height: 15px;
-      width: 15px;
-      top: -3px;
-      left: 1px;
+      height: 35px;
+      width: 35px;
+      top: -10px;
+      left: 1.5px;
       margin: 0;
       transition: $transition-one;
       z-index: 6;
@@ -97,7 +96,7 @@
 
   input[type='checkbox']:checked {
     &:before {
-      border: 3px solid $font-colour-brown;
+      border: 5px solid $font-colour-brown;
     }
   }
 
