@@ -177,3 +177,12 @@ select {
     color: $font-colour-green;
   }
 }
+
+.success {
+  p {
+    text-align: center;
+    color: $font-colour-brown;
+    //TODO: Check larger is okay
+    font-size: $font-size-extra-large;
+  }
+}
