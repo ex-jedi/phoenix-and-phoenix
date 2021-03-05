@@ -59,6 +59,10 @@ select {
   color: $background-colour-brown;
   margin-bottom: $section-spacing-small;
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   input {
     color: inherit;
     background-color: $background-colour-light;
@@ -137,6 +141,7 @@ select {
   border: none;
   color: $font-colour-brown;
   width: 100%;
+  background-color: $background-colour-light;
 
   // Underline
   background-attachment: local;
@@ -155,4 +160,20 @@ select {
     $background-colour-light,
     $background-colour-light
   );
+}
+
+.submit-button {
+  display: block;
+  border: none;
+  color: $font-colour-blue;
+  background-color: $background-colour-light;
+  text-transform: uppercase;
+  font-size: $font-size-extra-large;
+  margin: $section-spacing-large auto 0;
+  cursor: pointer;
+  transition: $transition-one;
+
+  &:hover {
+    color: $font-colour-green;
+  }
 }
