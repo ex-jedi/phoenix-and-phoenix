@@ -5,3 +5,35 @@
 //********** Imports **********
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
+
+.main-header {
+  overflow: visible;
+}
+
+.bio-section {
+  background-color: $background-colour-light;
+  padding: 0 $section-spacing-big $section-spacing-large;
+}
+
+.kate-bio-section {
+  color: $font-colour-brown;
+}
+
+.bio-flex-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bio-text-wrapper {
+  flex: 0 1 auto;
+  width: 50%;
+  font-size: $font-size-large;
+}
+
+.bio-image {
+  flex: 0 1 auto;
+  width: calc(50% - #{$section-spacing-small});
+  height: 100%;
+  margin-right: $section-spacing-small;
+}

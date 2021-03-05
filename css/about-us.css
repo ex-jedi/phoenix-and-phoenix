@@ -24,3 +24,35 @@
     transform: translateY(0);
   }
 }
+.main-header {
+  overflow: visible;
+}
+
+.bio-section {
+  background-color: #fdfcfa;
+  padding: 0 30rem 20rem;
+}
+
+.kate-bio-section {
+  color: #b07677;
+}
+
+.bio-flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bio-text-wrapper {
+  flex: 0 1 auto;
+  width: 50%;
+  font-size: 5rem;
+}
+
+.bio-image {
+  flex: 0 1 auto;
+  width: calc(50% - 10rem);
+  height: 100%;
+  margin-right: 10rem;
+}
