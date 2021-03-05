@@ -96,5 +96,6 @@
     "Export": "Export",
     "Export responses": "Export responses",
     "": "",
-    "Delete selected": "Delete selected"
+    "Delete selected": "Delete selected",
+    "Form \/ Delete response": "Form \/ Delete response"
 }

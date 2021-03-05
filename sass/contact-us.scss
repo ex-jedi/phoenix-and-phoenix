@@ -56,7 +56,7 @@ select {
 
 .form-input-wrapper {
   @include flex(column);
-  color: $background-colour-brown;
+  color: $font-colour-brown;
   margin-bottom: $section-spacing-small;
 
   &:last-of-type {
