@@ -127,6 +127,8 @@ a {
 
 .main-header {
   padding: 0 $section-spacing-extra-large $section-spacing-large;
+  //TODO: Check this doesn't break stuff & remove from page specific styles if it's okay.
+  overflow: visible;
 }
 
 .main-logo-wrapper {

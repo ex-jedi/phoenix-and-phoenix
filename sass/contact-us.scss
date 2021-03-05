@@ -1,0 +1,26 @@
+//*==============================================================================
+//** Main Contact Form **
+//*==============================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+.main-contact-section {
+  background-color: $background-colour-light;
+  font-size: $font-size-large;
+  padding: 0 $section-spacing-big $section-spacing-large;
+}
+
+.main-contact-form-intro-text-wrapper {
+  text-align: center;
+  color: $font-colour-blue;
+  margin-bottom: $section-spacing-large;
+
+  p {
+    margin-bottom: $paragraph-spacing-extra-large;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

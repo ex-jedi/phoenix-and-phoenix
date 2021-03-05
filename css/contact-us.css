@@ -1,0 +1,43 @@
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(2rem);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(2rem);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.main-contact-section {
+  background-color: #fdfcfa;
+  font-size: 5rem;
+  padding: 0 30rem 20rem;
+}
+
+.main-contact-form-intro-text-wrapper {
+  text-align: center;
+  color: #535cb0;
+  margin-bottom: 20rem;
+}
+.main-contact-form-intro-text-wrapper p {
+  margin-bottom: 10rem;
+}
+.main-contact-form-intro-text-wrapper p:last-of-type {
+  margin-bottom: 0;
+}
