@@ -10,42 +10,41 @@ html {
   background-color: $background-colour-light;
 }
 
-.illustration-page {
-  overflow: hidden;
-  //TODO: Set media query to show menu when page is too short
-  // height: 110vh;
+.main-nav {
+  z-index: 3;
+  overflow: visible;
 }
 
 .small-header {
   position: relative;
   z-index: 3;
-  overflow: visible;
   width: 100%;
+  overflow: visible;
 }
 
 .small-logo-wrapper {
-  width: 500px;
-  margin: 1rem auto 0;
+  width: 200px;
+  margin: 1rem auto $section-spacing-small;
 }
 
 .illustration-portfolio-section {
   position: relative;
   background-color: transparent;
   width: 100%;
+  height: 100%;
   margin: 0;
   z-index: 1;
-  overflow: hidden;
 }
 
 .illustration-image-wrapper {
   width: 100%;
   background-color: $background-colour-light;
-  overflow: hidden;
 }
 
 .illustration-portfolio-image {
   width: auto;
-  max-height: 80vh;
+  height: 100%;
+  max-height: 75vh;
   margin: 0 auto;
 }
 

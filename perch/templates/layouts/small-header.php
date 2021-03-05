@@ -50,4 +50,5 @@
             'hide-extensions' => true,
             'levels'    => 1
         )); ?>
+				<?php perch_content("Illustration Portfolio"); ?>
     </header>
