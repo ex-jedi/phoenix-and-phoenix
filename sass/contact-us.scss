@@ -36,7 +36,7 @@
 .form-input-wrapper {
   @include flex(column);
   color: $background-colour-brown;
-  margin-bottom: $section-spacing-medium;
+  margin-bottom: $section-spacing-small;
 
   input {
     color: inherit;
@@ -50,8 +50,10 @@
 
 .checkbox-wrapper {
   color: $font-colour-brown;
+  margin-bottom: $section-spacing-small;
 }
 
 .message-area-wrapper {
   color: $font-colour-brown;
+  margin-bottom: $section-spacing-small;
 }

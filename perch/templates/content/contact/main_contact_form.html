@@ -35,18 +35,20 @@
           </div>
           <div class="form-input-wrapper">
               <perch:label for="budget">What's your budget?</perch:label>
-              <perch:input type="budget" id="budget" label="Budget" required>
+              <perch:input type="text" id="budget" label="Budget" required>
           </div>
           <div class="form-input-wrapper">
               <perch:label for="deadline">When would you like the project finished?</perch:label>
-              <perch:input type="deadline" id="deadline" label="Deadline" required>
+              <perch:input type="text" id="deadline" label="Deadline" required>
           </div>
-
           <div class="message-area-wrapper">
               <perch:label for="message">Tell us about your project</perch:label>
               <perch:input class="message-area-input" type="textarea" id="message" label="Project Description" required>
           </div>
-
+          <div class="form-input-wrapper">
+              <perch:label for="found">Where did you find us?</perch:label>
+              <perch:input type="text" id="found" label="Where did you find us?">
+          </div>
           <perch:input class="submit" type="submit" id="submit" value="Send" />
           <perch:success>
               <div class="success">
