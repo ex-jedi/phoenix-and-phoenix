@@ -41,3 +41,26 @@
 .main-contact-form-intro-text-wrapper p:last-of-type {
   margin-bottom: 0;
 }
+
+.form-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: #b07677;
+  margin-bottom: 15rem;
+}
+.form-input-wrapper input {
+  color: inherit;
+  background-color: #fdfcfa;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 4px solid #b07677;
+}
+
+.checkbox-wrapper {
+  color: #b07677;
+}
+
+.message-area-wrapper {
+  color: #b07677;
+}
