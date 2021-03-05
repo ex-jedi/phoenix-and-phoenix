@@ -136,7 +136,7 @@ select {
 .message-area-input {
   border: none;
   background-attachment: local;
-  line-height: 4.4rem;
+  line-height: 4.1rem;
   color: inherit;
   // Text area underlining
   background-image: linear-gradient(
@@ -152,25 +152,6 @@ select {
       $font-colour-brown 1.8rem,
       // Seems to control line thickness
       $font-colour-brown 4.4rem,
-      $background-colour-light 1.85rem
+      $background-colour-light 2rem
     );
-
-  &.active {
-    // Text area underlining
-    background-image: linear-gradient(
-        to right,
-        $font-colour-brown 0,
-        transparent 0
-      ),
-      linear-gradient(to left, $font-colour-brown 0, transparent 0),
-      repeating-linear-gradient(
-        $background-colour-light,
-        // Leave
-        $font-colour-brown 4rem,
-        $font-colour-brown 1.8rem,
-        // Seems to control line thickness
-        $font-colour-brown 4.4rem,
-        $font-colour-brown 1.85rem
-      );
-  }
 }
