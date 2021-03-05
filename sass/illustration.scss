@@ -54,6 +54,26 @@ html {
   overflow: hidden;
 }
 
+.scroll-svg-arrow-wrapper {
+  position: absolute;
+  bottom: $paragraph-spacing-small;
+  right: $section-spacing-medium;
+  width: 200px;
+  height: 200px;
+  z-index: 5;
+
+  [data-name='Text'] {
+    transform-origin: center;
+    animation: rotateSvg 10s linear infinite forwards;
+  }
+}
+
+@keyframes rotateSvg {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 //*=========================================
 //** Flickity CSS **
 //*=========================================

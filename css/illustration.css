@@ -70,6 +70,24 @@ html {
   overflow: hidden;
 }
 
+.scroll-svg-arrow-wrapper {
+  position: absolute;
+  bottom: 1rem;
+  right: 15rem;
+  width: 200px;
+  height: 200px;
+  z-index: 5;
+}
+.scroll-svg-arrow-wrapper [data-name=Text] {
+  transform-origin: center;
+  animation: rotateSvg 10s linear infinite forwards;
+}
+
+@keyframes rotateSvg {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*! Flickity v2.2.2
 https://flickity.metafizzy.co
 ---------------------------------------------- */
