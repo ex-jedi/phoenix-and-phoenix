@@ -49,12 +49,14 @@
   @include flex(row);
   flex-wrap: wrap;
   justify-content: space-between;
-  font-size: $font-size-large;
   padding: 0 $section-spacing-larger;
   background-color: $background-colour-light;
 }
 
 .tab-button {
+  //FIXME: Why doesn't this work without the font stack here?
+  @include main-font-stack;
+  font-size: $font-size-large;
   flex: 1 0 auto;
   width: 300px;
   outline: none;
