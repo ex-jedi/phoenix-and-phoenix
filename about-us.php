@@ -3,6 +3,7 @@
 <main class="main-content about-us-main-content" id="main-content">
 <?php perch_content("Kate Bio"); ?>
 <?php perch_content("Mark Bio"); ?>
+<?php perch_content("Contact Section"); ?>
 </main>
 <?php perch_layout('main-footer'); ?>
 <?php perch_layout('main-footer-end'); ?>
