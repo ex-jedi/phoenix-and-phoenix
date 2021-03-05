@@ -127,8 +127,10 @@ select {
 
 .message-area-input {
   border: none;
+  color: #b07677;
+  width: 100%;
   background-attachment: local;
-  line-height: 4.1rem;
-  color: inherit;
-  background-image: linear-gradient(to right, #fdfcfa 0, transparent 0), linear-gradient(to left, #fdfcfa 0, transparent 0), repeating-linear-gradient(#fdfcfa, #fdfcfa 4rem, #b07677 1.8rem, #b07677 4.4rem, #fdfcfa 2rem);
+  line-height: 5rem;
+  background-image: linear-gradient(transparent, transparent calc(5rem - 4px), #b07677 calc(5rem - 4px));
+  background-size: 5rem 5rem;
 }

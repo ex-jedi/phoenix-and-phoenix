@@ -133,25 +133,42 @@ select {
   margin-bottom: $section-spacing-small;
 }
 
+// .message-area-input {
+//   background-attachment: local;
+//   line-height: 4.4rem;
+//   color: inherit;
+//   border: none;
+
+//   // Text area underlining
+//   background-image: linear-gradient(
+//       to right,
+//       $background-colour-light 0,
+//       transparent 0
+//     ),
+//     linear-gradient(to left, $background-colour-light 0, transparent 0),
+//     repeating-linear-gradient(
+//       $background-colour-light,
+//       // Leave
+//       $background-colour-light 4rem,
+//       $font-colour-brown 1.8rem,
+//       // Seems to control line thickness
+//       $font-colour-brown 4.4rem,
+//       $background-colour-light 2rem
+//     );
+//   background-size: $font-size-large $font-size-large;
+// }
+
 .message-area-input {
   border: none;
+  color: $font-colour-brown;
+  width: 100%;
+
   background-attachment: local;
-  line-height: 4.1rem;
-  color: inherit;
-  // Text area underlining
+  line-height: $font-size-large;
   background-image: linear-gradient(
-      to right,
-      $background-colour-light 0,
-      transparent 0
-    ),
-    linear-gradient(to left, $background-colour-light 0, transparent 0),
-    repeating-linear-gradient(
-      $background-colour-light,
-      // Leave
-      $background-colour-light 4rem,
-      $font-colour-brown 1.8rem,
-      // Seems to control line thickness
-      $font-colour-brown 4.4rem,
-      $background-colour-light 2rem
-    );
+    transparent,
+    transparent calc(#{$font-size-large} - 4px),
+    $font-colour-brown calc(#{$font-size-large} - 4px)
+  );
+  background-size: $font-size-large $font-size-large;
 }
