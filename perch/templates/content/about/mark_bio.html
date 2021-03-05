@@ -1,0 +1,17 @@
+<section class="bio-section mark-bio-section">
+  <h2 class="bio-subheading">
+    <perch:content id="markBioSubheading" type="text" label="Mark Bio Subheading" required>
+  </h2>
+  <div class="bio-flex-wrapper">
+    <img class="bio-image" itemprop="image" loading="lazy" src="<perch:content id="markBioImage" type="image" width="1000" label="Mark Bio Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image Description">"
+    sizes="(max-width:500) 50vw, 100vw"
+    srcset="<perch:content type="image" id="markBioImage" width="1000" > 1000w,
+    <perch:content type="image" id="markBioImage" width="900" quality="70"> 900w,
+    <perch:content type="image" id="markBioImage" width="700" quality="70"> 700w,
+    <perch:content type="image" id="markBioImage" width="500" quality="70"> 500w,
+    <perch:content type="image" id="markBioImage" width="400" quality="70"> 400w" >
+    <div class="bio-text-wrapper">
+      <perch:content id="markBioText" type="textarea" editor="redactor" label="Mark Bio Textarea" required html>
+    </div>
+  </div>
+</section>

@@ -37,6 +37,10 @@
   color: #b07677;
 }
 
+.mark-bio-section {
+  color: #535cb0;
+}
+
 .bio-flex-wrapper {
   display: flex;
   flex-direction: row;
@@ -48,6 +52,9 @@
   flex: 0 1 auto;
   width: 50%;
   font-size: 5rem;
+}
+.bio-text-wrapper p:last-of-type {
+  margin-bottom: 0;
 }
 
 .bio-image {

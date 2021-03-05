@@ -19,6 +19,10 @@
   color: $font-colour-brown;
 }
 
+.mark-bio-section {
+  color: $font-colour-blue;
+}
+
 .bio-flex-wrapper {
   @include flex(row);
   justify-content: space-between;
@@ -29,6 +33,12 @@
   flex: 0 1 auto;
   width: 50%;
   font-size: $font-size-large;
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .bio-image {
