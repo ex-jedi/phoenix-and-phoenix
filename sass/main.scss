@@ -215,27 +215,6 @@ a {
   text-decoration: none;
 }
 
-// *=========================================
-// ** Forms  **
-// *=========================================
-
-//* Inherit fonts for inputs and buttons
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-//********** Honeypot **********
-
-.form-identification-number {
-  overflow: hidden;
-  position: absolute;
-  z-index: -10;
-  opacity: 0;
-}
-
 //*=========================================
 //** Contact Section **
 //*=========================================

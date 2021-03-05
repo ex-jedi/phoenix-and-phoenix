@@ -33,6 +33,27 @@
 //** Form **
 //*=========================================
 
+//********** Reset **********
+
+//* Inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+//********** Honeypot **********
+
+.form-identification-number {
+  overflow: hidden;
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+}
+
+//********** Form Styles **********
+
 .form-input-wrapper {
   @include flex(column);
   color: $background-colour-brown;
@@ -110,4 +131,46 @@
 .message-area-wrapper {
   color: $font-colour-brown;
   margin-bottom: $section-spacing-small;
+}
+
+.message-area-input {
+  border: none;
+  background-attachment: local;
+  line-height: 4.4rem;
+  color: inherit;
+  // Text area underlining
+  background-image: linear-gradient(
+      to right,
+      $background-colour-light 0,
+      transparent 0
+    ),
+    linear-gradient(to left, $background-colour-light 0, transparent 0),
+    repeating-linear-gradient(
+      $background-colour-light,
+      // Leave
+      $background-colour-light 4rem,
+      $font-colour-brown 1.8rem,
+      // Seems to control line thickness
+      $font-colour-brown 4.4rem,
+      $background-colour-light 1.85rem
+    );
+
+  &.active {
+    // Text area underlining
+    background-image: linear-gradient(
+        to right,
+        $font-colour-brown 0,
+        transparent 0
+      ),
+      linear-gradient(to left, $font-colour-brown 0, transparent 0),
+      repeating-linear-gradient(
+        $background-colour-light,
+        // Leave
+        $font-colour-brown 4rem,
+        $font-colour-brown 1.8rem,
+        // Seems to control line thickness
+        $font-colour-brown 4.4rem,
+        $font-colour-brown 1.85rem
+      );
+  }
 }

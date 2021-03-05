@@ -42,6 +42,20 @@
   margin-bottom: 0;
 }
 
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.form-identification-number {
+  overflow: hidden;
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+}
+
 .form-input-wrapper {
   display: flex;
   flex-direction: column;
@@ -109,4 +123,15 @@
 .message-area-wrapper {
   color: #b07677;
   margin-bottom: 10rem;
+}
+
+.message-area-input {
+  border: none;
+  background-attachment: local;
+  line-height: 4.4rem;
+  color: inherit;
+  background-image: linear-gradient(to right, #fdfcfa 0, transparent 0), linear-gradient(to left, #fdfcfa 0, transparent 0), repeating-linear-gradient(#fdfcfa, #fdfcfa 4rem, #b07677 1.8rem, #b07677 4.4rem, #fdfcfa 1.85rem);
+}
+.message-area-input.active {
+  background-image: linear-gradient(to right, #b07677 0, transparent 0), linear-gradient(to left, #b07677 0, transparent 0), repeating-linear-gradient(#fdfcfa, #b07677 4rem, #b07677 1.8rem, #b07677 4.4rem, #b07677 1.85rem);
 }
