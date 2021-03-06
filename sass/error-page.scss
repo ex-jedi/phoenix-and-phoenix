@@ -6,8 +6,17 @@
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
-.error-page-heading {
+.error-page-section {
   background-color: $background-colour-light;
+  padding: $section-spacing-medium $section-spacing-super-large;
+}
+
+.error-page-text-wrapper {
+  font-size: $font-size-large;
   color: $font-colour-blue;
-  padding: $section-spacing-large 0;
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
