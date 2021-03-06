@@ -24,15 +24,30 @@
     transform: translateY(0);
   }
 }
+.main-logo-wrapper {
+  margin: 0 auto;
+}
+
 .error-page-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fdfcfa;
-  padding: 15rem 40rem;
+  padding: 0 40rem 20rem;
 }
 
 .error-page-text-wrapper {
   font-size: 5rem;
   color: #535cb0;
+  flex: 0 1 auto;
+  width: 45%;
 }
 .error-page-text-wrapper p:last-of-type {
   margin-bottom: 0;
+}
+
+.error-page-image {
+  flex: 0 1 auto;
+  width: 45%;
 }

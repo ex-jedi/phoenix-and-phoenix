@@ -6,17 +6,32 @@
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
+.main-logo-wrapper {
+  margin: 0 auto;
+}
+
 .error-page-section {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
   background-color: $background-colour-light;
-  padding: $section-spacing-medium $section-spacing-super-large;
+  padding: 0 $section-spacing-super-large $section-spacing-large;
 }
 
 .error-page-text-wrapper {
   font-size: $font-size-large;
   color: $font-colour-blue;
+  flex: 0 1 auto;
+  width: 45%;
+
   p {
     &:last-of-type {
       margin-bottom: 0;
     }
   }
+}
+
+.error-page-image {
+  flex: 0 1 auto;
+  width: 45%;
 }
