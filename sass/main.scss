@@ -59,6 +59,7 @@ body {
 
 section,
 main {
+  position: relative;
   overflow: hidden;
   z-index: 1;
 }
@@ -123,6 +124,7 @@ a {
   position: relative;
   background-color: $background-colour-light;
   overflow: hidden;
+  z-index: 2;
 }
 
 .main-header {
@@ -241,7 +243,7 @@ a {
   position: sticky;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
 
   p {
