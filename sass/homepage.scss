@@ -26,6 +26,10 @@
   @include breakpoint(1700) {
     align-items: center;
   }
+
+  @include breakpoint(1400) {
+    @include flex(column);
+  }
 }
 
 .homepage-header-text-wrapper {
@@ -40,6 +44,10 @@
       margin-bottom: $paragraph-spacing-large;
     }
   }
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-medium;
+  }
 }
 
 .homepage-header-image {
@@ -49,6 +57,10 @@
 .homepage-header-text-wrapper,
 .homepage-header-image {
   width: 47%;
+
+  @include breakpoint(1400) {
+    width: 100%;
+  }
 }
 
 //*=========================================

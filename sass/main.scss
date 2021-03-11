@@ -61,7 +61,7 @@ section,
 main {
   position: relative;
   overflow: hidden;
-  z-index: 1;
+  z-index: 3;
 }
 
 // *=========================================
@@ -124,19 +124,25 @@ a {
   position: relative;
   background-color: $background-colour-light;
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
 }
 
 .main-header {
   padding: 0 $section-spacing-extra-large $section-spacing-large;
   //TODO: Check this doesn't break stuff & remove from page specific styles if it's okay.
   overflow: visible;
+  z-index: 2;
 }
 
 .main-logo-wrapper {
   width: 100%;
   max-width: 350px;
   margin: $paragraph-spacing-small auto $section-spacing-large;
+
+  //TODO: Looks good on homepage. Check it's good everywhere else.
+  @include breakpoint(1400) {
+    margin: $paragraph-spacing-small auto $section-spacing-medium;
+  }
 }
 
 .main-logo {
