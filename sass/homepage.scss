@@ -13,7 +13,7 @@
 .main-header {
   padding: 0 $section-spacing-extra-large $section-spacing-large;
 
-  @include breakpoint(1700) {
+  @include breakpoint(1800) {
     padding: 0 $section-spacing-large $section-spacing-large;
   }
 }
@@ -23,11 +23,11 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  @include breakpoint(1700) {
+  @include breakpoint(1800) {
     align-items: center;
   }
 
-  @include breakpoint(1300) {
+  @include breakpoint(1400) {
     @include flex(column);
   }
 }
@@ -45,7 +45,7 @@
     }
   }
 
-  @include breakpoint(1300) {
+  @include breakpoint(1400) {
     margin-bottom: $section-spacing-medium;
   }
 }
@@ -58,7 +58,7 @@
 .homepage-header-image {
   width: 47%;
 
-  @include breakpoint(1300) {
+  @include breakpoint(1400) {
     width: 100%;
   }
 }
@@ -72,6 +72,10 @@
   padding: $section-spacing-large $section-spacing-super-large;
   color: $font-colour-light;
   position: relative;
+
+  @include breakpoint(1800) {
+    padding: $section-spacing-large $section-spacing-large;
+  }
 }
 
 //*=========================================
