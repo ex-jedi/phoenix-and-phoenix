@@ -72,10 +72,19 @@
   padding: $section-spacing-large $section-spacing-super-large;
   color: $font-colour-light;
   position: relative;
+  // z-index: 3;
 
   @include breakpoint(1800) {
-    padding: $section-spacing-large $section-spacing-large;
+    padding: $section-spacing-large;
   }
+
+  @include breakpoint(1400) {
+    padding: $section-spacing-medium;
+  }
+}
+
+.homepage-section-heading {
+  margin-bottom: $section-spacing-medium;
 }
 
 //*=========================================
@@ -89,12 +98,21 @@
 .homepage-bio-image {
   width: 100%;
   height: auto;
+  //TODO: Make sure this isn't ruining the image
   object-fit: cover;
+
+  @include breakpoint(1400) {
+    max-height: 100vh;
+  }
 }
 
 .homepage-section-one-main-image-wrapper {
   width: 100%;
   margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-medium;
+  }
 }
 
 .homepage-bio-div {
@@ -104,22 +122,41 @@
   font-size: $font-size-large;
   margin-bottom: $section-spacing-large;
   position: relative;
+
+  @include breakpoint(1400) {
+    @include flex(column);
+  }
 }
 
 .bio-image-wrapper,
 .bio-text-wrapper {
   flex: 0 1 auto;
   width: 50%;
+
+  @include breakpoint(1400) {
+    width: 100%;
+    margin-bottom: $section-spacing-medium;
+  }
 }
 
 .bio-image-wrapper {
   margin-right: $section-spacing-small;
   margin-top: $section-spacing-large;
+
+  @include breakpoint(1400) {
+    margin: 0;
+    order: 2;
+  }
 }
 
 .bio-text-wrapper {
   p {
     margin: 0;
+  }
+
+  @include breakpoint(1400) {
+    text-align: center;
+    order: 1;
   }
 }
 
