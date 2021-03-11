@@ -61,7 +61,7 @@ section,
 main {
   position: relative;
   overflow: hidden;
-  z-index: 3;
+  z-index: 2;
 }
 
 // *=========================================
@@ -124,7 +124,6 @@ a {
   position: relative;
   background-color: $background-colour-light;
   overflow: hidden;
-  z-index: 3;
 }
 
 .main-header {
@@ -253,7 +252,7 @@ a {
   position: sticky;
   bottom: 0;
   left: 0;
-  z-index: 0;
+  z-index: 1;
   overflow: hidden;
 
   p {
@@ -262,6 +261,10 @@ a {
 
   a {
     color: inherit;
+  }
+
+  @include breakpoint(1200) {
+    padding: $section-spacing-medium;
   }
 }
 
