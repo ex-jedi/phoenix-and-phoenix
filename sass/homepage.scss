@@ -27,7 +27,7 @@
     align-items: center;
   }
 
-  @include breakpoint(1400) {
+  @include breakpoint(1300) {
     @include flex(column);
   }
 }
@@ -45,7 +45,7 @@
     }
   }
 
-  @include breakpoint(1400) {
+  @include breakpoint(1300) {
     margin-bottom: $section-spacing-medium;
   }
 }
@@ -58,7 +58,7 @@
 .homepage-header-image {
   width: 47%;
 
-  @include breakpoint(1400) {
+  @include breakpoint(1300) {
     width: 100%;
   }
 }
