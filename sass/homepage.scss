@@ -10,10 +10,22 @@
 //** Header **
 //*=========================================
 
+.main-header {
+  padding: 0 $section-spacing-extra-large $section-spacing-large;
+
+  @include breakpoint(1700) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
+}
+
 .homepage-header-content-wrapper {
   @include flex(row);
   justify-content: space-between;
   align-items: flex-start;
+
+  @include breakpoint(1700) {
+    align-items: center;
+  }
 }
 
 .homepage-header-text-wrapper {
