@@ -176,6 +176,10 @@
   font-size: $font-size-large;
   margin: 0 auto $section-spacing-large;
   text-align: center;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-medium;
+  }
 }
 
 .section-two-flex-wrapper {
@@ -183,6 +187,11 @@
   align-items: center;
   margin: 0 auto $section-spacing-large;
   position: relative;
+
+  @include breakpoint(1400) {
+    @include flex(column);
+    margin: 0 auto $section-spacing-medium;
+  }
 }
 
 .section-two-flex-wrapper-three {
@@ -191,6 +200,10 @@
 
 .section-two-flex-paragraph {
   margin: 0;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-medium;
+  }
 }
 
 .section-two-flex-image {
@@ -198,6 +211,12 @@
   height: 500px;
   object-fit: cover;
   margin-left: $section-spacing-small;
+
+  @include breakpoint(1400) {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
 }
 
 .homepage-call-to-action-link-wrapper {
