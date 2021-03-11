@@ -135,6 +135,7 @@
   color: $font-colour-light;
   font-size: $font-size-large;
   margin: 0 auto $section-spacing-large;
+  text-align: center;
 }
 
 .section-two-flex-wrapper {
@@ -161,6 +162,10 @@
 
 .homepage-call-to-action-link-wrapper {
   background-color: $background-colour-light;
+}
+
+.homepage-cta-one {
+  margin-left: $paragraph-spacing-large;
 }
 
 .homepage-call-to-action-link-one {
