@@ -86,8 +86,8 @@
 .homepage-section-heading {
   margin-bottom: $section-spacing-medium;
 
-  @include breakpoint(1400) {
-    // font-size: $heading-size-medium;
+  @include breakpoint(1200) {
+    font-size: $heading-size-medium;
   }
 }
 
