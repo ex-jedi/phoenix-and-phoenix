@@ -251,6 +251,10 @@ header {
   @include breakpoint(1400) {
     padding: $section-spacing-medium;
   }
+
+  @include breakpoint(1200) {
+    padding: $section-spacing-medium $section-spacing-small;
+  }
 }
 
 .contact-heading {

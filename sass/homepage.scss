@@ -12,11 +12,19 @@
 
 .main-header {
   padding: 0 $section-spacing-extra-large $section-spacing-large;
+  overflow-x: hidden;
 
   @include breakpoint(1800) {
     padding: 0 $section-spacing-large $section-spacing-large;
   }
-  overflow-x: hidden;
+
+  @include breakpoint(1400) {
+    padding: 0 $section-spacing-medium $section-spacing-medium;
+  }
+
+  @include breakpoint(1200) {
+    padding: 0 $section-spacing-small $section-spacing-medium;
+  }
 }
 
 .homepage-header-content-wrapper {
@@ -81,6 +89,10 @@
 
   @include breakpoint(1400) {
     padding: $section-spacing-medium;
+  }
+
+  @include breakpoint(1200) {
+    padding: $section-spacing-medium $section-spacing-small;
   }
 }
 
@@ -275,7 +287,7 @@
 
   @include breakpoint(1400) {
     position: static;
-    margin: $section-spacing-medium auto;
+    margin: $section-spacing-medium auto 0;
   }
 }
 
