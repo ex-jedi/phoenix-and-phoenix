@@ -240,7 +240,7 @@
     width: 100%;
     height: auto;
     max-height: 100vh;
-    margin: 0 auto $section-spacing-medium;
+    margin: 0 auto;
   }
 }
 
@@ -250,6 +250,10 @@
 
 .homepage-cta-one {
   margin-left: $paragraph-spacing-large;
+
+  @include breakpoint(1400) {
+    margin: 0;
+  }
 }
 
 .homepage-call-to-action-link-one {
@@ -271,6 +275,7 @@
 
   @include breakpoint(1400) {
     position: static;
+    margin: $section-spacing-medium auto;
   }
 }
 
