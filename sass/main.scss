@@ -61,7 +61,12 @@ section,
 main {
   position: relative;
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
+  /*
+  * Fixes IOS Bug where scrolling breaks z-index
+  https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
+  */
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 // *=========================================
@@ -120,17 +125,19 @@ a {
 //** Header **
 //*=========================================
 
-.header {
+header {
   position: relative;
+  z-index: 3;
+}
+
+.header {
   background-color: $background-colour-light;
-  overflow: hidden;
 }
 
 .main-header {
   padding: 0 $section-spacing-extra-large $section-spacing-large;
   //TODO: Check this doesn't break stuff & remove from page specific styles if it's okay.
   overflow: visible;
-  z-index: 2;
 }
 
 .main-logo-wrapper {
@@ -260,6 +267,8 @@ a {
   position: sticky;
   bottom: 0;
   left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1;
   overflow: hidden;
 
