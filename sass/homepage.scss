@@ -16,6 +16,7 @@
   @include breakpoint(1800) {
     padding: 0 $section-spacing-large $section-spacing-large;
   }
+  overflow-x: hidden;
 }
 
 .homepage-header-content-wrapper {
