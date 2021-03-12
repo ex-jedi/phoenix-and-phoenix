@@ -25,6 +25,10 @@
   @include breakpoint(1200) {
     padding: 0 $section-spacing-small $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-tiny $section-spacing-small;
+  }
 }
 
 .homepage-header-content-wrapper {
@@ -56,6 +60,10 @@
 
   @include breakpoint(1400) {
     margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
   }
 }
 
@@ -127,6 +135,10 @@
   @include breakpoint(1400) {
     margin-bottom: $section-spacing-medium;
   }
+
+  @include breakpoint(1200) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 .homepage-section-one-main-image {
@@ -154,6 +166,14 @@
 
 .homepage-bio-one {
   margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 .bio-image-wrapper,
@@ -164,6 +184,10 @@
   @include breakpoint(1400) {
     width: 100%;
     margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
   }
 }
 

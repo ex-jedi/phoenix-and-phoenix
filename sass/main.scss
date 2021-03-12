@@ -152,6 +152,10 @@ header {
   @include breakpoint(1400) {
     margin: $paragraph-spacing-small auto $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 .main-logo {
