@@ -127,7 +127,7 @@ a {
 //** Header **
 //*=========================================
 
-header {
+.header {
   position: relative;
   z-index: 3;
   overflow: visible;
@@ -136,16 +136,29 @@ header {
   https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
   */
   -webkit-transform: translate3d(0, 0, 0);
-}
-
-.header {
   background-color: $background-colour-light;
 }
 
 .main-header {
   padding: 0 $section-spacing-extra-large $section-spacing-large;
-  //TODO: Check this doesn't break stuff & remove from page specific styles if it's okay.
   overflow: visible;
+  overflow-x: hidden;
+
+  @include breakpoint(1800) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
+
+  @include breakpoint(1400) {
+    padding: 0 $section-spacing-medium $section-spacing-medium;
+  }
+
+  @include breakpoint(1200) {
+    padding: 0 $section-spacing-small $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-tiny $section-spacing-small;
+  }
 }
 
 .main-logo-wrapper {

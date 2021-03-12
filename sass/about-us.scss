@@ -19,7 +19,7 @@
   }
 
   @include breakpoint(1400) {
-    padding: 0 $section-spacing-medium $section-spacing-large;
+    padding: 0 $section-spacing-medium $section-spacing-medium;
   }
 }
 
