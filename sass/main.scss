@@ -131,6 +131,11 @@ header {
   position: relative;
   z-index: 3;
   overflow: visible;
+  /*
+  * Fixes IOS Bug where scrolling breaks z-index
+  https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
+  */
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .header {

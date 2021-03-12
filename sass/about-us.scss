@@ -13,6 +13,14 @@
 .bio-section {
   background-color: $background-colour-light;
   padding: 0 $section-spacing-big $section-spacing-large;
+
+  @include breakpoint(1800) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
+
+  @include breakpoint(1400) {
+    padding: 0 $section-spacing-medium $section-spacing-large;
+  }
 }
 
 .kate-bio-section {
