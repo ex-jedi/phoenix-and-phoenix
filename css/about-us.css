@@ -42,6 +42,16 @@
     padding: 0 15rem 15rem;
   }
 }
+@media (max-width: 1200px) {
+  .bio-section {
+    padding: 0 10rem 15rem;
+  }
+}
+@media (max-width: 700px) {
+  .bio-section {
+    padding: 0 2.5rem 10rem;
+  }
+}
 
 .kate-bio-section {
   color: #b07677;
