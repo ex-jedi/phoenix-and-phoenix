@@ -213,8 +213,8 @@
   margin: 0 auto $section-spacing-large;
   text-align: center;
 
-  @include breakpoint(1400) {
-    margin: 0 auto $section-spacing-medium;
+  @include breakpoint(1200) {
+    margin: 0 auto $section-spacing-small;
   }
 }
 
@@ -228,6 +228,10 @@
     @include flex(column);
     margin: 0 auto $section-spacing-medium;
   }
+
+  @include breakpoint(1700) {
+    margin: 0 auto $section-spacing-small;
+  }
 }
 
 .section-two-flex-wrapper-three {
@@ -236,6 +240,10 @@
   @include breakpoint(1400) {
     margin: 0 auto $section-spacing-medium;
   }
+
+  @include breakpoint(1200) {
+    margin: 0 auto $section-spacing-small;
+  }
 }
 
 .section-two-flex-paragraph {
@@ -243,6 +251,10 @@
 
   @include breakpoint(1400) {
     margin: 0 auto $section-spacing-medium;
+  }
+
+  @include breakpoint(1200) {
+    margin: 0 auto $section-spacing-small;
   }
 }
 
@@ -296,6 +308,10 @@
   @include breakpoint(1400) {
     position: static;
     margin: $section-spacing-medium auto 0;
+  }
+
+  @include breakpoint(700) {
+    margin: $section-spacing-small auto 0;
   }
 }
 
