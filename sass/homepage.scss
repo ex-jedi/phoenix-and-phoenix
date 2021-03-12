@@ -94,6 +94,10 @@
   @include breakpoint(1200) {
     padding: $section-spacing-medium $section-spacing-small;
   }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-tiny;
+  }
 }
 
 .homepage-section-heading {
@@ -101,6 +105,10 @@
 
   @include breakpoint(1200) {
     font-size: $heading-size-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
   }
 }
 
@@ -320,6 +328,10 @@
     @include breakpoint(1400) {
       margin-bottom: $section-spacing-medium;
     }
+
+    @include breakpoint(700) {
+      margin-bottom: $section-spacing-small;
+    }
   }
 
   &:nth-of-type(2) {
@@ -336,6 +348,10 @@
 .testimonial-name {
   @include breakpoint(1400) {
     margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
   }
 }
 
@@ -355,6 +371,10 @@
 
   @include breakpoint(1400) {
     margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
   }
 }
 
