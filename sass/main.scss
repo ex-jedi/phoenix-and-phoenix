@@ -216,6 +216,12 @@ header {
 
 //********** Responsive Nav Styles **********
 
+.main-nav {
+  @include breakpoint(700) {
+    display: none;
+  }
+}
+
 // *=========================================
 // ** Body **
 // *=========================================
@@ -255,10 +261,15 @@ header {
   @include breakpoint(1200) {
     padding: $section-spacing-medium $section-spacing-small;
   }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-tiny;
+  }
 }
 
 .contact-heading {
   margin: 0 auto;
+  font-size: $heading-size-medium;
 }
 
 // *=========================================
@@ -281,6 +292,7 @@ header {
 
   p {
     text-align: center;
+    margin-bottom: $paragraph-spacing-medium;
   }
 
   a {
@@ -290,6 +302,10 @@ header {
   @include breakpoint(1200) {
     padding: $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-tiny;
+  }
 }
 
 .footer-social-media-wrapper {
@@ -297,6 +313,14 @@ header {
   justify-content: space-between;
   margin: 0 auto $section-spacing-large;
   width: 150px;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-small;
+  }
 }
 
 .footer-social-media-link {
