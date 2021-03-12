@@ -39,6 +39,7 @@ body {
   margin: 0 auto;
   padding: 0;
   background: none;
+  // overflow-x: hidden;
   // Removes small gap below footer
   //TODO: Check this doesn't mess stuff up
   line-height: 0;
@@ -48,6 +49,7 @@ body {
   // Removes small gap below footer
   line-height: normal;
   width: 100%;
+  overflow: visible;
 }
 
 // * Box sizing rules
@@ -61,7 +63,7 @@ section,
 main {
   position: relative;
   overflow: hidden;
-  z-index: 3;
+  z-index: 2;
   /*
   * Fixes IOS Bug where scrolling breaks z-index
   https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
@@ -128,6 +130,7 @@ a {
 header {
   position: relative;
   z-index: 3;
+  overflow: visible;
 }
 
 .header {

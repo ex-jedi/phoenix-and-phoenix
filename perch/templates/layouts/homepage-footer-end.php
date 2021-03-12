@@ -1,3 +1,3 @@
-<script src="/scripts/minified/main-min.js"></script>
+<script src="/scripts/minified/homepage-min.js"></script>
 </body>
 </html>

@@ -99,7 +99,16 @@
   background-color: $background-colour-blue;
 }
 
-.homepage-bio-image {
+.homepage-section-one-main-image-wrapper {
+  width: 100%;
+  margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-medium;
+  }
+}
+
+.homepage-section-one-main-image {
   width: 100%;
   height: auto;
   //TODO: Make sure this isn't ruining the image
@@ -107,15 +116,6 @@
 
   @include breakpoint(1400) {
     max-height: 100vh;
-  }
-}
-
-.homepage-section-one-main-image-wrapper {
-  width: 100%;
-  margin-bottom: $section-spacing-large;
-
-  @include breakpoint(1400) {
-    margin-bottom: $section-spacing-medium;
   }
 }
 
@@ -153,6 +153,17 @@
   @include breakpoint(1400) {
     margin: 0;
     order: 2;
+  }
+}
+
+.homepage-bio-image {
+  width: 100%;
+  height: auto;
+  //TODO: Make sure this isn't ruining the image
+  object-fit: cover;
+
+  @include breakpoint(1400) {
+    max-height: 100vh;
   }
 }
 
