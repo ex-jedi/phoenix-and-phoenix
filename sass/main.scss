@@ -142,6 +142,7 @@ a {
 .main-header {
   padding: 0 $section-spacing-extra-large $section-spacing-large;
   overflow: visible;
+  // Fixes HTML overflow
   overflow-x: hidden;
 
   @include breakpoint(1800) {
