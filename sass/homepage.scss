@@ -10,6 +10,10 @@
 //** Header **
 //*=========================================
 
+.header {
+  overflow: hidden;
+}
+
 .homepage-header-content-wrapper {
   @include flex(row);
   justify-content: space-between;
