@@ -67,11 +67,22 @@
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 1400px) {
+  .bio-flex-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .bio-text-wrapper {
   flex: 0 1 auto;
   width: 50%;
   font-size: 5rem;
+}
+@media (max-width: 1400px) {
+  .bio-text-wrapper {
+    width: 100%;
+  }
 }
 .bio-text-wrapper p:last-of-type {
   margin-bottom: 0;
@@ -82,6 +93,12 @@
   width: calc(50% - 10rem);
   height: 100%;
   margin-right: 10rem;
+}
+@media (max-width: 1400px) {
+  .bio-image {
+    width: 100%;
+    margin: 0 auto 15rem;
+  }
 }
 
 .contact-section {

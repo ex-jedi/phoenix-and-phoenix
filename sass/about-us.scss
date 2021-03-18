@@ -43,12 +43,20 @@
   @include flex(row);
   justify-content: space-between;
   align-items: center;
+
+  @include breakpoint(1400) {
+    @include flex(column);
+  }
 }
 
 .bio-text-wrapper {
   flex: 0 1 auto;
   width: 50%;
   font-size: $font-size-large;
+
+  @include breakpoint(1400) {
+    width: 100%;
+  }
 
   p {
     &:last-of-type {
@@ -62,6 +70,11 @@
   width: calc(50% - #{$section-spacing-small});
   height: 100%;
   margin-right: $section-spacing-small;
+
+  @include breakpoint(1400) {
+    width: 100%;
+    margin: 0 auto $section-spacing-medium;
+  }
 }
 
 //*=========================================
