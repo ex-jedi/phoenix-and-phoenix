@@ -231,10 +231,15 @@ select {
 }
 
 .success {
+  font-size: $font-size-extra-large;
+
+  @include breakpoint(1200) {
+    font-size: $font-size-large;
+  }
+
   p {
     text-align: center;
     color: $font-colour-brown;
     //TODO: Check larger is okay
-    font-size: $font-size-extra-large;
   }
 }

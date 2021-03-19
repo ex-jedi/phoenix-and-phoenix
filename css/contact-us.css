@@ -228,8 +228,15 @@ select {
   color: #5bb072;
 }
 
+.success {
+  font-size: 10rem;
+}
+@media (max-width: 1200px) {
+  .success {
+    font-size: 5rem;
+  }
+}
 .success p {
   text-align: center;
   color: #b07677;
-  font-size: 10rem;
 }
