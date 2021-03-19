@@ -1,3 +1,4 @@
+</div>
 <footer class="main-footer">
 		<?php perch_content("Footer Social Media"); ?>
 		<p class="footer-terms">
