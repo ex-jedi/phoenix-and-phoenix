@@ -51,6 +51,10 @@
   @include breakpoint(1400) {
     margin-bottom: $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 //*=========================================
@@ -202,6 +206,10 @@ select {
 
   @include breakpoint(1400) {
     margin: $section-spacing-medium auto 0;
+  }
+
+  @include breakpoint(700) {
+    margin: $section-spacing-small auto 0;
   }
 
   &:hover {

@@ -68,6 +68,11 @@
     margin-bottom: 15rem;
   }
 }
+@media (max-width: 700px) {
+  .main-contact-form-intro-text-wrapper {
+    margin-bottom: 10rem;
+  }
+}
 
 input,
 button,
@@ -197,6 +202,11 @@ select {
 @media (max-width: 1400px) {
   .submit-button {
     margin: 15rem auto 0;
+  }
+}
+@media (max-width: 700px) {
+  .submit-button {
+    margin: 10rem auto 0;
   }
 }
 .submit-button:hover {
