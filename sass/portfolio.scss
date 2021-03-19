@@ -36,10 +36,12 @@ body {
 
   &:nth-of-type(odd) {
     justify-content: flex-start;
+    text-align: left;
   }
 
   &:nth-of-type(even) {
     margin-left: auto;
+    text-align: right;
   }
 }
 
