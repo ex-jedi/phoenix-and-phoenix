@@ -40,7 +40,6 @@ body {
   margin: 0 auto;
   padding: 0;
   background: none;
-  // overflow-x: hidden;
   // Removes small gap below footer
   //TODO: Check this doesn't mess stuff up
   line-height: 0;
@@ -155,8 +154,6 @@ a {
 .main-header {
   padding: 0 $section-spacing-extra-large $section-spacing-large;
   overflow: visible;
-  // Fixes HTML overflow
-  overflow-x: hidden;
 
   @include breakpoint(1800) {
     padding: 0 $section-spacing-large $section-spacing-large;
