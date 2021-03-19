@@ -29,6 +29,26 @@
   font-size: 5rem;
   padding: 0 30rem 20rem;
 }
+@media (max-width: 1800px) {
+  .main-contact-section {
+    padding: 0 20rem 20rem;
+  }
+}
+@media (max-width: 1400px) {
+  .main-contact-section {
+    padding: 0 15rem 15rem;
+  }
+}
+@media (max-width: 1200px) {
+  .main-contact-section {
+    padding: 0 10rem 15rem;
+  }
+}
+@media (max-width: 700px) {
+  .main-contact-section {
+    padding: 0 2.5rem 10rem;
+  }
+}
 
 .main-contact-form-intro-text-wrapper {
   text-align: center;
@@ -40,6 +60,11 @@
 }
 .main-contact-form-intro-text-wrapper p:last-of-type {
   margin-bottom: 0;
+}
+@media (max-width: 1400px) {
+  .main-contact-form-intro-text-wrapper {
+    margin-bottom: 15rem;
+  }
 }
 
 input,
