@@ -190,6 +190,12 @@ select {
   margin: 20rem auto 0;
   cursor: pointer;
   transition: 0.2s ease-in 0s;
+  -webkit-appearance: none;
+}
+@media (max-width: 1400px) {
+  .submit-button {
+    margin: 15rem auto 0;
+  }
 }
 .submit-button:hover {
   color: #5bb072;

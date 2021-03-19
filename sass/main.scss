@@ -200,11 +200,15 @@ a {
 }
 
 .header-page-title {
-  font-size: $font-size-extra-large;
+  font-size: $heading-size-large;
   color: $font-colour-green;
   width: fit-content;
   text-transform: uppercase;
   margin: 0 auto;
+
+  @include breakpoint(1200) {
+    font-size: $heading-size-medium;
+  }
 }
 
 // *=========================================
