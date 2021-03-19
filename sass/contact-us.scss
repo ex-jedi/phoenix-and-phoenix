@@ -101,11 +101,24 @@ select {
   }
 }
 
+.checkboxes-subheading {
+  margin-bottom: $section-spacing-small;
+  color: $font-colour-brown;
+
+  @include breakpoint(1200) {
+    margin-bottom: $paragraph-spacing-large;
+  }
+}
+
 .checkbox-wrapper {
   @include flex(row);
   color: $font-colour-brown;
   margin-bottom: $section-spacing-small;
   align-items: center;
+
+  @include breakpoint(1200) {
+    margin-bottom: $paragraph-spacing-large;
+  }
 
   label {
     order: 2;

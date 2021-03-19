@@ -106,12 +106,27 @@ select {
   border-bottom: 4px solid #b07677;
 }
 
+.checkboxes-subheading {
+  margin-bottom: 10rem;
+  color: #b07677;
+}
+@media (max-width: 1200px) {
+  .checkboxes-subheading {
+    margin-bottom: 5rem;
+  }
+}
+
 .checkbox-wrapper {
   display: flex;
   flex-direction: row;
   color: #b07677;
   margin-bottom: 10rem;
   align-items: center;
+}
+@media (max-width: 1200px) {
+  .checkbox-wrapper {
+    margin-bottom: 5rem;
+  }
 }
 .checkbox-wrapper label {
   order: 2;
