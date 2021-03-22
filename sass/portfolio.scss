@@ -23,10 +23,22 @@ body {
 
 .portfolio-index-section {
   padding: 0 $section-spacing-big $section-spacing-large;
+
+  @include breakpoint(1800) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
+
+  @include breakpoint(1600) {
+    padding: 0 $section-spacing-small $section-spacing-small;
+  }
 }
 
 .portfolio-index-subheading {
   color: $font-colour-blue;
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 .portfolio-index-sub-nav-link {
@@ -42,6 +54,19 @@ body {
   &:nth-of-type(even) {
     margin-left: auto;
     text-align: right;
+  }
+
+  @include breakpoint(1600) {
+    &:nth-of-type(odd) {
+      justify-content: center;
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    &:nth-of-type(even) {
+      margin-inline: auto;
+      text-align: center;
+    }
   }
 }
 
