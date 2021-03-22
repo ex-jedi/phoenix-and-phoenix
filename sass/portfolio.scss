@@ -39,6 +39,10 @@ body {
   @include breakpoint(1400) {
     margin-bottom: $section-spacing-small;
   }
+
+  @include breakpoint(1200) {
+    font-size: $font-size-large;
+  }
 }
 
 .portfolio-index-sub-nav-link {
@@ -77,6 +81,10 @@ body {
     margin-bottom: $paragraph-spacing-larger;
   }
 
+  @include breakpoint(1200) {
+    font-size: $font-size-large;
+  }
+
   &::before {
     counter-increment: sub-nav-counter;
     content: '0' counter(sub-nav-counter) '. ';
@@ -108,6 +116,10 @@ body {
   margin: 0;
   padding: $section-spacing-large $section-spacing-super-large;
   background-color: $background-colour-gold;
+
+  @include breakpoint(1400) {
+    padding: $section-spacing-medium $section-spacing-large;
+  }
 }
 
 .portfolio-illustration-portfolio-subheading {
