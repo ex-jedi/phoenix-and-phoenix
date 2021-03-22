@@ -72,6 +72,11 @@ body {
 
 .featured-portfolio-link {
   margin-bottom: $section-spacing-small;
+
+  @include breakpoint(1400) {
+    margin-bottom: $paragraph-spacing-larger;
+  }
+
   &::before {
     counter-increment: sub-nav-counter;
     content: '0' counter(sub-nav-counter) '. ';
