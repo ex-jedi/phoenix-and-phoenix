@@ -337,7 +337,7 @@ a {
     color: inherit;
   }
 
-  @include breakpoint(1200) {
+  @include breakpoint(1400) {
     padding: $section-spacing-medium;
   }
 
