@@ -147,6 +147,10 @@ body {
 
 .portfolio-padding-wrapper {
   padding: 0 $section-spacing-big $section-spacing-small;
+
+  @include breakpoint(1400) {
+    padding: 0 $section-spacing-large $section-spacing-small;
+  }
 }
 
 .portfolio-project-header-index-link {
@@ -156,6 +160,10 @@ body {
   font-size: $font-size-medium;
   text-decoration: none;
   margin: 0 auto $section-spacing-small;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $paragraph-spacing-larger;
+  }
 }
 
 .portfolio-project-text-wrapper {
@@ -163,6 +171,7 @@ body {
   color: $font-colour-blue;
 
   p {
+    margin-bottom: $paragraph-spacing-extra-large;
     &:last-of-type {
       margin-bottom: 0;
     }
