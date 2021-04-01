@@ -124,20 +124,38 @@
 
 .services-intro-section {
   @include flex(row);
+  justify-content: center;
   align-items: center;
   background-color: $background-colour-light;
   color: $font-colour-blue;
+  overflow: hidden;
+
+  @include breakpoint(1700) {
+    @include flex(column);
+  }
 }
 
 .services-intro-text-wrapper {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   width: 60%;
+
+  @include breakpoint(1700) {
+    width: 100%;
+    margin-bottom: $section-spacing-large;
+  }
 }
 
 .services-intro-image {
   flex: 0 1 auto;
   margin-left: $section-spacing-small;
   width: 40%;
+
+  @include breakpoint(1700) {
+    height: 70vh;
+    width: auto;
+    object-fit: contain;
+    margin: 0;
+  }
 }
 
 //*=========================================
