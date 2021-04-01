@@ -16,7 +16,6 @@ body {
 
 .portfolio-section {
   @include flex(column);
-  // align-items: center;
   background-color: $background-colour-light;
   font-size: $font-size-extra-large;
 }
@@ -150,6 +149,10 @@ body {
 
   @include breakpoint(1400) {
     padding: 0 $section-spacing-large $section-spacing-smallish;
+  }
+
+  @include breakpoint(1200) {
+    padding: 0 $section-spacing-small $section-spacing-smallish;
   }
 }
 
