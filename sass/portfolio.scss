@@ -167,6 +167,7 @@ body {
   font-size: $font-size-medium;
   text-decoration: none;
   margin: 0 auto $section-spacing-small;
+  text-align: center;
 
   @include breakpoint(1400) {
     margin: 0 auto $paragraph-spacing-larger;
