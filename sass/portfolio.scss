@@ -149,7 +149,7 @@ body {
   padding: 0 $section-spacing-big $section-spacing-small;
 
   @include breakpoint(1400) {
-    padding: 0 $section-spacing-large $section-spacing-small;
+    padding: 0 $section-spacing-large $section-spacing-smallish;
   }
 }
 
@@ -176,6 +176,15 @@ body {
       margin-bottom: 0;
     }
   }
+
+  @include breakpoint(1400) {
+    p {
+      margin-bottom: $paragraph-spacing-larger;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .portfolio-dual-image-wrapper {
@@ -197,6 +206,10 @@ body {
 .portfolio-project-video-wrapper {
   width: 100%;
   margin: 0 auto $section-spacing-small;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-smallish;
+  }
 }
 
 .portfolio-project-page-wrapper {
@@ -209,6 +222,10 @@ body {
 .like-what-you-see-cta {
   color: $font-colour-brown;
   margin: $section-spacing-small auto;
+
+  @include breakpoint(1400) {
+    margin: $section-spacing-smallish auto;
+  }
 }
 
 .portfolio-project-svg-down-arrow {
@@ -219,5 +236,9 @@ body {
 
   svg .a {
     stroke: $font-colour-brown;
+  }
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-medium;
   }
 }
