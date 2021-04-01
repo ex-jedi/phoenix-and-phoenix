@@ -204,6 +204,14 @@ body {
   @include breakpoint(700) {
     p {
       margin-bottom: $paragraph-spacing-large;
+      font-size: $font-size-large-medium;
+    }
+  }
+
+  @include breakpoint(500) {
+    p {
+      margin-bottom: $paragraph-spacing-large;
+      font-size: $font-size-medium;
     }
   }
 }
@@ -211,11 +219,25 @@ body {
 .portfolio-dual-image-wrapper {
   @include flex(row);
   justify-content: space-between;
+
+  @include breakpoint(700) {
+    @include flex(column);
+  }
 }
 
 .portfolio-project-dual-image {
   flex: 0 1 auto;
   width: 46%;
+
+  @include breakpoint(700) {
+    width: 100%;
+  }
+}
+
+.portfolio-project-dual-image-one {
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-smaller;
+  }
 }
 
 .portfolio-project-single-image {
@@ -230,6 +252,10 @@ body {
 
   @include breakpoint(1400) {
     margin: 0 auto $section-spacing-smallish;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-smaller;
   }
 }
 
@@ -247,6 +273,14 @@ body {
   @include breakpoint(1400) {
     margin: $section-spacing-smallish auto;
   }
+
+  @include breakpoint(1200) {
+    font-size: $font-size-large;
+  }
+
+  @include breakpoint(700) {
+    margin: $section-spacing-smaller auto;
+  }
 }
 
 .portfolio-project-svg-down-arrow {
@@ -261,5 +295,9 @@ body {
 
   @include breakpoint(1400) {
     margin: 0 auto $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-small;
   }
 }
