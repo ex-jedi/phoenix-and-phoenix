@@ -129,14 +129,15 @@
   color: $font-colour-blue;
 }
 
-.services-intro-text-wrapper,
-.services-intro-image {
-  flex: 0 1 auto;
-  width: 50%;
+.services-intro-text-wrapper {
+  flex: 1 0 auto;
+  width: 60%;
 }
 
 .services-intro-image {
+  flex: 0 1 auto;
   margin-left: $section-spacing-small;
+  width: 40%;
 }
 
 //*=========================================
