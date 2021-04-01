@@ -46,6 +46,7 @@
 <!-- Cookie Warning -->
 <?php perch_content("Cookie Warning"); ?>
 				<div class="site-wrapper portfolio-project-page-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
+					<div class="sticky-footer-wrapper">
 			<header class="header main-header">
 				<!-- Skip to main content link  -->
 				<a class="show-on-focus"  href="#main-content">Skip to main content</a>
