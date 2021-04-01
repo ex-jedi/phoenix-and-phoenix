@@ -154,6 +154,10 @@ body {
   @include breakpoint(1200) {
     padding: 0 $section-spacing-small $section-spacing-smallish;
   }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-tiny $section-spacing-smaller;
+  }
 }
 
 .portfolio-project-header-index-link {
@@ -166,6 +170,10 @@ body {
 
   @include breakpoint(1400) {
     margin: 0 auto $paragraph-spacing-larger;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $paragraph-spacing-large;
   }
 }
 
@@ -191,6 +199,12 @@ body {
 
   @include breakpoint(1200) {
     text-align: center;
+  }
+
+  @include breakpoint(700) {
+    p {
+      margin-bottom: $paragraph-spacing-large;
+    }
   }
 }
 
