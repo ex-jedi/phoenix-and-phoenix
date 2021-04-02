@@ -36,6 +36,10 @@
   p:last-of-type {
     margin-bottom: 0;
   }
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-medium;
+  }
 }
 
 .branding-image {
@@ -45,12 +49,20 @@
 
 .want-more-paragraph-wrapper {
   margin: 0 auto $section-spacing-large;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-medium;
+  }
 }
 
 .svg-down-arrow {
   @include flex(row);
   justify-content: center;
   animation: arrow-bounce 2s linear infinite forwards;
+}
+
+.services-subheading {
+  margin-bottom: $section-spacing-medium;
 }
 
 //*=========================================
@@ -200,6 +212,10 @@
   margin: $section-spacing-large auto;
   font-size: $font-size-large;
   text-align: center;
+
+  @include breakpoint(1400) {
+    margin: $section-spacing-medium auto;
+  }
 }
 
 .branding-package-cta-wrapper {
@@ -209,6 +225,10 @@
   align-items: center;
   width: 100%;
   max-width: 1000px;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-medium;
+  }
 }
 
 .essential-branding-call-to-action-link-wrapper {
@@ -274,6 +294,10 @@
 
 .custom-services-text-wrapper {
   margin-right: $section-spacing-medium;
+
+  @include breakpoint(1400) {
+    margin: 0 $section-spacing-medium 0 0;
+  }
 }
 
 .custom-branding-call-to-action-link-wrapper {
@@ -292,6 +316,10 @@
 
 .small-print-text-wrapper {
   margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-medium;
+  }
 }
 
 .yes-svg-wrapper {
