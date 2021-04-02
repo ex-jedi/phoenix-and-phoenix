@@ -11,6 +11,10 @@
 //*=========================================
 .services-section {
   padding: $section-spacing-large $section-spacing-larger;
+
+  @include breakpoint(1700) {
+    padding: $section-spacing-large $section-spacing-large;
+  }
 }
 
 .services-text-wrapper {
@@ -51,6 +55,10 @@
   justify-content: space-between;
   padding: 0 $section-spacing-larger;
   background-color: $background-colour-light;
+
+  @include breakpoint(1700) {
+    padding: 0 $section-spacing-large;
+  }
 }
 
 .tab-button {
