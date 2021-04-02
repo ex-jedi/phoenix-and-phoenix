@@ -19,6 +19,10 @@
   @include breakpoint(1600) {
     padding: $section-spacing-large $section-spacing-small;
   }
+
+  @include breakpoint(1400) {
+    padding: $section-spacing-medium $section-spacing-small;
+  }
 }
 
 .services-text-wrapper {
