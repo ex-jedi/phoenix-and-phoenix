@@ -79,18 +79,21 @@ h1 {
   font-size: $heading-size-large;
   text-align: center;
   margin: 0 auto;
+  overflow-wrap: break-word;
 }
 
 h2 {
   font-size: $heading-size-large;
   text-align: center;
   margin: 0 auto $section-spacing-large;
+  overflow-wrap: break-word;
 }
 
 h3 {
   font-size: $heading-size-medium;
   text-align: center;
   margin: 0 auto $paragraph-spacing-large;
+  overflow-wrap: break-word;
 }
 
 .section-heading {
@@ -126,6 +129,7 @@ img {
 //********** Paragraphs **********
 p {
   margin: 0 auto $paragraph-spacing-large;
+  overflow-wrap: break-word;
 }
 
 //********** Links **********
