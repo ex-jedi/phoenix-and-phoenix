@@ -318,6 +318,10 @@
   @include breakpoint(1400) {
     margin: 0 $section-spacing-medium 0 0;
   }
+
+  @include breakpoint(1000) {
+    margin: 0 $section-spacing-tiny 0 0;
+  }
 }
 
 .custom-branding-call-to-action-link-wrapper {
