@@ -27,6 +27,10 @@
   @include breakpoint(750) {
     padding: $section-spacing-medium $section-spacing-tiny;
   }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-tiny;
+  }
 }
 
 .services-text-wrapper {
@@ -44,6 +48,9 @@
   @include breakpoint(1400) {
     font-size: $font-size-medium;
   }
+
+  @include breakpoint(700) {
+  }
 }
 
 .branding-image {
@@ -53,6 +60,10 @@
   @include breakpoint(1100) {
     margin-bottom: $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 .want-more-paragraph-wrapper {
@@ -60,6 +71,10 @@
 
   @include breakpoint(1400) {
     margin: 0 auto $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-small;
   }
 }
 
@@ -74,6 +89,10 @@
 
   @include breakpoint(1400) {
     font-size: $heading-size-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
   }
 }
 
@@ -99,6 +118,10 @@
   @include breakpoint(750) {
     padding: 0 $section-spacing-tiny;
   }
+
+  @include breakpoint(600) {
+    @include flex(column);
+  }
 }
 
 .tab-button {
@@ -116,6 +139,11 @@
 
   @include breakpoint(1400) {
     font-size: $font-size-medium;
+  }
+
+  @include breakpoint(600) {
+    width: 100%;
+    padding: $paragraph-spacing-small 0;
   }
 }
 
@@ -200,6 +228,10 @@
   @include breakpoint(1400) {
     margin-bottom: $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 .services-intro-image {
@@ -212,6 +244,12 @@
     width: auto;
     object-fit: contain;
     margin: 0;
+  }
+
+  @include breakpoint(700) {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -241,6 +279,10 @@
   @include breakpoint(1400) {
     margin: $section-spacing-medium auto;
   }
+
+  @include breakpoint(700) {
+    margin: $section-spacing-small auto;
+  }
 }
 
 .branding-package-cta-wrapper {
@@ -257,6 +299,10 @@
 
   @include breakpoint(1100) {
     @include flex(column);
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-small;
   }
 }
 
@@ -319,6 +365,10 @@
 
   background-color: $background-colour-brown;
   color: $font-colour-light;
+
+  @include breakpoint(700) {
+    @include flex(column);
+  }
 }
 
 .custom-services-text-wrapper {
@@ -330,6 +380,10 @@
 
   @include breakpoint(1000) {
     margin: 0 $section-spacing-tiny 0 0;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 0 $section-spacing-small;
   }
 }
 
