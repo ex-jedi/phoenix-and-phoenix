@@ -254,7 +254,7 @@ a {
 //********** Responsive Nav Styles **********
 
 .main-nav {
-  @include breakpoint(700) {
+  @include breakpoint(750) {
     display: none;
   }
 }

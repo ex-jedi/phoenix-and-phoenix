@@ -23,6 +23,10 @@
   @include breakpoint(1400) {
     padding: $section-spacing-medium $section-spacing-small;
   }
+
+  @include breakpoint(750) {
+    padding: $section-spacing-medium $section-spacing-tiny;
+  }
 }
 
 .services-text-wrapper {
@@ -91,19 +95,24 @@
   @include breakpoint(1600) {
     padding: 0 $section-spacing-small;
   }
+
+  @include breakpoint(750) {
+    padding: 0 $section-spacing-tiny;
+  }
 }
 
 .tab-button {
   //FIXME: Why doesn't this work without the font stack here?
   @include main-font-stack;
   font-size: $font-size-large;
-  flex: 1 0 auto;
-  width: 300px;
+  flex: 1 1 auto;
+  width: 30%;
   outline: none;
   border: none;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 0;
 
   @include breakpoint(1400) {
     font-size: $font-size-medium;
