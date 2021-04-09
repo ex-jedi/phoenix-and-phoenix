@@ -44,7 +44,9 @@
 				<div class="main-logo-wrapper">
 					<a class="main-logo-wrapper-link" itemprop="url" href="<?php echo $domain ?>">
 					<img class="hidden-main-logo" aria-hidden="true" itemprop="logo" src="/images/main-logo.png" alt="phoenix and phoenix main logo">
-					<?php perch_layout("main-logo"); ?>
+					<!-- TODO: Remove old logo -->
+					<!-- <?php perch_layout("main-logo"); ?> -->
+					<?php perch_content("Animated Main Logo"); ?>
 				</a>
 				</div>
 					<?php perch_pages_navigation(array(

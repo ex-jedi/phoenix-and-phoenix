@@ -179,6 +179,7 @@ a {
 .main-logo-wrapper {
   width: 100%;
   max-width: 350px;
+  overflow: hidden;
   margin: $paragraph-spacing-small auto $section-spacing-large;
 
   //TODO: Looks good on homepage. Check it's good everywhere else.
@@ -191,8 +192,26 @@ a {
   }
 }
 
-.main-logo {
+.main-logo-image {
+  flex: 0 1 auto;
+}
+
+.main-logo-text {
   width: 100%;
+}
+
+.main-logo-kate-image {
+  width: 155px;
+}
+
+.main-logo-mark-image {
+  width: 113px;
+}
+
+.main-logo-images-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .hidden-main-logo {
