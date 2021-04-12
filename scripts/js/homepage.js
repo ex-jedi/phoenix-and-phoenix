@@ -30,12 +30,12 @@ const animatedMainLogoTimeline = gsap.timeline({
 });
 
 animatedMainLogoTimeline
-  .fromTo(kateImages[0], { opacity: 1 }, { opacity: 0, delay: 2 })
+  .to(kateImages[0], { opacity: 0, delay: 2 })
   .to(kateImages[0], { opacity: 0 })
-  .fromTo(kateImages[1], { opacity: 0 }, { opacity: 1 })
+  .to(kateImages[1], { opacity: 1 })
   .to(kateImages[1], { opacity: 0, delay: 2 })
-  .fromTo(kateImages[2], { opacity: 0 }, { opacity: 1 });
+  .to(kateImages[2], { opacity: 1 });
 
-function animatedMainLogo() {
-  animatedMainLogoTimeline.play();
-}
+// function animatedMainLogo() {
+//   animatedMainLogoTimeline.play();
+// }
