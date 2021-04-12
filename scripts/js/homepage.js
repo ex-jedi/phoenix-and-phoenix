@@ -7,38 +7,17 @@ import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+import { animatedMainLogo } from './animations';
 // *==============================================================================
 // ** Page JS  **
 // *==============================================================================
 
 // *==============================================================================
-// ** Imported  **
+// ** Imports  **
 // *==============================================================================
 
-// TODO: Temp 👇🏾 Move to animations file
 // *=========================================
-// ** Main Logo  **
+// ** GSAP  **
 // *=========================================
 
-const kateImages = gsap.utils.toArray('.kate-images-wrapper img');
-const markImages = gsap.utils.toArray('.mark-images-wrapper img');
-
-const animatedMainLogoTimeline = gsap.timeline({
-  repeat: -1,
-  repeatDelay: 2,
-  defaults: { ease: 'none', duration: 0 },
-});
-
-animatedMainLogoTimeline
-  .to(markImages[0], { opacity: 0 }, '+=2')
-  .to(markImages[1], { opacity: 1 })
-  .to(kateImages[0], { opacity: 0 }, '+=2')
-  .to(kateImages[1], { opacity: 1 })
-  .to(markImages[1], { opacity: 0 }, '+=2')
-  .to(markImages[2], { opacity: 1 })
-  .to(kateImages[1], { opacity: 0 }, '+=2')
-  .to(kateImages[2], { opacity: 1 });
-
-// function animatedMainLogo() {
-//   animatedMainLogoTimeline.play();
-// }
+animatedMainLogo();
