@@ -47,3 +47,7 @@ closeMenuTl
   .to(mainNavTriggerWrapper, { backgroundColor: '#6c9184' }, 'colorChange')
   .to(mainNavTrigger, { color: '#f4f1f0' }, 'colorChange')
   .to(mainNav, { y: '120%', onComplete: pointerEventsRestore }, 'colorChange');
+
+// *==============================================================================
+// ** Homepage Animation  **
+// *==============================================================================
