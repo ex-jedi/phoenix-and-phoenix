@@ -202,7 +202,7 @@ a {
   width: 100%;
 }
 
-.kate-image-wrapper {
+.kate-images-wrapper {
   width: 155px;
 }
 
@@ -216,7 +216,7 @@ a {
   position: relative;
 }
 
-.mark-image-wrapper {
+.mark-images-wrapper {
   width: 113px;
 }
 
@@ -224,6 +224,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
 }
 
 .hidden-main-logo {

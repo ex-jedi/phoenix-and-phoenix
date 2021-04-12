@@ -51,3 +51,15 @@ closeMenuTl
 // *==============================================================================
 // ** Homepage Animation  **
 // *==============================================================================
+
+// *=========================================
+// ** Main Logo  **
+// *=========================================
+
+const animatedMainLogoTimeline = gsap.timeline({
+  defaults: { ease: 'power3.in', duration: 1, delay: 0 },
+});
+
+function animatedMainLogo() {
+  animatedMainLogoTimeline.play();
+}
