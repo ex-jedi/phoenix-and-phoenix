@@ -21,7 +21,7 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 // *=========================================
 
 const kateImages = gsap.utils.toArray('.kate-images-wrapper img');
-console.log(kateImages);
+const markImages = gsap.utils.toArray('.mark-images-wrapper img');
 
 const animatedMainLogoTimeline = gsap.timeline({
   repeat: -1,
@@ -30,10 +30,9 @@ const animatedMainLogoTimeline = gsap.timeline({
 });
 
 animatedMainLogoTimeline
-  .to(kateImages[0], { opacity: 0, delay: 2 })
-  .to(kateImages[0], { opacity: 0 })
+  .to(kateImages[0], { opacity: 0 }, '+=2')
   .to(kateImages[1], { opacity: 1 })
-  .to(kateImages[1], { opacity: 0, delay: 2 })
+  .to(kateImages[1], { opacity: 0 }, '+=2')
   .to(kateImages[2], { opacity: 1 });
 
 // function animatedMainLogo() {
