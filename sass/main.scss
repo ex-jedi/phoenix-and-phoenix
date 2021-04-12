@@ -212,8 +212,18 @@ a {
   align-items: flex-start;
 }
 
+.main-logo-image-wrapper {
+  position: relative;
+}
+
 .mark-image-wrapper {
   width: 113px;
+}
+
+.animated-logo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hidden-main-logo {
