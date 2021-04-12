@@ -30,8 +30,12 @@ const animatedMainLogoTimeline = gsap.timeline({
 });
 
 animatedMainLogoTimeline
+  .to(markImages[0], { opacity: 0 }, '+=2')
+  .to(markImages[1], { opacity: 1 })
   .to(kateImages[0], { opacity: 0 }, '+=2')
   .to(kateImages[1], { opacity: 1 })
+  .to(markImages[1], { opacity: 0 }, '+=2')
+  .to(markImages[2], { opacity: 1 })
   .to(kateImages[1], { opacity: 0 }, '+=2')
   .to(kateImages[2], { opacity: 1 });
 
