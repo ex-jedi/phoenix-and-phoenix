@@ -176,6 +176,8 @@ a {
   }
 }
 
+//********** Main Logo **********
+
 .main-logo-wrapper {
   width: 100%;
   max-width: 350px;
@@ -204,14 +206,14 @@ a {
   width: 155px;
 }
 
-.mark-image-wrapper {
-  width: 113px;
-}
-
 .main-logo-images-wrapper {
   @include flex(row);
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.mark-image-wrapper {
+  width: 113px;
 }
 
 .hidden-main-logo {
