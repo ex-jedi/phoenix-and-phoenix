@@ -51,7 +51,9 @@
 }
 
 .homepage-header-image-wrapper {
+  position: relative;
   flex: 0 1 auto;
+  overflow: hidden;
 }
 
 .homepage-header-text-wrapper,
@@ -65,6 +67,17 @@
 
 .homepage-header-image {
   width: 100%;
+}
+
+//* Homepage Animated Image
+
+.homepage-header-animated-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
 }
 
 //*=========================================

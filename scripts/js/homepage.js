@@ -21,3 +21,6 @@ import { animatedMainLogo } from './animations';
 // *=========================================
 
 animatedMainLogo();
+
+const headerImageWrapper = document.querySelector('.homepage-header-image-wrapper');
+console.log(headerImageWrapper);

@@ -9,5 +9,17 @@
     <perch:content type="image" id="homepageHeaderImage" width="800" quality="75"> 800w,
     <perch:content type="image" id="homepageHeaderImage" width="600" quality="75"> 600w,
     <perch:content type="image" id="homepageHeaderImage" width="400" quality="75"> 400w" >
+
+    <perch:repeater id="homepageHeaderAnimatedImage" label="Homepage Header Animated Images" max="3">
+
+      <img class="homepage-header-image homepage-header-animated-image" itemprop="image" src="<perch:content id="homepageHeaderAnimatedImage" type="image" width="500" label="Homepage Header Image" quality="75">" alt="<perch:content id="animatedAlt" type="text" label="Image description">"
+      sizes="30vw"
+      srcset="<perch:content type="image" id="homepageHeaderAnimatedImage" width="1000" > 1000w,
+      <perch:content type="image" id="homepageHeaderAnimatedImage" width="800" quality="75"> 800w,
+      <perch:content type="image" id="homepageHeaderAnimatedImage" width="600" quality="75"> 600w,
+      <perch:content type="image" id="homepageHeaderAnimatedImage" width="400" quality="75"> 400w" >
+
+    </perch:repeater>
+
   </div>
 </div>
