@@ -131,6 +131,7 @@
 }
 
 .homepage-section-one-main-image-wrapper {
+  position: relative;
   width: 100%;
   margin-bottom: $section-spacing-large;
 
@@ -152,6 +153,13 @@
   @include breakpoint(1400) {
     max-height: 100vh;
   }
+}
+
+.homepage-section-one-main-animated-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
 .homepage-bio-div {

@@ -2,7 +2,7 @@
   <h2 class="section-heading homepage-section-heading">
     <perch:content id="sectionOneHeading" type="text" label="Section One Heading" divider-before="Section One Intro" required>
   </h2>
-  <div class="homepage-section-one-main-image-wrapper">
+  <div class="homepage-section-one-main-image-wrapper image-wipe-animation">
       <img class="homepage-section-one-main-image" itemprop="image" loading="lazy" src="<perch:content id="homepageSectionOneMainImage" type="image" width="1500" height="1500" label="Section One Main Image" quality="70" crop>" alt="<perch:content id="alt" type="text" label="Image Description">"
       sizes="(max-width:1400px) 100vw, 40vw"
       srcset="<perch:content type="image" id="homepageSectionOneMainImage" width="1500" height="1500" crop> 1500w,
@@ -10,6 +10,17 @@
       <perch:content type="image" id="homepageSectionOneMainImage" width="1000" height="1000" quality="70" crop> 1000w,
       <perch:content type="image" id="homepageSectionOneMainImage" width="800" height="800" quality="70" crop> 800w,
       <perch:content type="image" id="homepageSectionOneMainImage" width="600" height="600" quality="70" crop> 600w" >
+
+      <perch:repeater id="sectionOneMainImageAnimated" label="Section One Animated Main Images" max="3">
+        <img class="homepage-section-one-main-image homepage-section-one-main-animated-image" itemprop="image" loading="lazy" src="<perch:content id="homepageSectionOneMainImageAnimated" type="image" width="1500" height="1500" label="Section One Main Image" quality="70" crop>" alt="<perch:content id="altAnimatedOne" type="text" label="Image Description">"
+        sizes="(max-width:1400px) 100vw, 40vw"
+        srcset="<perch:content type="image" id="homepageSectionOneMainImageAnimated" width="1500" height="1500" crop> 1500w,
+        <perch:content type="image" id="homepageSectionOneMainImageAnimated" width="1200" height="1200" quality="70" crop> 1200w,
+        <perch:content type="image" id="homepageSectionOneMainImageAnimated" width="1000" height="1000" quality="70" crop> 1000w,
+        <perch:content type="image" id="homepageSectionOneMainImageAnimated" width="800" height="800" quality="70" crop> 800w,
+        <perch:content type="image" id="homepageSectionOneMainImageAnimated" width="600" height="600" quality="70" crop> 600w" >
+      </perch:repeater>
+
   </div>
 
   <div class="homepage-bio-div homepage-bio-one">

@@ -21,19 +21,14 @@ console.log('This is the homepage!');
 
 // ********** Initial Wipe **********
 
-/*
-Image wipes
-Images swap
-
-
-*/
-
 // * Element Variables
 const imageWipeElement = document.querySelectorAll('.image-wipe-animation');
 const imageSwapImages = gsap.utils.toArray('.image-wipe-animation img');
-console.log(imageSwapImages);
 
 gsap.set(imageWipeElement, { clipPath: 'inset(0 100% 0 0)' });
+function myFunc() {
+  console.log(this);
+}
 
 const imageWipeSwap = gsap.timeline({
   scrollTrigger: {
@@ -42,6 +37,7 @@ const imageWipeSwap = gsap.timeline({
     markers: true,
   },
   defaults: { ease: 'none', duration: 0, delay: 0 },
+  onComplete: myFunc,
 });
 
 imageWipeSwap
@@ -52,6 +48,12 @@ imageWipeSwap
   .to(imageSwapImages[2], { autoAlpha: 1 })
   .to(imageSwapImages[2], { autoAlpha: 0 }, '+=0.6')
   .to(imageSwapImages[3], { autoAlpha: 1 });
+
+/*
+  Take each image wrapper
+  Get images to animate for each wrapper
+  Loop over each image and animate
+  */
 
 // *==============================================================================
 // ** Page JS  **
