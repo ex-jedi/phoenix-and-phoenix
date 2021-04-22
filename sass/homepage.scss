@@ -50,17 +50,21 @@
   }
 }
 
-.homepage-header-image {
+.homepage-header-image-wrapper {
   flex: 0 1 auto;
 }
 
 .homepage-header-text-wrapper,
-.homepage-header-image {
+.homepage-header-image-wrapper {
   width: 47%;
 
   @include breakpoint(1400) {
     width: 100%;
   }
+}
+
+.homepage-header-image {
+  width: 100%;
 }
 
 //*=========================================
