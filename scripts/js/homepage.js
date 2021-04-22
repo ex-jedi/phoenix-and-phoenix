@@ -46,16 +46,12 @@ const imageWipeSwap = gsap.timeline({
 
 imageWipeSwap
   .to(imageWipeElement, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' })
-  .to(imageSwapImages[0], { autoAlpha: 0 }, '+=1')
+  .to(imageSwapImages[0], { autoAlpha: 0 }, '+=0.6')
   .to(imageSwapImages[1], { autoAlpha: 1 })
-  .to(imageSwapImages[1], { autoAlpha: 0 }, '+=1')
-  .to(imageSwapImages[2], { autoAlpha: 1 });
-
-// ScrollTrigger.batch(imageWipeElement, {
-//   markers: true,
-//   start: 'top center',
-//   onEnter: (batch) => gsap.to(batch, { duration: 0.5, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }),
-// });
+  .to(imageSwapImages[1], { autoAlpha: 0 }, '+=0.6')
+  .to(imageSwapImages[2], { autoAlpha: 1 })
+  .to(imageSwapImages[2], { autoAlpha: 0 }, '+=0.6')
+  .to(imageSwapImages[3], { autoAlpha: 1 });
 
 // *==============================================================================
 // ** Page JS  **
