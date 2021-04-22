@@ -25,29 +25,39 @@ console.log('This is the homepage!');
 const imageWipeElement = document.querySelectorAll('.image-wipe-animation');
 const imageSwapImages = gsap.utils.toArray('.image-wipe-animation img');
 
-gsap.set(imageWipeElement, { clipPath: 'inset(0 100% 0 0)' });
-function myFunc() {
-  console.log(this);
-}
-
-const imageWipeSwap = gsap.timeline({
-  scrollTrigger: {
-    trigger: imageWipeElement,
+imageWipeElement.forEach((elem) => {
+  const gsapImages = gsap.utils.toArray(elem.querySelectorAll('img'));
+  ScrollTrigger.create({
+    trigger: elem,
     start: 'top center',
     markers: true,
-  },
-  defaults: { ease: 'none', duration: 0, delay: 0 },
-  onComplete: myFunc,
+    onEnter: () => console.log(gsapImages),
+  });
 });
 
-imageWipeSwap
-  .to(imageWipeElement, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' })
-  .to(imageSwapImages[0], { autoAlpha: 0 }, '+=0.6')
-  .to(imageSwapImages[1], { autoAlpha: 1 })
-  .to(imageSwapImages[1], { autoAlpha: 0 }, '+=0.6')
-  .to(imageSwapImages[2], { autoAlpha: 1 })
-  .to(imageSwapImages[2], { autoAlpha: 0 }, '+=0.6')
-  .to(imageSwapImages[3], { autoAlpha: 1 });
+// gsap.set(imageWipeElement, { clipPath: 'inset(0 100% 0 0)' });
+// function myFunc() {
+//   console.log('Done!');
+// }
+
+// const imageWipeSwap = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: imageWipeElement,
+//     start: 'top center',
+//     markers: true,
+//   },
+//   defaults: { ease: 'none', duration: 0, delay: 0 },
+//   onComplete: myFunc,
+// });
+
+// imageWipeSwap
+//   .to(imageWipeElement, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' })
+//   .to(imageSwapImages[0], { autoAlpha: 0 }, '+=0.6')
+//   .to(imageSwapImages[1], { autoAlpha: 1 })
+//   .to(imageSwapImages[1], { autoAlpha: 0 }, '+=0.6')
+//   .to(imageSwapImages[2], { autoAlpha: 1 })
+//   .to(imageSwapImages[2], { autoAlpha: 0 }, '+=0.6')
+//   .to(imageSwapImages[3], { autoAlpha: 1 });
 
 /*
   Take each image wrapper
