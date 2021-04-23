@@ -63,6 +63,7 @@ fadeAndSwapNineElement.forEach((images) => {
   ScrollTrigger.create({
     trigger: images,
     start: 'top center',
+    id: 'Header Image',
     markers: true,
     once: true,
     onEnter: () => fadeAndSwapNineFunction(images, gsapImages).play(),
