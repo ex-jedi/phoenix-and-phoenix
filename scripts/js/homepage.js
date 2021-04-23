@@ -32,8 +32,8 @@ gsap.set(fadeAndSwapNineElement, { clipPath: 'inset(0% 100% 0% 0%)' });
 function fadeAndSwapNineFunction(elem, swapperImages) {
   const faderSwapper = gsap.timeline({
     defaults: { duration: 0, ease: 'none' },
-    onComplete: () => console.log('Add event listener for swapper here'),
   });
+
   const delay = '+=0.4';
 
   faderSwapper
@@ -65,6 +65,7 @@ fadeAndSwapNineElement.forEach((images) => {
     start: 'top center',
     markers: true,
     onEnter: () => fadeAndSwapNineFunction(images, gsapImages).play(),
+    onLeaveBack: (self) => self.disable(),
   });
 });
 
