@@ -117,7 +117,9 @@ function fadeAndSwapNineFunction(elem, swapperImages) {
     .to(swapperImages[6], { autoAlpha: 0 }, delay)
     .to(swapperImages[7], { autoAlpha: 1 })
     .to(swapperImages[7], { autoAlpha: 0 }, delay)
-    .to(swapperImages[8], { autoAlpha: 1 });
+    .to(swapperImages[8], { autoAlpha: 1 })
+    .to(swapperImages[8], { autoAlpha: 0 }, delay)
+    .to(swapperImages[0], { autoAlpha: 1 });
 
   return faderSwapper;
 }
@@ -158,7 +160,9 @@ function fadeAndSwapThreeFunction(elem, swapperImages) {
     .to(swapperImages[0], { autoAlpha: 0 }, '+=1')
     .to(swapperImages[1], { autoAlpha: 1 })
     .to(swapperImages[1], { autoAlpha: 0 }, delay)
-    .to(swapperImages[2], { autoAlpha: 1 });
+    .to(swapperImages[2], { autoAlpha: 1 })
+    .to(swapperImages[2], { autoAlpha: 0 }, delay)
+    .to(swapperImages[0], { autoAlpha: 1 });
 
   return faderSwapperThree;
 }
