@@ -64,8 +64,8 @@ fadeAndSwapNineElement.forEach((images) => {
     trigger: images,
     start: 'top center',
     markers: true,
+    once: true,
     onEnter: () => fadeAndSwapNineFunction(images, gsapImages).play(),
-    onLeaveBack: (self) => self.disable(),
   });
 });
 
