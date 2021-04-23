@@ -129,7 +129,7 @@ function homepageHeaderImageAnimation() {
       trigger: images,
       start: 'top 60%',
       id: 'Header Image',
-      // markers: true,
+      markers: true,
       once: true,
       onEnter: () => fadeAndSwapNineFunction(images, gsapImages).play(),
     });

@@ -71,7 +71,7 @@
 
 //* Homepage Animated Image
 
-.homepage-header-animated-image {
+.fade-and-swap-nine-images {
   position: absolute;
   top: 0;
   left: 0;
@@ -153,13 +153,6 @@
   @include breakpoint(1400) {
     max-height: 100vh;
   }
-}
-
-.homepage-section-one-main-animated-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
 }
 
 .homepage-bio-div {
