@@ -49,6 +49,21 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 //   .to(mainNav, { y: '120%', onComplete: pointerEventsRestore }, 'colorChange');
 
 // *=========================================
+// ** Fade In Image  **
+// *=========================================
+
+function imageSwipeInExportFunction() {
+  gsap.set('.swipe-in-image', { clipPath: 'inset(0% 100% 0% 0%)' });
+
+  ScrollTrigger.batch('.swipe-in-image', {
+    start: 'top center',
+    id: 'Swip In Image',
+    once: true,
+    onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }),
+  });
+}
+
+// *=========================================
 // ** Main Logo  **
 // *=========================================
 
@@ -185,4 +200,4 @@ function fadeAndSwapThreeExport() {
 // ** Exports  **
 // *==============================================================================
 
-export { animatedMainLogo, homepageHeaderImageAnimation, fadeAndSwapThreeExport };
+export { animatedMainLogo, homepageHeaderImageAnimation, fadeAndSwapThreeExport, imageSwipeInExportFunction };

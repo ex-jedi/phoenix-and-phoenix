@@ -7,7 +7,12 @@ import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
-import { animatedMainLogo, homepageHeaderImageAnimation, fadeAndSwapThreeExport } from './animations';
+import {
+  animatedMainLogo,
+  homepageHeaderImageAnimation,
+  fadeAndSwapThreeExport,
+  imageSwipeInExportFunction,
+} from './animations';
 
 // !==============================================================================
 // ! Temp Things For Building **
@@ -35,3 +40,6 @@ homepageHeaderImageAnimation();
 
 // * Fade and Swap Three Animation
 fadeAndSwapThreeExport();
+
+// * Image Swipe In
+imageSwipeInExportFunction();
