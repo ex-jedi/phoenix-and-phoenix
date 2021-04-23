@@ -123,6 +123,7 @@ function fadeAndSwapNineFunction(elem, swapperImages) {
 }
 
 function homepageHeaderImageAnimation() {
+  // TODO: Doesn't need to be foreach as there's only one per page
   fadeAndSwapNineElement.forEach((images) => {
     const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
     ScrollTrigger.create({
