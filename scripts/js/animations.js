@@ -128,7 +128,7 @@ function homepageHeaderImageAnimation() {
     ScrollTrigger.create({
       trigger: images,
       start: 'top 60%',
-      id: 'Header Image',
+      id: 'Fade & SWap Nine',
       markers: true,
       once: true,
       onEnter: () => fadeAndSwapNineFunction(images, gsapImages).play(),

@@ -70,12 +70,16 @@
 }
 
 //* Homepage Animated Image
+//TODO: More to main & make more modular
+
+.fade-and-swap-nine {
+  position: relative;
+}
 
 .fade-and-swap-nine-images {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
   width: 100%;
   opacity: 0;
 }
