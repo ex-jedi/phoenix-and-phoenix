@@ -10,7 +10,7 @@
       <perch:content id="secTwoFlexParaOne" type="text" label="Paragraph Two" divider-before="Paragraph Two">
     </p>
     <div class="section-two-flex-image-wrapper fade-and-swap-nine">
-      <img class="section-two-flex-image" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgOne" type="image" width="1000" height="1000" label="Section Two Image One" quality="70" crop>" alt="<perch:content id="altOne" type="text" label="Image description">"
+      <img class="section-two-flex-image" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgOne" type="image" width="1000" height="1000" label="Section Two Image One" quality="70" crop required>" alt="<perch:content id="altOne" type="text" label="Image description">"
       sizes="40vw"
       srcset="<perch:content type="image" id="secTwoFlexImgOne" width="1000" height="1000" crop> 1000w,
       <perch:content type="image" id="secTwoFlexImgOne" width="900" height="900" quality="70" crop> 900w,
@@ -99,13 +99,13 @@
       <perch:content id="secTwoFlexParaFour" type="text" label="Paragraph Four" divider-before="Paragraph Four">
     </p>
     <div class="section-two-flex-image-wrapper fade-and-swap-nine">
-      <img class="section-two-flex-image" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgTwo" type="image" width="1000" label="Section Two Image One" quality="70">" alt="<perch:content id="altThree" type="text" label="Image description">"
+      <img class="section-two-flex-image" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgTwo" type="image" width="1000" height="1000" label="Section Two Image One" quality="70" crop required>" alt="<perch:content id="altTwo" type="text" label="Image description">"
       sizes="40vw"
       srcset="<perch:content type="image" id="secTwoFlexImgTwo" width="1000" > 1000w,
-      <perch:content type="image" id="secTwoFlexImgTwo" width="900" quality="70"> 900w,
-      <perch:content type="image" id="secTwoFlexImgTwo" width="800" quality="70"> 800w,
-      <perch:content type="image" id="secTwoFlexImgTwo" width="600" quality="70"> 600w,
-      <perch:content type="image" id="secTwoFlexImgTwo" width="400" quality="70"> 400w">
+      <perch:content type="image" id="secTwoFlexImgTwo" width="900" height="900" quality="70" crop> 900w,
+      <perch:content type="image" id="secTwoFlexImgTwo" width="800" height="800" quality="70" crop> 800w,
+      <perch:content type="image" id="secTwoFlexImgTwo" width="600" height="600" quality="70" crop> 600w,
+      <perch:content type="image" id="secTwoFlexImgTwo" width="400" height="400" quality="70" crop> 400w">
 
       <!-- Animated Images  -->
       <img class="section-two-flex-image fade-and-swap-nine-images" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgTwoAnimatedOne" type="image" width="1000" height="1000" label="Section Two Image One Animated Image One" divider-before="Section Two Image Two Animated Images" quality="70" crop required>" alt="<perch:content id="altTwoAnimatedOne" type="text" label="Image description">"
@@ -183,14 +183,79 @@
     <p class="section-two-paragraph section-two-flex-paragraph">
       <perch:content id="secTwoFlexParaFive" type="text" label="Paragraph Five" divider-before="Paragraph Five">
     </p>
-    <div class="section-two-flex-image-wrapper">
-      <img class="section-two-flex-image" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgThree" type="image" width="1000" label="Section Two Image One" quality="70">" alt="<perch:content id="altFour" type="text" label="Image description">"
+    <div class="section-two-flex-image-wrapper fade-and-swap-nine">
+      <img class="section-two-flex-image" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgThree" type="image" width="1000" height="1000" label="Section Two Image Three" quality="70" crop required>" alt="<perch:content id="altThree" type="text" label="Image description">"
       sizes="40vw"
       srcset="<perch:content type="image" id="secTwoFlexImgThree" width="1000" > 1000w,
-      <perch:content type="image" id="secTwoFlexImgThree" width="900" quality="70"> 900w,
-      <perch:content type="image" id="secTwoFlexImgThree" width="800" quality="70"> 800w,
-      <perch:content type="image" id="secTwoFlexImgThree" width="600" quality="70"> 600w,
-      <perch:content type="image" id="secTwoFlexImgThree" width="400" quality="70"> 400w">
+      <perch:content type="image" id="secTwoFlexImgThree" width="900" height="900" quality="70" crop> 900w,
+      <perch:content type="image" id="secTwoFlexImgThree" width="800" height="800" quality="70" crop> 800w,
+      <perch:content type="image" id="secTwoFlexImgThree" width="600" height="600" quality="70" crop> 600w,
+      <perch:content type="image" id="secTwoFlexImgThree" width="400" height="400" quality="70" crop> 400w">
+
+      <!-- Animated Images  -->
+      <img class="section-two-flex-image fade-and-swap-nine-images" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgThreeAnimatedOne" type="image" width="1000" height="1000" label="Section Two Image Three Animated Image One" divider-before="Section Two Image Three Animated Images" quality="70" crop required>" alt="<perch:content id="altThreeAnimatedOne" type="text" label="Image description">"
+      sizes="40vw"
+      srcset="<perch:content type="image" id="secTwoFlexImgThreeAnimatedOne" width="1000" height="1000" crop> 1000w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedOne" width="900" height="900" quality="70" crop> 900w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedOne" width="800" height="800" quality="70" crop> 800w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedOne" width="600" height="600" quality="70" crop> 600w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedOne" width="400" height="400" quality="70" crop> 400w">
+
+      <img class="section-two-flex-image fade-and-swap-nine-images" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgThreeAnimatedTwo" type="image" width="1000" height="1000" label="Section Two Image Three Animated Image Two" quality="70" crop required>" alt="<perch:content id="altThreeAnimatedTwo" type="text" label="Image description">"
+      sizes="40vw"
+      srcset="<perch:content type="image" id="secTwoFlexImgThreeAnimatedTwo" width="1000" height="1000" crop> 1000w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedTwo" width="900" height="900" quality="70" crop> 900w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedTwo" width="800" height="800" quality="70" crop> 800w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedTwo" width="600" height="600" quality="70" crop> 600w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedTwo" width="400" height="400" quality="70" crop> 400w">
+
+      <img class="section-two-flex-image fade-and-swap-nine-images" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgThreeAnimatedThree" type="image" width="1000" height="1000" label="Section Two Image Three Animated Image Three" quality="70" crop required>" alt="<perch:content id="altThreeAnimatedThree" type="text" label="Image description">"
+      sizes="40vw"
+      srcset="<perch:content type="image" id="secTwoFlexImgThreeAnimatedThree" width="1000" height="1000" crop> 1000w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedThree" width="900" height="900" quality="70" crop> 900w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedThree" width="800" height="800" quality="70" crop> 800w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedThree" width="600" height="600" quality="70" crop> 600w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedThree" width="400" height="400" quality="70" crop> 400w">
+
+      <img class="section-two-flex-image fade-and-swap-nine-images" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgThreeAnimatedFour" type="image" width="1000" height="1000" label="Section Two Image Three Animated Image Four" quality="70" crop required>" alt="<perch:content id="altThreeAnimatedFour" type="text" label="Image description">"
+      sizes="40vw"
+      srcset="<perch:content type="image" id="secTwoFlexImgThreeAnimatedFour" width="1000" height="1000" crop> 1000w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedFour" width="900" height="900" quality="70" crop> 900w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedFour" width="800" height="800" quality="70" crop> 800w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedFour" width="600" height="600" quality="70" crop> 600w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedFour" width="400" height="400" quality="70" crop> 400w">
+
+      <img class="section-two-flex-image fade-and-swap-nine-images" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgThreeAnimatedFive" type="image" width="1000" height="1000" label="Section Two Image Three Animated Image Five" quality="70" crop required>" alt="<perch:content id="altThreeAnimatedFive" type="text" label="Image description">"
+      sizes="40vw"
+      srcset="<perch:content type="image" id="secTwoFlexImgThreeAnimatedFive" width="1000" height="1000" crop> 1000w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedFive" width="900" height="900" quality="70" crop> 900w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedFive" width="800" height="800" quality="70" crop> 800w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedFive" width="600" height="600" quality="70" crop> 600w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedFive" width="400" height="400" quality="70" crop> 400w">
+
+      <img class="section-two-flex-image fade-and-swap-nine-images" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgThreeAnimatedSix" type="image" width="1000" height="1000" label="Section Two Image Three Animated Image Six" quality="70" crop required>" alt="<perch:content id="altThreeAnimatedSix" type="text" label="Image description">"
+      sizes="40vw"
+      srcset="<perch:content type="image" id="secTwoFlexImgThreeAnimatedSix" width="1000" height="1000" crop> 1000w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedSix" width="900" height="900" quality="70" crop> 900w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedSix" width="800" height="800" quality="70" crop> 800w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedSix" width="600" height="600" quality="70" crop> 600w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedSix" width="400" height="400" quality="70" crop> 400w">
+
+      <img class="section-two-flex-image fade-and-swap-nine-images" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgThreeAnimatedSeven" type="image" width="1000" height="1000" label="Section Two Image Three Animated Image Seven" quality="70" crop required>" alt="<perch:content id="altThreeAnimatedSeven" type="text" label="Image description">"
+      sizes="40vw"
+      srcset="<perch:content type="image" id="secTwoFlexImgThreeAnimatedSeven" width="1000" height="1000" crop> 1000w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedSeven" width="900" height="900" quality="70" crop> 900w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedSeven" width="800" height="800" quality="70" crop> 800w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedSeven" width="600" height="600" quality="70" crop> 600w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedSeven" width="400" height="400" quality="70" crop> 400w">
+
+      <img class="section-two-flex-image fade-and-swap-nine-images" itemprop="image" loading="lazy" src="<perch:content id="secTwoFlexImgThreeAnimatedEight" type="image" width="1000" height="1000" label="Section Two Image Three Animated Image Eight" quality="70" crop required>" alt="<perch:content id="altThreeAnimatedEight" type="text" label="Image description">"
+      sizes="40vw"
+      srcset="<perch:content type="image" id="secTwoFlexImgThreeAnimatedEight" width="1000" height="1000" crop> 1000w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedEight" width="900" height="900" quality="70" crop> 900w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedEight" width="800" height="800" quality="70" crop> 800w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedEight" width="600" height="600" quality="70" crop> 600w,
+      <perch:content type="image" id="secTwoFlexImgThreeAnimatedEight" width="400" height="400" quality="70" crop> 400w">
     </div>
     <div class="call-to-action-link-wrapper homepage-call-to-action-link-wrapper positioned-call-to-action-wrapper">
       <!-- TODO: Insert proper link -->
