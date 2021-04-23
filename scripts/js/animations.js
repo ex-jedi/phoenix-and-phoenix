@@ -85,9 +85,6 @@ function animatedMainLogo() {
 // *=========================================
 // ** Header Image  **
 // *=========================================
-const imageWipeElement = document.querySelectorAll('.image-wipe-animation');
-
-// ********** Wipe and Swap Nine **********
 
 // * Element Variables
 const fadeAndSwapNineElement = document.querySelectorAll('.fade-and-swap-nine');
@@ -104,7 +101,7 @@ function fadeAndSwapNineFunction(elem, swapperImages) {
   const delay = '+=0.4';
 
   faderSwapper
-    .to(elem, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' })
+    .to(elem, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }, delay)
     .to(swapperImages[0], { autoAlpha: 0 }, '+=1')
     .to(swapperImages[1], { autoAlpha: 1 })
     .to(swapperImages[1], { autoAlpha: 0 }, delay)
@@ -130,9 +127,9 @@ function homepageHeaderImageAnimation() {
     const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
     ScrollTrigger.create({
       trigger: images,
-      start: 'top center',
+      start: 'top 60%',
       id: 'Header Image',
-      markers: true,
+      // markers: true,
       once: true,
       onEnter: () => fadeAndSwapNineFunction(images, gsapImages).play(),
     });
