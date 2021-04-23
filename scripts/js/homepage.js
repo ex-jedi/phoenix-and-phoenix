@@ -21,8 +21,7 @@ console.log('This is the homepage!');
 
 // * Element Variables
 const fadeAndSwapThreeElement = document.querySelectorAll('.fade-and-swap-three');
-// const imageSwapImages = gsap.utils.toArray('.image-wipe-animation img');
-// gsap.set(fadeAndSwapThreeElement, { clipPath: 'inset(0% 100% 0% 0%)' });
+gsap.set(fadeAndSwapThreeElement, { clipPath: 'inset(0% 100% 0% 0%)' });
 
 // * Image swapping Function
 
@@ -43,17 +42,18 @@ function fadeAndSwapThreeFunction(elem, swapperImages) {
   return faderSwapperThree;
 }
 
-// fadeAndSwapThreeElement.forEach((images) => {
-//   const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
-//   ScrollTrigger.create({
-//     trigger: images,
-//     start: 'top center',
-//     id: 'Three F & S Image',
-//     markers: true,
-//     once: true,
-//     onEnter: () => fadeAndSwapThreeFunction(images, gsapImages).play(),
-//   });
-// });
+fadeAndSwapThreeElement.forEach((images) => {
+  const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
+  console.log(gsapImages);
+  ScrollTrigger.create({
+    trigger: images,
+    start: 'top 60%',
+    id: 'Three F & S Image',
+    markers: true,
+    once: true,
+    onEnter: () => fadeAndSwapThreeFunction(images, gsapImages).play(),
+  });
+});
 
 // *==============================================================================
 // ** Page JS  **
