@@ -11,6 +11,7 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 // *=========================================
 // ** GSAP  **
 // *=========================================
+// TODO: Remove markers
 
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
@@ -146,7 +147,7 @@ function homepageHeaderImageAnimation() {
       trigger: images,
       start: 'top 60%',
       id: 'Fade & SWap Nine',
-      markers: true,
+      // markers: true,
       once: true,
       onEnter: () => fadeAndSwapNineFunction(images, gsapImages).play(),
     });
@@ -189,7 +190,7 @@ function fadeAndSwapThreeExport() {
       trigger: images,
       start: 'top 60%',
       id: 'Three F & S Image',
-      markers: true,
+      // markers: true,
       once: true,
       onEnter: () => fadeAndSwapThreeFunction(images, gsapImages).play(),
     });

@@ -23,51 +23,77 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
 console.log('This is the homepage!');
 
-const splitTextHeadings = document.querySelector('.split-text-heading-animation');
+const splitTextHeadings = document.querySelectorAll('.split-text-heading-animation');
 
-const split = new SplitText(splitTextHeadings, { type: 'words' });
-
-const splitWords = split.words;
-
-const evenSplit = splitWords.filter((div, index) => index % 2 === 0);
-const oddSplit = splitWords.filter((div, index) => index % 2 !== 0);
-
-function splitBeGone() {
-  split.revert();
+// Split text revert function
+function splitBeGone(element) {
+  element.revert();
 }
 
-const headingAnimationTL = gsap.timeline({
-  defaults: {
-    duration: 0.75,
-    ease: 'power2.inOut',
-    stagger: { each: 0.1, from: 'random' },
-  },
-  onComplete: splitBeGone,
-});
+function splitTextHeadingsFunction() {
+  splitTextHeadings.forEach((headings) => {
+    // Split headings into words
+    const split = new SplitText(headings, { type: 'words' });
 
-// gsap.set(evenSplit, { y: -20 });
-// gsap.set(oddSplit, { y: 20 });
+    // Create array or words
+    const splitWords = split.words;
 
-headingAnimationTL
-  .addLabel('start', 0.5)
-  .fromTo(
-    evenSplit,
-    { opacity: 0, y: -20 },
-    {
-      opacity: 1,
-      y: 0,
-    },
-    'start'
-  )
-  .fromTo(
-    oddSplit,
-    { opacity: 0, y: +20 },
-    {
-      opacity: 1,
-      y: 0,
-    },
-    'start'
-  );
+    // Timing idea
+    const splitDuration = splitWords.length / 20;
+    console.log('splitDuration', splitDuration);
+
+    // Filter for odd index items in words array
+    const evenSplit = splitWords.filter((div, index) => index % 2 === 0);
+
+    // Filter for even index items in words array
+    const oddSplit = splitWords.filter((div, index) => index % 2 !== 0);
+
+    // Set heading starting properties
+    gsap.set(evenSplit, { opacity: 0, y: -20 });
+    gsap.set(oddSplit, { opacity: 0, y: +20 });
+
+    // Create GSAP Timeline
+    const headingAnimationTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: headings,
+        start: 'top 60%',
+        markers: true,
+        id: 'Split Text Headings',
+        once: true,
+      },
+      defaults: {
+        duration: 0.3,
+        ease: 'power2.inOut',
+        stagger: { each: 0.09, from: 'random' },
+      },
+      onComplete: () => splitBeGone(split),
+    });
+
+    // Populate timeline
+    headingAnimationTL
+      .addLabel('start')
+      .fromTo(
+        evenSplit,
+        { opacity: 0, y: -20 },
+        {
+          opacity: 1,
+          y: 0,
+        },
+        'start'
+      )
+      .fromTo(
+        oddSplit,
+        { opacity: 0, y: +20 },
+        {
+          opacity: 1,
+          y: 0,
+        },
+        'start'
+      );
+  });
+}
+
+splitTextHeadingsFunction();
 
 // *==============================================================================
 // ** Page JS  **
