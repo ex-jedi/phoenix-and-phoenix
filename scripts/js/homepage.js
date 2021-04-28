@@ -24,10 +24,14 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 console.log('This is the homepage!');
 
 const splitTextHeadings = document.querySelector('.split-text-heading-animation');
-console.log(splitTextHeadings);
 
 const split = new SplitText(splitTextHeadings, { type: 'words' });
 
+gsap.fromTo(
+  split.words,
+  { opacity: 0, y: -20 },
+  { delay: 1, opacity: 1, duration: 0.75, y: 1, stagger: { amount: 0.5, from: 'random', ease: 'power2.inOut' } }
+);
 // *==============================================================================
 // ** Page JS  **
 // *==============================================================================
