@@ -18,6 +18,8 @@ import {
 // ! Temp Things For Building **
 // !==============================================================================
 
+// const splitTextParagraph = document.querySelectorAll('');
+
 console.log('This is the homepage!');
 
 // *==============================================================================

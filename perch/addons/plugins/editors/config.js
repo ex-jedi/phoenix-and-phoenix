@@ -22,6 +22,21 @@ Perch.UserConfig.redactor = (function () {
           type: 'remove',
         },
       },
+      'split-text-heading-add': {
+        title: 'Split Text Heading',
+        api: 'module.block.format',
+        args: {
+          class: 'split-text-heading-animation',
+        },
+      },
+      'split-text-heading-remove': {
+        title: 'Remove Split Text Heading',
+        api: 'module.block.format',
+        args: {
+          class: 'split-text-heading-animation',
+          type: 'remove',
+        },
+      },
     };
 
     return config;
