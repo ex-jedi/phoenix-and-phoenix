@@ -18,7 +18,8 @@ import {
 // ! Temp Things For Building **
 // !==============================================================================
 
-// const splitTextParagraph = document.querySelectorAll('');
+const splitTextHeadings = gsap.utils.toArray(document.querySelectorAll('.split-text-heading-animation'));
+console.log(splitTextHeadings);
 
 console.log('This is the homepage!');
 
