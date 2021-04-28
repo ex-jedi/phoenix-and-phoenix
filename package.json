@@ -19,7 +19,7 @@
   "dependencies": {
     "flickity": "^2.2.2",
     "flickity-imagesloaded": "^2.0.0",
-    "gsap": "npm:@gsap/simply@^3.6.0",
+    "gsap": "npm:@gsap/shockingly@^3.6.1",
     "reframe.js": "^3.0.2"
   },
   "devDependencies": {
