@@ -18,6 +18,7 @@ import {
   fadeAndSwapThreeExport,
   imageSwipeInExportFunction,
   splitTextHeadingsFunction,
+  circleAnimationfunction,
 } from './animations';
 
 // TODO: Temp For Building. Remove 👇🏾
@@ -28,24 +29,9 @@ import {
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
 // *=========================================
-// ** Circular Element Animation  **
+// ** Body Splittext Animation  **
 // *=========================================
 
-// Get elements to animate
-const circleToAnimate = gsap.utils.toArray(document.querySelectorAll('.circle-animation'));
-console.log(circleToAnimate);
-
-function circleAnimationfunction() {
-  gsap.set(circleToAnimate, { rotate: -20 });
-  ScrollTrigger.batch(circleToAnimate, {
-    start: 'top 75%',
-    once: true,
-    id: 'Circles',
-    onEnter: (batch) => gsap.to(batch, { opacity: 1, rotate: 0, duration: 0.75 }),
-  });
-}
-
-circleAnimationfunction();
 // *==============================================================================
 // ** Page JS  **
 // *==============================================================================
@@ -57,6 +43,9 @@ circleAnimationfunction();
 // *=========================================
 // ** GSAP  **
 // *=========================================
+
+// * Circle Animation
+circleAnimationfunction();
 
 // * Animated Main Logo
 animatedMainLogo();

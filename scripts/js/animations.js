@@ -171,6 +171,25 @@ function splitTextHeadingsFunction() {
   });
 }
 
+// *=========================================
+// ** Circular Element Animation  **
+// *=========================================
+
+// Get elements to animate
+const circleToAnimate = gsap.utils.toArray(document.querySelectorAll('.circle-animation'));
+
+// Circle animation function
+function circleAnimationfunction() {
+  gsap.set(circleToAnimate, { rotate: -45, opacity: 0 });
+  ScrollTrigger.batch(circleToAnimate, {
+    start: 'top 75%',
+    once: true,
+    id: 'Circles',
+    // markers: true,
+    onEnter: (batch) => gsap.to(batch, { opacity: 1, rotate: 0, duration: 0.75, ease: 'circ.inOut' }),
+  });
+}
+
 // *==============================================================================
 // ** Homepage **
 // *==============================================================================
@@ -283,4 +302,5 @@ export {
   fadeAndSwapThreeExport,
   imageSwipeInExportFunction,
   splitTextHeadingsFunction,
+  circleAnimationfunction,
 };
