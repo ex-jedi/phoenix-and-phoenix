@@ -14,7 +14,15 @@ import { SplitText } from 'gsap/SplitText';
 // *=========================================
 // TODO: Remove All markers
 
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
+// ********** Register Plugins **********
+gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin, SplitText);
+
+// ********** GSAP Utility Functions **********
+
+//* Split text revert function to remove split text elements after timeline has run
+function splitBeGone(element) {
+  element.revert();
+}
 
 // *==============================================================================
 // ** General Animations  **
@@ -101,11 +109,6 @@ function animatedMainLogo() {
 
 const splitTextHeadings = gsap.utils.toArray(document.querySelectorAll('.split-text-heading-animation'));
 
-// Split text revert function to remove split text elements after timeline has run
-function splitBeGone(element) {
-  element.revert();
-}
-
 // Timeline function to be popped into scroll trigger creating function
 function splitTextTimelineFunction(splitElems, evenSplitElems, oddSplitElems) {
   // Create GSAP Timeline
@@ -187,6 +190,41 @@ function circleAnimationfunction() {
     id: 'Circles',
     // markers: true,
     onEnter: (batch) => gsap.to(batch, { opacity: 1, rotate: 0, duration: 0.75, ease: 'circ.inOut' }),
+  });
+}
+
+// *=========================================
+// ** Body Splittext Animation  **
+// *=========================================
+
+const splitTextBodyElems = gsap.utils.toArray(document.querySelectorAll('.split-text-body-animation'));
+
+function bodySplitTextAnimation() {
+  splitTextBodyElems.forEach((body) => {
+    // Split headings into words
+    const split = new SplitText(body, { type: 'lines' });
+
+    // Create array of lines
+    const splitLines = split.lines;
+
+    // Set lines starting properties
+    gsap.set(splitLines, { opacity: 0, y: -10 });
+
+    ScrollTrigger.create({
+      trigger: body,
+      start: 'top 75%',
+      id: 'Body Split Text',
+      markers: true,
+      onEnter: () =>
+        gsap.to(splitLines, {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          stagger: 0.06,
+          ease: 'none',
+          onComplete: () => splitBeGone(split),
+        }),
+    });
   });
 }
 
@@ -303,4 +341,5 @@ export {
   imageSwipeInExportFunction,
   splitTextHeadingsFunction,
   circleAnimationfunction,
+  bodySplitTextAnimation,
 };
