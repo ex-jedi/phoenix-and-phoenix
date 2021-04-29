@@ -8,6 +8,7 @@ import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 import { SplitText } from 'gsap/SplitText';
+import { toArray } from 'gsap/gsap-core';
 import {
   animatedMainLogo,
   homepageHeaderImageAnimation,
@@ -21,9 +22,7 @@ import {
 
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
-console.log('This is the homepage!');
-
-const splitTextHeadings = document.querySelectorAll('.split-text-heading-animation');
+const splitTextHeadings = toArray(document.querySelectorAll('.split-text-heading-animation'));
 
 // Split text revert function
 function splitBeGone(element) {
@@ -59,7 +58,6 @@ function splitTextHeadingsFunction() {
         start: 'top 60%',
         markers: true,
         id: 'Split Text Headings',
-        once: true,
       },
       defaults: {
         duration: 0.3,
