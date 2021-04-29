@@ -139,7 +139,7 @@ h3 {
   margin-left: 10px;
   padding: 1px;
   /* position: absolute; */
-  color: #00f;
+  color: #4343df;
 }
 
 .split-text-body-animation::after {
@@ -148,5 +148,5 @@ h3 {
   margin-left: 10px;
   padding: 1px;
   /* position: absolute; */
-  color: rgb(28, 138, 28);
+  color: #1c8a1c;
 }
