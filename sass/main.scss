@@ -404,8 +404,18 @@ a {
   }
 }
 
+@keyframes social-rotate {
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
 .footer-social-media-link {
   width: 50px;
+
+  &:hover {
+    animation: social-rotate 1s ease-in-out infinite forwards;
+  }
 }
 
 .footer-copyright {
