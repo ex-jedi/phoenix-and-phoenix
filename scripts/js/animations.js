@@ -66,7 +66,7 @@ function imageSwipeInExportFunction() {
   gsap.set('.swipe-in-image', { clipPath: 'inset(0% 100% 0% 0%)' });
 
   ScrollTrigger.batch('.swipe-in-image', {
-    start: 'top center',
+    start: 'top 75%',
     id: 'Swipe In Image',
     once: true,
     onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }),
@@ -214,7 +214,7 @@ function bodySplitTextAnimation() {
       trigger: body,
       start: 'top 75%',
       id: 'Body Split Text',
-      markers: true,
+      // markers: true,
       onEnter: () =>
         gsap.to(splitLines, {
           opacity: 1,
@@ -278,7 +278,7 @@ function homepageHeaderImageAnimation() {
     const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
     ScrollTrigger.create({
       trigger: images,
-      start: 'top 60%',
+      start: 'top 75%',
       id: 'Fade & SWap Nine',
       // markers: true,
       once: true,
@@ -321,7 +321,7 @@ function fadeAndSwapThreeExport() {
     const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
     ScrollTrigger.create({
       trigger: images,
-      start: 'top 60%',
+      start: 'top 75%',
       id: 'Three F & S Image',
       // markers: true,
       once: true,
