@@ -55,7 +55,7 @@ function splitTextHeadingsFunction() {
     const headingAnimationTL = gsap.timeline({
       scrollTrigger: {
         trigger: headings,
-        start: 'top 60%',
+        start: 'top 70%',
         markers: true,
         id: 'Split Text Headings',
       },
