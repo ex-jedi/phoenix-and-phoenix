@@ -7,6 +7,7 @@ import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+import { SplitText } from 'gsap/SplitText';
 
 // *=========================================
 // ** GSAP  **
@@ -94,6 +95,82 @@ function animatedMainLogo() {
   animatedMainLogoTimeline.play();
 }
 
+// *=========================================
+// ** Heading Split Text  **
+// *=========================================
+
+const splitTextHeadings = gsap.utils.toArray(document.querySelectorAll('.split-text-heading-animation'));
+
+// Split text revert function to remove split text elements after timeline has run
+function splitBeGone(element) {
+  element.revert();
+}
+
+// Timeline function to be popped into scroll trigger creating function
+function splitTextTimelineFunction(splitElems, evenSplitElems, oddSplitElems) {
+  // Create GSAP Timeline
+  const headingAnimationTL = gsap.timeline({
+    defaults: {
+      duration: 0.3,
+      ease: 'power2.inOut',
+      stagger: { each: 0.05, from: 'random', ease: 'circ.inOut' },
+    },
+    onComplete: () => splitBeGone(splitElems),
+  });
+
+  // Populate timeline
+  headingAnimationTL
+    .addLabel('start')
+    .fromTo(
+      evenSplitElems,
+      { opacity: 0, y: -20 },
+      {
+        opacity: 1,
+        y: 0,
+      },
+      'start'
+    )
+    .fromTo(
+      oddSplitElems,
+      { opacity: 0, y: +20 },
+      {
+        opacity: 1,
+        y: 0,
+      },
+      'start'
+    );
+
+  return headingAnimationTL;
+}
+
+function splitTextHeadingsFunction() {
+  splitTextHeadings.forEach((headings) => {
+    // Split headings into words
+    const split = new SplitText(headings, { type: 'words' });
+
+    // Create array of words
+    const splitWords = split.words;
+
+    // Filter for odd index items in words array
+    const evenSplit = splitWords.filter((div, index) => index % 2 === 0);
+
+    // Filter for even index items in words array
+    const oddSplit = splitWords.filter((div, index) => index % 2 !== 0);
+
+    // Set heading starting properties
+    gsap.set(evenSplit, { opacity: 0, y: -20 });
+    gsap.set(oddSplit, { opacity: 0, y: +20 });
+
+    ScrollTrigger.create({
+      trigger: headings,
+      start: 'top 75%',
+      id: 'Heading Split Text',
+      markers: true,
+      onEnter: () => splitTextTimelineFunction(split, evenSplit, oddSplit).play(),
+    });
+  });
+}
+
 // *==============================================================================
 // ** Homepage **
 // *==============================================================================
@@ -104,7 +181,6 @@ function animatedMainLogo() {
 
 // * Element Variables
 const fadeAndSwapNineElement = document.querySelectorAll('.fade-and-swap-nine');
-// const imageSwapImages = gsap.utils.toArray('.image-wipe-animation img');
 gsap.set(fadeAndSwapNineElement, { clipPath: 'inset(0% 100% 0% 0%)' });
 
 // * Image swapping Function
@@ -201,4 +277,10 @@ function fadeAndSwapThreeExport() {
 // ** Exports  **
 // *==============================================================================
 
-export { animatedMainLogo, homepageHeaderImageAnimation, fadeAndSwapThreeExport, imageSwipeInExportFunction };
+export {
+  animatedMainLogo,
+  homepageHeaderImageAnimation,
+  fadeAndSwapThreeExport,
+  imageSwipeInExportFunction,
+  splitTextHeadingsFunction,
+};
