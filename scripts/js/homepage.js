@@ -14,7 +14,7 @@ import { SplitText } from 'gsap/SplitText';
 // *==============================================================================
 import {
   animatedMainLogo,
-  homepageHeaderImageAnimation,
+  fadeAndSwapNineFunctionExport,
   fadeAndSwapThreeExport,
   imageSwipeInExportFunction,
   splitTextHeadingsFunction,
@@ -50,7 +50,7 @@ circleAnimationfunction();
 animatedMainLogo();
 
 // * Header Image Animation
-homepageHeaderImageAnimation();
+fadeAndSwapNineFunctionExport();
 
 // * Fade and Swap Three Animation
 fadeAndSwapThreeExport();

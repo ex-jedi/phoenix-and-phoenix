@@ -233,7 +233,7 @@ function bodySplitTextAnimation() {
 // *==============================================================================
 
 // *=========================================
-// ** Header Image  **
+// ** Three image Wipe and Swap Nine **
 // *=========================================
 
 // * Element Variables
@@ -251,7 +251,7 @@ function fadeAndSwapNineFunction(elem, swapperImages) {
 
   faderSwapper
     .to(elem, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }, delay)
-    .to(swapperImages[0], { autoAlpha: 0 }, '+=1')
+    .to(swapperImages[0], { autoAlpha: 0 }, delay)
     .to(swapperImages[1], { autoAlpha: 1 })
     .to(swapperImages[1], { autoAlpha: 0 }, delay)
     .to(swapperImages[2], { autoAlpha: 1 })
@@ -273,7 +273,7 @@ function fadeAndSwapNineFunction(elem, swapperImages) {
   return faderSwapper;
 }
 
-function homepageHeaderImageAnimation() {
+function fadeAndSwapNineFunctionExport() {
   fadeAndSwapNineElement.forEach((images) => {
     const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
     ScrollTrigger.create({
@@ -336,7 +336,7 @@ function fadeAndSwapThreeExport() {
 
 export {
   animatedMainLogo,
-  homepageHeaderImageAnimation,
+  fadeAndSwapNineFunctionExport,
   fadeAndSwapThreeExport,
   imageSwipeInExportFunction,
   splitTextHeadingsFunction,
