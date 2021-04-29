@@ -208,7 +208,7 @@ function bodySplitTextAnimation() {
     const splitLines = split.lines;
 
     // Set lines starting properties
-    gsap.set(splitLines, { opacity: 0, y: -10 });
+    gsap.set(splitLines, { opacity: 0, y: -15 });
 
     ScrollTrigger.create({
       trigger: body,
