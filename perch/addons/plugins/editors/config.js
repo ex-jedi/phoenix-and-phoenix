@@ -37,6 +37,21 @@ Perch.UserConfig.redactor = (function () {
           type: 'remove',
         },
       },
+      'split-text-body-add': {
+        title: 'Split Text Body',
+        api: 'module.block.format',
+        args: {
+          class: 'split-text-body-animation',
+        },
+      },
+      'split-text-body-remove': {
+        title: 'Remove Split Text body',
+        api: 'module.block.format',
+        args: {
+          class: 'split-text-body-animation',
+          type: 'remove',
+        },
+      },
     };
 
     return config;

@@ -134,10 +134,19 @@ h3 {
 /* Split Text Animations */
 
 .split-text-heading-animation::after {
-  content: '* split text';
+  content: '* split text heading';
   font-size: 50%;
   margin-left: 10px;
   padding: 1px;
   /* position: absolute; */
   color: #00f;
+}
+
+.split-text-body-animation::after {
+  content: '* split text body';
+  font-size: 50%;
+  margin-left: 10px;
+  padding: 1px;
+  /* position: absolute; */
+  color: rgb(28, 138, 28);
 }
