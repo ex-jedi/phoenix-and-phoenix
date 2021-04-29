@@ -12,7 +12,7 @@ import { SplitText } from 'gsap/SplitText';
 // *=========================================
 // ** GSAP  **
 // *=========================================
-// TODO: Remove markers
+// TODO: Remove All markers
 
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
@@ -59,7 +59,7 @@ function imageSwipeInExportFunction() {
 
   ScrollTrigger.batch('.swipe-in-image', {
     start: 'top center',
-    id: 'Swip In Image',
+    id: 'Swipe In Image',
     once: true,
     onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }),
   });
@@ -165,7 +165,7 @@ function splitTextHeadingsFunction() {
       trigger: headings,
       start: 'top 75%',
       id: 'Heading Split Text',
-      markers: true,
+      // markers: true,
       onEnter: () => splitTextTimelineFunction(split, evenSplit, oddSplit).play(),
     });
   });
