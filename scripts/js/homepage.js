@@ -36,7 +36,7 @@ function splitTextTimelineFunction(splitElems, evenSplitElems, oddSplitElems) {
     defaults: {
       duration: 0.3,
       ease: 'power2.inOut',
-      stagger: { each: 0.09, from: 'random', ease: 'circ.inOut' },
+      stagger: { each: 0.05, from: 'random', ease: 'circ.inOut' },
     },
     onComplete: () => splitBeGone(splitElems),
   });
