@@ -59,21 +59,6 @@ function splitBeGone(element) {
 //   .to(mainNav, { y: '120%', onComplete: pointerEventsRestore }, 'colorChange');
 
 // *=========================================
-// ** Fade In Image  **
-// *=========================================
-
-function imageSwipeInExportFunction() {
-  gsap.set('.swipe-in-image', { clipPath: 'inset(0% 100% 0% 0%)' });
-
-  ScrollTrigger.batch('.swipe-in-image', {
-    start: 'top 75%',
-    id: 'Swipe In Image',
-    once: true,
-    onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }),
-  });
-}
-
-// *=========================================
 // ** Main Logo  **
 // *=========================================
 
@@ -101,6 +86,21 @@ animatedMainLogoTimeline
 
 function animatedMainLogo() {
   animatedMainLogoTimeline.play();
+}
+
+// *=========================================
+// ** Fade In Image  **
+// *=========================================
+
+function imageSwipeInExportFunction() {
+  gsap.set('.swipe-in-image', { clipPath: 'inset(0% 100% 0% 0%)' });
+
+  ScrollTrigger.batch('.swipe-in-image', {
+    start: 'top 75%',
+    id: 'Swipe In Image',
+    once: true,
+    onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }),
+  });
 }
 
 // *=========================================
@@ -175,6 +175,41 @@ function splitTextHeadingsFunction() {
 }
 
 // *=========================================
+// ** Body Split Text Animation  **
+// *=========================================
+
+const splitTextBodyElems = gsap.utils.toArray(document.querySelectorAll('.split-text-body-animation'));
+
+function bodySplitTextAnimation() {
+  splitTextBodyElems.forEach((body) => {
+    // Split headings into words
+    const split = new SplitText(body, { type: 'lines' });
+
+    // Create array of lines
+    const splitLines = split.lines;
+
+    // Set lines starting properties
+    gsap.set(splitLines, { opacity: 0, y: -20 });
+
+    ScrollTrigger.create({
+      trigger: body,
+      start: 'top 75%',
+      id: 'Body Split Text',
+      // markers: true,
+      onEnter: () =>
+        gsap.to(splitLines, {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          stagger: 0.06,
+          ease: 'power2.out',
+          onComplete: () => splitBeGone(split),
+        }),
+    });
+  });
+}
+
+// *=========================================
 // ** Circular Element Animation  **
 // *=========================================
 
@@ -192,45 +227,6 @@ function circleAnimationfunction() {
     onEnter: (batch) => gsap.to(batch, { opacity: 1, rotate: 0, duration: 0.75, ease: 'circ.inOut' }),
   });
 }
-
-// *=========================================
-// ** Body Splittext Animation  **
-// *=========================================
-
-const splitTextBodyElems = gsap.utils.toArray(document.querySelectorAll('.split-text-body-animation'));
-
-function bodySplitTextAnimation() {
-  splitTextBodyElems.forEach((body) => {
-    // Split headings into words
-    const split = new SplitText(body, { type: 'lines' });
-
-    // Create array of lines
-    const splitLines = split.lines;
-
-    // Set lines starting properties
-    gsap.set(splitLines, { opacity: 0, y: -15 });
-
-    ScrollTrigger.create({
-      trigger: body,
-      start: 'top 75%',
-      id: 'Body Split Text',
-      // markers: true,
-      onEnter: () =>
-        gsap.to(splitLines, {
-          opacity: 1,
-          y: 0,
-          duration: 0.4,
-          stagger: 0.06,
-          ease: 'none',
-          onComplete: () => splitBeGone(split),
-        }),
-    });
-  });
-}
-
-// *==============================================================================
-// ** Homepage **
-// *==============================================================================
 
 // *=========================================
 // ** Three image Wipe and Swap Nine **
