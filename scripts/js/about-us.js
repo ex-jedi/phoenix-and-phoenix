@@ -2,7 +2,12 @@
 // ** Imports  **
 // *==============================================================================
 
-import { animatedMainLogo, bodySplitTextAnimation, splitTextHeadingsFunction } from './animations';
+import {
+  animatedMainLogo,
+  bodySplitTextAnimation,
+  splitTextHeadingsFunction,
+  fadeAndSwapThreeExport,
+} from './animations';
 
 // *=========================================
 // ** GSAP  **
@@ -11,6 +16,11 @@ import { animatedMainLogo, bodySplitTextAnimation, splitTextHeadingsFunction } f
 // ********** Animated Main Logo **********
 animatedMainLogo();
 
+// ********** Heading Split Text **********
+splitTextHeadingsFunction();
+
 // ********** Body Text **********
 bodySplitTextAnimation();
-splitTextHeadingsFunction();
+
+// ********** Fade and Swap Three **********
+fadeAndSwapThreeExport();

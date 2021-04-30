@@ -1,17 +1,37 @@
 <section class="bio-section kate-bio-section">
-  <h2 class="section-heading bio-subheading">
+  <!-- TODO: Check sourceset sizes -->
+  <h2 class="section-heading bio-subheading split-text-heading-animation">
     <perch:content id="kateBioSubheading" type="text" label="Kate Bio Subheading" required>
   </h2>
   <div class="bio-flex-wrapper">
-    <img class="bio-image" itemprop="image" loading="lazy" src="<perch:content id="kateBioImage" type="image" width="1000" label="Kate Bio Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image Description">"
-    sizes="(max-width:500) 50vw, 100vw"
-    srcset="<perch:content type="image" id="kateBioImage" width="1000" > 1000w,
-    <perch:content type="image" id="kateBioImage" width="900" quality="70"> 900w,
-    <perch:content type="image" id="kateBioImage" width="700" quality="70"> 700w,
-    <perch:content type="image" id="kateBioImage" width="500" quality="70"> 500w,
-    <perch:content type="image" id="kateBioImage" width="400" quality="70"> 400w" >
+    <div class="bio-image-wrapper fade-and-swap-three">
+      <img class="bio-image" itemprop="image" loading="lazy" src="<perch:content id="kateBioImage" type="image" width="1000" label="Kate Bio Image" quality="70" required>" alt="<perch:content id="alt" type="text" label="Image Description">"
+      sizes="(max-width:500) 50vw, 100vw"
+      srcset="<perch:content type="image" id="kateBioImage" width="1000" > 1000w,
+      <perch:content type="image" id="kateBioImage" width="900" quality="70"> 900w,
+      <perch:content type="image" id="kateBioImage" width="700" quality="70"> 700w,
+      <perch:content type="image" id="kateBioImage" width="500" quality="70"> 500w,
+      <perch:content type="image" id="kateBioImage" width="400" quality="70"> 400w" >
+
+        <!-- Animated Images -->
+        <img class="bio-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="kateBioImageAnimatedOne" type="image" width="1000" label="Kate Animated Bio Image One" divider-before="Animated images" quality="70" required>" alt="<perch:content id="altAnimatedOne" type="text" label="Image Description">"
+        sizes="(max-width:500) 50vw, 100vw"
+        srcset="<perch:content type="image" id="kateBioImageAnimatedOne" width="1000" > 1000w,
+        <perch:content type="image" id="kateBioImageAnimatedOne" width="900" quality="70"> 900w,
+        <perch:content type="image" id="kateBioImageAnimatedOne" width="700" quality="70"> 700w,
+        <perch:content type="image" id="kateBioImageAnimatedOne" width="500" quality="70"> 500w,
+        <perch:content type="image" id="kateBioImageAnimatedOne" width="400" quality="70"> 400w" >
+
+        <img class="bio-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="kateBioImageAnimatedTwo" type="image" width="1000" label="Kate Animated Bio Image Two" divider-before="Animated images" quality="70" required>" alt="<perch:content id="altAnimatedTwo" type="text" label="Image Description">"
+        sizes="(max-width:500) 50vw, 100vw"
+        srcset="<perch:content type="image" id="kateBioImageAnimatedTwo" width="1000" > 1000w,
+        <perch:content type="image" id="kateBioImageAnimatedTwo" width="900" quality="70"> 900w,
+        <perch:content type="image" id="kateBioImageAnimatedTwo" width="700" quality="70"> 700w,
+        <perch:content type="image" id="kateBioImageAnimatedTwo" width="500" quality="70"> 500w,
+        <perch:content type="image" id="kateBioImageAnimatedTwo" width="400" quality="70"> 400w" >
+    </div>
     <div class="bio-text-wrapper">
-      <perch:content id="kateBioText" type="textarea" editor="redactor" label="Kate Bio Textarea" required html>
+      <perch:content id="kateBioText" type="textarea" editor="redactor" label="Kate Bio Textarea" divider-before="Bio Text" required html>
     </div>
   </div>
 </section>

@@ -88,22 +88,26 @@
   margin-bottom: 0;
 }
 
-.bio-image {
+.bio-image-wrapper {
   flex: 0 1 auto;
   width: calc(50% - 10rem);
   height: 100%;
   margin-right: 10rem;
 }
 @media (max-width: 1400px) {
-  .bio-image {
+  .bio-image-wrapper {
     width: 100%;
     margin: 0 auto 15rem;
   }
 }
 @media (max-width: 700px) {
-  .bio-image {
+  .bio-image-wrapper {
     margin: 0 auto 10rem;
   }
+}
+
+.bio-image {
+  width: 100%;
 }
 
 .contact-section {

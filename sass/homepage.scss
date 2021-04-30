@@ -71,18 +71,6 @@
 //* Homepage Animated Image
 //TODO: More to main & make more modular
 
-.fade-and-swap-nine {
-  position: relative;
-}
-
-.fade-and-swap-nine-images {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0;
-}
-
 //*=========================================
 //** Main **
 //*=========================================
@@ -227,19 +215,6 @@
     text-align: center;
     order: 1;
   }
-}
-
-//********** Fade and Swap Three **********
-
-.fade-and-swap-three {
-  position: relative;
-}
-
-.fade-and-swap-three-images {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
 }
 
 //*=========================================
