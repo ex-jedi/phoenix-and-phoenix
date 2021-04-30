@@ -28,7 +28,7 @@ function scrollTriggerRefresh(time) {
   window.addEventListener('load', () => {
     setTimeout(() => {
       ScrollTrigger.refresh();
-      console.log(`ScrollTrigger Refresh after ${time}ms`);
+      console.log(`ScrollTrigger refresh after ${time}ms.`);
     }, time);
   });
 }
