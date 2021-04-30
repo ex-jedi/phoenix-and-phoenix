@@ -24,6 +24,15 @@ function splitBeGone(element) {
   element.revert();
 }
 
+function scrollTriggerRefresh(time) {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+      console.log(`ScrollTrigger Refresh after ${time}ms`);
+    }, time);
+  });
+}
+
 // *==============================================================================
 // ** General Animations  **
 // *==============================================================================
@@ -99,7 +108,7 @@ function imageSwipeInExportFunction() {
     start: 'top 75%',
     end: 'bottom bottom',
     id: 'Swipe In Image',
-    markers: true,
+    // markers: true,
     once: true,
     onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }),
   });
@@ -171,7 +180,7 @@ function splitTextHeadingsFunction() {
       start: 'top 75%',
       end: 'bottom bottom',
       id: 'Heading Split Text',
-      markers: true,
+      // markers: true,
       onEnter: () => splitTextTimelineFunction(split, evenSplit, oddSplit).play(),
     });
   });
@@ -199,7 +208,7 @@ function bodySplitTextAnimation() {
       start: 'top 75%',
       end: 'bottom bottom',
       id: 'Body Split Text',
-      markers: true,
+      // markers: true,
       onEnter: () =>
         gsap.to(splitLines, {
           opacity: 1,
@@ -228,7 +237,7 @@ function circleAnimationfunction() {
     end: 'bottom bottom',
     once: true,
     id: 'Circles',
-    markers: true,
+    // markers: true,
     onEnter: (batch) => gsap.to(batch, { opacity: 1, rotate: 0, duration: 0.75, ease: 'circ.inOut' }),
   });
 }
@@ -282,7 +291,7 @@ function fadeAndSwapNineFunctionExport() {
       start: 'top 75%',
       end: 'bottom bottom',
       id: 'Fade & SWap Nine',
-      markers: true,
+      // markers: true,
       once: true,
       onEnter: () => fadeAndSwapNineFunction(images, gsapImages).play(),
     });
@@ -326,19 +335,12 @@ function fadeAndSwapThreeExport() {
       start: 'top 75%',
       end: 'bottom bottom',
       id: 'Three F & S Image',
-      markers: true,
+      // markers: true,
       once: true,
       onEnter: () => fadeAndSwapThreeFunction(images, gsapImages).play(),
     });
   });
 }
-
-window.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    ScrollTrigger.refresh();
-    console.log('Dom Refreshed - 4');
-  }, 4000);
-});
 
 // *==============================================================================
 // ** Exports  **
@@ -352,4 +354,5 @@ export {
   splitTextHeadingsFunction,
   circleAnimationfunction,
   bodySplitTextAnimation,
+  scrollTriggerRefresh,
 };

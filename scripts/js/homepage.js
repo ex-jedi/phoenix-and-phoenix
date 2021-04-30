@@ -20,6 +20,7 @@ import {
   splitTextHeadingsFunction,
   circleAnimationfunction,
   bodySplitTextAnimation,
+  scrollTriggerRefresh,
 } from './animations';
 
 // TODO: Temp For Building. Remove 👇🏾
@@ -34,6 +35,10 @@ bodySplitTextAnimation();
 // *==============================================================================
 // ** Page JS  **
 // *==============================================================================
+
+console.log(
+  "Well hello 👋🏾, fancy seeing you here. As you're interested in this sort of thing why not have a look at my GitHub profile - 💻👍🏾 https://github.com/ex-jedi 👍🏾💻"
+);
 
 // *==============================================================================
 // ** Imports  **
@@ -60,3 +65,6 @@ imageSwipeInExportFunction();
 
 // * Split Text Animation For Headings
 splitTextHeadingsFunction();
+
+// * Scroll Trigger Refresh
+scrollTriggerRefresh(4000);
