@@ -24,11 +24,26 @@ function splitBeGone(element) {
   element.revert();
 }
 
+// * ScrollTrigger Refresh
 function scrollTriggerRefresh(time) {
+  const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
   window.addEventListener('load', () => {
     setTimeout(() => {
-      ScrollTrigger.refresh();
-      console.log(`ScrollTrigger refresh after ${time}ms.`);
+      console.log('✨ScrollTrigger refresh created✨');
+      scrollTriggerRefreshTarget.forEach((triggerElem) => {
+        ScrollTrigger.create({
+          trigger: triggerElem,
+          start: 'top Bottom',
+          end: 'bottom bottom',
+          once: true,
+          id: 'ScrollTrigger Refresh',
+          // markers: true,
+          onEnter: () => {
+            ScrollTrigger.refresh();
+            console.log('⚡ScrollTrigger Refresh Triggered⚡');
+          },
+        });
+      });
     }, time);
   });
 }
