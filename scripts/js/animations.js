@@ -336,8 +336,8 @@ function fadeAndSwapThreeExport() {
 window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     ScrollTrigger.refresh();
-    console.log('Dom Refreshed - 2');
-  }, 2000);
+    console.log('Dom Refreshed - 4');
+  }, 4000);
 });
 
 // *==============================================================================
