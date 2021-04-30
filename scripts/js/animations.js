@@ -97,7 +97,9 @@ function imageSwipeInExportFunction() {
 
   ScrollTrigger.batch('.swipe-in-image', {
     start: 'top 75%',
+    end: 'bottom bottom',
     id: 'Swipe In Image',
+    markers: true,
     once: true,
     onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }),
   });
@@ -167,8 +169,9 @@ function splitTextHeadingsFunction() {
     ScrollTrigger.create({
       trigger: headings,
       start: 'top 75%',
+      end: 'bottom bottom',
       id: 'Heading Split Text',
-      // markers: true,
+      markers: true,
       onEnter: () => splitTextTimelineFunction(split, evenSplit, oddSplit).play(),
     });
   });
@@ -194,8 +197,9 @@ function bodySplitTextAnimation() {
     ScrollTrigger.create({
       trigger: body,
       start: 'top 75%',
+      end: 'bottom bottom',
       id: 'Body Split Text',
-      // markers: true,
+      markers: true,
       onEnter: () =>
         gsap.to(splitLines, {
           opacity: 1,
@@ -221,9 +225,10 @@ function circleAnimationfunction() {
   gsap.set(circleToAnimate, { rotate: -45, opacity: 0 });
   ScrollTrigger.batch(circleToAnimate, {
     start: 'top 75%',
+    end: 'bottom bottom',
     once: true,
     id: 'Circles',
-    // markers: true,
+    markers: true,
     onEnter: (batch) => gsap.to(batch, { opacity: 1, rotate: 0, duration: 0.75, ease: 'circ.inOut' }),
   });
 }
@@ -275,8 +280,9 @@ function fadeAndSwapNineFunctionExport() {
     ScrollTrigger.create({
       trigger: images,
       start: 'top 75%',
+      end: 'bottom bottom',
       id: 'Fade & SWap Nine',
-      // markers: true,
+      markers: true,
       once: true,
       onEnter: () => fadeAndSwapNineFunction(images, gsapImages).play(),
     });
@@ -318,13 +324,21 @@ function fadeAndSwapThreeExport() {
     ScrollTrigger.create({
       trigger: images,
       start: 'top 75%',
+      end: 'bottom bottom',
       id: 'Three F & S Image',
-      // markers: true,
+      markers: true,
       once: true,
       onEnter: () => fadeAndSwapThreeFunction(images, gsapImages).play(),
     });
   });
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+    console.log('Dom Refreshed - 2');
+  }, 2000);
+});
 
 // *==============================================================================
 // ** Exports  **
