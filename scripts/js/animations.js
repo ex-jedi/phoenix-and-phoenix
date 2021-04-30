@@ -136,11 +136,11 @@ function imageSwipeInExportFunction() {
 const splitTextHeadings = gsap.utils.toArray(document.querySelectorAll('.split-text-heading-animation'));
 
 // Timeline function to be popped into scroll trigger creating function
-function splitTextTimelineFunction(splitElems, evenSplitElems, oddSplitElems) {
+function splitTextTimelineFunction(splitElems, evenSplitElems, oddSplitElems, durationTime, delayTime) {
   // Create GSAP Timeline
   const headingAnimationTL = gsap.timeline({
     defaults: {
-      duration: 0.3,
+      duration: durationTime,
       ease: 'power2.inOut',
       stagger: { each: 0.05, from: 'random', ease: 'circ.inOut' },
     },
@@ -149,7 +149,7 @@ function splitTextTimelineFunction(splitElems, evenSplitElems, oddSplitElems) {
 
   // Populate timeline
   headingAnimationTL
-    .addLabel('start')
+    .addLabel('start', delayTime)
     .fromTo(
       evenSplitElems,
       { opacity: 0, y: -20 },
@@ -180,6 +180,16 @@ function splitTextHeadingsFunction() {
     // Create array of words
     const splitWords = split.words;
 
+    const wordsLength = splitWords.length;
+    let timingDuration;
+    let timingDelay;
+    if (wordsLength < 4) {
+      timingDuration = 0.6;
+      timingDelay = 0.3;
+    } else {
+      timingDuration = 0.3;
+    }
+
     // Filter for odd index items in words array
     const evenSplit = splitWords.filter((div, index) => index % 2 === 0);
 
@@ -196,7 +206,7 @@ function splitTextHeadingsFunction() {
       end: 'bottom bottom',
       id: 'Heading Split Text',
       // markers: true,
-      onEnter: () => splitTextTimelineFunction(split, evenSplit, oddSplit).play(),
+      onEnter: () => splitTextTimelineFunction(split, evenSplit, oddSplit, timingDuration, timingDelay).play(),
     });
   });
 }
