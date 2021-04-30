@@ -33,8 +33,8 @@ function scrollTriggerRefresh(time = 2000) {
       scrollTriggerRefreshTarget.forEach((triggerElem) => {
         ScrollTrigger.create({
           trigger: triggerElem,
-          start: 'top Bottom',
-          end: 'bottom bottom',
+          start: 'top bottom',
+          // end: 'bottom bottom',
           once: true,
           id: 'ScrollTrigger Refresh',
           // markers: true,
@@ -202,7 +202,7 @@ function splitTextHeadingsFunction() {
 
     ScrollTrigger.create({
       trigger: headings,
-      start: 'top 70%',
+      start: 'top 75%',
       end: 'bottom bottom',
       id: 'Heading Split Text',
       // markers: true,
