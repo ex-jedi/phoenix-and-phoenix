@@ -25,11 +25,11 @@ function splitBeGone(element) {
 }
 
 // * ScrollTrigger Refresh
-function scrollTriggerRefresh(time) {
+function scrollTriggerRefresh(time = 2000) {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
   window.addEventListener('load', () => {
     setTimeout(() => {
-      console.log('✨ScrollTrigger refresh created✨');
+      console.log(`✨ScrollTrigger refresh created after ${time}ms✨`);
       scrollTriggerRefreshTarget.forEach((triggerElem) => {
         ScrollTrigger.create({
           trigger: triggerElem,

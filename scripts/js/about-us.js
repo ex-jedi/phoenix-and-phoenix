@@ -7,6 +7,7 @@ import {
   bodySplitTextAnimation,
   splitTextHeadingsFunction,
   fadeAndSwapThreeExport,
+  scrollTriggerRefresh,
 } from './animations';
 
 // *=========================================
@@ -24,3 +25,6 @@ bodySplitTextAnimation();
 
 // ********** Fade and Swap Three **********
 fadeAndSwapThreeExport();
+
+// ********** Scroll Trigger Refresh **********
+scrollTriggerRefresh();
