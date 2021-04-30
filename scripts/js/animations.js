@@ -239,7 +239,7 @@ function bodySplitTextAnimation() {
           opacity: 1,
           y: 0,
           duration: 0.4,
-          stagger: 0.06,
+          stagger: 0.05,
           ease: 'power2.out',
           onComplete: () => splitBeGone(split),
         }),
