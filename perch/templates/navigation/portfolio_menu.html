@@ -3,11 +3,11 @@
 </perch:before>
   <perch:if id="perch_item_index" value="5" match="lt">
     <a class="portfolio-index-sub-nav-link featured-portfolio-link split-text-heading-animation" href="<perch:pages id="pagePath">">
-       <span class="menu-item-number"><perch:pages id="pageNavText">
+      <perch:if id="perch_item_index" value="10" match="lt">0</perch:if><perch:pages id="perch_item_index"> <perch:pages id="pageNavText">
     </a>
     <perch:else>
     <a class="portfolio-index-sub-nav-link non-featured-portfolio-link split-text-heading-animation" href="<perch:pages id="pagePath">">
-       <span class="menu-item-number"></span><perch:pages id="pageNavText">
+       <perch:if id="perch_item_index" value="10" match="lt">0</perch:if><perch:pages id="perch_item_index"> <perch:pages id="pageNavText">
     </a>
   </perch:if>
 <perch:after>
