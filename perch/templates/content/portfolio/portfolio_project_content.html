@@ -3,13 +3,13 @@
 <perch:blocks>
 
   <perch:block type="text" label="Text Area" icon="edit">
-    <div class="portfolio-project-text-wrapper portfolio-padding-wrapper">
+    <div class="portfolio-project-text-wrapper portfolio-padding-wrapper scrolltrigger-refresh-target">
       <perch:content id="portfolioIntroTextarea" type="textarea" editor="redactor" label="Portfolio Project Introduction Text" required html>
     </div>
   </perch:block>
 
   <perch:block type="dualImage" label="Dual Image Block" icon="photo">
-    <div class="portfolio-dual-image-wrapper portfolio-padding-wrapper">
+    <div class="portfolio-dual-image-wrapper portfolio-padding-wrapper scrolltrigger-refresh-target">
     <!-- TODO: Change sourceset sizes -->
     <img class="portfolio-project-dual-image portfolio-project-dual-image-one" itemprop="image" loading="lazy" src="<perch:content id="portfolioDualImageOne" type="image" width="1200" label="Portfolio Project Dual Image One" quality="70">" alt="<perch:content id="altOne" type="text" label="Image Description One">"
     sizes="(max-width:1000px) 100vw, 40vw"
@@ -30,7 +30,7 @@
 </perch:block>
 
 <perch:block type="singleImage" label="Single Image Block" icon="photo">
-  <div class="portfolio-single-image-wrapper portfolio-padding-wrapper">
+  <div class="portfolio-single-image-wrapper portfolio-padding-wrapper scrolltrigger-refresh-target">
     <!-- TODO: Change sourceset sizes -->
     <img class="portfolio-project-single-image" itemprop="image" loading="lazy" src="<perch:content id="portfolioSingleImage" type="image" width="1400" label="Portfolio Project Single Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image Description">"
     sizes="(max-width:1000px) 100vw, 40vw"
@@ -44,7 +44,7 @@
 
 <perch:block type="embed" icon="video" label="Video Clip">
   <!-- TODO: Animate + lazyload with GSAP -->
-    <video class="portfolio-project-video-wrapper" <perch:if exists="portfolioVideoPoster">poster="<perch:content id="portfolioVideoPoster" type="image" label="Optional Placeholder Image">"</perch:if>  autoplay loop muted>
+    <video class="portfolio-project-video-wrapper scrolltrigger-refresh-target" <perch:if exists="portfolioVideoPoster">poster="<perch:content id="portfolioVideoPoster" type="image" label="Optional Placeholder Image">"</perch:if>  autoplay loop muted>
         <source src="<perch:content id="portfilioProjectVideo" type="file" file-type="video" label="Portfolio Video - MP4">" type="video/mp4">
 
         <!-- TODO: Check if I need to add other video types  -->
@@ -55,7 +55,7 @@
 
 </perch:blocks>
 
- <div class="portfolio-padding-wraper">
+ <div class="portfolio-padding-wraper scrolltrigger-refresh-target">
    <h2 class="like-what-you-see-cta">
      <perch:content id="likeWhatYouSeePortfolio" type="text" label="Like What You See Text" required>
    </h2>

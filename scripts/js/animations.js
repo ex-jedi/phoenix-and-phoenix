@@ -233,7 +233,7 @@ function bodySplitTextAnimation() {
       start: 'top 70%',
       end: 'bottom bottom',
       id: 'Body Split Text',
-      // markers: true,
+      markers: true,
       onEnter: () =>
         gsap.to(splitLines, {
           opacity: 1,

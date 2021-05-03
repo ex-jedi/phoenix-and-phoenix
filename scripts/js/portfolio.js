@@ -2,7 +2,14 @@
 // ** Imports  **
 // *==============================================================================
 
-import { animatedMainLogo, splitTextHeadingsFunction, bodySplitTextAnimation } from './animations';
+import {
+  animatedMainLogo,
+  splitTextHeadingsFunction,
+  bodySplitTextAnimation,
+  scrollTriggerRefresh,
+} from './animations';
+
+import { consoleGreeting } from './lib';
 
 // *=========================================
 // ** GSAP  **
@@ -11,8 +18,20 @@ import { animatedMainLogo, splitTextHeadingsFunction, bodySplitTextAnimation } f
 // ********** Animated Main Logo **********
 
 animatedMainLogo();
+
+// ********** Split Text Animation **********
+
+// * Headings
 splitTextHeadingsFunction();
 
+// * Body Text
+bodySplitTextAnimation();
+
+// ********** Scroll Trigger Refresh **********
+scrollTriggerRefresh();
+
 // *=========================================
-// ** On Page JS  **
+// ** Lib  **
 // *=========================================
+
+consoleGreeting();
