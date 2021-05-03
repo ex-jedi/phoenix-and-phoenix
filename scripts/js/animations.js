@@ -139,7 +139,7 @@ function simpleFadeIn() {
     start: 'top 75%',
     end: 'bottom bottom',
     id: 'Fade In',
-    markers: true,
+    // markers: true,
     once: true,
     onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', opacity: 1 }),
   });
