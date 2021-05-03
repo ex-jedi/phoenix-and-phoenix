@@ -148,19 +148,19 @@ body {
 //** Portfolio Project Page **
 //*==============================================================================
 
-.portfolio-padding-wrapper {
-  padding: 0 $section-spacing-big $section-spacing-small;
+.portfolio-margin-wrapper {
+  margin: 0 $section-spacing-big $section-spacing-small;
 
   @include breakpoint(1400) {
-    padding: 0 $section-spacing-large $section-spacing-smallish;
+    margin: 0 $section-spacing-large $section-spacing-smallish;
   }
 
   @include breakpoint(1200) {
-    padding: 0 $section-spacing-small $section-spacing-smallish;
+    margin: 0 $section-spacing-small $section-spacing-smallish;
   }
 
   @include breakpoint(700) {
-    padding: 0 $section-spacing-tiny $section-spacing-smaller;
+    margin: 0 $section-spacing-tiny $section-spacing-smaller;
   }
 }
 
@@ -221,6 +221,10 @@ body {
   }
 }
 
+//*=========================================
+//** Images **
+//*=========================================
+
 .portfolio-dual-image-wrapper {
   @include flex(row);
   justify-content: space-between;
@@ -233,6 +237,8 @@ body {
 .portfolio-project-dual-image {
   flex: 0 1 auto;
   width: 46%;
+  max-height: 95vh;
+  object-fit: cover;
 
   @include breakpoint(700) {
     width: 100%;
@@ -247,8 +253,10 @@ body {
 
 .portfolio-project-single-image {
   width: 100%;
-  max-width: 1000px;
+  height: 100%;
+  max-height: 95vh;
   margin: 0 auto;
+  object-fit: contain;
 }
 
 .portfolio-project-video-wrapper {

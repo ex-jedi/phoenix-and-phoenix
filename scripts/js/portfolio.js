@@ -8,6 +8,7 @@ import {
   bodySplitTextAnimation,
   imageSwipeInExportFunction,
   scrollTriggerRefresh,
+  fadeAndSwapNineFunctionExport,
 } from './animations';
 
 import { consoleGreeting } from './lib';
@@ -32,6 +33,9 @@ bodySplitTextAnimation();
 
 // * Swipe
 imageSwipeInExportFunction();
+
+// * Fade and Swap Nine
+fadeAndSwapNineFunctionExport();
 
 // ********** Scroll Trigger Refresh **********
 scrollTriggerRefresh();
