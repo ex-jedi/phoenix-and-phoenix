@@ -23,14 +23,14 @@ Perch.UserConfig.redactor = (function () {
         },
       },
       'split-text-heading-add': {
-        title: 'Split Text Heading',
+        title: 'Heading Text Animation',
         api: 'module.block.format',
         args: {
           class: 'split-text-heading-animation',
         },
       },
       'split-text-heading-remove': {
-        title: 'Remove Split Text Heading',
+        title: 'Remove Heading Text Animation',
         api: 'module.block.format',
         args: {
           class: 'split-text-heading-animation',
@@ -38,14 +38,14 @@ Perch.UserConfig.redactor = (function () {
         },
       },
       'split-text-body-add': {
-        title: 'Split Text Body',
+        title: 'Body Text Animation',
         api: 'module.block.format',
         args: {
           class: 'split-text-body-animation',
         },
       },
       'split-text-body-remove': {
-        title: 'Remove Split Text body',
+        title: 'Remove Body Text Animation',
         api: 'module.block.format',
         args: {
           class: 'split-text-body-animation',
