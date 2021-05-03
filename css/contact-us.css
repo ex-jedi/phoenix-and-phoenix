@@ -240,3 +240,30 @@ select {
   text-align: center;
   color: #b07677;
 }
+
+.required-input {
+  font-size: 3.5rem;
+  position: relative;
+}
+
+[data-title] {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+[data-title]:after {
+  content: attr(data-title);
+  font-size: 1.75rem;
+  position: absolute;
+  left: 3.5rem;
+  color: #535cb0;
+  border: 4px solid #535cb0;
+  padding: 1px 5px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.2s ease-out;
+}
+[data-title]:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
