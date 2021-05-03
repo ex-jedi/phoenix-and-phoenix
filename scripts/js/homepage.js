@@ -23,6 +23,8 @@ import {
   scrollTriggerRefresh,
 } from './animations';
 
+import { consoleGreeting } from './lib';
+
 // TODO: Temp For Building. Remove 👇🏾
 // !==============================================================================
 // ! Temp Things For Building **
@@ -35,10 +37,6 @@ bodySplitTextAnimation();
 // *==============================================================================
 // ** Page JS  **
 // *==============================================================================
-
-console.log(
-  "Well hello 👋🏾, fancy seeing you here. As you're interested in this sort of thing why not have a look at my GitHub profile - 💻👍🏾 https://github.com/ex-jedi 👍🏾💻"
-);
 
 // *==============================================================================
 // ** Imports  **
@@ -68,3 +66,11 @@ splitTextHeadingsFunction();
 
 // * Scroll Trigger Refresh
 scrollTriggerRefresh(2000);
+
+// *=========================================
+// ** Lib  **
+// *=========================================
+
+// ********** Console Greeting **********
+
+consoleGreeting();

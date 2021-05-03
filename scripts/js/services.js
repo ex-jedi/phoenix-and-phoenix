@@ -3,7 +3,7 @@
 // *==============================================================================
 
 import { animatedMainLogo } from './animations';
-import { tabButtons, tabClickHandler } from './lib';
+import { tabButtons, tabClickHandler, addTabsListeners, consoleGreeting } from './lib';
 
 // *=========================================
 // ** GSAP  **
@@ -14,10 +14,13 @@ import { tabButtons, tabClickHandler } from './lib';
 animatedMainLogo();
 
 // *=========================================
-// ** On Page JS  **
+// ** Lib  **
 // *=========================================
 
 // ********** Tabs **********
 
-// * Tabs Handler
-tabButtons.forEach((button) => button.addEventListener('click', tabClickHandler));
+// * Tabs Listeners
+addTabsListeners();
+
+// ********** Console Greeting **********
+consoleGreeting();
