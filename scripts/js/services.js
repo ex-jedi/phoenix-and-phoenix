@@ -3,7 +3,7 @@
 // *==============================================================================
 
 import { animatedMainLogo } from './animations';
-import { tabButtons, tabClickHandler, addTabsListeners, consoleGreeting } from './lib';
+import { addTabsListeners, consoleGreeting } from './lib';
 
 // *=========================================
 // ** GSAP  **
