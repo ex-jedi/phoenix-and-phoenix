@@ -130,6 +130,22 @@ function imageSwipeInExportFunction() {
 }
 
 // *=========================================
+// ** Simple Fade In  **
+// *=========================================
+function simpleFadeIn() {
+  gsap.set('.simple-fade-in', { opacity: 0 });
+
+  ScrollTrigger.batch('.simple-fade-in', {
+    start: 'top 75%',
+    end: 'bottom bottom',
+    id: 'Fade In',
+    markers: true,
+    once: true,
+    onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', opacity: 1 }),
+  });
+}
+
+// *=========================================
 // ** Heading Split Text  **
 // *=========================================
 
@@ -380,4 +396,5 @@ export {
   circleAnimationfunction,
   bodySplitTextAnimation,
   scrollTriggerRefresh,
+  simpleFadeIn,
 };

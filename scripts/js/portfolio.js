@@ -9,6 +9,7 @@ import {
   imageSwipeInExportFunction,
   scrollTriggerRefresh,
   fadeAndSwapNineFunctionExport,
+  simpleFadeIn,
 } from './animations';
 
 import { consoleGreeting } from './lib';
@@ -36,6 +37,9 @@ imageSwipeInExportFunction();
 
 // * Fade and Swap Nine
 fadeAndSwapNineFunctionExport();
+
+// * Simple Fade
+simpleFadeIn();
 
 // ********** Scroll Trigger Refresh **********
 scrollTriggerRefresh();
