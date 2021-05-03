@@ -113,7 +113,7 @@ function animatedMainLogo() {
 }
 
 // *=========================================
-// ** Fade In Image  **
+// ** Swipe In Image  **
 // *=========================================
 
 function imageSwipeInExportFunction() {
@@ -183,7 +183,7 @@ function splitTextHeadingsFunction() {
     const wordsLength = splitWords.length;
     let timingDuration;
     let timingDelay;
-    if (wordsLength < 4) {
+    if (wordsLength < 5) {
       timingDuration = 0.6;
       timingDelay = 0.3;
     } else {

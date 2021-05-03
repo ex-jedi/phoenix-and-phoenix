@@ -6,6 +6,7 @@ import {
   animatedMainLogo,
   splitTextHeadingsFunction,
   bodySplitTextAnimation,
+  imageSwipeInExportFunction,
   scrollTriggerRefresh,
 } from './animations';
 
@@ -26,6 +27,11 @@ splitTextHeadingsFunction();
 
 // * Body Text
 bodySplitTextAnimation();
+
+// ********** Images **********
+
+// * Swipe
+imageSwipeInExportFunction();
 
 // ********** Scroll Trigger Refresh **********
 scrollTriggerRefresh();
