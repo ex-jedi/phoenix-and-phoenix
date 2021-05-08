@@ -130,6 +130,7 @@ img {
 p {
   margin: 0 auto $paragraph-spacing-large;
   overflow-wrap: break-word;
+  font-kerning: none;
 }
 
 //********** Links **********
