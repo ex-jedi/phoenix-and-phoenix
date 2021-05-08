@@ -346,6 +346,7 @@ function fadeAndSwapNineFunctionExport() {
 
 // * Element Variables
 const fadeAndSwapThreeElement = document.querySelectorAll('.fade-and-swap-three');
+// TODO: Do I need this? 👇🏾
 gsap.set(fadeAndSwapThreeElement, { clipPath: 'inset(0% 100% 0% 0%)' });
 
 // * Image swapping Function
