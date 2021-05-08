@@ -54,7 +54,7 @@
   }
 }
 
-.branding-image {
+.branding-image-wrapper {
   flex: 0 1 auto;
   width: 500px;
 
@@ -65,6 +65,11 @@
   @include breakpoint(700) {
     margin-bottom: $section-spacing-small;
   }
+}
+
+.branding-image {
+  width: 100%;
+  height: auto;
 }
 
 .want-more-paragraph-wrapper {

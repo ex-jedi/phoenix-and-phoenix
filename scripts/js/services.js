@@ -10,6 +10,7 @@ import {
   simpleFadeIn,
   circleAnimationfunction,
   svgScrubAnimation,
+  fadeAndSwapThreeExport,
 } from './animations';
 import { addTabsListeners, consoleGreeting } from './lib';
 
@@ -38,6 +39,9 @@ circleAnimationfunction();
 
 // ********** SVG Scrub Animation **********
 svgScrubAnimation();
+
+// ********** Fade and Swap Three **********
+fadeAndSwapThreeExport();
 
 // *=========================================
 // ** Lib  **
