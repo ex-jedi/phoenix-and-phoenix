@@ -7,6 +7,8 @@ import {
   splitTextHeadingsFunction,
   bodySplitTextAnimation,
   scrollTriggerRefresh,
+  simpleFadeIn,
+  circleAnimationfunction,
 } from './animations';
 import { addTabsListeners, consoleGreeting } from './lib';
 
@@ -27,6 +29,11 @@ splitTextHeadingsFunction();
 // ********** Split Text Body **********
 bodySplitTextAnimation();
 
+// ********** Simple Fade In **********
+simpleFadeIn();
+
+// ********** Circle Animation **********
+circleAnimationfunction();
 // *=========================================
 // ** Lib  **
 // *=========================================
