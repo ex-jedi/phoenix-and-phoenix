@@ -97,13 +97,6 @@
   }
 }
 
-//* For Animations
-// [data-name='Text'] {
-//   transform-origin: center center;
-//   transform-box: fill-box;
-//   position: relative;
-// }
-
 //*=========================================
 //** Tabs **
 //*=========================================
@@ -242,7 +235,7 @@
   }
 }
 
-.services-intro-image {
+.services-intro-image-wrapper {
   flex: 0 1 auto;
   margin-left: $section-spacing-small;
   width: 40%;
@@ -259,6 +252,11 @@
     width: 100%;
     object-fit: cover;
   }
+}
+
+.services-intro-image {
+  width: 100%;
+  height: auto;
 }
 
 //*=========================================
