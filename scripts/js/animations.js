@@ -204,6 +204,7 @@ function splitTextHeadingsFunction() {
       timingDelay = 0.3;
     } else {
       timingDuration = 0.3;
+      timingDelay = 0;
     }
 
     // Filter for odd index items in words array
