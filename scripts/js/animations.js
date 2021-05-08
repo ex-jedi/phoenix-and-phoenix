@@ -389,20 +389,23 @@ function fadeAndSwapThreeExport() {
 // *=========================================
 
 function svgScrubAnimation() {
-  const svgToAnimate = document.querySelector('[data-name="Text"]');
-  svgToAnimate.style.transformOrigin = 'center';
-  gsap.to(svgToAnimate, {
-    rotation: 360,
-    transformOrigin: 'center',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: svgToAnimate,
-      id: 'SVG Scrubber',
-      markers: true,
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: 0.5,
-    },
+  const svgToAnimate = gsap.utils.toArray(document.querySelectorAll('[data-name="Text"]'));
+
+  svgToAnimate.forEach((svg) => {
+    svg.style.transformOrigin = 'center';
+    gsap.to(svg, {
+      rotation: 360,
+      transformOrigin: 'center',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: svg,
+        id: 'SVG Scrubber',
+        // markers: true,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5,
+      },
+    });
   });
 }
 
