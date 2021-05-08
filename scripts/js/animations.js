@@ -354,11 +354,15 @@ function fadeAndSwapThreeFunction(elem, swapperImages) {
   const faderSwapperThree = gsap.timeline({
     defaults: { duration: 0, ease: 'none' },
   });
-
   const delay = '+=0.4';
 
   faderSwapperThree
-    .to(elem, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }, '+=0.2')
+    .fromTo(
+      elem,
+      { clipPath: 'inset(0% 100% 0% 0%)' },
+      { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' },
+      '+=0.2'
+    )
     .to(swapperImages[0], { autoAlpha: 0 })
     .to(swapperImages[1], { autoAlpha: 1 })
     .to(swapperImages[1], { autoAlpha: 0 }, delay)

@@ -67,6 +67,9 @@ serviceTabButtons.forEach((button) => {
     () => {
       splitTextHeadingsFunction();
       bodySplitTextAnimation();
+      fadeAndSwapThreeExport();
+      circleAnimationfunction();
+      simpleFadeIn();
       console.log('GSAP refresh');
     },
     { once: true }
