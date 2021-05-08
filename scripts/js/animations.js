@@ -384,6 +384,28 @@ function fadeAndSwapThreeExport() {
   });
 }
 
+// *=========================================
+// ** SVG Scrub Animation  **
+// *=========================================
+
+function svgScrubAnimation() {
+  const svgToAnimate = document.querySelector('[data-name="Text"]');
+  svgToAnimate.style.transformOrigin = 'center';
+  gsap.to(svgToAnimate, {
+    rotation: 360,
+    transformOrigin: 'center',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: svgToAnimate,
+      id: 'SVG Scrubber',
+      markers: true,
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: 0.5,
+    },
+  });
+}
+
 // *==============================================================================
 // ** Exports  **
 // *==============================================================================
@@ -398,4 +420,5 @@ export {
   bodySplitTextAnimation,
   scrollTriggerRefresh,
   simpleFadeIn,
+  svgScrubAnimation,
 };

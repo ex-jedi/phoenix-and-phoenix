@@ -9,6 +9,7 @@ import {
   scrollTriggerRefresh,
   simpleFadeIn,
   circleAnimationfunction,
+  svgScrubAnimation,
 } from './animations';
 import { addTabsListeners, consoleGreeting } from './lib';
 
@@ -34,6 +35,10 @@ simpleFadeIn();
 
 // ********** Circle Animation **********
 circleAnimationfunction();
+
+// ********** SVG Scrub Animation **********
+svgScrubAnimation();
+
 // *=========================================
 // ** Lib  **
 // *=========================================

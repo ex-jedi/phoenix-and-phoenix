@@ -9,6 +9,7 @@
 //*=========================================
 //** General Styles **
 //*=========================================
+
 .services-section {
   padding: $section-spacing-large $section-spacing-larger;
 
@@ -95,6 +96,13 @@
     margin-bottom: $section-spacing-small;
   }
 }
+
+//* For Animations
+// [data-name='Text'] {
+//   transform-origin: center center;
+//   transform-box: fill-box;
+//   position: relative;
+// }
 
 //*=========================================
 //** Tabs **
@@ -426,17 +434,6 @@
     fill: $font-colour-light;
     stroke: $font-colour-light;
   }
-}
-
-@keyframes rotateSvg {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-[data-name='Text'] {
-  transform-origin: center;
-  animation: rotateSvg 10s linear infinite forwards;
 }
 
 //*=========================================
