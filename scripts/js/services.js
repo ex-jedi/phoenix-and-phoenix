@@ -9,8 +9,10 @@ import {
   scrollTriggerRefresh,
   simpleFadeIn,
   circleAnimationfunction,
-  svgScrubAnimation,
   fadeAndSwapThreeExport,
+  brandingTabSvgAnimation,
+  websitesTabSvgAnimation,
+  illustrationTabSvgAnimation,
 } from './animations';
 import { addTabsListeners, consoleGreeting } from './lib';
 
@@ -37,8 +39,16 @@ simpleFadeIn();
 // ********** Circle Animation **********
 circleAnimationfunction();
 
-// ********** SVG Scrub Animation **********
-svgScrubAnimation();
+// ********** SVG Scrub Animations **********
+
+// * Branding
+brandingTabSvgAnimation();
+
+// * Websites
+websitesTabSvgAnimation();
+
+// * Illustration
+// illustrationTabSvgAnimation();
 
 // ********** Fade and Swap Three **********
 fadeAndSwapThreeExport();
@@ -56,7 +66,7 @@ addTabsListeners();
 consoleGreeting();
 
 // !==============================================================================
-// FIXME: Services page animations
+// FIXME: Services page animations. Move to lib
 // !==============================================================================
 
 const serviceTabButtons = document.querySelectorAll('.tab-button');
@@ -69,9 +79,27 @@ serviceTabButtons.forEach((button) => {
       fadeAndSwapThreeExport();
       circleAnimationfunction();
       simpleFadeIn();
-      svgScrubAnimation();
       console.log('🚀 GSAP Tab Refresh 🚀');
     },
     { once: true }
   );
+});
+
+const brandingButton = document.querySelector('#branding');
+const websitesButton = document.querySelector('#websites');
+const illustrationButton = document.querySelector('#illustration');
+
+brandingButton.addEventListener('click', (e) => {
+  console.log(e.currentTarget);
+  brandingTabSvgAnimation();
+});
+
+websitesButton.addEventListener('click', (e) => {
+  console.log(e.currentTarget);
+  websitesTabSvgAnimation();
+});
+
+illustrationButton.addEventListener('click', (e) => {
+  console.log(e.currentTarget);
+  illustrationTabSvgAnimation();
 });
