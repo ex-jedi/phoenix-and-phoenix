@@ -408,7 +408,7 @@ function svgScrubAnimation() {
       scrollTrigger: {
         trigger: svg,
         id: 'SVG Scrubber',
-        markers: true,
+        // markers: true,
         start: 'top bottom',
         end: 'bottom top',
         scrub: 0.5,
