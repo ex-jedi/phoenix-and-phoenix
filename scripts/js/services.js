@@ -70,7 +70,7 @@ serviceTabButtons.forEach((button) => {
       fadeAndSwapThreeExport();
       circleAnimationfunction();
       simpleFadeIn();
-      console.log('GSAP refresh');
+      console.log('🚀 GSAP Tab Refresh 🚀');
     },
     { once: true }
   );
