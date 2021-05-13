@@ -399,7 +399,7 @@ function fadeAndSwapThreeExport() {
 
 function svgScrubAnimation() {
   const svgToAnimate = gsap.utils.toArray(document.querySelectorAll('[data-name="Text"]'));
-
+  console.log({ svgToAnimate });
   svgToAnimate.forEach((svg) => {
     svg.style.transformOrigin = 'center';
     gsap.to(svg, {
@@ -409,7 +409,7 @@ function svgScrubAnimation() {
       scrollTrigger: {
         trigger: svg,
         id: 'SVG Scrubber',
-        // markers: true,
+        markers: true,
         start: 'top bottom',
         end: 'bottom top',
         scrub: 0.5,
