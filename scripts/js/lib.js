@@ -6,37 +6,37 @@ function consoleGreeting() {
 // *=========================================
 // ** Main Nav  **
 // *=========================================
-const mainNavTriggerWrapper = document.querySelector('.main-nav-trigger-wrapper');
-const mainNavTrigger = document.querySelector('.main-nav-trigger');
-const mainNav = document.querySelector('.main-nav');
-const navLink = document.querySelectorAll('.main-nav-link');
+// const mainNavTriggerWrapper = document.querySelector('.main-nav-trigger-wrapper');
+// const mainNavTrigger = document.querySelector('.main-nav-trigger');
+// const mainNav = document.querySelector('.main-nav');
+// const navLink = document.querySelectorAll('.main-nav-link');
 
-// Restore pointerevents
-function pointerEventsRestore() {
-  mainNavTrigger.style.pointerEvents = 'auto';
-  if (mainNav.dataset.state === 'open') {
-    mainNavTrigger.textContent = 'CLOSE MENU';
-    mainNavTrigger.style.padding = '0';
-  } else {
-    mainNavTrigger.textContent = 'MENU';
-    mainNavTrigger.style.padding = '0 5rem';
-    // Stripping out styles injected by GreenSock to show normal menu if screen is resized
-    mainNav.removeAttribute('style');
-    navLink.forEach((link) => link.removeAttribute('style'));
-  }
-}
+// // Restore pointerevents
+// function pointerEventsRestore() {
+//   mainNavTrigger.style.pointerEvents = 'auto';
+//   if (mainNav.dataset.state === 'open') {
+//     mainNavTrigger.textContent = 'CLOSE MENU';
+//     mainNavTrigger.style.padding = '0';
+//   } else {
+//     mainNavTrigger.textContent = 'MENU';
+//     mainNavTrigger.style.padding = '0 5rem';
+//     // Stripping out styles injected by GreenSock to show normal menu if screen is resized
+//     mainNav.removeAttribute('style');
+//     navLink.forEach((link) => link.removeAttribute('style'));
+//   }
+// }
 
-function menuOpenerHandler() {
-  if (mainNav.dataset.state === 'closed') {
-    openMenuTl.restart();
-    mainNavTrigger.style.pointerEvents = 'none';
-    mainNav.dataset.state = 'open';
-  } else {
-    closeMenuTl.restart();
-    mainNavTrigger.style.pointerEvents = 'none';
-    mainNav.dataset.state = 'closed';
-  }
-}
+// function menuOpenerHandler() {
+//   if (mainNav.dataset.state === 'closed') {
+//     openMenuTl.restart();
+//     mainNavTrigger.style.pointerEvents = 'none';
+//     mainNav.dataset.state = 'open';
+//   } else {
+//     closeMenuTl.restart();
+//     mainNavTrigger.style.pointerEvents = 'none';
+//     mainNav.dataset.state = 'closed';
+//   }
+// }
 
 // *==============================================================================
 // ** GSAP Animations For Multiple Pages  **

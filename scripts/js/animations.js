@@ -285,7 +285,7 @@ function circleAnimationfunction() {
 }
 
 // *=========================================
-// ** Three image Wipe and Swap Nine **
+// ** Nine Image Wipe and Swap Nine **
 // *=========================================
 
 // * Element Variables
@@ -344,10 +344,10 @@ function fadeAndSwapNineFunctionExport() {
 // ** Three image Wipe and Swap Three **
 // *=========================================
 
-// * Element Variables
-const fadeAndSwapThreeElement = document.querySelectorAll('.fade-and-swap-three');
-// TODO: Do I need this? 👇🏾
-gsap.set(fadeAndSwapThreeElement, { clipPath: 'inset(0% 100% 0% 0%)' });
+function getFadeSwapThreeImages() {
+  const fadeAndSwapThreeElement = gsap.utils.toArray(document.querySelectorAll('.fade-and-swap-three'));
+  return fadeAndSwapThreeElement;
+}
 
 // * Image swapping Function
 
@@ -375,7 +375,11 @@ function fadeAndSwapThreeFunction(elem, swapperImages) {
 }
 
 function fadeAndSwapThreeExport() {
+  const fadeAndSwapThreeElement = getFadeSwapThreeImages();
+  console.log({ fadeAndSwapThreeElement });
+
   fadeAndSwapThreeElement.forEach((images) => {
+    gsap.set(images, { clipPath: 'inset(0% 100% 0% 0%)' });
     const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
     ScrollTrigger.create({
       trigger: images,

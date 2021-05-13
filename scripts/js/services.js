@@ -60,7 +60,6 @@ consoleGreeting();
 // !==============================================================================
 
 const serviceTabButtons = document.querySelectorAll('.tab-button');
-console.log(serviceTabButtons);
 serviceTabButtons.forEach((button) => {
   button.addEventListener(
     'click',
