@@ -401,7 +401,6 @@ function svgScrubAnimation() {
   const svgToAnimate = gsap.utils.toArray(document.querySelectorAll('[data-name="Text"]'));
   console.log({ svgToAnimate });
   svgToAnimate.forEach((svg) => {
-    svg.style.transformOrigin = 'center';
     gsap.to(svg, {
       rotation: 360,
       transformOrigin: 'center',
