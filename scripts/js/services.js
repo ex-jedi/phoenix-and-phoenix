@@ -78,23 +78,6 @@ serviceTabButtons.forEach((button) => {
   );
 });
 
-// TODO: Delete if this isn't needed anymore
-// const brandingButton = document.querySelector('#branding');
-// const websitesButton = document.querySelector('#websites');
-// const illustrationButton = document.querySelector('#illustration');
-
-// brandingButton.addEventListener('click', (e) => {
-//   brandingTabSvgAnimation();
-// });
-
-// websitesButton.addEventListener('click', (e) => {
-//   websitesTabSvgAnimation();
-// });
-
-// illustrationButton.addEventListener('click', (e) => {
-//   illustrationTabSvgAnimation();
-// });
-
 // TODO: Put in lib
 function svgScrubAnimationRefresh() {
   const { tabPanel, tabButtons } = getTabsElements();

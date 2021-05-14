@@ -400,7 +400,7 @@ function fadeAndSwapThreeExport() {
 // ** SVG Scrub Animation  **
 // *=========================================
 
-// Branding tab. Needed to initialise animation on load.
+// Initialise animation on load.
 function svgScrubAnimation() {
   const svgToAnimate = gsap.utils.toArray(document.querySelectorAll('[data-name="Text"]'));
 
@@ -421,44 +421,6 @@ function svgScrubAnimation() {
     });
   });
 }
-// TODO: Delete individual ones if they're not needed
-// // Websites tab
-// function websitesTabSvgAnimation() {
-//   const websitesTab = document.querySelector('.websites-tab-panel');
-//   const websitesTabSvg = websitesTab.querySelector('[data-name="Text"]');
-
-//   gsap.to(websitesTabSvg, {
-//     rotation: 360,
-//     transformOrigin: 'center',
-//     ease: 'none',
-//     scrollTrigger: {
-//       trigger: websitesTabSvg,
-//       id: 'Websites SVG Scrubber',
-//       start: 'top bottom',
-//       end: 'bottom top',
-//       scrub: 0.5,
-//     },
-//   });
-// }
-
-// // Illustration tab
-// function illustrationTabSvgAnimation() {
-//   const illustrationTab = document.querySelector('.illustration-tab-panel');
-//   const illustrationTabSvg = illustrationTab.querySelector('[data-name="Text"]');
-
-//   gsap.to(illustrationTabSvg, {
-//     rotation: 360,
-//     transformOrigin: 'center',
-//     ease: 'none',
-//     scrollTrigger: {
-//       trigger: illustrationTabSvg,
-//       id: 'Illustration SVG Scrubber',
-//       start: 'top bottom',
-//       end: 'bottom top',
-//       scrub: 0.5,
-//     },
-//   });
-// }
 
 function tabSvgAnimation(targetSvg) {
   gsap.to(targetSvg, {
