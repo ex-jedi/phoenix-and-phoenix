@@ -85,11 +85,8 @@ function svgScrubAnimationRefresh() {
     buttons.addEventListener('click', (e) => {
       const clickedTab = e.currentTarget;
       const { id } = clickedTab;
-      console.log({ id });
       const panelToShow = tabPanel.find((panel) => panel.getAttribute('aria-labelledby') === id);
-      console.log({ panelToShow });
       const svgToAnimate = panelToShow.querySelector('[data-name="Text"]');
-      console.log({ svgToAnimate });
       tabSvgAnimation(svgToAnimate);
     });
   });
