@@ -295,7 +295,7 @@ a {
 
 .main-nav {
   @include breakpoint(750) {
-    display: none;
+    // display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -311,6 +311,7 @@ a {
     height: 100vh;
     margin: 0;
     z-index: 5;
+    transform: translateY(120%);
   }
 }
 

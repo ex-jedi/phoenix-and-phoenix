@@ -89,6 +89,20 @@ function navTextPointerEvents() {
   }
 }
 
+// * Add and remove Transforms
+
+function removeTransformProperty() {
+  const header = document.querySelector('.header');
+  header.style.transform = 'none';
+  console.log('Take');
+}
+
+function addTransformProperty() {
+  const header = document.querySelector('.header');
+  header.style.transform = 'translate3d(0,0,0)';
+  console.log('add');
+}
+
 // * Open Menu
 
 function menuOpenAnimation() {
@@ -98,12 +112,12 @@ function menuOpenAnimation() {
     defaults: { ease: 'power3.out', duration: 1, delay: 0 },
   });
 
-  openMenuTl
+  return openMenuTl
     .to(mainNav, { y: '0%' })
     .addLabel('colorChange', '-=0.3')
     .to(mainNavLinks, { y: 0, opacity: 1, stagger: 0.2, duration: 0.5 }, 'colorChange')
     .to(mainNavTriggerWrapper, { backgroundColor: '#f4f1f0' }, 'colorChange')
-    .to(mainNavTrigger, { color: '#6c9184', onComplete: pointerEventsRestore }, 'colorChange');
+    .to(mainNavTrigger, { color: '#6c9184', onComplete: navTextPointerEvents }, 'colorChange');
 }
 
 // * Close menu
@@ -115,12 +129,38 @@ function closeMenuAnimation() {
     defaults: { ease: 'power3.in', duration: 1, delay: 0 },
   });
 
-  closeMenuTl
+  return closeMenuTl
     .to(mainNavLinks, { y: 40, opacity: 0, stagger: -0.2, duration: 0.5 })
     .addLabel('colorChange', '-=0.5')
     .to(mainNavTriggerWrapper, { backgroundColor: '#6c9184' }, 'colorChange')
     .to(mainNavTrigger, { color: '#f4f1f0' }, 'colorChange')
-    .to(mainNav, { y: '120%', onComplete: pointerEventsRestore }, 'colorChange');
+    .to(mainNav, { y: '120%', onComplete: navTextPointerEvents }, 'colorChange');
+}
+
+// * Menu Opener and Closer Handler
+
+function menuOpenerHandler() {
+  const { mainNav, mainNavTrigger } = getNavElements();
+  if (mainNav.dataset.state === 'closed') {
+    console.log('⚡ Opening ⚡');
+    mainNavTrigger.style.pointerEvents = 'none';
+    removeTransformProperty();
+    menuOpenAnimation().restart();
+    mainNav.dataset.state = 'open';
+  } else {
+    console.log('⚡ Closing ⚡');
+    addTransformProperty();
+    mainNavTrigger.style.pointerEvents = 'none';
+    closeMenuAnimation().restart();
+    mainNav.dataset.state = 'closed';
+  }
+}
+
+// * Menu Event Listener
+
+function addMenuListener() {
+  const { mainNavTriggerWrapper } = getNavElements();
+  mainNavTriggerWrapper.addEventListener('click', menuOpenerHandler);
 }
 
 // *=========================================
@@ -489,4 +529,5 @@ export {
   simpleFadeIn,
   tabSvgAnimation,
   svgScrubAnimation,
+  addMenuListener,
 };

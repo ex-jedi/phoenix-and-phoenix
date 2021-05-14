@@ -21,6 +21,7 @@ import {
   circleAnimationfunction,
   bodySplitTextAnimation,
   scrollTriggerRefresh,
+  addMenuListener,
 } from './animations';
 
 import { consoleGreeting } from './lib';
@@ -79,18 +80,4 @@ consoleGreeting();
 // FIXME: Here for responsive menu styling
 // !==============================================================================
 
-function removeProperty() {
-  const header = document.querySelector('.header');
-  header.style.transform = 'none';
-  console.log('Take');
-}
-
-removeProperty();
-
-function addProperty() {
-  const header = document.querySelector('.header');
-  header.style.transform = 'translate3d(0,0,0)';
-  console.log('add');
-}
-
-// addProperty();
+addMenuListener();
