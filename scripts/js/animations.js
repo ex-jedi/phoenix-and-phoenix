@@ -401,23 +401,26 @@ function fadeAndSwapThreeExport() {
 // *=========================================
 
 // Branding tab. Needed to initialise animation on load.
-function brandingTabSvgAnimation() {
-  const brandingTab = document.querySelector('.branding-tab-panel');
-  const brandingTabSvg = brandingTab.querySelector('[data-name="Text"]');
-  gsap.to(brandingTabSvg, {
-    rotation: 360,
-    transformOrigin: 'center',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: brandingTabSvg,
-      id: ' Branding SVG Scrubber',
-      start: 'top bottom',
-      end: 'bottom top',
-      scrub: 0.5,
-    },
+function svgScrubAnimation() {
+  const svgToAnimate = gsap.utils.toArray(document.querySelectorAll('[data-name="Text"]'));
+
+  svgToAnimate.forEach((svg) => {
+    svg.style.transformOrigin = 'center';
+    gsap.to(svg, {
+      rotation: 360,
+      transformOrigin: 'center',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: svg,
+        id: 'SVG Scrubber',
+        // markers: true,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.5,
+      },
+    });
   });
 }
-
 // TODO: Delete individual ones if they're not needed
 // // Websites tab
 // function websitesTabSvgAnimation() {
@@ -487,5 +490,5 @@ export {
   scrollTriggerRefresh,
   simpleFadeIn,
   tabSvgAnimation,
-  brandingTabSvgAnimation,
+  svgScrubAnimation,
 };

@@ -11,7 +11,7 @@ import {
   circleAnimationfunction,
   fadeAndSwapThreeExport,
   tabSvgAnimation,
-  brandingTabSvgAnimation,
+  svgScrubAnimation,
 } from './animations';
 import { addTabsListeners, consoleGreeting, getTabsElements } from './lib';
 
@@ -40,8 +40,8 @@ circleAnimationfunction();
 
 // ********** SVG Scrub Animations **********
 
-// * Branding
-brandingTabSvgAnimation();
+// * Initialising Animation
+svgScrubAnimation();
 
 // ********** Fade and Swap Three **********
 fadeAndSwapThreeExport();
@@ -96,7 +96,7 @@ serviceTabButtons.forEach((button) => {
 // });
 
 // TODO: Put in lib
-function allTheThings() {
+function svgScrubAnimationRefresh() {
   const { tabPanel, tabButtons } = getTabsElements();
   tabButtons.forEach((buttons) => {
     buttons.addEventListener('click', (e) => {
@@ -112,4 +112,4 @@ function allTheThings() {
   });
 }
 
-allTheThings();
+svgScrubAnimationRefresh();
