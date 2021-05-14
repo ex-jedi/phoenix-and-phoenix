@@ -83,4 +83,4 @@ function addTabsListeners() {
 // ** Exports  **
 // *=========================================
 
-export { consoleGreeting, addTabsListeners };
+export { consoleGreeting, addTabsListeners, getTabsElements };
