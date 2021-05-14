@@ -59,26 +59,30 @@ addTabsListeners();
 consoleGreeting();
 
 // !==============================================================================
-// FIXME: Services page animations. Move to lib
+// FIXME: Don't seem to work when moved into modules
 // !==============================================================================
 
-const serviceTabButtons = document.querySelectorAll('.tab-button');
-serviceTabButtons.forEach((button) => {
-  button.addEventListener(
-    'click',
-    () => {
-      splitTextHeadingsFunction();
-      bodySplitTextAnimation();
-      fadeAndSwapThreeExport();
-      circleAnimationfunction();
-      simpleFadeIn();
-      console.log('🚀 GSAP Tab Refresh 🚀');
-    },
-    { once: true }
-  );
-});
+function svgScrubberEventListener() {
+  // TODO: Check if you want to refresh every time not just once.
+  const serviceTabButtons = document.querySelectorAll('.tab-button');
+  serviceTabButtons.forEach((button) => {
+    button.addEventListener(
+      'click',
+      () => {
+        splitTextHeadingsFunction();
+        bodySplitTextAnimation();
+        fadeAndSwapThreeExport();
+        circleAnimationfunction();
+        simpleFadeIn();
+        console.log('🚀 GSAP Tab Refresh 🚀');
+      },
+      { once: true }
+    );
+  });
+}
 
-// TODO: Put in lib
+svgScrubberEventListener();
+
 function svgScrubAnimationRefresh() {
   const { tabPanel, tabButtons } = getTabsElements();
   tabButtons.forEach((buttons) => {
