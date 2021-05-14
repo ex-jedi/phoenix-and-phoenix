@@ -152,7 +152,7 @@ a {
   * Fixes IOS Bug where scrolling breaks z-index
   https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
   */
-  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   background-color: $background-colour-light;
 }
 
@@ -296,6 +296,19 @@ a {
 .main-nav {
   @include breakpoint(750) {
     display: none;
+  }
+}
+
+.main-nav-trigger-wrapper {
+  position: fixed;
+  z-index: 4;
+  @include breakpoint(750) {
+    display: revert;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $background-colour-green;
   }
 }
 

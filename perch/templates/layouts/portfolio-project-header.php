@@ -63,3 +63,4 @@
 
         <?php perch_content_custom('Portfolio Project Header Content', []); ?>
 			</header>
+      <?php perch_layout('nav-pull'); ?>

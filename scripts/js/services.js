@@ -59,7 +59,7 @@ addTabsListeners();
 consoleGreeting();
 
 // !==============================================================================
-// FIXME: Don't seem to work when moved into modules
+// FIXME: 👇🏾 Don't seem to work when moved into modules
 // !==============================================================================
 
 function svgScrubberEventListener() {
