@@ -311,12 +311,14 @@ a {
     height: 100vh;
     margin: 0;
     z-index: 5;
-    transform: translateY(120%);
+    transform: translateY(130%);
   }
 }
 
 .main-nav-link {
   @include breakpoint(750) {
+    opacity: 0;
+    transform: translateY(40px);
     color: $font-colour-light;
   }
 }

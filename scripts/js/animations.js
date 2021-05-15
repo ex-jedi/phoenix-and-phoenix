@@ -72,23 +72,6 @@ function getNavElements() {
   return { mainNav, mainNavLinks, mainNavTriggerWrapper, mainNavTrigger };
 }
 
-// * Menu pointer events and text
-// Restore pointerevents
-function navTextPointerEvents() {
-  const { mainNav, mainNavLinks, mainNavTrigger } = getNavElements();
-  mainNavTrigger.style.pointerEvents = 'auto';
-  if (mainNav.dataset.state === 'open') {
-    mainNavTrigger.textContent = 'CLOSE MENU';
-    mainNavTrigger.style.padding = '0';
-  } else {
-    mainNavTrigger.textContent = 'MENU';
-    mainNavTrigger.style.padding = '0 5rem';
-    // Stripping out styles injected by GreenSock to show normal menu if screen is resized
-    mainNav.removeAttribute('style');
-    mainNavLinks.forEach((link) => link.removeAttribute('style'));
-  }
-}
-
 // * Add and remove Transforms
 
 function removeTransformProperty() {
@@ -101,6 +84,23 @@ function addTransformProperty() {
   const header = document.querySelector('.header');
   header.style.transform = 'translate3d(0,0,0)';
   console.log('add');
+}
+
+// * Menu pointer events and text
+// Restore pointerevents
+function navTextPointerEvents() {
+  const { mainNav, mainNavLinks, mainNavTrigger } = getNavElements();
+  mainNavTrigger.style.pointerEvents = 'auto';
+  if (mainNav.dataset.state === 'open') {
+    mainNavTrigger.textContent = 'CLOSE MENU';
+    // mainNavTrigger.style.padding = '0';
+  } else {
+    mainNavTrigger.textContent = 'MENU';
+    // Stripping out styles injected by GreenSock to show normal menu if screen is resized
+    mainNav.removeAttribute('style');
+    mainNavLinks.forEach((link) => link.removeAttribute('style'));
+    addTransformProperty();
+  }
 }
 
 // * Open Menu
@@ -116,8 +116,12 @@ function menuOpenAnimation() {
     .to(mainNav, { y: '0%' })
     .addLabel('colorChange', '-=0.3')
     .to(mainNavLinks, { y: 0, opacity: 1, stagger: 0.2, duration: 0.5 }, 'colorChange')
-    .to(mainNavTriggerWrapper, { backgroundColor: '#f4f1f0' }, 'colorChange')
-    .to(mainNavTrigger, { color: '#6c9184', onComplete: navTextPointerEvents }, 'colorChange');
+    .to(mainNavTriggerWrapper, { backgroundColor: '#fdfcfa' }, 'colorChange')
+    .to(
+      mainNavTrigger,
+      { backgroundColor: '#fdfcfa', color: '#5bb072', onComplete: navTextPointerEvents },
+      'colorChange'
+    );
 }
 
 // * Close menu
@@ -132,8 +136,8 @@ function closeMenuAnimation() {
   return closeMenuTl
     .to(mainNavLinks, { y: 40, opacity: 0, stagger: -0.2, duration: 0.5 })
     .addLabel('colorChange', '-=0.5')
-    .to(mainNavTriggerWrapper, { backgroundColor: '#6c9184' }, 'colorChange')
-    .to(mainNavTrigger, { color: '#f4f1f0' }, 'colorChange')
+    .to(mainNavTriggerWrapper, { backgroundColor: '#5bb072' }, 'colorChange')
+    .to(mainNavTrigger, { backgroundColor: '#5bb072', color: '#f4f1f0' }, 'colorChange')
     .to(mainNav, { y: '120%', onComplete: navTextPointerEvents }, 'colorChange');
 }
 
@@ -149,7 +153,6 @@ function menuOpenerHandler() {
     mainNav.dataset.state = 'open';
   } else {
     console.log('⚡ Closing ⚡');
-    addTransformProperty();
     mainNavTrigger.style.pointerEvents = 'none';
     closeMenuAnimation().restart();
     mainNav.dataset.state = 'closed';
@@ -159,8 +162,8 @@ function menuOpenerHandler() {
 // * Menu Event Listener
 
 function addMenuListener() {
-  const { mainNavTriggerWrapper } = getNavElements();
-  mainNavTriggerWrapper.addEventListener('click', menuOpenerHandler);
+  const { mainNavTrigger } = getNavElements();
+  mainNavTrigger.addEventListener('click', menuOpenerHandler);
 }
 
 // *=========================================
