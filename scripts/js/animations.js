@@ -277,6 +277,7 @@ function splitTextHeadingsFunction() {
     // Create array of words
     const splitWords = split.words;
 
+    // TODO: Add some logic for large paragraphs
     const wordsLength = splitWords.length;
     let timingDuration;
     let timingDelay;
