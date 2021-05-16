@@ -107,20 +107,17 @@ function menuOpenAnimation() {
   const { mainNav, mainNavLinks, mainNavTriggerWrapper, mainNavTrigger } = getNavElements();
   const openMenuTl = gsap.timeline({
     paused: true,
+    onComplete: navTextPointerEvents,
     defaults: { ease: 'power3.out', duration: 1, delay: 0 },
   });
 
   return openMenuTl
     .to(mainNav, { opacity: 1, duration: 0, ease: 'none' })
     .to(mainNav, { y: '0%' })
-    .addLabel('colorChange', '-=0.3')
+    .addLabel('colorChange', '-=0.5')
     .to(mainNavLinks, { y: 0, opacity: 1, stagger: 0.2, duration: 0.5 }, 'colorChange')
-    .to(mainNavTriggerWrapper, { backgroundColor: '#fdfcfa' }, 'colorChange')
-    .to(
-      mainNavTrigger,
-      { backgroundColor: '#fdfcfa', color: '#5bb072', onComplete: navTextPointerEvents },
-      'colorChange'
-    );
+    .to(mainNavTriggerWrapper, { backgroundColor: '#fdfcfa' }, 'colorChange+=1')
+    .to(mainNavTrigger, { backgroundColor: '#fdfcfa', color: '#5bb072' }, 'colorChange+=1');
 }
 
 // * Close menu
@@ -129,6 +126,7 @@ function closeMenuAnimation() {
   const { mainNav, mainNavLinks, mainNavTriggerWrapper, mainNavTrigger } = getNavElements();
   const closeMenuTl = gsap.timeline({
     paused: true,
+    onComplete: navTextPointerEvents,
     defaults: { ease: 'power3.in', duration: 1, delay: 0 },
   });
 
@@ -137,7 +135,7 @@ function closeMenuAnimation() {
     .addLabel('colorChange', '-=0.5')
     .to(mainNavTriggerWrapper, { backgroundColor: '#5bb072' }, 'colorChange')
     .to(mainNavTrigger, { backgroundColor: '#5bb072', color: '#f4f1f0' }, 'colorChange')
-    .to(mainNav, { y: '120%', onComplete: navTextPointerEvents }, 'colorChange');
+    .to(mainNav, { y: '120%' }, 'colorChange');
 }
 
 // * Menu Opener and Closer Handler
@@ -145,13 +143,11 @@ function closeMenuAnimation() {
 function menuOpenerHandler() {
   const { mainNav, mainNavTrigger } = getNavElements();
   if (mainNav.dataset.state === 'closed') {
-    console.log('⚡ Opening ⚡');
     mainNavTrigger.style.pointerEvents = 'none';
     removeTransformProperty();
     menuOpenAnimation().restart();
     mainNav.dataset.state = 'open';
   } else {
-    console.log('⚡ Closing ⚡');
     mainNavTrigger.style.pointerEvents = 'none';
     closeMenuAnimation().restart();
     mainNav.dataset.state = 'closed';
