@@ -246,10 +246,9 @@
   width: 40%;
 
   @include breakpoint(1700) {
-    max-height: 70vh;
-    width: auto;
-    object-fit: contain;
-    margin: 0;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 
   @include breakpoint(700) {
@@ -264,6 +263,12 @@
   height: auto;
   object-fit: cover;
   aspect-ratio: 1 / 1;
+
+  @include breakpoint(1700) {
+    width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+  }
 }
 
 //*=========================================
