@@ -110,16 +110,16 @@ function menuOpenAnimation() {
   const openMenuTl = gsap.timeline({
     paused: true,
     onComplete: navTextPointerEvents,
-    defaults: { ease: 'power3.out', duration: 1, delay: 0 },
+    defaults: { ease: 'power3.out', duration: 0.75, delay: 0 },
   });
 
   return openMenuTl
     .to(mainNav, { opacity: 1, duration: 0, ease: 'none' })
     .to(mainNav, { y: '0%' })
-    .addLabel('colorChange', '-=0.5')
-    .to(mainNavLinks, { y: 0, opacity: 1, stagger: 0.2, duration: 0.5 }, 'colorChange')
-    .to(mainNavTriggerWrapper, { backgroundColor: '#fdfcfa' }, 'colorChange+=1')
-    .to(mainNavTrigger, { backgroundColor: '#fdfcfa', color: '#5bb072' }, 'colorChange+=1');
+    .addLabel('colorChange', '-=0.3')
+    .to(mainNavLinks, { y: 0, opacity: 1, stagger: 0.1, duration: 0.25 }, 'colorChange')
+    .to(mainNavTriggerWrapper, { backgroundColor: '#fdfcfa' }, 'colorChange+=0.75')
+    .to(mainNavTrigger, { backgroundColor: '#fdfcfa', color: '#5bb072' }, 'colorChange+=0.75');
 }
 
 // * Close menu
@@ -129,12 +129,12 @@ function closeMenuAnimation() {
   const closeMenuTl = gsap.timeline({
     paused: true,
     onComplete: navTextPointerEvents,
-    defaults: { ease: 'power3.in', duration: 1, delay: 0 },
+    defaults: { ease: 'power3.in', duration: 0.75, delay: 0 },
   });
 
   return closeMenuTl
-    .to(mainNavLinks, { y: 40, opacity: 0, stagger: -0.2, duration: 0.5 })
-    .addLabel('colorChange', '-=0.5')
+    .to(mainNavLinks, { y: 40, opacity: 0, stagger: -0.1, duration: 0.25 })
+    .addLabel('colorChange', '-=0.3')
     .to(mainNavTriggerWrapper, { backgroundColor: '#5bb072' }, 'colorChange')
     .to(mainNavTrigger, { backgroundColor: '#5bb072', color: '#f4f1f0' }, 'colorChange')
     .to(mainNav, { y: '120%' }, 'colorChange');
