@@ -89,7 +89,8 @@ function addTransformProperty() {
 function navTextPointerEvents() {
   const { mainNav, mainNavLinks, mainNavTrigger } = getNavElements();
   mainNavTrigger.style.pointerEvents = 'auto';
-  mainNavLinks.forEach((link) => (link.style.pointerEvents = 'auto'));
+  mainNav.style.pointerEvents = 'auto';
+  // mainNavLinks.forEach((link) => (link.style.pointerEvents = 'auto'));
 
   if (mainNav.dataset.state === 'open') {
     mainNavTrigger.textContent = 'CLOSE MENU';
