@@ -77,13 +77,11 @@ function getNavElements() {
 function removeTransformProperty() {
   const header = document.querySelector('.header');
   header.style.transform = 'none';
-  console.log('Take');
 }
 
 function addTransformProperty() {
   const header = document.querySelector('.header');
   header.style.transform = 'translate3d(0,0,0)';
-  console.log('add');
 }
 
 // * Menu pointer events and text
@@ -113,6 +111,7 @@ function menuOpenAnimation() {
   });
 
   return openMenuTl
+    .to(mainNav, { opacity: 1, duration: 0, ease: 'none' })
     .to(mainNav, { y: '0%' })
     .addLabel('colorChange', '-=0.3')
     .to(mainNavLinks, { y: 0, opacity: 1, stagger: 0.2, duration: 0.5 }, 'colorChange')
