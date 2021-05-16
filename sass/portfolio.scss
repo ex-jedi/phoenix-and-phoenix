@@ -30,6 +30,14 @@ body {
   @include breakpoint(1600) {
     padding: 0 $section-spacing-small $section-spacing-small;
   }
+
+  @include breakpoint(1200) {
+    padding: 0 $section-spacing-small $section-spacing-smallish;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-tiny $section-spacing-smaller;
+  }
 }
 
 .portfolio-index-subheading {
