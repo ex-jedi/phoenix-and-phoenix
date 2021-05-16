@@ -319,6 +319,7 @@ a {
   @include breakpoint(750) {
     opacity: 0;
     transform: translateY(40px);
+    pointer-events: none;
     color: $font-colour-light;
     margin: 0 auto $paragraph-spacing-medium;
     padding: $paragraph-spacing-small $paragraph-spacing-medium;
