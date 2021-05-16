@@ -8,6 +8,7 @@ import {
   splitTextHeadingsFunction,
   fadeAndSwapThreeExport,
   scrollTriggerRefresh,
+  addMenuListener,
 } from './animations';
 
 // *=========================================
@@ -28,3 +29,6 @@ fadeAndSwapThreeExport();
 
 // ********** Scroll Trigger Refresh **********
 scrollTriggerRefresh();
+
+// ********** Menu Animation **********
+addMenuListener();

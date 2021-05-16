@@ -1,6 +1,22 @@
+// *==============================================================================
+// ** Imports  **
+// *==============================================================================
+
 import * as Flickity from 'flickity';
 import 'flickity-imagesloaded';
+import { addMenuListener } from './animations';
 
+// *=========================================
+// ** GSAP  **
+// *=========================================
+// ********** Menu Animation **********
+addMenuListener();
+
+// *==============================================================================
+// ** on Page  **
+// *==============================================================================
+
+// TODO: Move to lib
 const carousel = document.querySelector('.illustration-portfolio-section');
 const flkty = new Flickity(carousel, {
   imagesLoaded: true,

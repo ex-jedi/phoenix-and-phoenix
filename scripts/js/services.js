@@ -12,6 +12,7 @@ import {
   fadeAndSwapThreeExport,
   tabSvgAnimation,
   svgScrubAnimation,
+  addMenuListener,
 } from './animations';
 import { addTabsListeners, consoleGreeting, getTabsElements } from './lib';
 
@@ -45,6 +46,9 @@ svgScrubAnimation();
 
 // ********** Fade and Swap Three **********
 fadeAndSwapThreeExport();
+
+// ********** Menu Animation **********
+addMenuListener();
 
 // *=========================================
 // ** Lib  **

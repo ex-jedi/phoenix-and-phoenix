@@ -10,6 +10,7 @@ import {
   scrollTriggerRefresh,
   fadeAndSwapNineFunctionExport,
   simpleFadeIn,
+  addMenuListener,
 } from './animations';
 
 import { consoleGreeting } from './lib';
@@ -43,6 +44,9 @@ simpleFadeIn();
 
 // ********** Scroll Trigger Refresh **********
 scrollTriggerRefresh();
+
+// ********** Menu Animation **********
+addMenuListener();
 
 // *=========================================
 // ** Lib  **

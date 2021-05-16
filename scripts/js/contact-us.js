@@ -2,7 +2,7 @@
 // ** Imports  **
 // *==============================================================================
 
-import { animatedMainLogo, splitTextHeadingsFunction } from './animations';
+import { animatedMainLogo, splitTextHeadingsFunction, addMenuListener } from './animations';
 
 // *=========================================
 // ** GSAP  **
@@ -12,3 +12,6 @@ import { animatedMainLogo, splitTextHeadingsFunction } from './animations';
 
 animatedMainLogo();
 splitTextHeadingsFunction();
+
+// ********** Menu Animation **********
+addMenuListener();

@@ -315,7 +315,8 @@ a {
   }
 }
 
-.main-nav-link {
+.main-nav-link,
+.main-nav-link:first-of-type {
   @include breakpoint(750) {
     opacity: 0;
     transform: translateY(40px);
