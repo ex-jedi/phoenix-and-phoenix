@@ -545,7 +545,6 @@ function svgScrubAnimation() {
   const { tabPanel } = getTabsElements();
   tabPanel.forEach((panel) => {
     const svgToAnimate = panel.querySelector('[data-name="Text"]');
-    console.log({ svgToAnimate });
     tabSvgAnimation(svgToAnimate);
   });
 }
@@ -566,7 +565,6 @@ function svgRefresh() {
 function gsapTabRefresh() {
   // TODO: Check if you want to refresh every time not just once.
   const { tabButtons } = getTabsElements();
-  console.log({ tabButtons });
   tabButtons.forEach((button) => {
     button.addEventListener(
       'click',
