@@ -7,14 +7,14 @@ import {
   splitTextHeadingsFunction,
   bodySplitTextAnimation,
   scrollTriggerRefresh,
+  scrollTriggerRefreshTabs,
   simpleFadeIn,
   circleAnimationfunction,
   fadeAndSwapThreeExport,
-  tabSvgAnimation,
   svgScrubAnimation,
   addMenuListener,
 } from './animations';
-import { addTabsListeners, consoleGreeting, getTabsElements } from './lib';
+import { addTabsListeners, consoleGreeting } from './lib';
 
 // *=========================================
 // ** GSAP  **
@@ -41,9 +41,6 @@ circleAnimationfunction();
 
 // ********** SVG Scrub Animations **********
 
-// * Initialising Animation
-svgScrubAnimation();
-
 // ********** Fade and Swap Three **********
 fadeAndSwapThreeExport();
 
@@ -66,7 +63,7 @@ consoleGreeting();
 // FIXME: 👇🏾 Don't seem to work when moved into modules
 // !==============================================================================
 
-function svgScrubberEventListener() {
+function gsapTabRefresh() {
   // TODO: Check if you want to refresh every time not just once.
   const serviceTabButtons = document.querySelectorAll('.tab-button');
   serviceTabButtons.forEach((button) => {
@@ -78,6 +75,7 @@ function svgScrubberEventListener() {
         fadeAndSwapThreeExport();
         circleAnimationfunction();
         simpleFadeIn();
+        scrollTriggerRefreshTabs(500);
         console.log('🚀 GSAP Tab Refresh 🚀');
       },
       { once: true }
@@ -85,21 +83,6 @@ function svgScrubberEventListener() {
   });
 }
 
-svgScrubberEventListener();
+gsapTabRefresh();
 
-function svgScrubAnimationRefresh() {
-  const { tabPanel, tabButtons } = getTabsElements();
-  tabButtons.forEach((buttons) => {
-    buttons.addEventListener('click', (e) => {
-      // TODO: Remove scroll trigger from all SVG's
-      // Add trigger to SVG in current tab
-      const clickedTab = e.currentTarget;
-      const { id } = clickedTab;
-      const panelToShow = tabPanel.find((panel) => panel.getAttribute('aria-labelledby') === id);
-      const svgToAnimate = panelToShow.querySelector('[data-name="Text"]');
-      tabSvgAnimation(svgToAnimate);
-    });
-  });
-}
-
-svgScrubAnimationRefresh();
+svgScrubAnimation();

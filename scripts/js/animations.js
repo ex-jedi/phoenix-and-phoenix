@@ -10,6 +10,11 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 import { SplitText } from 'gsap/SplitText';
 
 // *=========================================
+// ** lib  **
+// *=========================================
+import { getTabsElements } from './lib';
+
+// *=========================================
 // ** GSAP  **
 // *=========================================
 // TODO: Remove All markers
@@ -29,7 +34,7 @@ function splitBeGone(element) {
   element.revert();
 }
 
-// * ScrollTrigger Refresh
+// * ScrollTrigger Refresh Initial
 function scrollTriggerRefresh(time = 2000) {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
   window.addEventListener('load', () => {
@@ -50,6 +55,27 @@ function scrollTriggerRefresh(time = 2000) {
         });
       });
     }, time);
+  });
+}
+
+// * ScrollTrigger Refresh Tabs
+function scrollTriggerRefreshTabs(time = 2000) {
+  const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
+
+  console.log(`✨ ScrollTrigger refresh created after ${time}ms ✨`);
+  scrollTriggerRefreshTarget.forEach((triggerElem) => {
+    ScrollTrigger.create({
+      trigger: triggerElem,
+      start: 'top bottom',
+      // end: 'bottom bottom',
+      once: true,
+      id: 'ScrollTrigger Refresh',
+      // markers: true,
+      onEnter: () => {
+        ScrollTrigger.refresh();
+        console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
+      },
+    });
   });
 }
 
@@ -478,28 +504,6 @@ function fadeAndSwapThreeExport() {
 // ** SVG Scrub Animation  **
 // *=========================================
 
-// Initialise animation on load.
-function svgScrubAnimation() {
-  const svgToAnimate = gsap.utils.toArray(document.querySelectorAll('[data-name="Text"]'));
-
-  svgToAnimate.forEach((svg) => {
-    svg.style.transformOrigin = 'center';
-    gsap.to(svg, {
-      rotation: 360,
-      transformOrigin: 'center',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: svg,
-        id: 'SVG Scrubber',
-        // markers: true,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 0.5,
-      },
-    });
-  });
-}
-
 function tabSvgAnimation(targetSvg) {
   gsap.to(targetSvg, {
     rotation: 360,
@@ -507,11 +511,21 @@ function tabSvgAnimation(targetSvg) {
     ease: 'none',
     scrollTrigger: {
       trigger: targetSvg,
+      markers: true,
       id: 'Illustration SVG Scrubber',
       start: 'top bottom',
       end: 'bottom top',
       scrub: 0.5,
     },
+  });
+}
+
+function svgScrubAnimation() {
+  const { tabPanel } = getTabsElements();
+  tabPanel.forEach((panel) => {
+    const svgToAnimate = panel.querySelector('[data-name="Text"]');
+    console.log({ svgToAnimate });
+    tabSvgAnimation(svgToAnimate);
   });
 }
 
@@ -528,8 +542,8 @@ export {
   circleAnimationfunction,
   bodySplitTextAnimation,
   scrollTriggerRefresh,
+  scrollTriggerRefreshTabs,
   simpleFadeIn,
-  tabSvgAnimation,
   svgScrubAnimation,
   addMenuListener,
 };
