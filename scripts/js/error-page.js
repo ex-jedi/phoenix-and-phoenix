@@ -11,12 +11,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 import { SplitText } from 'gsap/SplitText';
 
-import { addMenuListener } from './animations';
+import { addMenuListener, splitTextHeadingsFunction } from './animations';
 
 // *=========================================
 // ** GSAP  **
 // *=========================================
 // ********** Menu Animation **********
+
+// ********** Heading Split Text **********
+splitTextHeadingsFunction();
+
 addMenuListener();
 
 // ********** Swap Two Images **********
