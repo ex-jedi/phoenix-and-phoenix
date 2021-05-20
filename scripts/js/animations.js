@@ -556,7 +556,7 @@ function svgRefresh() {
   tabButtons.forEach((button) => {
     button.addEventListener('click', () => {
       scrollTriggerRefreshSVG(500);
-      console.log('🚀 GSAP SVG Refresh Click 🚀');
+      // console.log('🚀 GSAP SVG Refresh Click 🚀');
     });
   });
 }
@@ -575,7 +575,7 @@ function gsapTabRefresh() {
         circleAnimationfunction();
         simpleFadeIn();
         scrollTriggerRefreshTabs();
-        console.log('🚀 GSAP Tab Refresh 🚀');
+        // console.log('🚀 GSAP Tab Refresh 🚀');
       },
       { once: true }
     );
