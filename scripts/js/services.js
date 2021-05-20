@@ -91,6 +91,8 @@ function svgScrubAnimationRefresh() {
   const { tabPanel, tabButtons } = getTabsElements();
   tabButtons.forEach((buttons) => {
     buttons.addEventListener('click', (e) => {
+      // TODO: Remove scroll trigger from all SVG's
+      // Add trigger to SVG in current tab
       const clickedTab = e.currentTarget;
       const { id } = clickedTab;
       const panelToShow = tabPanel.find((panel) => panel.getAttribute('aria-labelledby') === id);
