@@ -2,13 +2,22 @@
   <div class="error-page-text-wrapper">
     <perch:content id="errorPageText" type="textarea" editor="redactor" label="Error Page Text" required html>
   </div>
-  <div class="error-page-image-wrapper">
-    <img class="error-page-image" itemprop="image" loading="lazy" src="<perch:content id="errorPageImage" type="image" width="1000" label="Error Page Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image Description">"
+  <div class="error-page-image-wrapper swap-two">
+    <img id="swap-one" class="error-page-image" itemprop="image" loading="lazy" src="<perch:content id="errorPageImage" type="image" width="1000" label="Error Page Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image Description">"
     sizes="(max-width:1000) 100vw, 30vw"
     srcset="<perch:content type="image" id="errorPageImage" width="1000" > 1000w,
     <perch:content type="image" id="errorPageImage" width="800" quality="70"> 800w,
     <perch:content type="image" id="errorPageImage" width="700" quality="70"> 700w,
     <perch:content type="image" id="errorPageImage" width="600" quality="70"> 600w,
     <perch:content type="image" id="errorPageImage" width="450" quality="70"> 450w">
+
+    <!-- Animated Image -->
+    <img id="swap-two" class="error-page-image swap-two-images" itemprop="image" loading="lazy" src="<perch:content id="errorPageImageAnimOne" type="image" width="1000" label="Error Page Image Two" quality="70">" alt="<perch:content id="altAnimOne" type="text" label="Image Description">"
+    sizes="(max-width:1000) 100vw, 30vw"
+    srcset="<perch:content type="image" id="errorPageImageAnimOne" width="1000" > 1000w,
+    <perch:content type="image" id="errorPageImageAnimOne" width="800" quality="70"> 800w,
+    <perch:content type="image" id="errorPageImageAnimOne" width="700" quality="70"> 700w,
+    <perch:content type="image" id="errorPageImageAnimOne" width="600" quality="70"> 600w,
+    <perch:content type="image" id="errorPageImageAnimOne" width="450" quality="70"> 450w">
   </div>
 </section>
