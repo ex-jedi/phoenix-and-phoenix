@@ -62,7 +62,7 @@ function scrollTriggerRefresh(time = 2000) {
 function scrollTriggerRefreshTabs(time = 2000) {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
 
-  console.log(`✨ ScrollTrigger refresh created after ${time}ms ✨`);
+  console.log(`✨ ScrollTrigger Tabs refresh created after ${time}ms ✨`);
   scrollTriggerRefreshTarget.forEach((triggerElem) => {
     ScrollTrigger.create({
       trigger: triggerElem,
@@ -73,7 +73,28 @@ function scrollTriggerRefreshTabs(time = 2000) {
       // markers: true,
       onEnter: () => {
         ScrollTrigger.refresh();
-        console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
+        console.log('⚡ ScrollTrigger Tabs Refresh Triggered ⚡');
+      },
+    });
+  });
+}
+
+// * ScrollTrigger Refresh Tabs
+function scrollTriggerRefreshSVG(time = 2000) {
+  const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-svg-refresh-target');
+
+  console.log(`✨ ScrollTrigger SVG refresh created after ${time}ms ✨`);
+  scrollTriggerRefreshTarget.forEach((triggerElem) => {
+    ScrollTrigger.create({
+      trigger: triggerElem,
+      start: 'top bottom',
+      // end: 'bottom bottom',
+      once: true,
+      id: 'ScrollTrigger Refresh',
+      // markers: true,
+      onEnter: () => {
+        ScrollTrigger.refresh();
+        console.log('⚡ ScrollTrigger SVG Refresh Triggered ⚡');
       },
     });
   });
@@ -543,6 +564,7 @@ export {
   bodySplitTextAnimation,
   scrollTriggerRefresh,
   scrollTriggerRefreshTabs,
+  scrollTriggerRefreshSVG,
   simpleFadeIn,
   svgScrubAnimation,
   addMenuListener,

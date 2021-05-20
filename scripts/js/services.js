@@ -8,13 +8,14 @@ import {
   bodySplitTextAnimation,
   scrollTriggerRefresh,
   scrollTriggerRefreshTabs,
+  scrollTriggerRefreshSVG,
   simpleFadeIn,
   circleAnimationfunction,
   fadeAndSwapThreeExport,
   svgScrubAnimation,
   addMenuListener,
 } from './animations';
-import { addTabsListeners, consoleGreeting } from './lib';
+import { addTabsListeners, consoleGreeting, getTabsElements } from './lib';
 
 // *=========================================
 // ** GSAP  **
@@ -40,6 +41,7 @@ simpleFadeIn();
 circleAnimationfunction();
 
 // ********** SVG Scrub Animations **********
+svgScrubAnimation();
 
 // ********** Fade and Swap Three **********
 fadeAndSwapThreeExport();
@@ -65,8 +67,9 @@ consoleGreeting();
 
 function gsapTabRefresh() {
   // TODO: Check if you want to refresh every time not just once.
-  const serviceTabButtons = document.querySelectorAll('.tab-button');
-  serviceTabButtons.forEach((button) => {
+  const { tabButtons } = getTabsElements();
+  console.log({ tabButtons });
+  tabButtons.forEach((button) => {
     button.addEventListener(
       'click',
       () => {
@@ -75,7 +78,7 @@ function gsapTabRefresh() {
         fadeAndSwapThreeExport();
         circleAnimationfunction();
         simpleFadeIn();
-        scrollTriggerRefreshTabs(500);
+        scrollTriggerRefreshTabs();
         console.log('🚀 GSAP Tab Refresh 🚀');
       },
       { once: true }
@@ -85,4 +88,14 @@ function gsapTabRefresh() {
 
 gsapTabRefresh();
 
-svgScrubAnimation();
+function svgRefresh() {
+  const { tabButtons } = getTabsElements();
+  tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      scrollTriggerRefreshSVG(500);
+      console.log('🚀 GSAP SVG Refresh Click 🚀');
+    });
+  });
+}
+
+svgRefresh();
