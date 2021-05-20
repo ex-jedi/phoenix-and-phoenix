@@ -8,12 +8,10 @@ import { addMenuListener, splitTextHeadingsFunction, swapTwoImagesFunction } fro
 // ** GSAP  **
 // *=========================================
 // ********** Menu Animation **********
+addMenuListener();
 
 // ********** Heading Split Text **********
 splitTextHeadingsFunction();
 
-addMenuListener();
-
 // ********** Swap Two Images **********
-
 swapTwoImagesFunction();
