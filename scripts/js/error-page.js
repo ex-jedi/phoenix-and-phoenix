@@ -2,7 +2,7 @@
 // ** Imports  **
 // *==============================================================================
 
-import { addMenuListener, splitTextHeadingsFunction, swapTwoImagesFunction } from './animations';
+import { addMenuListener, splitTextHeadingsFunction, swapTwoImagesFunction, animatedMainLogo } from './animations';
 
 // *=========================================
 // ** GSAP  **
@@ -15,3 +15,6 @@ splitTextHeadingsFunction();
 
 // ********** Swap Two Images **********
 swapTwoImagesFunction();
+
+// ********** Logo **********
+animatedMainLogo();
