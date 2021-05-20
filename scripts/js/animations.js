@@ -522,6 +522,24 @@ function fadeAndSwapThreeExport() {
 }
 
 // *=========================================
+// ** Swap Two **
+// *=========================================
+
+// * 404 Page swapping Function
+
+function swapTwoImagesFunction() {
+  const swapTwoElement = document.querySelector('.swap-two');
+  const gsapImages = gsap.utils.toArray(swapTwoElement.querySelectorAll('img'));
+  const swapTwoTl = gsap.timeline({
+    repeat: -1,
+    paused: false,
+    defaults: { ease: 'none', duration: 0 },
+  });
+
+  swapTwoTl.to(gsapImages[0], { autoAlpha: 0 }, '+=1').to(gsapImages[1], { autoAlpha: 1 }).to(null, { duration: 1 });
+}
+
+// *=========================================
 // ** SVG Scrub Animation  **
 // *=========================================
 
@@ -602,4 +620,5 @@ export {
   svgScrubAnimation,
   addMenuListener,
   gsapTabRefresh,
+  swapTwoImagesFunction,
 };
