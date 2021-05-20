@@ -36,10 +36,7 @@ function swapTwoImagesFunction() {
     defaults: { ease: 'none', duration: 0 },
   });
 
-  swapTwoTl
-    .fromTo(gsapImages[0], { autoAlpha: 1 }, { autoAlpha: 0 }, '+=1')
-    .to(gsapImages[1], { autoAlpha: 1 })
-    .to(null, { duration: 1 });
+  swapTwoTl.to(gsapImages[0], { autoAlpha: 0 }, '+=1').to(gsapImages[1], { autoAlpha: 1 }).to(null, { duration: 1 });
 }
 
 swapTwoImagesFunction();
