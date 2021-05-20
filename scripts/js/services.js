@@ -7,7 +7,7 @@ import {
   splitTextHeadingsFunction,
   bodySplitTextAnimation,
   scrollTriggerRefresh,
-  scrollTriggerRefreshTabs,
+  gsapTabRefresh,
   svgRefresh,
   simpleFadeIn,
   circleAnimationfunction,
@@ -15,7 +15,7 @@ import {
   svgScrubAnimation,
   addMenuListener,
 } from './animations';
-import { addTabsListeners, consoleGreeting, getTabsElements } from './lib';
+import { addTabsListeners, consoleGreeting } from './lib';
 
 // *=========================================
 // ** GSAP  **
@@ -64,27 +64,6 @@ consoleGreeting();
 // !==============================================================================
 // FIXME: 👇🏾 Don't seem to work when moved into modules
 // !==============================================================================
-
-function gsapTabRefresh() {
-  // TODO: Check if you want to refresh every time not just once.
-  const { tabButtons } = getTabsElements();
-  console.log({ tabButtons });
-  tabButtons.forEach((button) => {
-    button.addEventListener(
-      'click',
-      () => {
-        splitTextHeadingsFunction();
-        bodySplitTextAnimation();
-        fadeAndSwapThreeExport();
-        circleAnimationfunction();
-        simpleFadeIn();
-        scrollTriggerRefreshTabs();
-        console.log('🚀 GSAP Tab Refresh 🚀');
-      },
-      { once: true }
-    );
-  });
-}
 
 gsapTabRefresh();
 

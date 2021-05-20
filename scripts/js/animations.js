@@ -562,6 +562,28 @@ function svgRefresh() {
   });
 }
 
+// ********** Tabs Refresh **********
+function gsapTabRefresh() {
+  // TODO: Check if you want to refresh every time not just once.
+  const { tabButtons } = getTabsElements();
+  console.log({ tabButtons });
+  tabButtons.forEach((button) => {
+    button.addEventListener(
+      'click',
+      () => {
+        splitTextHeadingsFunction();
+        bodySplitTextAnimation();
+        fadeAndSwapThreeExport();
+        circleAnimationfunction();
+        simpleFadeIn();
+        scrollTriggerRefreshTabs();
+        console.log('🚀 GSAP Tab Refresh 🚀');
+      },
+      { once: true }
+    );
+  });
+}
+
 // *==============================================================================
 // ** Exports  **
 // *==============================================================================
@@ -581,4 +603,5 @@ export {
   simpleFadeIn,
   svgScrubAnimation,
   addMenuListener,
+  gsapTabRefresh,
 };
