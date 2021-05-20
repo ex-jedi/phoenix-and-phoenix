@@ -550,6 +550,18 @@ function svgScrubAnimation() {
   });
 }
 
+// * Refresh SVG Scrolltriggers as they get a but messes up when swapping tabs
+
+function svgRefresh() {
+  const { tabButtons } = getTabsElements();
+  tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      scrollTriggerRefreshSVG(500);
+      console.log('🚀 GSAP SVG Refresh Click 🚀');
+    });
+  });
+}
+
 // *==============================================================================
 // ** Exports  **
 // *==============================================================================
@@ -565,6 +577,7 @@ export {
   scrollTriggerRefresh,
   scrollTriggerRefreshTabs,
   scrollTriggerRefreshSVG,
+  svgRefresh,
   simpleFadeIn,
   svgScrubAnimation,
   addMenuListener,

@@ -8,7 +8,7 @@ import {
   bodySplitTextAnimation,
   scrollTriggerRefresh,
   scrollTriggerRefreshTabs,
-  scrollTriggerRefreshSVG,
+  svgRefresh,
   simpleFadeIn,
   circleAnimationfunction,
   fadeAndSwapThreeExport,
@@ -87,15 +87,5 @@ function gsapTabRefresh() {
 }
 
 gsapTabRefresh();
-
-function svgRefresh() {
-  const { tabButtons } = getTabsElements();
-  tabButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      scrollTriggerRefreshSVG(500);
-      console.log('🚀 GSAP SVG Refresh Click 🚀');
-    });
-  });
-}
 
 svgRefresh();
