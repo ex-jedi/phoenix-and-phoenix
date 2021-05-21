@@ -4,13 +4,15 @@
 
 import * as Flickity from 'flickity';
 import 'flickity-imagesloaded';
-import { addMenuListener } from './animations';
+import { addMenuListener, swipeTextAnimation } from './animations';
 
 // *=========================================
 // ** GSAP  **
 // *=========================================
 // ********** Menu Animation **********
 addMenuListener();
+
+swipeTextAnimation();
 
 // *==============================================================================
 // ** on Page  **

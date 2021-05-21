@@ -604,6 +604,32 @@ function gsapTabRefresh() {
 // ** Illustrations Fade Text  **
 // *=========================================
 
+function swipeTextwiggle() {
+  const wiggleTl = gsap.timeline({
+    repeat: 3,
+    delay: 1,
+    defaults: { ease: 'power3.out', duration: 0.25 },
+  });
+  wiggleTl.to('.swipe-text-paragraph', { x: 50 }).to('.swipe-text-paragraph', { x: -50 });
+  return wiggleTl;
+}
+
+function swipeTextFade() {
+  const fadeTl = gsap.timeline({
+    defaults: { duration: 1, ease: 'power3.out' },
+  });
+
+  fadeTl.to('.swipe-text-paragraph', { autoAlpha: 0 });
+
+  return fadeTl;
+}
+
+function swipeTextAnimation() {
+  console.log('PLay');
+  const swipeMasterTl = gsap.timeline();
+  swipeMasterTl.add(swipeTextwiggle()).add(swipeTextwiggle()).add(swipeTextwiggle()).add(swipeTextFade());
+}
+
 // *==============================================================================
 // ** Exports  **
 // *==============================================================================
@@ -625,4 +651,5 @@ export {
   addMenuListener,
   gsapTabRefresh,
   swapTwoImagesFunction,
+  swipeTextAnimation,
 };
