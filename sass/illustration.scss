@@ -70,11 +70,11 @@ html {
 
   [data-name='Text'] {
     transform-origin: center;
-    // animation: rotateSvg 4s linear forwards;
+    animation: rotateSvg 4s linear forwards;
   }
 
   [data-name='Arrow'] {
-    // animation: fadeSvg 4s linear forwards;
+    animation: fadeSvg 4s linear forwards;
   }
 
   @include breakpoint(1500) {
@@ -103,6 +103,24 @@ html {
   }
   100% {
     opacity: 0;
+  }
+}
+
+.swipe-text-paragraph {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+
+  @include breakpoint(1300) {
+    display: initial;
+    visibility: visible;
+    font-size: $font-size-large;
+    color: $font-colour-blue;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    top: 45%;
   }
 }
 

@@ -89,6 +89,10 @@ html {
 }
 .scroll-svg-arrow-wrapper [data-name=Text] {
   transform-origin: center;
+  animation: rotateSvg 4s linear forwards;
+}
+.scroll-svg-arrow-wrapper [data-name=Arrow] {
+  animation: fadeSvg 4s linear forwards;
 }
 @media (max-width: 1500px) {
   .scroll-svg-arrow-wrapper {
@@ -119,6 +123,25 @@ html {
     opacity: 0;
   }
 }
+.swipe-text-paragraph {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+@media (max-width: 1300px) {
+  .swipe-text-paragraph {
+    display: initial;
+    visibility: visible;
+    font-size: 5rem;
+    color: #535cb0;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    top: 45%;
+  }
+}
+
 /*! Flickity v2.2.2
 https://flickity.metafizzy.co
 ---------------------------------------------- */
