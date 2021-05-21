@@ -3,7 +3,7 @@
 // *=========================================
 
 // ********** GSAP **********
-import { gsap } from 'gsap';
+import { gsap, timeline } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
@@ -415,18 +415,70 @@ function circleAnimationfunction() {
 }
 
 // *=========================================
-// ** Nine Image Wipe and Swap Nine **
+// ** Nine Image fade Swappers **
 // *=========================================
 
 // * Element Variables
 const fadeAndSwapNineElement = document.querySelectorAll('.fade-and-swap-nine');
-gsap.set(fadeAndSwapNineElement, { clipPath: 'inset(0% 100% 0% 0%)' });
 
-// * Image swapping Function
+// *=========================================
+// ** Swapper Nine  **
+// *=========================================
+
+function swapNineFunction(swapperImages) {
+  const imageSwapper = gsap.timeline({
+    paused: true,
+    defaults: { duration: 0, ease: 'none' },
+    repeat: -1,
+  });
+
+  const delay = '+=0.4';
+
+  imageSwapper
+    .to(swapperImages[0], { autoAlpha: 0 })
+    .to(swapperImages[1], { autoAlpha: 1 })
+    .to(swapperImages[1], { autoAlpha: 0 }, delay)
+    .to(swapperImages[2], { autoAlpha: 1 })
+    .to(swapperImages[2], { autoAlpha: 0 }, delay)
+    .to(swapperImages[3], { autoAlpha: 1 })
+    .to(swapperImages[3], { autoAlpha: 0 }, delay)
+    .to(swapperImages[4], { autoAlpha: 1 })
+    .to(swapperImages[4], { autoAlpha: 0 }, delay)
+    .to(swapperImages[5], { autoAlpha: 1 })
+    .to(swapperImages[5], { autoAlpha: 0 }, delay)
+    .to(swapperImages[6], { autoAlpha: 1 })
+    .to(swapperImages[6], { autoAlpha: 0 }, delay)
+    .to(swapperImages[7], { autoAlpha: 1 })
+    .to(swapperImages[7], { autoAlpha: 0 }, delay)
+    .to(swapperImages[8], { autoAlpha: 1 })
+    .to(swapperImages[8], { autoAlpha: 0 }, delay)
+    .to(swapperImages[0], { autoAlpha: 1 });
+
+  return imageSwapper;
+}
+
+function nineSwapCallback(elem, images) {
+  const swapping = swapNineFunction(images);
+  elem.addEventListener('mouseenter', function () {
+    console.log('Mouse Enter');
+    swapping.resume();
+  });
+  elem.addEventListener('mouseleave', function () {
+    console.log('Mouse Leave');
+    swapping.pause();
+  });
+}
+
+// *=========================================
+// ** Nine Image Fade and SWap  **
+// *=========================================
+
+gsap.set(fadeAndSwapNineElement, { clipPath: 'inset(0% 100% 0% 0%)' });
 
 function fadeAndSwapNineFunction(elem, swapperImages) {
   const faderSwapper = gsap.timeline({
     defaults: { duration: 0, ease: 'none' },
+    onComplete: () => nineSwapCallback(elem, swapperImages),
   });
 
   const delay = '+=0.4';
