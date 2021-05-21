@@ -5,6 +5,7 @@
 import * as Flickity from 'flickity';
 import 'flickity-imagesloaded';
 import { addMenuListener, swipeTextAnimation } from './animations';
+import { consoleGreeting } from './lib';
 
 // *=========================================
 // ** GSAP  **
@@ -12,7 +13,15 @@ import { addMenuListener, swipeTextAnimation } from './animations';
 // ********** Menu Animation **********
 addMenuListener();
 
+// ********** Swipe Text Animation **********
 swipeTextAnimation();
+
+// *=========================================
+// ** Lib  **
+// *=========================================
+
+// ********** Console Greeting **********
+consoleGreeting();
 
 // *==============================================================================
 // ** on Page  **
