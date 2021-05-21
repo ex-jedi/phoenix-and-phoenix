@@ -458,6 +458,7 @@ function swapNineFunction(swapperImages) {
 }
 
 function nineSwapCallback(elem, images) {
+  // TODO: Mouseover or Mouseenter?
   const swapping = swapNineFunction(images);
   elem.addEventListener('mouseenter', function () {
     console.log('Mouse Enter');
