@@ -32,6 +32,15 @@ html {
   overflow: hidden;
 }
 
+.illustration-portfolio-section {
+  padding: 0 5rem;
+}
+@media (max-width: 700px) {
+  .illustration-portfolio-section {
+    padding: 0;
+  }
+}
+
 .small-header {
   position: relative;
   z-index: 3;
@@ -80,10 +89,17 @@ html {
 }
 .scroll-svg-arrow-wrapper [data-name=Text] {
   transform-origin: center;
-  animation: rotateSvg 4s linear forwards;
 }
-.scroll-svg-arrow-wrapper [data-name=Arrow] {
-  animation: fadeSvg 4s linear forwards;
+@media (max-width: 1500px) {
+  .scroll-svg-arrow-wrapper {
+    right: 5rem;
+  }
+}
+@media (max-width: 1300px) {
+  .scroll-svg-arrow-wrapper {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 @keyframes rotateSvg {
