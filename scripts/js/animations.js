@@ -605,12 +605,20 @@ function gsapTabRefresh() {
 // *=========================================
 
 function swipeTextwiggle() {
+  const xPos = 25;
+
   const wiggleTl = gsap.timeline({
-    repeat: 3,
-    delay: 1,
-    defaults: { ease: 'power3.out', duration: 0.25 },
+    delay: 0.5,
+    defaults: { ease: 'power3.out', duration: 0.1 },
   });
-  wiggleTl.to('.swipe-text-paragraph', { x: 50 }).to('.swipe-text-paragraph', { x: -50 });
+  wiggleTl
+    .to('.swipe-text-paragraph', { x: xPos })
+    .to('.swipe-text-paragraph', { x: -xPos })
+    .to('.swipe-text-paragraph', { x: xPos })
+    .to('.swipe-text-paragraph', { x: -xPos })
+    .to('.swipe-text-paragraph', { x: xPos })
+    .to('.swipe-text-paragraph', { x: -xPos })
+    .to('.swipe-text-paragraph', { x: 0 });
   return wiggleTl;
 }
 
@@ -625,7 +633,6 @@ function swipeTextFade() {
 }
 
 function swipeTextAnimation() {
-  console.log('PLay');
   const swipeMasterTl = gsap.timeline();
   swipeMasterTl.add(swipeTextwiggle()).add(swipeTextwiggle()).add(swipeTextwiggle()).add(swipeTextFade());
 }
