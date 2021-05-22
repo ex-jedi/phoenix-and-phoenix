@@ -458,14 +458,11 @@ function swapNineFunction(swapperImages) {
 }
 
 function nineSwapCallback(elem, images) {
-  // TODO: Mouseover or Mouseenter?
   const swapping = swapNineFunction(images);
-  elem.addEventListener('mouseenter', function () {
-    console.log('Mouse Enter');
+  elem.addEventListener('mouseover', function () {
     swapping.resume();
   });
   elem.addEventListener('mouseleave', function () {
-    console.log('Mouse Leave');
     swapping.pause();
   });
 }
@@ -551,15 +548,11 @@ function swapThreeFunction(swapperImages) {
 }
 
 function threeSwapCallback(elem, images) {
-  // TODO: Mouseover or Mouseenter?
-  console.log(images);
   const swappingThree = swapThreeFunction(images);
-  elem.addEventListener('mouseenter', function () {
-    console.log('Mouse Enter');
+  elem.addEventListener('mouseover', function () {
     swappingThree.resume();
   });
   elem.addEventListener('mouseleave', function () {
-    console.log('Mouse Leave');
     swappingThree.pause();
   });
 }
