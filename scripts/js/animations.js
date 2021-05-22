@@ -35,7 +35,7 @@ function splitBeGone(element) {
 }
 
 // * ScrollTrigger Refresh Initial
-function scrollTriggerRefresh(time = 2000) {
+function scrollTriggerRefresh(time = 1000) {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
   window.addEventListener('load', () => {
     setTimeout(() => {
@@ -44,7 +44,6 @@ function scrollTriggerRefresh(time = 2000) {
         ScrollTrigger.create({
           trigger: triggerElem,
           start: 'top bottom',
-          // end: 'bottom bottom',
           once: true,
           id: 'ScrollTrigger Refresh',
           // markers: true,
@@ -638,7 +637,7 @@ function tabSvgAnimation(targetSvg) {
     ease: 'none',
     scrollTrigger: {
       trigger: targetSvg,
-      markers: true,
+      // markers: true,
       id: 'Illustration SVG Scrubber',
       start: 'top bottom',
       end: 'bottom top',

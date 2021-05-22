@@ -66,7 +66,7 @@ imageSwipeInExportFunction();
 splitTextHeadingsFunction();
 
 // * Scroll Trigger Refresh
-scrollTriggerRefresh(2000);
+scrollTriggerRefresh();
 
 // *=========================================
 // ** Lib  **
