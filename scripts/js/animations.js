@@ -435,7 +435,7 @@ function swapNineFunction(swapperImages) {
   const delay = '+=0.4';
 
   imageSwapper
-    .to(swapperImages[0], { autoAlpha: 0 })
+    .to(swapperImages[0], { autoAlpha: 0 }, delay)
     .to(swapperImages[1], { autoAlpha: 1 })
     .to(swapperImages[1], { autoAlpha: 0 }, delay)
     .to(swapperImages[2], { autoAlpha: 1 })
@@ -540,7 +540,7 @@ function swapThreeFunction(swapperImages) {
   const delay = '+=0.4';
 
   swapperThree
-    .to(swapperImages[0], { autoAlpha: 0 })
+    .to(swapperImages[0], { autoAlpha: 0 }, delay)
     .to(swapperImages[1], { autoAlpha: 1 })
     .to(swapperImages[1], { autoAlpha: 0 }, delay)
     .to(swapperImages[2], { autoAlpha: 1 })
