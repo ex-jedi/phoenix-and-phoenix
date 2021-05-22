@@ -218,7 +218,6 @@ const kateImages = gsap.utils.toArray('.kate-images-wrapper img');
 const markImages = gsap.utils.toArray('.mark-images-wrapper img');
 
 const animatedMainLogoTimeline = gsap.timeline({
-  // TODO: Limit repeats?
   repeat: -1,
   repeatDelay: 1,
   defaults: { ease: 'none', duration: 0 },
@@ -324,7 +323,7 @@ function splitTextHeadingsFunction() {
     // Create array of words
     const splitWords = split.words;
 
-    // TODO: Add some logic for large paragraphs
+    // TODO: Add some logic for large paragraphs and stagger delay
     const wordsLength = splitWords.length;
     let timingDuration;
     let timingDelay;
