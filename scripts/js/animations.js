@@ -524,8 +524,47 @@ function fadeAndSwapNineFunctionExport() {
 }
 
 // *=========================================
-// ** Three image Wipe and Swap Three **
+// ** Three image Wiper and Swapper **
 // *=========================================
+
+// ********** Three Image Swap **********
+
+// * Image swapping Function
+
+function swapThreeFunction(swapperImages) {
+  const swapperThree = gsap.timeline({
+    defaults: { duration: 0, ease: 'none' },
+    paused: true,
+    repeat: -1,
+  });
+  const delay = '+=0.4';
+
+  swapperThree
+    .to(swapperImages[0], { autoAlpha: 0 })
+    .to(swapperImages[1], { autoAlpha: 1 })
+    .to(swapperImages[1], { autoAlpha: 0 }, delay)
+    .to(swapperImages[2], { autoAlpha: 1 })
+    .to(swapperImages[2], { autoAlpha: 0 }, delay)
+    .to(swapperImages[0], { autoAlpha: 1 });
+
+  return swapperThree;
+}
+
+function threeSwapCallback(elem, images) {
+  // TODO: Mouseover or Mouseenter?
+  console.log(images);
+  const swappingThree = swapThreeFunction(images);
+  elem.addEventListener('mouseenter', function () {
+    console.log('Mouse Enter');
+    swappingThree.resume();
+  });
+  elem.addEventListener('mouseleave', function () {
+    console.log('Mouse Leave');
+    swappingThree.pause();
+  });
+}
+
+// ********** Three Image Wipe and Swap **********
 
 function getFadeSwapThreeImages() {
   const fadeAndSwapThreeElement = gsap.utils.toArray(document.querySelectorAll('.fade-and-swap-three'));
@@ -537,6 +576,9 @@ function getFadeSwapThreeImages() {
 function fadeAndSwapThreeFunction(elem, swapperImages) {
   const faderSwapperThree = gsap.timeline({
     defaults: { duration: 0, ease: 'none' },
+    onComplete: () => {
+      threeSwapCallback(elem, swapperImages);
+    },
   });
   const delay = '+=0.4';
 
