@@ -5,5 +5,4 @@
 </main>
 <?php perch_layout('invisible-footer'); ?>
 <?php perch_layout('illustration-footer-end'); ?>
-<!-- TODO: Remove debug -->
-<!-- <?php PerchUtil::output_debug(); ?> -->
+
