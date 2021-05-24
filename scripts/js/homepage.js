@@ -1,14 +1,3 @@
-// TODO: Temp for speedy animation building 👇🏾 Remove
-// !==============================================================================
-// ! Temp Imports  **
-// !==============================================================================
-
-import { gsap } from 'gsap';
-import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
-import { SplitText } from 'gsap/SplitText';
-
 // *==============================================================================
 // ** Imports  **
 // *==============================================================================
@@ -25,13 +14,6 @@ import {
 } from './animations';
 
 import { consoleGreeting } from './lib';
-
-// TODO: Temp For Building. Remove 👇🏾
-// !==============================================================================
-// ! Temp Things For Building **
-// !==============================================================================
-
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin, SplitText);
 
 bodySplitTextAnimation();
 
