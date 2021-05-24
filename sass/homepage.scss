@@ -69,7 +69,6 @@
 }
 
 //* Homepage Animated Image
-//TODO: More to main & make more modular
 
 //*=========================================
 //** Main **
@@ -138,7 +137,6 @@
 .homepage-section-one-main-image {
   width: 100%;
   height: auto;
-  //TODO: Make sure this isn't ruining the image
   object-fit: cover;
 
   @include breakpoint(1400) {
@@ -198,7 +196,6 @@
 .homepage-bio-image {
   width: 100%;
   height: auto;
-  //TODO: Make sure this isn't ruining the image
   object-fit: cover;
 
   @include breakpoint(1400) {

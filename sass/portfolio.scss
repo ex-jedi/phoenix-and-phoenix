@@ -123,7 +123,6 @@ body {
 //** Illustration Portfolio Link **
 //*=========================================
 
-//TODO: Check padding for smaller screens
 .portfolio-illustration-portfolio-link-section {
   margin: 0;
   padding: $section-spacing-large $section-spacing-super-large;
@@ -131,6 +130,14 @@ body {
 
   @include breakpoint(1400) {
     padding: $section-spacing-medium $section-spacing-large;
+  }
+
+  @include breakpoint(1200) {
+    padding: $section-spacing-medium $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-tiny;
   }
 }
 

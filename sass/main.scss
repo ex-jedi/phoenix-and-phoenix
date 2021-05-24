@@ -35,13 +35,11 @@ body {
   position: relative;
   width: 100%;
   min-width: 320px;
-  //TODO: Choose max width
   max-width: 2520px;
   margin: 0 auto;
   padding: 0;
   background: none;
   // Removes small gap below footer
-  //TODO: Check this doesn't mess stuff up
   line-height: 0;
 }
 
@@ -185,7 +183,6 @@ a {
   overflow: hidden;
   margin: $paragraph-spacing-small auto $section-spacing-large;
 
-  //TODO: Looks good on homepage. Check it's good everywhere else.
   @include breakpoint(1400) {
     margin: $paragraph-spacing-small auto $section-spacing-medium;
   }
