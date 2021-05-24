@@ -234,12 +234,6 @@ $transition-one: 0.2s ease-in 0s;
 //** Media Queries   **
 //*=========================================
 
-//*=========================================
-//** Media Queries   **
-//*=========================================
-
-//TODO: Delete unused media query's
-
 //********** Max Width **********
 
 @mixin breakpoint($point) {
@@ -247,39 +241,6 @@ $transition-one: 0.2s ease-in 0s;
     $point: 1px * $point;
   }
   @media (max-width: $point) {
-    @content;
-  }
-}
-
-//********** Min Width **********
-
-@mixin breakpoint-min($point) {
-  @if unitless($point) {
-    $point: 1px * $point;
-  }
-  @media (min-width: $point) {
-    @content;
-  }
-}
-
-//********** Height **********
-
-@mixin height-breakpoint($point) {
-  @if unitless($point) {
-    $point: 1px * $point;
-  }
-  @media (max-height: $point) {
-    @content;
-  }
-}
-
-//********** Width and Orientation **********
-
-@mixin width-orientation-breakpoint($point, $orientation: portrait) {
-  @if unitless($point) {
-    $point: 1px * $point;
-  }
-  @media (max-height: $point) and (orientation: $orientation) {
     @content;
   }
 }
