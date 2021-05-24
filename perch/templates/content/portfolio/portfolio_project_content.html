@@ -118,13 +118,8 @@
 </perch:block>
 
 <perch:block type="embed" icon="video" label="Video Clip">
-  <!-- TODO: Animate + lazyload with GSAP -->
     <video class="portfolio-project-video-wrapper scrolltrigger-refresh-target swipe-in-image" <perch:if exists="portfolioVideoPoster">poster="<perch:content id="portfolioVideoPoster" type="image" label="Optional Placeholder Image">"</perch:if>  autoplay loop muted>
-        <source src="<perch:content id="portfilioProjectVideo" type="file" file-type="video" label="Portfolio Video - MP4">" type="video/mp4">
-
-        <!-- TODO: Check if I need to add other video types  -->
-        <!-- <source src="" type="video/ogv"> -->
-        <!-- <source src="" type="video/webm"> -->
+      <source src="<perch:content id="portfilioProjectVideo" type="file" file-type="video" label="Portfolio Video - MP4">" type="video/mp4">
     </video>
 </perch:block>
 
