@@ -38,17 +38,16 @@ function scrollTriggerRefresh(time = 1000) {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
   window.addEventListener('load', () => {
     setTimeout(() => {
-      console.log(`✨ ScrollTrigger refresh created after ${time}ms ✨`);
+      // console.log(`✨ ScrollTrigger refresh created after ${time}ms ✨`);
       scrollTriggerRefreshTarget.forEach((triggerElem) => {
         ScrollTrigger.create({
           trigger: triggerElem,
           start: 'top bottom',
           once: true,
           id: 'ScrollTrigger Refresh',
-          // markers: true,
           onEnter: () => {
             ScrollTrigger.refresh();
-            console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
+            // console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
           },
         });
       });
@@ -59,8 +58,7 @@ function scrollTriggerRefresh(time = 1000) {
 // * ScrollTrigger Refresh Tabs
 function scrollTriggerRefreshTabs(time = 2000) {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
-
-  console.log(`✨ ScrollTrigger Tabs refresh created after ${time}ms ✨`);
+  // console.log(`✨ ScrollTrigger Tabs refresh created after ${time}ms ✨`);
   scrollTriggerRefreshTarget.forEach((triggerElem) => {
     ScrollTrigger.create({
       trigger: triggerElem,
@@ -68,10 +66,9 @@ function scrollTriggerRefreshTabs(time = 2000) {
       // end: 'bottom bottom',
       once: true,
       id: 'ScrollTrigger Refresh',
-      // markers: true,
       onEnter: () => {
         ScrollTrigger.refresh();
-        console.log('⚡ ScrollTrigger Tabs Refresh Triggered ⚡');
+        // console.log('⚡ ScrollTrigger Tabs Refresh Triggered ⚡');
       },
     });
   });
@@ -80,8 +77,7 @@ function scrollTriggerRefreshTabs(time = 2000) {
 // * ScrollTrigger Refresh Tabs
 function scrollTriggerRefreshSVG(time = 2000) {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-svg-refresh-target');
-
-  console.log(`✨ ScrollTrigger SVG refresh created after ${time}ms ✨`);
+  // console.log(`✨ ScrollTrigger SVG refresh created after ${time}ms ✨`);
   scrollTriggerRefreshTarget.forEach((triggerElem) => {
     ScrollTrigger.create({
       trigger: triggerElem,
@@ -89,10 +85,9 @@ function scrollTriggerRefreshSVG(time = 2000) {
       // end: 'bottom bottom',
       once: true,
       id: 'ScrollTrigger Refresh',
-      // markers: true,
       onEnter: () => {
         ScrollTrigger.refresh();
-        console.log('⚡ ScrollTrigger SVG Refresh Triggered ⚡');
+        // console.log('⚡ ScrollTrigger SVG Refresh Triggered ⚡');
       },
     });
   });
@@ -249,7 +244,6 @@ function imageSwipeInExportFunction() {
     start: 'top 60%',
     end: 'bottom bottom',
     id: 'Swipe In Image',
-    // markers: true,
     once: true,
     onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }),
   });
@@ -265,7 +259,6 @@ function simpleFadeIn() {
     start: 'top 75%',
     end: 'bottom bottom',
     id: 'Fade In',
-    // markers: true,
     once: true,
     onEnter: (batch) => gsap.to(batch, { duration: 0.75, ease: 'circ.inOut', opacity: 1 }),
   });
@@ -349,7 +342,6 @@ function splitTextHeadingsFunction() {
       start: 'top 75%',
       end: 'bottom bottom',
       id: 'Heading Split Text',
-      // markers: true,
       onEnter: () => splitTextTimelineFunction(split, evenSplit, oddSplit, timingDuration, timingDelay).play(),
     });
   });
@@ -377,7 +369,6 @@ function bodySplitTextAnimation() {
       start: 'top 70%',
       end: 'bottom bottom',
       id: 'Body Split Text',
-      // markers: true,
       onEnter: () =>
         gsap.to(splitLines, {
           opacity: 1,
@@ -406,7 +397,6 @@ function circleAnimationfunction() {
     end: 'bottom bottom',
     once: true,
     id: 'Circles',
-    // markers: true,
     onEnter: (batch) => gsap.to(batch, { opacity: 1, rotate: 0, duration: 0.75, ease: 'circ.inOut' }),
   });
 }
@@ -510,7 +500,6 @@ function fadeAndSwapNineFunctionExport() {
       start: 'top 60%',
       end: 'bottom bottom',
       id: 'Fade & SWap Nine',
-      // markers: true,
       once: true,
       onEnter: () => fadeAndSwapNineFunction(images, gsapImages).play(),
     });
@@ -599,7 +588,6 @@ function fadeAndSwapThreeExport() {
       start: 'top 60%',
       end: 'bottom bottom',
       id: 'Three F & S Image',
-      // markers: true,
       once: true,
       onEnter: () => fadeAndSwapThreeFunction(images, gsapImages).play(),
     });

@@ -1,10 +1,13 @@
+import * as Flickity from 'flickity';
+import 'flickity-imagesloaded';
+
 // *==============================================================================
 // ** Utils  **
 // *==============================================================================
 
 function consoleGreeting() {
   console.log(
-    "Well hello 👋🏾, fancy seeing you here. As you're interested in this sort of thing why not have a look at my GitHub profile - 💻👍🏾 https://github.com/ex-jedi 👍🏾💻"
+    "Well hello 👋🏾! Fancy seeing you here. As you're interested in this sort of thing why not have a look at my GitHub profile - 💻👍🏾 https://github.com/ex-jedi 👍🏾💻"
   );
 }
 
@@ -39,8 +42,24 @@ function addTabsListeners() {
   tabButtons.forEach((button) => button.addEventListener('click', tabClickHandler));
 }
 
+// *==============================================================================
+// ** Illustrations  **
+// *==============================================================================
+
+function flickityInit() {
+  const carousel = document.querySelector('.illustration-portfolio-section');
+  const flkty = new Flickity(carousel, {
+    imagesLoaded: true,
+    autoPlay: 10000,
+    prevNextButtons: false,
+    wrapAround: true,
+    selectedAttraction: 0.006,
+    friction: 0.15,
+  });
+}
+
 // *=========================================
 // ** Exports  **
 // *=========================================
 
-export { consoleGreeting, addTabsListeners, getTabsElements };
+export { consoleGreeting, addTabsListeners, getTabsElements, flickityInit };
