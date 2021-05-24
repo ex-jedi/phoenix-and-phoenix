@@ -61,10 +61,8 @@ addTabsListeners();
 // ********** Console Greeting **********
 consoleGreeting();
 
-// !==============================================================================
-// FIXME: 👇🏾 Don't seem to work when moved into modules
-// !==============================================================================
-
+// ********** GSAP Tab Refresh **********
 gsapTabRefresh();
 
+// ********** SVG Refresh **********
 svgRefresh();

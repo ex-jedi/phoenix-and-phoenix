@@ -16,7 +16,6 @@ import { getTabsElements } from './lib';
 // *=========================================
 // ** GSAP  **
 // *=========================================
-// TODO: Remove All markers
 
 // ********** Register Plugins **********
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, SplitText);
@@ -654,7 +653,7 @@ function svgRefresh() {
 
 // ********** Tabs Refresh **********
 function gsapTabRefresh() {
-  // TODO: Check if you want to refresh every time not just once.
+  // FIXME: Stress test to check if you want to refresh every time not just once
   const { tabButtons } = getTabsElements();
   tabButtons.forEach((button) => {
     button.addEventListener(
