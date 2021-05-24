@@ -25,9 +25,7 @@
 
   @include breakpoint(1200) {
     padding: 0 $section-spacing-small $section-spacing-medium;
-    //TODO: Font too small?
     font-size: $font-size-medium;
-    // font-size: $font-size-large-medium;
   }
 
   @include breakpoint(700) {
@@ -240,7 +238,6 @@ select {
   p {
     text-align: center;
     color: $font-colour-brown;
-    //TODO: Check larger is okay
   }
 }
 
