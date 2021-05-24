@@ -7,7 +7,7 @@
             <div class="services-intro-image-wrapper fade-and-swap-three">
               <!-- TODO: Choose source set sizes -->
               <img class="services-intro-image" itemprop="image" loading="lazy" src="<perch:content id="brandingIntroImg" type="image" width="1000" height="1000" label="Branding Intro Image" quality="70" crop>" alt="<perch:content id="brandingImgAlt" type="text" label="Branding Image Description">"
-              sizes="40vw"
+              sizes="(max-width: 1700px) 95vw, 30vw"
               srcset="<perch:content type="image" id="brandingIntroImg" width="1000" height="1000" quality="70" crop> 1000w,
               <perch:content type="image" id="brandingIntroImg" width="800" height="800" quality="70" crop> 800w,
               <perch:content type="image" id="brandingIntroImg" width="600" height="600" quality="70" crop> 600w,
@@ -15,14 +15,14 @@
 
               <!-- Animated mages -->
             <img class="services-intro-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="brandingIntroImgAnimatedOne" type="image" width="1000" height="1000" label="Animated Branding Intro Image One" divider-before="Animated Branding Images" quality="70" crop>" alt="<perch:content id="brandingImgAltAnimatedOne" type="text" label="Branding Image Description">"
-            sizes="40vw"
+            sizes="(max-width: 1700px) 95vw, 30vw"
             srcset="<perch:content type="image" id="brandingIntroImgAnimatedOne" width="1000" height="1000" quality="70" crop> 1000w,
             <perch:content type="image" id="brandingIntroImgAnimatedOne" width="800" height="800" quality="70" crop> 800w,
             <perch:content type="image" id="brandingIntroImgAnimatedOne" width="600" height="600" quality="70" crop> 600w,
             <perch:content type="image" id="brandingIntroImgAnimatedOne" width="500" height="500" quality="70" crop> 500w">
 
             <img class="services-intro-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="brandingIntroImgAnimatedTwo" type="image" width="1000" height="1000" label="Animated Branding Intro Image Two" quality="70" crop>" alt="<perch:content id="brandingImgAltAnimatedTwo" type="text" label="Branding Image Description">"
-            sizes="40vw"
+            sizes="(max-width: 1700px) 95vw, 30vw"
             srcset="<perch:content type="image" id="brandingIntroImgAnimatedTwo" width="1000" height="1000" quality="70" crop> 1000w,
             <perch:content type="image" id="brandingIntroImgAnimatedTwo" width="800" height="800" quality="70" crop> 800w,
             <perch:content type="image" id="brandingIntroImgAnimatedTwo" width="600" height="600" quality="70" crop> 600w,
@@ -78,7 +78,6 @@
                 </div>
 
                 <div class="call-to-action-link-wrapper essential-branding-call-to-action-link-wrapper circle-animation">
-                  <!-- TODO: Insert proper links -->
                   <a class="call-to-action-link essential-branding-call-to-action-link" href="<perch:content id="essentialBrandingCTALink" type="text" label="Essential Branding Call To Action Link" divider-before="Essential Branding Call To Action" required>">
                     <perch:content id="essentialBrandingCtaLinkText" type="text" label="Essential Branding Call To Action Text">
                   </a>
@@ -135,7 +134,6 @@
                 </div>
 
                 <div class="call-to-action-link-wrapper extended-branding-call-to-action-link-wrapper circle-animation">
-                  <!-- TODO: Insert proper link -->
                   <a class="call-to-action-link extended-branding-call-to-action-link" href="<perch:content id="extendedCTALink" type="text" label="Extended Branding Call To Action Link" required>">
                     <perch:content id="extendedBrandingCtaLink" type="text" label="Extended Branding Call To Action Text">
                   </a>
@@ -157,7 +155,6 @@
               <perch:content id="customBrandingText" type="textarea" editor="redactor" label="Custom Branding Text" divider-before="Custom Branding Package" required html>
             </div>
             <div class="call-to-action-link-wrapper custom-branding-call-to-action-link-wrapper circle-animation">
-              <!-- TODO: Insert proper link -->
               <a class="call-to-action-link custom-branding-call-to-action-link" href="<perch:content id="customCTALink" type="text" label="Custom Branding Call To Action Link" required>">
                 <perch:content id="customBrandingCtaLinkText" type="text" label="Custom Branding Call To Action Text">
               </a>
