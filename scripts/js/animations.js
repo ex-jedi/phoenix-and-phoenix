@@ -6,7 +6,6 @@
 import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 import { SplitText } from 'gsap/SplitText';
 
 // *=========================================
@@ -20,7 +19,7 @@ import { getTabsElements } from './lib';
 // TODO: Remove All markers
 
 // ********** Register Plugins **********
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin, SplitText);
+gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, SplitText);
 
 // ********** GSAP Utility Functions **********
 
