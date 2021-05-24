@@ -131,7 +131,6 @@
 }
 
 .tab-button {
-  //FIXME: Why doesn't this work without the font stack here?
   @include main-font-stack;
   font-size: $font-size-large;
   flex: 1 1 auto;
