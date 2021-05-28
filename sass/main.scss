@@ -577,9 +577,8 @@ body:not(.user-is-tabbing) textarea:focus {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: auto;
-  padding: 1rem;
-  font-size: 30px;
+  padding: $paragraph-spacing-small;
+  font-size: $font-size-medium;
   background-color: $background-colour-brown;
   opacity: 0;
   z-index: 10;
@@ -591,6 +590,8 @@ body:not(.user-is-tabbing) textarea:focus {
 }
 
 .cookie-warning-paragraph {
+  line-height: normal;
+
   margin: 0 $section-spacing-small 0 0;
   color: $font-colour-light;
 
@@ -610,11 +611,11 @@ body:not(.user-is-tabbing) textarea:focus {
 }
 
 .cookie-warning-button {
-  //TODO: Add variables for cookie warning spacing & colour
   background-color: transparent;
-  border: 2px solid $font-colour-light;
+  border: 4px solid $font-colour-light;
   color: $font-colour-light;
   font-size: inherit;
+  font-weight: bold;
   padding: 5px 20px;
   width: fit-content;
   flex: 0 0 auto;
