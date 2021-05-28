@@ -11,6 +11,8 @@ import {
   addMenuListener,
 } from './animations';
 
+import { cookieWarning } from './utils';
+
 // *=========================================
 // ** GSAP  **
 // *=========================================
@@ -32,3 +34,9 @@ scrollTriggerRefresh();
 
 // ********** Menu Animation **********
 addMenuListener();
+
+// *=========================================
+// ** Utils  **
+// *=========================================
+
+cookieWarning();

@@ -16,6 +16,7 @@ import {
   addMenuListener,
 } from './animations';
 import { addTabsListeners, consoleGreeting } from './lib';
+import { cookieWarning } from './utils';
 
 // *=========================================
 // ** GSAP  **
@@ -66,3 +67,9 @@ gsapTabRefresh();
 
 // ********** SVG Refresh **********
 svgRefresh();
+
+// *=========================================
+// ** Utils  **
+// *=========================================
+
+cookieWarning();

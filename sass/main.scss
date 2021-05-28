@@ -584,7 +584,7 @@ body:not(.user-is-tabbing) textarea:focus {
   z-index: 10;
   transition: all 0.5s 0.25s;
 
-  @include breakpoint(850) {
+  @include breakpoint(1200) {
     @include flex(column);
   }
 }
@@ -595,13 +595,9 @@ body:not(.user-is-tabbing) textarea:focus {
   margin: 0 $section-spacing-small 0 0;
   color: $font-colour-light;
 
-  @include breakpoint(1300) {
-    margin: 0 $paragraph-spacing-small 0 0;
-  }
-
-  @include breakpoint(850) {
+  @include breakpoint(1200) {
+    margin: 0 0 $paragraph-spacing-medium;
     text-align: center;
-    margin: 0 0 $paragraph-spacing-small;
   }
 }
 
@@ -616,7 +612,7 @@ body:not(.user-is-tabbing) textarea:focus {
   color: $font-colour-light;
   font-size: inherit;
   font-weight: bold;
-  padding: 5px 20px;
+  padding: $paragraph-spacing-small $paragraph-spacing-medium;
   width: fit-content;
   flex: 0 0 auto;
   text-align: center;

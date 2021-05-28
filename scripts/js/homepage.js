@@ -12,9 +12,7 @@ import {
   scrollTriggerRefresh,
   addMenuListener,
 } from './animations';
-
 import { consoleGreeting } from './lib';
-
 import { cookieWarning } from './utils';
 
 bodySplitTextAnimation();

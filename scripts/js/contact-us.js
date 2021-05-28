@@ -3,6 +3,7 @@
 // *==============================================================================
 
 import { animatedMainLogo, splitTextHeadingsFunction, addMenuListener } from './animations';
+import { cookieWarning } from './utils';
 
 // *=========================================
 // ** GSAP  **
@@ -15,3 +16,9 @@ splitTextHeadingsFunction();
 
 // ********** Menu Animation **********
 addMenuListener();
+
+// *=========================================
+// ** Utils  **
+// *=========================================
+
+cookieWarning();

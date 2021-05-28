@@ -4,6 +4,7 @@
 
 import { addMenuListener, swipeTextAnimation } from './animations';
 import { consoleGreeting, flickityInit } from './lib';
+import { cookieWarning } from './utils';
 
 // *=========================================
 // ** GSAP  **
@@ -24,3 +25,9 @@ consoleGreeting();
 // ********** Flickity Init **********
 
 flickityInit();
+
+// *=========================================
+// ** Utils  **
+// *=========================================
+
+cookieWarning();

@@ -12,8 +12,8 @@ import {
   simpleFadeIn,
   addMenuListener,
 } from './animations';
-
 import { consoleGreeting } from './lib';
+import { cookieWarning } from './utils';
 
 // *=========================================
 // ** GSAP  **
@@ -53,3 +53,9 @@ addMenuListener();
 // *=========================================
 
 consoleGreeting();
+
+// *=========================================
+// ** Utils  **
+// *=========================================
+
+cookieWarning();
