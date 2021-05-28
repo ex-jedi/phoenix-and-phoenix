@@ -607,6 +607,7 @@ body:not(.user-is-tabbing) textarea:focus {
 }
 
 .cookie-warning-button {
+  line-height: normal;
   background-color: transparent;
   border: 4px solid $font-colour-light;
   color: $font-colour-light;
