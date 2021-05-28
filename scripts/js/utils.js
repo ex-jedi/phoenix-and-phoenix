@@ -28,6 +28,7 @@ function cookieWarning() {
 // *=========================================
 // ** Accessibility  **
 // *=========================================
+// TODO: Does The outline handler need to be added?
 
 // * Adding focus outline class when tab key is used
 function handleFirstTab(e) {
@@ -45,7 +46,6 @@ function handleMouseDownOnce() {
   window.removeEventListener('mousedown', handleMouseDownOnce);
   window.addEventListener('keydown', handleFirstTab);
 }
-
 
 // *==============================================================================
 // ** Exports  **

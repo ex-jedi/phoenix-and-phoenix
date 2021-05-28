@@ -15,6 +15,8 @@ import {
 
 import { consoleGreeting } from './lib';
 
+import { cookieWarning } from './utils';
+
 bodySplitTextAnimation();
 
 // *=========================================
@@ -51,3 +53,9 @@ scrollTriggerRefresh();
 consoleGreeting();
 
 addMenuListener();
+
+// *=========================================
+// ** Utils  **
+// *=========================================
+
+cookieWarning();
