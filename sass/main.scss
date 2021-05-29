@@ -511,27 +511,20 @@ a {
   }
 }
 
-//* Hides outline unless tab key is pressed
+//* Visually hiding stuff
 
-body:not(.user-is-tabbing) button:focus,
-body:not(.user-is-tabbing) input:focus,
-body:not(.user-is-tabbing) select:focus,
-body:not(.user-is-tabbing) textarea:focus {
-  outline: none;
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
 
-.user-is-tabbing {
-  a:focus,
-  button:focus,
-  input:focus,
-  textarea:focus {
-    outline: 3px dashed #ff5e00;
-  }
-}
 
-.perch-debug {
-  line-height: normal;
-}
 
 //*=========================================
 //** Animation **

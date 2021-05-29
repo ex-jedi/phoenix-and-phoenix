@@ -1,11 +1,14 @@
   <p class="swipe-text-paragraph">
     <perch:content id="swipeText" type="text" label="Swipe Text">
   </p>
+  <h1 class="visually-hidden">
+    Illustrations
+  </h1>
 <section class="illustration-portfolio-section">
   <perch:repeater id="portfolio_slider" label="Portfolio Images">
     <div class="illustration-image-wrapper">
       <img class="illustration-portfolio-image" itemprop="image" loading="lazy" src="<perch:content id="illustrationPortfolioImg" type="image" width="1500" label="Illustration Portfolio Image" quality="80">" alt="<perch:content id="alt" type="text" label="Image Description">"
-      sizes="(max-width:1200px) 50vw, 100vw"
+      sizes="(max-width:1200px) 100vw, 50vw"
       srcset="<perch:content type="image" id="illustrationPortfolioImg" width="1500" > 1500w,
       <perch:content type="image" id="illustrationPortfolioImg" width="1200" quality="80"> 1200w,
       <perch:content type="image" id="illustrationPortfolioImg" width="900" quality="80"> 900w,
