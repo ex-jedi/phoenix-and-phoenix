@@ -19,7 +19,7 @@
 										), true);
 	$mainsitename      = "phoenix & phoenix";
 	$pagetitlename = " - phoenix & phoenix";
-	$sharing_image = '/images/default_fb_image.jpg';
+	$sharing_image = '/images/default-sharing-image.jpg';
 
 	PerchSystem::set_var('domain',$domain);
 	PerchSystem::set_var('mainurl',$mainurl);
