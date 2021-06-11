@@ -13,7 +13,7 @@ import {
   addMenuListener,
 } from './animations';
 import { consoleGreeting } from './lib';
-import { cookieWarning, handleFirstTab } from './utils';
+import { cookieWarning } from './utils';
 
 bodySplitTextAnimation();
 
