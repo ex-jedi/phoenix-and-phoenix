@@ -638,7 +638,7 @@ function svgScrubAnimation() {
   });
 }
 
-// * Refresh SVG Scrolltriggers as they get a but messes up when swapping tabs
+// * Refresh SVG Scrolltriggers as they get a bit messed up when swapping tabs
 
 function svgRefresh() {
   const { tabButtons } = getTabsElements();
