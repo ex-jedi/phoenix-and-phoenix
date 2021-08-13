@@ -87,6 +87,7 @@ $input-font-size: $font-size-small;
 $input-spacing: 1rem;
 
 //********** Links **********
+//TODO: Delete underlines if not using
 
 //* Fancy Link Underline
 @mixin link-underline($colour) {
@@ -143,16 +144,26 @@ $input-spacing: 1rem;
 //** Colours  **
 //*=========================================
 
-//Brand Colours
+//Main brand Colours
 $green: #5bb072;
 $blue: #535cb0;
 $gold: #b09b53;
 $light: #fdfcfa;
 $brown: #b07677;
 
+//Color Variables
+$background-colour-blue: $blue;
+$background-colour-light: $light;
+$background-colour-gold: $gold;
+$background-colour-brown: $brown;
+$background-colour-green: $green;
+
 //Main Font Colours
-$font-colour-light: #f4f1f0;
-$font-colour-dark: #252525;
+$font-colour-light: $light;
+$font-colour-green: $green;
+$font-colour-blue: $blue;
+$font-colour-brown: $brown;
+$font-colour-gold: $gold;
 
 //*=========================================
 //** Effects and Animation  **
