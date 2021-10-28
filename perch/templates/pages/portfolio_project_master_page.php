@@ -5,4 +5,4 @@
   <?php perch_content("Contact Section"); ?>
 </main>
 <?php perch_layout('main-footer'); ?>
-<?php perch_layout('portfolio-footer-end'); ?>
+<?php perch_layout('portfolio-page-footer-end'); ?>
