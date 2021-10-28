@@ -49,12 +49,8 @@ function cleanText(e) {
     .replace(/fi/g, 'f‌i');
 }
 
-function cleanTextExport() {
-  cleanText('.split-text-heading-animation');
-}
-
 // *==============================================================================
 // ** Exports  **
 // *==============================================================================
 
-export { cookieWarning, cleanTextExport };
+export { cookieWarning, cleanText };

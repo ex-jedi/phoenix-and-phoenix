@@ -4,14 +4,14 @@
 
 import { animatedMainLogo, splitTextHeadingsFunction, addMenuListener } from './animations';
 
-import { cookieWarning, cleanTextExport } from './utils';
+import { cookieWarning, cleanText } from './utils';
 
 // *=========================================
 // ** Utils  **
 // *=========================================
 
 // * Has to run first so it doesn't remove splitText's divs
-cleanTextExport();
+cleanText('.split-text-heading-animation');
 
 cookieWarning();
 

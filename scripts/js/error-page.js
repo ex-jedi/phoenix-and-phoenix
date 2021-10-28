@@ -2,7 +2,7 @@
 // ** Imports  **
 // *==============================================================================
 
-import { cookieWarning, cleanTextExport } from './utils.js';
+import { cookieWarning, cleanText } from './utils.js';
 
 import { addMenuListener, splitTextHeadingsFunction, swapTwoImagesFunction, animatedMainLogo } from './animations';
 
@@ -11,7 +11,7 @@ import { addMenuListener, splitTextHeadingsFunction, swapTwoImagesFunction, anim
 // *=========================================
 
 // * Has to run first so it doesn't remove splitText's divs
-cleanTextExport();
+cleanText('.split-text-heading-animation');
 
 cookieWarning();
 
