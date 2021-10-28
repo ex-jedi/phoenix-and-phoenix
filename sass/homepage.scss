@@ -136,8 +136,8 @@
 
 .homepage-section-one-main-image {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  max-height: 99vh;
+  object-fit: contain;
 
   @include breakpoint(1400) {
     max-height: 100vh;
