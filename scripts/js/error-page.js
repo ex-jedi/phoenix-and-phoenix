@@ -2,6 +2,7 @@
 // ** Imports  **
 // *==============================================================================
 
+import { cookieWarning } from './utils.js';
 import { addMenuListener, splitTextHeadingsFunction, swapTwoImagesFunction, animatedMainLogo } from './animations';
 
 // *=========================================
@@ -18,3 +19,8 @@ swapTwoImagesFunction();
 
 // ********** Logo **********
 animatedMainLogo();
+
+// *=========================================
+// ** Utils  **
+// *=========================================
+cookieWarning();
