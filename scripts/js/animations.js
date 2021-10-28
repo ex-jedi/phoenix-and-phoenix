@@ -284,6 +284,7 @@ function splitTextTimelineFunction(splitElems, evenSplitElems, oddSplitElems, du
   // Populate timeline
   headingAnimationTL
     .addLabel('start', delayTime)
+    .set('.split-text-heading-animation ', { opacity: 1 })
     .fromTo(
       evenSplitElems,
       { opacity: 0, y: -20 },

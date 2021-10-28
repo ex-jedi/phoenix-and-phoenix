@@ -12,8 +12,19 @@ import {
   simpleFadeIn,
   addMenuListener,
 } from './animations';
+
 import { consoleGreeting } from './lib';
-import { cookieWarning } from './utils';
+
+import { cookieWarning, cleanTextExport } from './utils';
+
+// *=========================================
+// ** Utils  **
+// *=========================================
+
+// * Has to run first so it doesn't remove splitText's divs
+cleanTextExport();
+
+cookieWarning();
 
 // *=========================================
 // ** GSAP  **
@@ -53,9 +64,3 @@ addMenuListener();
 // *=========================================
 
 consoleGreeting();
-
-// *=========================================
-// ** Utils  **
-// *=========================================
-
-cookieWarning();

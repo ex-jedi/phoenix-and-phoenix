@@ -15,8 +15,19 @@ import {
   svgScrubAnimation,
   addMenuListener,
 } from './animations';
+
 import { addTabsListeners, consoleGreeting } from './lib';
-import { cookieWarning } from './utils';
+
+import { cookieWarning, cleanTextExport } from './utils';
+
+// *=========================================
+// ** Utils  **
+// *=========================================
+
+// * Has to run first so it doesn't remove splitText's divs
+cleanTextExport();
+
+cookieWarning();
 
 // *=========================================
 // ** GSAP  **
@@ -67,9 +78,3 @@ gsapTabRefresh();
 
 // ********** SVG Refresh **********
 svgRefresh();
-
-// *=========================================
-// ** Utils  **
-// *=========================================
-
-cookieWarning();

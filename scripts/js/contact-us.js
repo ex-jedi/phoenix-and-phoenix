@@ -3,7 +3,17 @@
 // *==============================================================================
 
 import { animatedMainLogo, splitTextHeadingsFunction, addMenuListener } from './animations';
-import { cookieWarning } from './utils';
+
+import { cookieWarning, cleanTextExport } from './utils';
+
+// *=========================================
+// ** Utils  **
+// *=========================================
+
+// * Has to run first so it doesn't remove splitText's divs
+cleanTextExport();
+
+cookieWarning();
 
 // *=========================================
 // ** GSAP  **
@@ -16,9 +26,3 @@ splitTextHeadingsFunction();
 
 // ********** Menu Animation **********
 addMenuListener();
-
-// *=========================================
-// ** Utils  **
-// *=========================================
-
-cookieWarning();

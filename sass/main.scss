@@ -560,6 +560,13 @@ a {
   opacity: 0;
 }
 
+//********** Split Text Heading **********
+
+.split-text-heading-animation {
+  // Prevents flash of un-styled GSAP content.
+  opacity: 0;
+}
+
 //*=========================================
 //** Cookie Warning **
 //*=========================================
