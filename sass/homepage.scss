@@ -26,6 +26,9 @@
   @include breakpoint(1400) {
     @include flex(column);
   }
+
+  //TODO: For logo animation
+  display: none;
 }
 
 .homepage-header-text-wrapper {
