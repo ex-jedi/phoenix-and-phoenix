@@ -225,6 +225,10 @@ select {
     margin: $section-spacing-medium auto 0;
   }
 
+  @include breakpoint(1200) {
+    font-size: $heading-size-medium;
+  }
+
   @include breakpoint(700) {
     margin: $section-spacing-small auto 0;
   }
