@@ -185,7 +185,7 @@ a {
   width: 100%;
   max-width: 350px;
   overflow: hidden;
-  margin: $paragraph-spacing-small auto $section-spacing-large;
+  margin: $paragraph-spacing-small auto $section-spacing-small;
 
   @include breakpoint(1400) {
     margin: $paragraph-spacing-small auto $section-spacing-medium;
@@ -411,7 +411,8 @@ a {
   color: $font-colour-light;
   font-size: $font-size-medium;
   background-color: $background-colour-blue;
-  padding: $section-spacing-large $section-spacing-super-large;
+  padding: $section-spacing-large $section-spacing-super-large
+    $section-spacing-smaller;
   margin: 0;
   position: sticky;
   bottom: 0;
@@ -432,10 +433,11 @@ a {
   }
 
   @include breakpoint(1400) {
-    padding: $section-spacing-medium;
+    padding: $section-spacing-medium $section-spacing-medium
+      $section-spacing-smaller;
   }
 
-  @include breakpoint(700) {
+  @include breakpoint(750) {
     padding: $section-spacing-small $section-spacing-tiny;
   }
 }
