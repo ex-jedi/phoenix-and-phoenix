@@ -74,9 +74,11 @@
 
 .want-more-paragraph-wrapper {
   margin: 0 auto $section-spacing-large;
+  font-size: $heading-size-large;
 
   @include breakpoint(1400) {
     margin: 0 auto $section-spacing-medium;
+    font-size: $heading-size-medium;
   }
 
   @include breakpoint(700) {
