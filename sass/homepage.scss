@@ -377,6 +377,7 @@
     }
 
     .testimonial-name {
+      text-align: center;
       color: $font-colour-brown;
     }
 
@@ -397,6 +398,10 @@
     .testimonial-name {
       color: $font-colour-gold;
     }
+  }
+
+  @include breakpoint(750) {
+    font-size: $font-size-medium;
   }
 }
 
