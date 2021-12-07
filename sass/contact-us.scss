@@ -171,6 +171,12 @@ select {
   }
 }
 
+#other-checkbox-wrapper {
+  @include breakpoint(1200) {
+    margin-bottom: $section-spacing-small;
+  }
+}
+
 .message-area-wrapper {
   color: $font-colour-brown;
   margin-bottom: $section-spacing-small;
