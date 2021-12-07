@@ -35,7 +35,7 @@ function cleanText(e) {
     return cleanText(document.querySelectorAll(e));
   }
   if (e[0] && e[0].innerHTML) {
-    for (let i = 0; i < e.length; i++) {
+    for (let i = 0; i < e.length; i += 1) {
       cleanText(e[i]);
     }
     return;
