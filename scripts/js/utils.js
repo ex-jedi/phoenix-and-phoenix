@@ -30,7 +30,6 @@ function cookieWarning() {
 // *=========================================
 
 function cleanText(e) {
-  console.log('💫 Cleaned 💫');
   if (typeof e === 'string') {
     return cleanText(document.querySelectorAll(e));
   }

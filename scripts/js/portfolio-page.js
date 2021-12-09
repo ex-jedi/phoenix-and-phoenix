@@ -65,5 +65,3 @@ addMenuListener();
 // *=========================================
 
 consoleGreeting();
-
-console.log('Page!');
