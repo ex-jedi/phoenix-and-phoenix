@@ -1,0 +1,337 @@
+//*==============================================================================
+//** Portfolio **
+//*==============================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*==============================================================================
+//** General Styles **
+//*==============================================================================
+
+body {
+  counter-reset: sub-nav-counter;
+}
+
+.portfolio-section {
+  @include flex(column);
+  background-color: $background-colour-light;
+  font-size: $font-size-extra-large;
+}
+
+.portfolio-index-section {
+  padding: 0 $section-spacing-big $section-spacing-large;
+
+  @include breakpoint(1800) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
+
+  @include breakpoint(1600) {
+    padding: 0 $section-spacing-small $section-spacing-small;
+  }
+
+  @include breakpoint(1200) {
+    padding: 0 $section-spacing-small $section-spacing-smallish;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-tiny $section-spacing-smaller;
+  }
+}
+
+.portfolio-index-subheading {
+  color: $font-colour-blue;
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-small;
+  }
+
+  @include breakpoint(1200) {
+    font-size: $font-size-large;
+  }
+}
+
+.portfolio-index-sub-nav-link {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+
+  &:nth-of-type(odd) {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  &:nth-of-type(even) {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  @include breakpoint(1600) {
+    &:nth-of-type(odd) {
+      justify-content: center;
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    &:nth-of-type(even) {
+      margin-inline: auto;
+      text-align: center;
+    }
+  }
+
+  @include breakpoint(700) {
+    overflow-wrap: anywhere;
+  }
+}
+
+.featured-portfolio-link {
+  margin-bottom: $section-spacing-small;
+
+  @include breakpoint(1400) {
+    margin-bottom: $paragraph-spacing-larger;
+  }
+
+  @include breakpoint(1200) {
+    font-size: $font-size-large;
+  }
+
+  // &:before {
+  //   counter-increment: sub-nav-counter;
+  //   content: '0' counter(sub-nav-counter) '. ';
+  // }
+
+  &:nth-of-type(1) {
+    color: $font-colour-gold;
+  }
+
+  &:nth-of-type(2) {
+    color: $font-colour-brown;
+  }
+
+  &:nth-of-type(3) {
+    color: $font-colour-green;
+  }
+
+  &:nth-of-type(4) {
+    color: $font-colour-blue;
+    margin-bottom: 0;
+  }
+}
+
+//*=========================================
+//** Illustration Portfolio Link **
+//*=========================================
+
+.portfolio-illustration-portfolio-link-section {
+  margin: 0;
+  padding: $section-spacing-large $section-spacing-super-large;
+  background-color: $background-colour-gold;
+
+  @include breakpoint(1400) {
+    padding: $section-spacing-medium $section-spacing-large;
+  }
+
+  @include breakpoint(1200) {
+    padding: $section-spacing-medium $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-tiny;
+  }
+}
+
+.portfolio-illustration-portfolio-subheading {
+  margin: 0 auto;
+  font-size: $font-size-large;
+  color: $font-colour-light;
+}
+
+.portfolio-illustration-portfolio-link {
+  text-decoration: none;
+}
+
+.item-number {
+  display: inline-block;
+}
+
+//*=========================================
+//** Contact Section **
+//*=========================================
+
+.contact-section {
+  background-color: $background-colour-light;
+  color: $font-colour-brown;
+}
+
+//*==============================================================================
+//** Portfolio Project Page **
+//*==============================================================================
+
+.portfolio-margin-wrapper {
+  margin: 0 $section-spacing-big $section-spacing-small;
+
+  @include breakpoint(1400) {
+    margin: 0 $section-spacing-large $section-spacing-smallish;
+  }
+
+  @include breakpoint(1200) {
+    margin: 0 $section-spacing-small $section-spacing-smallish;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 $section-spacing-tiny $section-spacing-smaller;
+  }
+}
+
+.portfolio-project-header-index-link {
+  display: block;
+  width: fit-content;
+  color: $font-colour-blue;
+  font-size: $font-size-medium;
+  text-decoration: none;
+  margin: 0 auto $section-spacing-small;
+  text-align: center;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $paragraph-spacing-larger;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $paragraph-spacing-large;
+  }
+}
+
+.portfolio-project-text-wrapper {
+  font-size: $font-size-large;
+  color: $font-colour-blue;
+
+  p {
+    margin-bottom: $paragraph-spacing-extra-large;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(1400) {
+    p {
+      margin-bottom: $paragraph-spacing-larger;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include breakpoint(1200) {
+    text-align: center;
+  }
+
+  @include breakpoint(700) {
+    p {
+      margin-bottom: $paragraph-spacing-large;
+      font-size: $font-size-large-medium;
+    }
+  }
+
+  @include breakpoint(500) {
+    p {
+      margin-bottom: $paragraph-spacing-large;
+      font-size: $font-size-medium;
+    }
+  }
+}
+
+//*=========================================
+//** Images **
+//*=========================================
+
+.portfolio-dual-image-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+
+  @include breakpoint(700) {
+    @include flex(column);
+  }
+}
+
+.portfolio-project-dual-image {
+  flex: 0 1 auto;
+  width: 46%;
+  height: 100%;
+  max-height: 95vh;
+  object-fit: cover;
+
+  @include breakpoint(700) {
+    width: 100%;
+  }
+}
+
+.portfolio-project-dual-image-one {
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-smaller;
+  }
+}
+
+.portfolio-project-single-image {
+  width: 100%;
+  height: 100%;
+  max-height: 95vh;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.portfolio-project-video-wrapper {
+  width: 100%;
+  margin: 0 auto $section-spacing-small;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-smallish;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-smaller;
+  }
+}
+
+.portfolio-project-page-wrapper {
+  .contact-section {
+    background-color: $background-colour-gold;
+    color: $font-colour-light;
+  }
+}
+
+.like-what-you-see-cta {
+  color: $font-colour-brown;
+  margin: $section-spacing-small auto;
+
+  @include breakpoint(1400) {
+    margin: $section-spacing-smallish auto;
+  }
+
+  @include breakpoint(1200) {
+    font-size: $font-size-large;
+  }
+
+  @include breakpoint(700) {
+    margin: $section-spacing-smaller auto;
+  }
+}
+
+.portfolio-project-svg-down-arrow {
+  @include flex(row);
+  justify-content: center;
+  animation: arrow-bounce 2s linear infinite forwards;
+  margin: 0 auto $section-spacing-large;
+
+  svg .a {
+    stroke: $font-colour-brown;
+  }
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-small;
+  }
+}

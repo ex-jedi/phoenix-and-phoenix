@@ -118,10 +118,35 @@ label[for='postAllowComments'] ~ .form-entry {
   display: none;
 }
 
+/* Reducung native h3 size   */
+h3 {
+  font-size: 1.1rem !important;
+}
+
 /* Custom redactor styles */
+
 /* Gold Subheading */
 .h3-gold-subheading {
   color: #b09b53 !important;
   font-weight: bold !important;
-  font-size: 1.1rem !important;
+}
+
+/* Split Text Animations */
+
+.split-text-heading-animation::after {
+  content: '* heading text animation';
+  font-size: 50%;
+  margin-left: 10px;
+  padding: 1px;
+  /* position: absolute; */
+  color: #4343df;
+}
+
+.split-text-body-animation::after {
+  content: '* body text animation';
+  font-size: 50%;
+  margin-left: 10px;
+  padding: 1px;
+  /* position: absolute; */
+  color: #1c8a1c;
 }

@@ -1,57 +1,29 @@
-// *=========================================
-// ** Main Nav  **
-// *=========================================
-const mainNavTriggerWrapper = document.querySelector('.main-nav-trigger-wrapper');
-const mainNavTrigger = document.querySelector('.main-nav-trigger');
-const mainNav = document.querySelector('.main-nav');
-const navLink = document.querySelectorAll('.main-nav-link');
+import * as Flickity from 'flickity';
+import 'flickity-imagesloaded';
 
-// Restore pointerevents
-function pointerEventsRestore() {
-  mainNavTrigger.style.pointerEvents = 'auto';
-  if (mainNav.dataset.state === 'open') {
-    mainNavTrigger.textContent = 'CLOSE MENU';
-    mainNavTrigger.style.padding = '0';
-  } else {
-    mainNavTrigger.textContent = 'MENU';
-    mainNavTrigger.style.padding = '0 5rem';
-    // Stripping out styles injected by GreenSock to show normal menu if screen is resized
-    mainNav.removeAttribute('style');
-    navLink.forEach((link) => link.removeAttribute('style'));
-  }
-}
+// *==============================================================================
+// ** Utils  **
+// *==============================================================================
 
-function menuOpenerHandler() {
-  if (mainNav.dataset.state === 'closed') {
-    openMenuTl.restart();
-    mainNavTrigger.style.pointerEvents = 'none';
-    mainNav.dataset.state = 'open';
-  } else {
-    closeMenuTl.restart();
-    mainNavTrigger.style.pointerEvents = 'none';
-    mainNav.dataset.state = 'closed';
-  }
+function consoleGreeting() {
+  console.log(
+    "Well hello 👋🏾! Fancy seeing you here. As you're interested in this sort of thing why not have a look at my GitHub profile - 💻👍🏾 https://github.com/ex-jedi 👍🏾💻"
+  );
 }
 
 // *==============================================================================
-// ** GSAP Animations For Multiple Pages  **
+// ** Tabs  **
 // *==============================================================================
 
-// *==============================================================================
-// ** Homepage  **
-// *==============================================================================
-
-// *==============================================================================
-// ** Services  **
-// *==============================================================================
-
-// ********** Tabs **********
-
-const tabs = document.querySelector('.tabs-wrapper');
-const tabButtons = tabs.querySelectorAll('[role="tabButton"]');
-const tabPanel = Array.from(tabs.querySelectorAll('[role="tabpanel"]'));
+function getTabsElements() {
+  const tabs = document.querySelector('.tabs-wrapper');
+  const tabButtons = tabs.querySelectorAll('[role="tabButton"]');
+  const tabPanel = Array.from(tabs.querySelectorAll('[role="tabpanel"]'));
+  return { tabs, tabButtons, tabPanel };
+}
 
 function tabClickHandler(e) {
+  const { tabPanel, tabButtons } = getTabsElements();
   const clickedTab = e.currentTarget;
   // Hide tab panels
   tabPanel.forEach((panel) => (panel.hidden = true));
@@ -65,8 +37,29 @@ function tabClickHandler(e) {
   panelToShow.hidden = false;
 }
 
+function addTabsListeners() {
+  const { tabButtons } = getTabsElements();
+  tabButtons.forEach((button) => button.addEventListener('click', tabClickHandler));
+}
+
+// *==============================================================================
+// ** Illustrations  **
+// *==============================================================================
+
+function flickityInit() {
+  const carousel = document.querySelector('.illustration-portfolio-section');
+  const flkty = new Flickity(carousel, {
+    imagesLoaded: true,
+    autoPlay: 10000,
+    prevNextButtons: false,
+    wrapAround: true,
+    selectedAttraction: 0.006,
+    friction: 0.15,
+  });
+}
+
 // *=========================================
 // ** Exports  **
 // *=========================================
 
-export { tabButtons, tabClickHandler };
+export { consoleGreeting, addTabsListeners, getTabsElements, flickityInit };

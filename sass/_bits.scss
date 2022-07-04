@@ -43,13 +43,16 @@ $grid-gap: 0 1rem;
 
 $font-size-extra-large: 10rem;
 $font-size-large: 5rem;
+$font-size-large-medium: 3.5rem;
 $font-size-medium: 2.5rem;
+$font-size-smaller: 1.75rem;
 $font-size-small: 1rem;
 
 //* Headings
 
 //Sizing
 $heading-size-large: $font-size-extra-large;
+$heading-size-medium: $font-size-large;
 
 //Spacing
 $heading-spacing-large: 20rem;
@@ -59,12 +62,18 @@ $heading-spacing-large: 20rem;
 // Spacing
 $section-spacing-super-large: 40rem;
 $section-spacing-extra-large: 35rem;
+$section-spacing-big: 30rem;
 $section-spacing-larger: 25rem;
 $section-spacing-large: 20rem;
 $section-spacing-medium: 15rem;
 $section-spacing-small: 10rem;
+$section-spacing-smallish: 7.5rem;
+$section-spacing-smaller: 5rem;
+$section-spacing-tiny: 2.5rem;
 
 //Spacing
+$paragraph-spacing-extra-large: 10rem;
+$paragraph-spacing-larger: 7.5rem;
 $paragraph-spacing-large: 5rem;
 $paragraph-spacing-medium: 2.5rem;
 $paragraph-spacing-small: 1rem;
@@ -78,6 +87,7 @@ $input-font-size: $font-size-small;
 $input-spacing: 1rem;
 
 //********** Links **********
+//TODO: Delete underlines if not using
 
 //* Fancy Link Underline
 @mixin link-underline($colour) {
@@ -146,6 +156,7 @@ $background-colour-blue: $blue;
 $background-colour-light: $light;
 $background-colour-gold: $gold;
 $background-colour-brown: $brown;
+$background-colour-green: $green;
 
 //Main Font Colours
 $font-colour-light: $light;
@@ -160,7 +171,7 @@ $font-colour-gold: $gold;
 
 //********** Transition Timings**********
 
-$transition-one: 0.3s ease-in-out 0s;
+$transition-one: 0.2s ease-in 0s;
 
 //********** Scrollbar Mixin **********
 
@@ -224,12 +235,6 @@ $transition-one: 0.3s ease-in-out 0s;
 //** Media Queries   **
 //*=========================================
 
-//*=========================================
-//** Media Queries   **
-//*=========================================
-
-//TODO: Delete unused media query's
-
 //********** Max Width **********
 
 @mixin breakpoint($point) {
@@ -237,39 +242,6 @@ $transition-one: 0.3s ease-in-out 0s;
     $point: 1px * $point;
   }
   @media (max-width: $point) {
-    @content;
-  }
-}
-
-//********** Min Width **********
-
-@mixin breakpoint-min($point) {
-  @if unitless($point) {
-    $point: 1px * $point;
-  }
-  @media (min-width: $point) {
-    @content;
-  }
-}
-
-//********** Height **********
-
-@mixin height-breakpoint($point) {
-  @if unitless($point) {
-    $point: 1px * $point;
-  }
-  @media (max-height: $point) {
-    @content;
-  }
-}
-
-//********** Width and Orientation **********
-
-@mixin width-orientation-breakpoint($point, $orientation: portrait) {
-  @if unitless($point) {
-    $point: 1px * $point;
-  }
-  @media (max-height: $point) and (orientation: $orientation) {
     @content;
   }
 }

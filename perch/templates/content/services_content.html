@@ -1,11 +1,10 @@
     <div class="tabs-wrapper">
       <!-- Tab Buttons -->
       <div class="tab-buttons-wrapper" role="tablist" aria-label="Services">
-        <!-- TODO: Make sure selected button matches visible tab -->
-        <button class="tab-button" role="tabButton" aria-selected="false" id="branding">
+        <button class="tab-button" role="tabButton" aria-selected="true" id="branding">
           Branding
         </button>
-        <button class="tab-button" role="tabButton" aria-selected="true" id="websites">
+        <button class="tab-button" role="tabButton" aria-selected="false" id="websites">
           Websites
         </button>
         <button class="tab-button" role="tabButton" aria-selected="false" id="illustration">
@@ -13,12 +12,11 @@
         </button>
       </div>
       <!-- Tab Panels -->
-      <!-- TODO: Make sure branding tab is the unhidden one -->
-      <div class="tab-panel branding-tab-panel" role="tabpanel" aria-labelledby="branding" hidden>
+      <div class="tab-panel branding-tab-panel" role="tabpanel" aria-labelledby="branding">
         <!--* Branding Tab Template -->
         <perch:template path="services/branding.html">
       </div>
-      <div class="tab-panel websites-tab-panel" role="tabpanel" aria-labelledby="websites">
+      <div class="tab-panel websites-tab-panel" role="tabpanel" aria-labelledby="websites" hidden>
         <!-- * Websites Tab Template -->
         <perch:template path="services/websites.html">
       </div>

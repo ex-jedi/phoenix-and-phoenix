@@ -9,8 +9,29 @@
 //*=========================================
 //** General Styles **
 //*=========================================
+
 .services-section {
   padding: $section-spacing-large $section-spacing-larger;
+
+  @include breakpoint(1700) {
+    padding: $section-spacing-large $section-spacing-large;
+  }
+
+  @include breakpoint(1600) {
+    padding: $section-spacing-large $section-spacing-small;
+  }
+
+  @include breakpoint(1400) {
+    padding: $section-spacing-medium $section-spacing-small;
+  }
+
+  @include breakpoint(750) {
+    padding: $section-spacing-medium $section-spacing-tiny;
+  }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-tiny;
+  }
 }
 
 .services-text-wrapper {
@@ -24,21 +45,63 @@
   p:last-of-type {
     margin-bottom: 0;
   }
+
+  @include breakpoint(1400) {
+    font-size: $font-size-medium;
+  }
+
+  @include breakpoint(700) {
+  }
+}
+
+.branding-image-wrapper {
+  flex: 0 1 auto;
+  width: 500px;
+
+  @include breakpoint(1100) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 .branding-image {
-  flex: 0 1 auto;
-  width: 500px;
+  width: 100%;
+  height: auto;
 }
 
 .want-more-paragraph-wrapper {
   margin: 0 auto $section-spacing-large;
+  font-size: $heading-size-large;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-medium;
+    font-size: $heading-size-medium;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-small;
+  }
 }
 
 .svg-down-arrow {
   @include flex(row);
   justify-content: center;
   animation: arrow-bounce 2s linear infinite forwards;
+}
+
+.services-subheading {
+  margin-bottom: $section-spacing-medium;
+
+  @include breakpoint(1400) {
+    font-size: $heading-size-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 //*=========================================
@@ -49,19 +112,46 @@
   @include flex(row);
   flex-wrap: wrap;
   justify-content: space-between;
-  font-size: $font-size-large;
   padding: 0 $section-spacing-larger;
   background-color: $background-colour-light;
+
+  @include breakpoint(1700) {
+    padding: 0 $section-spacing-large;
+  }
+
+  @include breakpoint(1600) {
+    padding: 0 $section-spacing-small;
+  }
+
+  @include breakpoint(750) {
+    padding: 0 $section-spacing-tiny;
+  }
+
+  @include breakpoint(600) {
+    @include flex(column);
+  }
 }
 
 .tab-button {
-  flex: 1 0 auto;
-  width: 300px;
+  @include main-font-stack;
+  font-size: $font-size-large;
+  flex: 1 1 auto;
+  width: 30%;
   outline: none;
   border: none;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
+  padding: 0;
+
+  @include breakpoint(1400) {
+    font-size: $font-size-medium;
+  }
+
+  @include breakpoint(600) {
+    width: 100%;
+    padding: $paragraph-spacing-small 0;
+  }
 }
 
 .tab-button#branding {
@@ -120,21 +210,67 @@
 //** Branding **
 //*==============================================================================
 
-.branding-intro-section {
+.services-intro-section {
   @include flex(row);
+  justify-content: center;
   align-items: center;
   background-color: $background-colour-light;
   color: $font-colour-blue;
+  overflow: hidden;
+
+  @include breakpoint(1700) {
+    @include flex(column);
+  }
 }
 
-.branding-intro-text-wrapper,
-.branding-intro-image {
+.services-intro-text-wrapper {
+  flex: 1 1 auto;
+  width: 60%;
+
+  @include breakpoint(1700) {
+    width: 100%;
+    margin-bottom: $section-spacing-large;
+  }
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
+}
+
+.services-intro-image-wrapper {
+  position: relative;
   flex: 0 1 auto;
-  width: 50%;
+  justify-content: center;
+  align-content: center;
+  margin-left: $section-spacing-small;
+  width: 40%;
+
+  @include breakpoint(1700) {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(700) {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
-.branding-intro-image {
-  margin-left: $section-spacing-small;
+.services-intro-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+
+  @include breakpoint(1700) {
+    width: 100%;
+    max-height: 90vh;
+  }
 }
 
 //*=========================================
@@ -159,6 +295,14 @@
   margin: $section-spacing-large auto;
   font-size: $font-size-large;
   text-align: center;
+
+  @include breakpoint(1400) {
+    margin: $section-spacing-medium auto;
+  }
+
+  @include breakpoint(700) {
+    margin: $section-spacing-small auto;
+  }
 }
 
 .branding-package-cta-wrapper {
@@ -168,6 +312,18 @@
   align-items: center;
   width: 100%;
   max-width: 1000px;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-medium;
+  }
+
+  @include breakpoint(1100) {
+    @include flex(column);
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-small;
+  }
 }
 
 .essential-branding-call-to-action-link-wrapper {
@@ -229,10 +385,26 @@
 
   background-color: $background-colour-brown;
   color: $font-colour-light;
+
+  @include breakpoint(700) {
+    @include flex(column);
+  }
 }
 
 .custom-services-text-wrapper {
   margin-right: $section-spacing-medium;
+
+  @include breakpoint(1400) {
+    margin: 0 $section-spacing-medium 0 0;
+  }
+
+  @include breakpoint(1000) {
+    margin: 0 $section-spacing-tiny 0 0;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 0 $section-spacing-small;
+  }
 }
 
 .custom-branding-call-to-action-link-wrapper {
@@ -251,12 +423,16 @@
 
 .small-print-text-wrapper {
   margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-medium;
+  }
 }
 
 .yes-svg-wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 600px;
+  max-width: 300px;
   path,
   line {
     fill: #fff;
@@ -272,22 +448,11 @@
   }
 }
 
-@keyframes rotateSvg {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-[data-name='Text'] {
-  transform-origin: center;
-  animation: rotateSvg 10s linear infinite forwards;
-}
-
 //*=========================================
-//** Contact Section **
+//** Branding Contact Section **
 //*=========================================
 
-.contact-section {
+.branding-services-contact-section {
   color: $font-colour-gold;
   background-color: $background-colour-light;
 }
@@ -322,7 +487,7 @@
   color: $font-colour-blue;
 }
 
-.websites-small-print-subtitle {
+.websites-small-print-subheading {
   color: $font-colour-brown;
 }
 
@@ -330,7 +495,7 @@
   color: $font-colour-gold;
 }
 
-.websites-get-started-subtitle {
+.websites-get-started-subheading {
   color: $font-colour-brown;
 }
 
@@ -340,4 +505,46 @@
     fill: $font-colour-gold;
     stroke: $font-colour-gold;
   }
+}
+
+//*=========================================
+//** Websites Contact Section **
+//*=========================================
+.websites-contact-section {
+  background-color: $background-colour-brown;
+  color: $font-colour-light;
+}
+
+//*==============================================================================
+//** Illustration **
+//*==============================================================================
+
+//*=========================================
+//** Illustration Take a Look **
+//*=========================================
+
+.illustration-take-a-look-section {
+  background-color: $background-colour-blue;
+  color: $font-colour-light;
+}
+
+.illustration-take-a-look-subheading {
+  margin: 0 auto;
+}
+
+//*=========================================
+//** Illustration Small Print **
+//*=========================================
+
+.illustration-services-small-print-section {
+  background-color: $background-colour-gold;
+  color: $font-colour-light;
+}
+
+//*=========================================
+//** Illustration Contact **
+//*=========================================
+.illustration-contact-section {
+  background-color: $background-colour-light;
+  color: $font-colour-brown;
 }

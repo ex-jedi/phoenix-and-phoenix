@@ -19,7 +19,7 @@
 										), true);
 	$mainsitename      = "phoenix & phoenix";
 	$pagetitlename = " - phoenix & phoenix";
-	$sharing_image = '/images/default_fb_image.jpg';
+	$sharing_image = '/images/default-sharing-image.jpg';
 
 	PerchSystem::set_var('domain',$domain);
 	PerchSystem::set_var('mainurl',$mainurl);
@@ -31,24 +31,27 @@
 		'template' => 'default.html'
 	));
 	?>
-
+	<?php perch_content("Analytics"); ?>
 </head>
 	<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
 <!-- Cookie Warning -->
 <?php perch_content("Cookie Warning"); ?>
 				<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
+				<div class="sticky-footer-wrapper">
 			<header class="header main-header">
 				<!-- Skip to main content link  -->
 				<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 				<div class="main-logo-wrapper">
-					<a class="main-logo-wrapper" itemprop="url" href="<?php echo $domain ?>">
+					<a class="main-logo-wrapper-link" itemprop="url" href="<?php echo $domain ?>">
 					<img class="hidden-main-logo" aria-hidden="true" itemprop="logo" src="/images/main-logo.png" alt="phoenix and phoenix main logo">
-					<?php perch_layout("main-logo"); ?>
+					<?php perch_content("Animated Main Logo"); ?>
 				</a>
 				</div>
 					<?php perch_pages_navigation(array(
 							'hide-extensions' => true,
+							'levels'    => 1
 					)); ?>
 
         <?php perch_content("Header Content"); ?>
 			</header>
+					<?php perch_layout('nav-pull'); ?>

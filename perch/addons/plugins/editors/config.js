@@ -22,6 +22,36 @@ Perch.UserConfig.redactor = (function () {
           type: 'remove',
         },
       },
+      'split-text-heading-add': {
+        title: 'Heading Text Animation',
+        api: 'module.block.format',
+        args: {
+          class: 'split-text-heading-animation',
+        },
+      },
+      'split-text-heading-remove': {
+        title: 'Remove Heading Text Animation',
+        api: 'module.block.format',
+        args: {
+          class: 'split-text-heading-animation',
+          type: 'remove',
+        },
+      },
+      'split-text-body-add': {
+        title: 'Body Text Animation',
+        api: 'module.block.format',
+        args: {
+          class: 'split-text-body-animation',
+        },
+      },
+      'split-text-body-remove': {
+        title: 'Remove Body Text Animation',
+        api: 'module.block.format',
+        args: {
+          class: 'split-text-body-animation',
+          type: 'remove',
+        },
+      },
     };
 
     return config;

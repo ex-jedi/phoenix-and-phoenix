@@ -1,0 +1,86 @@
+//*==============================================================================
+//** Error Page **
+//*==============================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+.main-logo-wrapper {
+  margin: 0 auto;
+}
+
+.error-page-section {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: $background-colour-light;
+  padding: 0 $section-spacing-super-large $section-spacing-large;
+
+  @include breakpoint(1700) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
+
+  @include breakpoint(1400) {
+    padding: 0 $section-spacing-medium $section-spacing-medium;
+  }
+
+  @include breakpoint(1200) {
+    @include flex(column);
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-tiny $section-spacing-small;
+  }
+}
+
+.error-page-text-wrapper {
+  font-size: $font-size-large;
+  color: $font-colour-blue;
+  flex: 0 1 auto;
+  width: 45%;
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(1200) {
+    width: 100%;
+    margin-bottom: $section-spacing-medium;
+    text-align: center;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
+}
+
+.error-page-image-wrapper {
+  position: relative;
+  flex: 0 1 auto;
+  width: 45%;
+
+  @include breakpoint(1200) {
+    width: 100%;
+  }
+}
+
+.error-page-image {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.swap-two-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}

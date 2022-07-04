@@ -1,124 +1,184 @@
         <perch:group label="Branding Tab Content">
           <!-- Branding Intro -->
-          <section class="services-section branding-intro-section">
-            <div class="services-text-wrapper branding-intro-text-wrapper">
-              <perch:content id="brandingIntroText" type="textarea" editor="redactor" label="Branding Intro Text" divider-before="Branding Intro" required html>
+          <section class="services-section services-intro-section">
+            <div class="services-text-wrapper services-intro-text-wrapper">
+              <perch:content id="brandingIntroText" type="textarea" editor="redactor" count="words" label="Branding Intro Text" divider-before="Branding Intro" required html>
             </div>
-            <img class="branding-intro-image" itemprop="image" src="<perch:content id="brandingIntroImg" type="image" width="1000" label="Branding Intro Image" quality="70">" alt="<perch:content id="brandingImgAlt" type="text" label="Branding Image Description">"
-            sizes="40vw"
-            srcset="<perch:content type="image" id="brandingIntroImg" width="1000" > 1000w,
-            <perch:content type="image" id="brandingIntroImg" width="800" quality="70"> 800w,
-            <perch:content type="image" id="brandingIntroImg" width="600" quality="70"> 600w,
-            <perch:content type="image" id="brandingIntroImg" width="500" quality="70"> 500w">
+            <div class="services-intro-image-wrapper fade-and-swap-three">
+              <img class="services-intro-image" itemprop="image" loading="lazy" src="<perch:content id="brandingIntroImg" type="image" width="1000" height="1000" label="Branding Intro Image" quality="70" crop>" alt="<perch:content id="brandingImgAlt" type="text" label="Branding Image Description">"
+              sizes="(max-width: 1700px) 95vw, 30vw"
+              srcset="<perch:content type="image" id="brandingIntroImg" width="1000" height="1000" quality="70" crop> 1000w,
+              <perch:content type="image" id="brandingIntroImg" width="800" height="800" quality="70" crop> 800w,
+              <perch:content type="image" id="brandingIntroImg" width="600" height="600" quality="70" crop> 600w,
+              <perch:content type="image" id="brandingIntroImg" width="500" height="500" quality="70" crop> 500w">
+
+              <!-- Animated mages -->
+            <img class="services-intro-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="brandingIntroImgAnimatedOne" type="image" width="1000" height="1000" label="Animated Branding Intro Image One" divider-before="Animated Branding Images" quality="70" crop>" alt="<perch:content id="brandingImgAltAnimatedOne" type="text" label="Branding Image Description">"
+            sizes="(max-width: 1700px) 95vw, 30vw"
+            srcset="<perch:content type="image" id="brandingIntroImgAnimatedOne" width="1000" height="1000" quality="70" crop> 1000w,
+            <perch:content type="image" id="brandingIntroImgAnimatedOne" width="800" height="800" quality="70" crop> 800w,
+            <perch:content type="image" id="brandingIntroImgAnimatedOne" width="600" height="600" quality="70" crop> 600w,
+            <perch:content type="image" id="brandingIntroImgAnimatedOne" width="500" height="500" quality="70" crop> 500w">
+
+            <img class="services-intro-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="brandingIntroImgAnimatedTwo" type="image" width="1000" height="1000" label="Animated Branding Intro Image Two" quality="70" crop>" alt="<perch:content id="brandingImgAltAnimatedTwo" type="text" label="Branding Image Description">"
+            sizes="(max-width: 1700px) 95vw, 30vw"
+            srcset="<perch:content type="image" id="brandingIntroImgAnimatedTwo" width="1000" height="1000" quality="70" crop> 1000w,
+            <perch:content type="image" id="brandingIntroImgAnimatedTwo" width="800" height="800" quality="70" crop> 800w,
+            <perch:content type="image" id="brandingIntroImgAnimatedTwo" width="600" height="600" quality="70" crop> 600w,
+            <perch:content type="image" id="brandingIntroImgAnimatedTwo" width="500" height="500" quality="70" crop> 500w">
+            </div>
           </section>
           <!-- Branding Process -->
-          <section class="services-section branding-process-section">
-            <h2 class="services-subheading">
-              <perch:content id="brandingProcessSubtitle" type="text" label="Branding Process Subheading" divider-before="Process" required>
+          <section class="services-section branding-process-section scrolltrigger-refresh-target">
+            <h2 class="services-subheading split-text-heading-animation">
+              <perch:content id="brandingProcessSubheading" type="text" label="Branding Process Subheading" divider-before="Process" required>
             </h2>
             <div class="services-text-wrapper branding-process-text-wrapper">
-              <perch:content id="processText" type="textarea" editor="redactor" label="Branding Process Text" required html>
+              <perch:content id="processText" type="textarea" editor="redactor" count="words" label="Branding Process Text" required html>
             </div>
           </section>
           <!-- Branding Essential Package  -->
-          <section class="services-section essential-branding-package-section">
-            <h2 class="services-subheading">
+          <section class="services-section essential-branding-package-section scrolltrigger-refresh-target">
+            <h2 class="services-subheading split-text-heading-animation">
               <perch:content id="brandingPackageSubheading" type="text" label="Essential Branding Package Subheading" divider-before="Essential Branding Package" required>
             </h2>
             <div class="services-text-wrapper essential-branding-process-text-wrapper">
-              <perch:content id="essentialBrandingProcessTextWrapper" type="textarea" editor="redactor" label="Branding Essential Package Text" required html>
+              <perch:content id="essentialBrandingProcessTextWrapper" type="textarea" editor="redactor" count="words" label="Branding Essential Package Text" required html>
               </div>
-              <p class="branding-package-price-paragraph essential-branding-package-price-paragraph">
+              <p class="branding-package-price-paragraph essential-branding-package-price-paragraph split-text-body-animation">
                 <perch:content id="essentialBrandingPrice" type="text" label="Essential Branding Package Price" required >
               </p>
               <div class="branding-package-cta-wrapper">
-                <img class="branding-image essential-branding-image" itemprop="image" src="<perch:content id="essentialBrandingImage" type="image" width="1000" label="Essential Branding Image" quality="70">" alt="<perch:content id="essentialImgAlt" type="text" label="Essential Branding Image Description">"
-                sizes="100vw"
-                srcset="<perch:content type="image" id="essentialBrandingImage" width="1000" > 1000w,
-                <perch:content type="image" id="essentialBrandingImage" width="900" quality="70"> 900w,
-                <perch:content type="image" id="essentialBrandingImage" width="800" quality="70"> 800w,
-                <perch:content type="image" id="essentialBrandingImage" width="700" quality="70"> 700w,
-                <perch:content type="image" id="essentialBrandingImage" width="600" quality="70"> 600w" >
+                <div class="branding-image-wrapper fade-and-swap-three">
+                  <img class="branding-image essential-branding-image" itemprop="image" loading="lazy" src="<perch:content id="essentialBrandingImage" type="image" width="1000" height="1000" label="Essential Branding Image" quality="70" crop>" alt="<perch:content id="essentialImgAlt" type="text" label="Essential Branding Image Description">"
+                  sizes="(max-width: 1100px) 40vw, 95vw"
+                  srcset="<perch:content type="image" id="essentialBrandingImage" width="1000" height="1000" quality="70" crop> 1000w,
+                  <perch:content type="image" id="essentialBrandingImage" width="900" height="900" quality="70" crop> 900w,
+                  <perch:content type="image" id="essentialBrandingImage" width="800" height="800" quality="70" crop> 800w,
+                  <perch:content type="image" id="essentialBrandingImage" width="700" height="700" quality="70" crop> 700w,
+                  <perch:content type="image" id="essentialBrandingImage" width="600" height="600" quality="70" crop> 600w">
 
-                <div class="call-to-action-link-wrapper essential-branding-call-to-action-link-wrapper">
-                  <!-- TODO: Insert proper links -->
-                  <a class="call-to-action-link essential-branding-call-to-action-link" href="<perch:content id="essentialBrandingCTALink" type="text" label="Essential Branding Call To Action Link" required>">
+                  <!-- Animated Images    -->
+                  <img class="branding-image essential-branding-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="essentialBrandingImageAnimatedOne" type="image" width="1000" height="1000" label="Essential Branding Image" divider-before="Animated Essential Branding Images" quality="70" crop>" alt="<perch:content id="essentialImgAltAnimatedOne" type="text" label="Essential Branding Image Description">"
+                  sizes="(max-width: 1100px) 40vw, 95vw"
+                  srcset="<perch:content type="image" id="essentialBrandingImageAnimatedOne" width="1000" height="1000" quality="70" crop> 1000w,
+                  <perch:content type="image" id="essentialBrandingImageAnimatedOne" width="900" height="900" quality="70" crop> 900w,
+                  <perch:content type="image" id="essentialBrandingImageAnimatedOne" width="800" height="800" quality="70" crop> 800w,
+                  <perch:content type="image" id="essentialBrandingImageAnimatedOne" width="700" height="700" quality="70" crop> 700w,
+                  <perch:content type="image" id="essentialBrandingImageAnimatedOne" width="600" height="600" quality="70" crop> 600w">
+
+                  <img class="branding-image essential-branding-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="essentialBrandingImageAnimatedTwo" type="image" width="1000" height="1000" label="Essential Branding Image" quality="70" crop>" alt="<perch:content id="essentialImgAltAnimatedTwo" type="text" label="Essential Branding Image Description">"
+                  sizes="(max-width: 1100px) 40vw, 95vw"
+                  srcset="<perch:content type="image" id="essentialBrandingImageAnimatedTwo" width="1000" height="1000" quality="70" crop> 1000w,
+                  <perch:content type="image" id="essentialBrandingImageAnimatedTwo" width="900" height="900" quality="70" crop> 900w,
+                  <perch:content type="image" id="essentialBrandingImageAnimatedTwo" width="800" height="800" quality="70" crop> 800w,
+                  <perch:content type="image" id="essentialBrandingImageAnimatedTwo" width="700" height="700" quality="70" crop> 700w,
+                  <perch:content type="image" id="essentialBrandingImageAnimatedTwo" width="600" height="600" quality="70" crop> 600w">
+                </div>
+
+                <div class="call-to-action-link-wrapper essential-branding-call-to-action-link-wrapper circle-animation">
+                  <a class="call-to-action-link essential-branding-call-to-action-link" href="<perch:content id="essentialBrandingCTALink" type="text" label="Essential Branding Call To Action Link" divider-before="Essential Branding Call To Action" required>">
                     <perch:content id="essentialBrandingCtaLinkText" type="text" label="Essential Branding Call To Action Text">
                   </a>
                 </div>
               </div>
               <div class="services-text-wrapper want-more-paragraph-wrapper">
-                <p class="want-more-paragraph essential-branding-want-more-paragraph">
+                <p class="want-more-paragraph essential-branding-want-more-paragraph split-text-body-animation">
                   <perch:content id="essentialwantMorePara" type="text" label="Essential Want More Paragraph">
                 </p>
               </div>
 
-              <div class="svg-down-arrow essential-svg-down-arrow">
+              <div class="svg-down-arrow essential-svg-down-arrow simple-fade-in">
                 <perch:template path="svg/svg_arrow.html">
               </div>
           </section>
+
           <!-- Extended Branding Package -->
-          <section class="services-section extended-branding-package-section">
-            <h2 class="services-subheading extended-services-subheading">
+          <section class="services-section extended-branding-package-section scrolltrigger-refresh-target">
+            <h2 class="services-subheading extended-services-subheading split-text-heading-animation">
               <perch:content id="brandingExtendedPackageSubheading" type="text" label="Extended Branding Package Subheading" divider-before="Extended Branding Package" required>
             </h2>
             <div class="services-text-wrapper extended-branding-process-text-wrapper">
-              <perch:content id="extendedlBrandingProcessTextWrapper" type="textarea" editor="redactor" label="Branding Extended Package Text" required html>
+              <perch:content id="extendedlBrandingProcessTextWrapper" type="textarea" editor="redactor" count="words" label="Branding Extended Package Text" required html>
               </div>
-              <p class="branding-package-price-paragraph extended-branding-package-price-paragraph">
+              <p class="branding-package-price-paragraph extended-branding-package-price-paragraph split-text-body-animation">
                 <perch:content id="extendedBrandingPrice" type="text" label="Extended Branding Package Price" required >
               </p>
               <div class="branding-package-cta-wrapper">
-                <img class="branding-image extended-branding-image" itemprop="image" src="<perch:content id="extendedBrandingImage" type="image" width="1000" label="Extended Branding Image" quality="70">" alt="<perch:content id="extendedImgAlt" type="text" label="Extended Branding Image Description">"
-                sizes="100vw"
-                srcset="<perch:content type="image" id="extendedBrandingImage" width="1000" > 1000w,
-                <perch:content type="image" id="extendedBrandingImage" width="900" quality="70"> 900w,
-                <perch:content type="image" id="extendedBrandingImage" width="800" quality="70"> 800w,
-                <perch:content type="image" id="extendedBrandingImage" width="700" quality="70"> 700w,
-                <perch:content type="image" id="extendedBrandingImage" width="600" quality="70"> 600w" >
+                <div class="branding-image-wrapper fade-and-swap-three">
+                  <img class="branding-image extended-branding-image" itemprop="image" loading="lazy" src="<perch:content id="extendedBrandingImage" type="image" width="1000" height="1000" label="Extended Branding Image" quality="70" crop>" alt="<perch:content id="extendedImgAlt" type="text" label="Extended Branding Image Description">"
+                  sizes="(max-width: 1100px) 40vw, 95vw"
+                  srcset="<perch:content type="image" id="extendedBrandingImage" width="1000" height="1000" quality="70" crop> 1000w,
+                  <perch:content type="image" id="extendedBrandingImage" width="900" height="900" quality="70" crop> 900w,
+                  <perch:content type="image" id="extendedBrandingImage" width="800" height="800" quality="70" crop> 800w,
+                  <perch:content type="image" id="extendedBrandingImage" width="700" height="700" quality="70" crop> 700w,
+                  <perch:content type="image" id="extendedBrandingImage" width="600" height="600" quality="70" crop> 600w">
 
-                <div class="call-to-action-link-wrapper extended-branding-call-to-action-link-wrapper">
-                  <!-- TODO: Insert proper link -->
-                  <a class="call-to-action-link extended-branding-call-to-action-link" href="<perch:content id="extendedCTALink" type="text" label="Extended Branding Call To Action Link" required></a>">
+                  <!-- Animated Images  -->
+                  <img class="branding-image extended-branding-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="extendedBrandingImageAnimatedOne" type="image" width="1000" height="1000" label="Animated Extended Branding Image One" divider-before="Animated Extended Branding Images"  quality="70" crop>" alt="<perch:content id="extendedImgAltAnimatedOne" type="text" label="Extended Branding Image Description">"
+                  sizes="(max-width: 1100px) 40vw, 95vw"
+                  srcset="<perch:content type="image" id="extendedBrandingImageAnimatedOne" width="1000" height="1000" quality="70" crop> 1000w,
+                  <perch:content type="image" id="extendedBrandingImageAnimatedOne" width="900" height="900" quality="70" crop> 900w,
+                  <perch:content type="image" id="extendedBrandingImageAnimatedOne" width="800" height="800" quality="70" crop> 800w,
+                  <perch:content type="image" id="extendedBrandingImageAnimatedOne" width="700" height="700" quality="70" crop> 700w,
+                  <perch:content type="image" id="extendedBrandingImageAnimatedOne" width="600" height="600" quality="70" crop> 600w">
+
+                  <img class="branding-image extended-branding-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="extendedBrandingImageAnimatedTwo" type="image" width="1000" height="1000" label="Animated Extended Branding Image Two" quality="70" crop>" alt="<perch:content id="extendedImgAltAnimatedTwo" type="text" label="Extended Branding Image Description">"
+                  sizes="(max-width: 1100px) 40vw, 95vw"
+                  srcset="<perch:content type="image" id="extendedBrandingImageAnimatedTwo" width="1000" height="1000" quality="70" crop> 1000w,
+                  <perch:content type="image" id="extendedBrandingImageAnimatedTwo" width="900" height="900" quality="70" crop> 900w,
+                  <perch:content type="image" id="extendedBrandingImageAnimatedTwo" width="800" height="800" quality="70" crop> 800w,
+                  <perch:content type="image" id="extendedBrandingImageAnimatedTwo" width="700" height="700" quality="70" crop> 700w,
+                  <perch:content type="image" id="extendedBrandingImageAnimatedTwo" width="600" height="600" quality="70" crop> 600w">
+                </div>
+
+                <div class="call-to-action-link-wrapper extended-branding-call-to-action-link-wrapper circle-animation">
+                  <a class="call-to-action-link extended-branding-call-to-action-link" href="<perch:content id="extendedCTALink" type="text" label="Extended Branding Call To Action Link" required>">
                     <perch:content id="extendedBrandingCtaLink" type="text" label="Extended Branding Call To Action Text">
                   </a>
                 </div>
               </div>
               <div class="services-text-wrapper want-more-paragraph-wrapper">
-                <p class="want-more-paragraph extended-branding-want-more-paragraph">
+                <p class="want-more-paragraph extended-branding-want-more-paragraph split-text-body-animation">
                   <perch:content id="extendedWantMorePara" type="text" label="Extended Want More Paragraph">
                 </p>
               </div>
 
-              <div class="svg-down-arrow extended-svg-down-arrow">
+              <div class="svg-down-arrow extended-svg-down-arrow simple-fade-in">
                 <perch:template path="svg/svg_arrow.html">
               </div>
           </section>
           <!-- Custom Branding -->
-          <section class="section services-section custom-branding-section">
+          <section class="section services-section custom-branding-section scrolltrigger-refresh-target">
             <div class="services-text-wrapper custom-services-text-wrapper">
-              <perch:content id="customBrandingText" type="textarea" editor="redactor" label="Custom Branding Text" divider-before="Custom Branding Package" required html>
+              <perch:content id="customBrandingText" type="textarea" editor="redactor" count="words" label="Custom Branding Text" divider-before="Custom Branding Package" required html>
             </div>
-            <div class="call-to-action-link-wrapper custom-branding-call-to-action-link-wrapper">
-              <!-- TODO: Insert proper link -->
+            <div class="call-to-action-link-wrapper custom-branding-call-to-action-link-wrapper circle-animation">
               <a class="call-to-action-link custom-branding-call-to-action-link" href="<perch:content id="customCTALink" type="text" label="Custom Branding Call To Action Link" required>">
                 <perch:content id="customBrandingCtaLinkText" type="text" label="Custom Branding Call To Action Text">
               </a>
             </div>
           </section>
           <!-- Small Print -->
-          <section class="services-section small-print-section">
-            <h2 class="services-subheading small-print-subheading">
+          <section class="services-section small-print-section scrolltrigger-refresh-target scrolltrigger-svg-refresh-target">
+            <h2 class="services-subheading small-print-subheading split-text-heading-animation">
               <perch:content id="smallPrintSubheading" type="text" label="Small Print Subheading" divider-before="Small Print" required>
             </h2>
             <div class="services-text-wrapper small-print-text-wrapper">
-              <perch:content id="smallPrintText" type="textarea" editor="redactor" label="Small Print Text" required html>
+              <perch:content id="smallPrintText" type="textarea" editor="redactor" count="words" label="Small Print Text" required html>
             </div>
-            <h2 class="services-subheading small-print-subheading">
-              <perch:content id="smallPrintSubheadingTwo" type="text" label="Small Print Subheading Two" required>
+            <!-- Get Started -->
+            <h2 class="services-subheading small-print-subheading split-text-heading-animation">
+              <perch:content id="brandingGetstartedSubheading" type="text" label="Branding &#39;Get Started&#39; Subheading" required>
             </h2>
             <div class="yes-svg-wrapper branding-yes-svg-wrapper">
               <perch:template path="svg/yes_svg.html">
             </div>
+          </section>
+          <!-- Branding Contact Section -->
+          <section class="contact-section branding-services-contact-section scrolltrigger-refresh-target">
+            <h2 class="section-heading contact-heading split-text-heading-animation">
+            CONTACT US <a class="contact-link" href="<perch:content id="brandingContactUsLink" type="text" label="Branding &#39;Contact Us&#39; Link" required>">HERE</a>
+            </h2>
           </section>
         </perch:group>

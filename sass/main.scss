@@ -20,13 +20,12 @@ html {
   font-size: 10px;
   overflow-x: hidden;
   margin: 0;
+  background-color: $background-colour-light;
 
-  @include styled-scrollbar(
-    $font-size-small,
+  @include styled-scrollbar($font-size-small,
     $background-colour-blue,
     $background-colour-light,
-    $background-colour-light
-  );
+    $background-colour-light );
 }
 
 body {
@@ -34,12 +33,11 @@ body {
   position: relative;
   width: 100%;
   min-width: 320px;
-  max-width: 1920px;
+  max-width: 2520px;
   margin: 0 auto;
   padding: 0;
   background: none;
   // Removes small gap below footer
-  //TODO: Check this doesn't mess stuff up
   line-height: 0;
 }
 
@@ -47,6 +45,7 @@ body {
   // Removes small gap below footer
   line-height: normal;
   width: 100%;
+  overflow: visible;
 }
 
 // * Box sizing rules
@@ -58,30 +57,60 @@ body {
 
 section,
 main {
+  position: relative;
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
+  /*
+  * Fixes IOS Bug where scrolling breaks z-index
+  https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
+  */
+  transform: translate3d(0, 0, 0);
 }
 
 // *=========================================
 // ** Headings **
 // *=========================================
 
-h1 {
-  font-size: $font-size-extra-large;
+h1,
+h2,
+h3 {
+  font-kerning: none;
+  text-rendering: optimizeSpeed;
+  overflow-wrap: break-word;
   text-align: center;
+}
+
+h1 {
+  font-size: $heading-size-large;
   margin: 0 auto;
 }
 
 h2 {
-  font-size: $font-size-extra-large;
-  text-align: center;
+  font-size: $heading-size-large;
   margin: 0 auto $section-spacing-large;
 }
 
+h3 {
+  font-size: $heading-size-medium;
+  margin: 0 auto $paragraph-spacing-large;
+}
+
 .section-heading {
-  font-size: $font-size-extra-large;
+  font-size: $heading-size-large;
   width: fit-content;
   margin: 0 auto $section-spacing-large;
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(1200) {
+    font-size: $heading-size-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 // *=========================================
@@ -99,6 +128,9 @@ img {
 //********** Paragraphs **********
 p {
   margin: 0 auto $paragraph-spacing-large;
+  overflow-wrap: break-word;
+  font-kerning: none;
+  text-rendering: optimizeSpeed;
 }
 
 //********** Links **********
@@ -114,15 +146,86 @@ a {
 
 .header {
   position: relative;
-  padding: 0 $section-spacing-extra-large $section-spacing-large;
+  z-index: 3;
+  overflow: visible;
+  /*
+  * Fixes IOS Bug where scrolling breaks z-index
+  https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
+  */
+  transform: translate3d(0, 0, 0);
   background-color: $background-colour-light;
-  overflow: hidden;
 }
+
+.main-header {
+  padding: 0 $section-spacing-extra-large $section-spacing-large;
+  overflow: visible;
+
+  @include breakpoint(1800) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
+
+  @include breakpoint(1400) {
+    padding: 0 $section-spacing-medium $section-spacing-medium;
+  }
+
+  @include breakpoint(1200) {
+    padding: 0 $section-spacing-small $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-tiny $section-spacing-small;
+  }
+}
+
+//********** Main Logo **********
 
 .main-logo-wrapper {
   width: 100%;
   max-width: 350px;
-  margin: $paragraph-spacing-small auto $section-spacing-large;
+  overflow: hidden;
+  margin: $paragraph-spacing-small auto $section-spacing-small;
+
+  @include breakpoint(1400) {
+    margin: $paragraph-spacing-small auto $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
+}
+
+.main-logo-image {
+  flex: 0 1 auto;
+}
+
+.main-logo-text {
+  width: 100%;
+}
+
+.kate-images-wrapper {
+  width: 155px;
+}
+
+.main-logo-images-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-logo-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.mark-images-wrapper {
+  width: 113px;
+}
+
+.animated-logo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 }
 
 .hidden-main-logo {
@@ -131,14 +234,20 @@ a {
   position: absolute;
   z-index: -10;
   opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .header-page-title {
-  font-size: $font-size-extra-large;
+  font-size: $heading-size-large;
   color: $font-colour-green;
   width: fit-content;
   text-transform: uppercase;
   margin: 0 auto;
+
+  @include breakpoint(1200) {
+    font-size: $heading-size-medium;
+  }
 }
 
 // *=========================================
@@ -183,6 +292,65 @@ a {
 
 //********** Responsive Nav Styles **********
 
+.main-nav {
+  @include breakpoint(750) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $background-colour-green;
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+    transform: rotate(0);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(100%);
+    pointer-events: none;
+  }
+}
+
+.main-nav-link,
+.main-nav-link:first-of-type {
+  @include breakpoint(750) {
+    opacity: 0;
+    transform: translateY(40px);
+    color: $font-colour-light;
+    margin: 0 auto $paragraph-spacing-medium;
+    padding: $paragraph-spacing-small $paragraph-spacing-medium;
+  }
+}
+
+.main-nav-trigger-wrapper {
+  @include breakpoint(750) {
+    @include flex(row);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $background-colour-green;
+  }
+}
+
+.main-nav-trigger {
+  @include main-font-stack;
+  font-size: $font-size-medium;
+  border: none;
+  background-color: $background-colour-green;
+  color: $font-colour-light;
+  padding: $paragraph-spacing-medium;
+  cursor: pointer;
+}
+
 // *=========================================
 // ** Body **
 // *=========================================
@@ -203,27 +371,6 @@ a {
   text-decoration: none;
 }
 
-// *=========================================
-// ** Forms  **
-// *=========================================
-
-//* Inherit fonts for inputs and buttons
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-//********** Honeypot **********
-
-.form-identification-number {
-  overflow: hidden;
-  position: absolute;
-  z-index: -10;
-  opacity: 0;
-}
-
 //*=========================================
 //** Contact Section **
 //*=========================================
@@ -231,10 +378,27 @@ select {
 .contact-section {
   margin: 0;
   padding: $section-spacing-large $section-spacing-super-large;
+
+  @include breakpoint(1800) {
+    padding: $section-spacing-large;
+  }
+
+  @include breakpoint(1400) {
+    padding: $section-spacing-medium;
+  }
+
+  @include breakpoint(1200) {
+    padding: $section-spacing-medium $section-spacing-small;
+  }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-tiny;
+  }
 }
 
 .contact-heading {
   margin: 0 auto;
+  font-size: $heading-size-medium;
 }
 
 // *=========================================
@@ -245,21 +409,70 @@ select {
   color: $font-colour-light;
   font-size: $font-size-medium;
   background-color: $background-colour-blue;
-  padding: $section-spacing-large $section-spacing-super-large;
+  padding: $section-spacing-large $section-spacing-super-large $section-spacing-smaller;
   margin: 0;
   position: sticky;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  right: 0;
+  width: 100%;
+  z-index: 1;
   overflow: hidden;
 
   p {
     text-align: center;
+    margin-bottom: $paragraph-spacing-medium;
+    line-height: normal;
   }
 
   a {
     color: inherit;
   }
+
+  @include breakpoint(1400) {
+    padding: $section-spacing-medium $section-spacing-medium $section-spacing-smaller;
+  }
+
+  @include breakpoint(750) {
+    padding: $section-spacing-small $section-spacing-tiny;
+  }
+}
+
+.sticky-footer-wrapper {
+  overflow-x: hidden;
+}
+
+.footer-social-media-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  margin: 0 auto $section-spacing-large;
+  width: 150px;
+
+  @include breakpoint(1400) {
+    margin: 0 auto $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-small;
+  }
+}
+
+@keyframes social-rotate {
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+.footer-social-media-link {
+  width: 50px;
+
+  &:hover {
+    animation: social-rotate 1s ease-in-out infinite forwards;
+  }
+}
+
+.footer-copyright {
+  margin: 0 auto;
 }
 
 //*=========================================
@@ -300,22 +513,114 @@ select {
   }
 }
 
-//* Hides outline unless tab key is pressed
+//* Visually hiding stuff
 
-body:not(.user-is-tabbing) button:focus,
-body:not(.user-is-tabbing) input:focus,
-body:not(.user-is-tabbing) select:focus,
-body:not(.user-is-tabbing) textarea:focus {
-  outline: none;
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
 
-.user-is-tabbing {
-  a:focus,
-  button:focus,
-  input:focus,
-  textarea:focus {
-    outline: 3px dashed #ff5e00;
+//*=========================================
+//** Animation **
+//*=========================================
+
+//********** Fade and Swap Three **********
+
+.fade-and-swap-nine {
+  position: relative;
+}
+
+.fade-and-swap-nine-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+//********** Fade and Swap Three **********
+
+.fade-and-swap-three {
+  position: relative;
+}
+
+.fade-and-swap-three-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+//********** Split Text Heading **********
+
+.split-text-heading-animation {
+  // Prevents flash of un-styled GSAP content.
+  opacity: 0;
+}
+
+//*=========================================
+//** Cookie Warning **
+//*=========================================
+
+.cookie-warning-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: $paragraph-spacing-small;
+  font-size: $font-size-medium;
+  background-color: $background-colour-brown;
+  opacity: 0;
+  z-index: 10;
+  transition: all 0.5s 0.25s;
+
+  @include breakpoint(1200) {
+    @include flex(column);
   }
+}
+
+.cookie-warning-paragraph {
+  line-height: normal;
+
+  margin: 0 $section-spacing-small 0 0;
+  color: $font-colour-light;
+
+  @include breakpoint(1200) {
+    margin: 0 0 $paragraph-spacing-medium;
+    text-align: center;
+  }
+}
+
+.cookie-warning-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.cookie-warning-button {
+  line-height: normal;
+  background-color: transparent;
+  border: 4px solid $font-colour-light;
+  color: $font-colour-light;
+  font-size: inherit;
+  font-weight: bold;
+  padding: $paragraph-spacing-small $paragraph-spacing-medium;
+  width: fit-content;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.cookie-warning-wrapper.show-cookie-warning {
+  opacity: 1;
 }
 
 //*=========================================

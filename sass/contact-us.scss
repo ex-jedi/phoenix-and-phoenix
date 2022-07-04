@@ -1,0 +1,281 @@
+//*==============================================================================
+//** Main Contact Form **
+//*==============================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Intro **
+//*=========================================
+
+.main-contact-section {
+  background-color: $background-colour-light;
+  font-size: $font-size-large;
+  padding: 0 $section-spacing-big $section-spacing-large;
+
+  @include breakpoint(1800) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
+
+  @include breakpoint(1400) {
+    padding: 0 $section-spacing-medium $section-spacing-medium;
+  }
+
+  @include breakpoint(1200) {
+    padding: 0 $section-spacing-small $section-spacing-medium;
+    font-size: $font-size-medium;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-tiny $section-spacing-small;
+    font-size: $font-size-medium;
+  }
+}
+
+.main-contact-form-intro-text-wrapper {
+  text-align: center;
+  color: $font-colour-blue;
+  margin-bottom: $section-spacing-large;
+
+  p {
+    margin-bottom: $paragraph-spacing-extra-large;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(1400) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
+}
+
+//*=========================================
+//** Form **
+//*=========================================
+
+//********** Reset **********
+
+//* Inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+//********** Honeypot **********
+
+.form-identification-number {
+  overflow: hidden;
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+}
+
+//********** Form Styles **********
+
+.form-input-wrapper {
+  @include flex(column);
+  color: $font-colour-brown;
+  margin-bottom: $section-spacing-small;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  input {
+    color: inherit;
+    background-color: $background-colour-light;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 4px solid $background-colour-brown;
+  }
+}
+
+.checkboxes-subheading {
+  margin-bottom: $section-spacing-small;
+  color: $font-colour-brown;
+
+  @include breakpoint(1200) {
+    margin-bottom: $paragraph-spacing-large;
+  }
+}
+
+.checkbox-wrapper {
+  @include flex(row);
+  color: $font-colour-brown;
+  margin-bottom: $section-spacing-small;
+  align-items: center;
+
+  @include breakpoint(1200) {
+    margin-bottom: $paragraph-spacing-large;
+  }
+
+  label {
+    order: 2;
+  }
+
+  //* Custom radio button styling
+  input[type='checkbox'] {
+    position: relative;
+    order: 1;
+    margin-right: $paragraph-spacing-large;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      border: 5px solid $font-colour-brown;
+      background-color: $background-colour-light;
+      border-radius: 100%;
+      height: 50px;
+      width: 50px;
+      top: -18px;
+      left: -6px;
+      z-index: 5;
+      transition: $transition-one;
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      height: 35px;
+      width: 35px;
+      top: -10px;
+      left: 1.5px;
+      margin: 0;
+      transition: $transition-one;
+      z-index: 6;
+    }
+  }
+
+  input[type='checkbox']:checked {
+    &:before {
+      border: 5px solid $font-colour-brown;
+    }
+  }
+
+  input[type='checkbox']:checked {
+    &:after {
+      background: $font-colour-brown;
+    }
+  }
+}
+
+#other-checkbox-wrapper {
+  @include breakpoint(1200) {
+    margin-bottom: $section-spacing-small;
+  }
+}
+
+.message-area-wrapper {
+  color: $font-colour-brown;
+  margin-bottom: $section-spacing-small;
+}
+
+.message-area-input {
+  border: none;
+  color: $font-colour-brown;
+  width: 100%;
+  background-color: $background-colour-light;
+
+  // Underline
+  background-attachment: local;
+  line-height: $font-size-large;
+  background-image: linear-gradient(
+    transparent,
+    transparent calc(#{$font-size-large} - 4px),
+    $font-colour-brown calc(#{$font-size-large} - 4px)
+  );
+  background-size: $font-size-large $font-size-large;
+
+  // Scroll bar
+  @include styled-scrollbar(
+    $font-size-small,
+    $background-colour-brown,
+    $background-colour-light,
+    $background-colour-light
+  );
+}
+
+.submit-button {
+  display: block;
+  border: none;
+  color: $font-colour-blue;
+  background-color: $background-colour-light;
+  text-transform: uppercase;
+  font-size: $font-size-extra-large;
+  margin: $section-spacing-large auto 0;
+  cursor: pointer;
+  transition: $transition-one;
+
+  // Removes IOS button styles
+  -webkit-appearance: none;
+
+  @include breakpoint(1400) {
+    margin: $section-spacing-medium auto 0;
+  }
+
+  @include breakpoint(1200) {
+    font-size: $heading-size-medium;
+  }
+
+  @include breakpoint(700) {
+    margin: $section-spacing-small auto 0;
+  }
+
+  &:hover {
+    color: $font-colour-green;
+  }
+}
+
+.success {
+  font-size: $font-size-extra-large;
+
+  @include breakpoint(1200) {
+    font-size: $font-size-large;
+  }
+
+  p {
+    text-align: center;
+    color: $font-colour-brown;
+  }
+}
+
+//********** Required Title **********
+.required-input {
+  font-size: $font-size-large-medium;
+  position: relative;
+}
+
+[data-title] {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  &:after {
+    content: attr(data-title);
+    font-size: $font-size-smaller;
+    position: absolute;
+    left: $font-size-large-medium;
+    color: $font-colour-blue;
+    border: 4px solid $font-colour-blue;
+    padding: 1px 5px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.2s ease-out;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

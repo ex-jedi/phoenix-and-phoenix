@@ -26,29 +26,30 @@ function cookieWarning() {
 }
 
 // *=========================================
-// ** Accessibility  **
+// ** Clean Text  **
 // *=========================================
 
-// * Adding focus outline class when tab key is used
-function handleFirstTab(e) {
-  if (e.keyCode === 9) {
-    document.body.classList.add('user-is-tabbing');
-
-    window.removeEventListener('keydown', handleFirstTab);
-    window.addEventListener('mousedown', handleMouseDownOnce);
+function cleanText(e) {
+  if (typeof e === 'string') {
+    return cleanText(document.querySelectorAll(e));
   }
+  if (e[0] && e[0].innerHTML) {
+    for (let i = 0; i < e.length; i += 1) {
+      cleanText(e[i]);
+    }
+    return;
+  }
+  e.innerHTML = e.innerHTML
+    .replace(/\-/g, '‑')
+    .replace(/V/g, '‌V‌')
+    .replace(/\./g, '‌.‌')
+    .replace(/,/g, '‌,‌')
+    .replace(/A/g, '‌A‌')
+    .replace(/fi/g, 'f‌i');
 }
-
-function handleMouseDownOnce() {
-  document.body.classList.remove('user-is-tabbing');
-
-  window.removeEventListener('mousedown', handleMouseDownOnce);
-  window.addEventListener('keydown', handleFirstTab);
-}
-
 
 // *==============================================================================
 // ** Exports  **
 // *==============================================================================
 
-export { cookieWarning, handleFirstTab };
+export { cookieWarning, cleanText };

@@ -1,0 +1,63 @@
+<section class="main-contact-section" id="contact-me">
+  <div class="main-form-container">
+      <perch:form class="main-contact-form" id="contact" method="post" app="perch_forms">
+        <!-- * Intro text -->
+        <div class="main-contact-form-intro-text-wrapper">
+          <perch:content id="mainContactIntro" type="textarea" editor="redactor" label="Main Contact Form Intro Text" required html>
+        </div>
+          <div class="form-input-wrapper">
+              <perch:label for="name">Name<span class="required-input" data-title="Required">*</span></perch:label>
+              <perch:input type="text" id="name" label="Name" required >
+          </div>
+          <div class="form-identification-number">
+              <perch:label for="messageAreaOne">Message: Leave this field blank if you are a human</perch:label>
+              <perch:input type="textarea" id="messageAreaOne" aria-hidden="true" autocomplete="off" antispam="honeypot" />
+          </div>
+          <div class="form-input-wrapper">
+              <perch:label for="email">Email<span class="required-input" data-title="Required">*</span></perch:label>
+              <perch:input type="email" id="email" label="Email" required>
+          </div>
+          <p class="checkboxes-subheading">
+            <perch:content id="checkboxSubhead" type="text" label="Checkboxes Subheading">
+          </p>
+          <div class="checkbox-wrapper">
+            <perch:label for="branding">Branding (starting at £1500)</perch:label>
+            <perch:input class="checkbox" type="checkbox" id="branding" label="Branding" value="Yes">
+          </div>
+          <div class="checkbox-wrapper">
+            <perch:label for="website">Website design and&sol;or development (starting at £1000)</perch:label>
+            <perch:input class="checkbox" type="checkbox" id="website" label="Website Design" value="Yes">
+          </div>
+          <div class="checkbox-wrapper">
+            <perch:label for="illustration">Illustration</perch:label>
+            <perch:input class="checkbox" type="checkbox" id="illustration" label="Illustration" value="Yes">
+          </div>
+          <div class="checkbox-wrapper" id="other-checkbox-wrapper">
+            <perch:label for="other">Other</perch:label>
+            <perch:input class="checkbox" type="checkbox" id="other" label="Other" value="Yes">
+          </div>
+          <div class="form-input-wrapper">
+              <perch:label for="budget">What's your budget?<span class="required-input" data-title="Required">*</span></perch:label>
+              <perch:input type="text" id="budget" label="Budget" required>
+          </div>
+          <div class="form-input-wrapper">
+              <perch:label for="deadline">When would you like the project finished?<span class="required-input" data-title="Required">*</span></perch:label>
+              <perch:input type="text" id="deadline" label="Deadline" required>
+          </div>
+          <div class="message-area-wrapper">
+              <perch:label for="message">Tell us about your project<span class="required-input" data-title="Required">*</span></perch:label>
+              <perch:input class="message-area-input" type="textarea" id="message" label="Project Description" required>
+          </div>
+          <div class="form-input-wrapper">
+              <perch:label for="found">Where did you find us?</perch:label>
+              <perch:input type="text" id="found" label="Where did you find us?">
+          </div>
+          <perch:input class="submit-button" type="submit" id="submit" value="Send" />
+          <perch:success>
+              <div class="success">
+                  <perch:content id="success" type="textarea" label="Thank you message" html="true" editor="redactor" />
+              </div>
+          </perch:success>
+      </perch:form>
+  </div>
+</section>

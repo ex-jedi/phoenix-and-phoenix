@@ -1,0 +1,95 @@
+//*==============================================================================
+//** About Us **
+//*==============================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+.main-header {
+  overflow: visible;
+}
+
+.bio-section {
+  background-color: $background-colour-light;
+  padding: 0 $section-spacing-big $section-spacing-large;
+
+  @include breakpoint(1800) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
+
+  @include breakpoint(1400) {
+    padding: 0 $section-spacing-medium $section-spacing-medium;
+  }
+
+  @include breakpoint(1200) {
+    padding: 0 $section-spacing-small $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-tiny $section-spacing-small;
+  }
+}
+
+.kate-bio-section {
+  color: $font-colour-brown;
+}
+
+.mark-bio-section {
+  color: $font-colour-blue;
+}
+
+.bio-flex-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+
+  @include breakpoint(1400) {
+    @include flex(column);
+  }
+}
+
+.bio-text-wrapper {
+  flex: 0 1 auto;
+  width: 50%;
+  font-size: $font-size-large;
+
+  @include breakpoint(1400) {
+    width: 100%;
+  }
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.bio-image-wrapper {
+  flex: 0 1 auto;
+  width: calc(50% - #{$section-spacing-small});
+  height: 100%;
+  margin-right: $section-spacing-small;
+
+  @include breakpoint(1400) {
+    width: 100%;
+    margin: 0 auto $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin: 0 auto $section-spacing-small;
+  }
+}
+
+.bio-image {
+  width: 100%;
+}
+
+//*=========================================
+//** Contact Section **
+//*=========================================
+
+.contact-section {
+  background-color: $background-colour-gold;
+  color: $font-colour-light;
+}

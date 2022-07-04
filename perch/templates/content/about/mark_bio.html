@@ -1,0 +1,36 @@
+<section class="bio-section mark-bio-section scrolltrigger-refresh-target">
+  <h2 class="section-heading bio-subheading split-text-heading-animation">
+    <perch:content id="markBioSubheading" type="text" label="Mark Bio Subheading" required>
+  </h2>
+  <div class="bio-flex-wrapper">
+    <div class="bio-image-wrapper fade-and-swap-three">
+      <img class="bio-image" itemprop="image" loading="lazy" src="<perch:content id="markBioImage" type="image" width="1000" label="Mark Bio Image" quality="70">" alt="<perch:content id="alt" type="text" label="Image Description">"
+      sizes="(max-width: 1400px) 95vw, 40vw"
+      srcset="<perch:content type="image" id="markBioImage" width="1000" > 1000w,
+      <perch:content type="image" id="markBioImage" width="900" quality="70"> 900w,
+      <perch:content type="image" id="markBioImage" width="700" quality="70"> 700w,
+      <perch:content type="image" id="markBioImage" width="500" quality="70"> 500w,
+      <perch:content type="image" id="markBioImage" width="400" quality="70"> 400w" >
+
+        <!-- Animated Images -->
+        <img class="bio-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="markBioImageAnimatedOne" type="image" width="1000" label="Mark Animated Bio Image One" divider-before="Animated images" quality="70" required>" alt="<perch:content id="altAnimatedOne" type="text" label="Image Description">"
+        sizes="(max-width: 1400px) 95vw, 40vw"
+        srcset="<perch:content type="image" id="markBioImageAnimatedOne" width="1000" > 1000w,
+        <perch:content type="image" id="markBioImageAnimatedOne" width="900" quality="70"> 900w,
+        <perch:content type="image" id="markBioImageAnimatedOne" width="700" quality="70"> 700w,
+        <perch:content type="image" id="markBioImageAnimatedOne" width="500" quality="70"> 500w,
+        <perch:content type="image" id="markBioImageAnimatedOne" width="400" quality="70"> 400w" >
+
+        <img class="bio-image fade-and-swap-three-images" itemprop="image" loading="lazy" src="<perch:content id="markBioImageAnimatedTwo" type="image" width="1000" label="Mark Animated Bio Image Two" divider-before="Animated images" quality="70" required>" alt="<perch:content id="altAnimatedTwo" type="text" label="Image Description">"
+        sizes="(max-width: 1400px) 95vw, 40vw"
+        srcset="<perch:content type="image" id="markBioImageAnimatedTwo" width="1000" > 1000w,
+        <perch:content type="image" id="markBioImageAnimatedTwo" width="900" quality="70"> 900w,
+        <perch:content type="image" id="markBioImageAnimatedTwo" width="700" quality="70"> 700w,
+        <perch:content type="image" id="markBioImageAnimatedTwo" width="500" quality="70"> 500w,
+        <perch:content type="image" id="markBioImageAnimatedTwo" width="400" quality="70"> 400w" >
+    </div>
+    <div class="bio-text-wrapper">
+      <perch:content id="markBioText" type="textarea" editor="redactor" label="Mark Bio Textarea" divider-before="Bio Text" required html>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+//*==============================================================================
+//** Legals **
+//*==============================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+.legals-section {
+  padding: 0 $section-spacing-big $section-spacing-large;
+  background-color: $background-colour-light;
+  color: $font-colour-blue;
+  font-size: $font-size-large;
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

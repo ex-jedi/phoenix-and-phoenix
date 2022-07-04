@@ -56,9 +56,8 @@ RewriteRule ^journal/tag/([a-zA-Z0-9-/]+)$ /journal/archive.php?tag=$1 [L]
 #Main Blog Url
 RewriteRule ^journal/([a-zA-Z0-9-/]+)$ /journal/post.php?s=$1 [L]
 
-#Gallery URLs
-#RewriteRule ^gallery/page/([0-9]+)$ /gallery/?page=$1 [L]
-RewriteRule ^gallery/([a-zA-Z0-9-/]+)$ /gallery/album.php?s=$1 [L]
+#Portfolio URLs
+RewriteRule ^case-study/([a-zA-Z0-9-/]+)$ /case-study.php?s=1 [L]
 
 
 </IfModule>
