@@ -22,12 +22,10 @@ html {
   margin: 0;
   background-color: $background-colour-light;
 
-  @include styled-scrollbar(
-    $font-size-small,
+  @include styled-scrollbar($font-size-small,
     $background-colour-blue,
     $background-colour-light,
-    $background-colour-light
-  );
+    $background-colour-light );
 }
 
 body {
@@ -411,8 +409,7 @@ a {
   color: $font-colour-light;
   font-size: $font-size-medium;
   background-color: $background-colour-blue;
-  padding: $section-spacing-large $section-spacing-super-large
-    $section-spacing-smaller;
+  padding: $section-spacing-large $section-spacing-super-large $section-spacing-smaller;
   margin: 0;
   position: sticky;
   bottom: 0;
@@ -433,8 +430,7 @@ a {
   }
 
   @include breakpoint(1400) {
-    padding: $section-spacing-medium $section-spacing-medium
-      $section-spacing-smaller;
+    padding: $section-spacing-medium $section-spacing-medium $section-spacing-smaller;
   }
 
   @include breakpoint(750) {
