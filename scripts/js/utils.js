@@ -40,12 +40,12 @@ function cleanText(e) {
     return;
   }
   e.innerHTML = e.innerHTML
-    .replace(/\-/g, '‑')
-    .replace(/V/g, '‌V‌')
-    .replace(/\./g, '‌.‌')
-    .replace(/,/g, '‌,‌')
-    .replace(/A/g, '‌A‌')
-    .replace(/fi/g, 'f‌i');
+    .replace(/\-/g, '-')
+    .replace(/V/g, 'V')
+    .replace(/\./g, '.')
+    .replace(/,/g, ',')
+    .replace(/A/g, 'A')
+    .replace(/fi/g, 'fi');
 }
 
 // *==============================================================================
